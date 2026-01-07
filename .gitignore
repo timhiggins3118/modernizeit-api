@@ -17,6 +17,12 @@ aws_creds/
 *.log
 logs/
 references-ONLY/
+task_logs/
+
+# Personal session notes and handoffs (not for public repo)
+202*.md
+HANDOFF_*.md
+20*/
 
 # Environment
 .env
