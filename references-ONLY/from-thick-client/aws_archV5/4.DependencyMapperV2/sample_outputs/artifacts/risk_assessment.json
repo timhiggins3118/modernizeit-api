@@ -1,0 +1,37 @@
+{
+  "circular_dependencies": [],
+  "tight_coupling_areas": [],
+  "single_points_of_failure": [
+    {
+      "program": "UTCSNT00",
+      "fan_in": 17,
+      "risk": "17 programs depend on this - single point of failure",
+      "risk_level": "High",
+      "recommendation": "Ensure comprehensive testing and monitoring; consider redundancy"
+    },
+    {
+      "program": "UTCSUL00",
+      "fan_in": 13,
+      "risk": "13 programs depend on this - single point of failure",
+      "risk_level": "High",
+      "recommendation": "Ensure comprehensive testing and monitoring; consider redundancy"
+    }
+  ],
+  "god_programs": [
+    {
+      "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "fan_out": 80,
+      "risk": "Calls 80 other programs - too many responsibilities",
+      "risk_level": "Medium-High",
+      "recommendation": "Refactor to split responsibilities into smaller, focused programs"
+    }
+  ],
+  "shared_copybooks": [],
+  "summary": {
+    "high_risk_count": 2,
+    "medium_risk_count": 1,
+    "total_risk_items": 3
+  },
+  "generated_at": "2025-11-06T14:36:04.413281+00:00",
+  "source_job_id": "dmv2_job_0U812_TestApp01_1762439738_3581cb90"
+}

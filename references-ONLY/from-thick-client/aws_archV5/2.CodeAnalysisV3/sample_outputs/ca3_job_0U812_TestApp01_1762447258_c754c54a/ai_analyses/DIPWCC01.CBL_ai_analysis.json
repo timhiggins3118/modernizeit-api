@@ -1,0 +1,28 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "DIPWCC01.CBL",
+  "timestamp": "2025-11-06T16:41:17.531954Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This COBOL copybook appears to be a data structure definition used for handling claim-related data transfers or transformations, likely part of an insurance claims processing system.",
+    "content": "The file contains two record layouts: DIPWCC01-DATA and DIPWCC01-DATA-R (a redefines of the first structure). The first layout includes fields for transaction type, source claim, object claim, combination indicators and timestamps. The redefined structure contains transaction type, record count, and date range fields.",
+    "usage": "This copybook is likely included in COBOL programs that need to process claim transfers or combinations. The main program referenced in the header is DICPCC00, which probably includes this copybook for data structure definitions.",
+    "dependencies": [
+      "DICPCC00"
+    ],
+    "modernization_approach": "1. Map these fields to a modern data structure (class/struct)\n2. Consider creating separate DTOs for each layout\n3. Implement data validation rules for dates and transaction types\n4. Consider using enums for TRANTYPE field\n5. Convert date fields to proper date/time objects in target language\n6. Document business rules around the redefines structure usage",
+    "complexity": "LOW",
+    "complexity_reasoning": "The structure is straightforward with basic data types, no complex nested structures, and a simple redefines. The field definitions are clear and the purpose is well-defined. The only slight complexity is the dual record layout through the redefines clause."
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

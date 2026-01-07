@@ -1,0 +1,115 @@
+{
+  "job_id": "rf2_job_0U812_TestApp01_1762439638_48cf051e",
+  "source_hash": "9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74",
+  "generated_at": "2025-11-06T14:34:02.827796+00:00",
+  "agent_id": "TBD",
+  "agent_name": "COBOLRefactorAnalystV2",
+  "batch_mode": true,
+  "total_batches": 4,
+  "batches_processed": 4,
+  "files_expected": 20,
+  "files_analyzed": 0,
+  "files_failed": 20,
+  "files": [
+    {
+      "path": "IBMi-Cobol/Cobol/STATUSCODE.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSDC00L.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/CMCSRP00C.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/ADCPSH21L.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/DATEFLIP.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/DIPWCC00.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/DIPWCC01.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSUL10L.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/CMCSCL50L.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/XACSCC00L.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTXSFS00L.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/CMCSCL50C.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSDC00C.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/CMCSRP00L.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "error": "'utf-8' codec can't decode byte 0xac in position 30184: invalid start byte",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSC101L.CBL",
+      "error": "An error occurred (ResourceNotFoundException) when calling the InvokeAgent operation: Failed to retrieve resource because it doesn't exist. Retry the request with a different resource identifier.",
+      "patterns": null
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+      "error": "'utf-8' codec can't decode byte 0xa2 in position 3367: invalid start byte",
+      "patterns": null
+    }
+  ]
+}

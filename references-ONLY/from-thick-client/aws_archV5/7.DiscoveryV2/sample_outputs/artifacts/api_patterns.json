@@ -1,0 +1,214 @@
+{
+  "primary_api_pattern": "real_time_transaction",
+  "pattern_distribution": {
+    "real_time_transaction": 80.0,
+    "hybrid": 15.0,
+    "batch_processing": 5.0
+  },
+  "file_patterns": [
+    {
+      "file_path": "IBMi-Cobol/Cobol/STATUSCODE.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 100,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 60,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTCSDC00L.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 100,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCSRP00C.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 80,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/ADCPSH21L.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 100,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/DATEFLIP.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 60,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/DIPWCC00.CBL",
+      "pattern": "hybrid",
+      "confidence": 60,
+      "indicators": [
+        "batch_processing",
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "Hybrid architecture (Step Functions + Lambda + EventBridge)"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/DIPWCC01.CBL",
+      "pattern": "hybrid",
+      "confidence": 60,
+      "indicators": [
+        "batch_processing",
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "Hybrid architecture (Step Functions + Lambda + EventBridge)"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTCSUL10L.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 60,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCSCL50L.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 80,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/XACSCC00L.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 80,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTXSFS00L.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 60,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCSCL50C.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 60,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTCSDC00C.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 60,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+      "pattern": "batch_processing",
+      "confidence": 80,
+      "indicators": [
+        "batch_processing"
+      ],
+      "aws_recommendation": "AWS Batch or Step Functions with scheduled EventBridge triggers"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCSRP00L.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 60,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+      "pattern": "hybrid",
+      "confidence": 60,
+      "indicators": [
+        "batch_processing",
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "Hybrid architecture (Step Functions + Lambda + EventBridge)"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 80,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTCSC101L.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 100,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+      "pattern": "real_time_transaction",
+      "confidence": 80,
+      "indicators": [
+        "real_time_transaction"
+      ],
+      "aws_recommendation": "API Gateway + Lambda or ECS Fargate"
+    }
+  ],
+  "summary": {
+    "total_files_analyzed": 20,
+    "batch_processing_count": 1,
+    "real_time_transaction_count": 16,
+    "event_driven_count": 0,
+    "hybrid_count": 3
+  },
+  "aws_architecture_recommendation": {
+    "primary_service": "API Gateway + Lambda",
+    "supporting_services": [
+      "RDS",
+      "DynamoDB",
+      "ElastiCache"
+    ],
+    "architecture_pattern": "Serverless REST API with managed databases",
+    "estimated_cost_monthly": "$1000-5000 (based on request volume)",
+    "scalability": "Very High",
+    "complexity": "Medium"
+  },
+  "generated_at": "2025-11-06T14:43:29.102447+00:00",
+  "source_job_id": "dv2_job_0U812_TestApp01_1762440076_890f28c3"
+}

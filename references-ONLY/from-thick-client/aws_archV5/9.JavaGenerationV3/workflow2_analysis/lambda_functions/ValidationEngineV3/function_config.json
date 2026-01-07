@@ -1,0 +1,39 @@
+{
+  "FunctionName": "ValidationEngineV3",
+  "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:ValidationEngineV3",
+  "Role": "arn:aws:iam::376129851858:role/evaluation_lambda_role",
+  "CodeSize": 0,
+  "Description": "",
+  "Timeout": 300,
+  "MemorySize": 1024,
+  "LastModified": "2025-11-06T13:06:41.000+0000",
+  "CodeSha256": "8f62bca5dac17d49c529e6f3f2693fb8a5a28c952f60085e391aa0189d5d58af",
+  "Version": "$LATEST",
+  "Environment": {
+    "Variables": {
+      "OUTPUT_BUCKET": "code-transformation-v3",
+      "INPUT_BUCKET": "code-transformation-v2"
+    }
+  },
+  "TracingConfig": {
+    "Mode": "PassThrough"
+  },
+  "RevisionId": "ccb296b0-8480-45ba-baa5-00770f429501",
+  "State": "Active",
+  "LastUpdateStatus": "Successful",
+  "PackageType": "Image",
+  "Architectures": [
+    "x86_64"
+  ],
+  "EphemeralStorage": {
+    "Size": 512
+  },
+  "SnapStart": {
+    "ApplyOn": "None",
+    "OptimizationStatus": "Off"
+  },
+  "LoggingConfig": {
+    "LogFormat": "Text",
+    "LogGroup": "/aws/lambda/ValidationEngineV3"
+  }
+}

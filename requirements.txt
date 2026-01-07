@@ -1,0 +1,27 @@
+# Core runtime dependencies for modernizeit-api
+# Install these INSIDE your venv with:
+#   pip install -r requirements.txt
+
+fastapi>=0.111.0,<1.0
+uvicorn[standard]>=0.30.0,<1.0
+
+# AWS + S3-style access (even when mocked/redirected locally)
+boto3>=1.34.0,<2.0
+
+# Required for FastAPI file uploads (multipart/form-data)
+python-multipart>=0.0.9,<0.0.10
+
+# Explicitly include pydantic even though FastAPI pulls it in
+pydantic>=2.7.0,<3.0
+
+# Code Analysis engine dependencies
+tree-sitter>=0.23.0,<1.0
+jinja2>=3.1.0,<4.0
+
+# MongoDB drivers
+# motor (async) for FastAPI endpoints, pymongo (sync) for runners
+# Note: motor automatically includes pymongo as a dependency
+motor>=3.3.0,<4.0
+
+# HTTP client for MCP server communication
+httpx>=0.25.0,<1.0

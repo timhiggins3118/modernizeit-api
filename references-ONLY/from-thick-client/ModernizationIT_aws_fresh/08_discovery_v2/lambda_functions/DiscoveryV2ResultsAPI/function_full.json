@@ -1,0 +1,56 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "873f70df-f29b-4a0c-a4e5-76970c7cddfb",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 29 Oct 2025 15:10:38 GMT",
+      "content-type": "application/json",
+      "content-length": "2821",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "873f70df-f29b-4a0c-a4e5-76970c7cddfb"
+    },
+    "RetryAttempts": 0
+  },
+  "Configuration": {
+    "FunctionName": "DiscoveryV2ResultsAPI",
+    "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:DiscoveryV2ResultsAPI",
+    "Runtime": "python3.11",
+    "Role": "arn:aws:iam::376129851858:role/BedrockAgentRole-CodeRefactor",
+    "Handler": "discovery_results_v2_handler.lambda_handler",
+    "CodeSize": 4956,
+    "Description": "Discovery V2 - Results API (GET)",
+    "Timeout": 60,
+    "MemorySize": 512,
+    "LastModified": "2025-10-05T21:56:22.000+0000",
+    "CodeSha256": "fbyr3z0kt2t0zDeSxkum8CyO4OosRHDVmWTzdTboE1o=",
+    "Version": "$LATEST",
+    "TracingConfig": {
+      "Mode": "PassThrough"
+    },
+    "RevisionId": "8eb9a30a-0f3d-483f-848a-b23415d9e060",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+      "x86_64"
+    ],
+    "EphemeralStorage": {
+      "Size": 512
+    },
+    "SnapStart": {
+      "ApplyOn": "None",
+      "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+      "RuntimeVersionArn": "arn:aws:lambda:us-east-1::runtime:d6935992cddc0c573a0cb7ac0214699a5676aefd38a43d64192dce8a044a3724"
+    },
+    "LoggingConfig": {
+      "LogFormat": "Text",
+      "LogGroup": "/aws/lambda/DiscoveryV2ResultsAPI"
+    }
+  },
+  "Code": {
+    "RepositoryType": "S3",
+    "Location": "https://prod-iad-c1-djusa-tasks.s3.us-east-1.amazonaws.com/snapshots/376129851858/DiscoveryV2ResultsAPI-96121060-3999-46e1-ab29-481efaa16b5b?versionId=pNfiHU5trkW5bBEAy3twCprNipPQLp2P&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB4aCXVzLWVhc3QtMSJHMEUCID7NVL%2BzW76MnnQIOiM%2BNFpOlHH4wvY7bWSYlxcuAtTkAiEAyqnIemfUfMSEiUBR3I3uETQ1J8ohfNcopWJfFf7dBkAqlAII1%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAEGgw0NzkyMzMwMjUzNzkiDKjaDS6yBSgh5x9i%2ByroAY%2BxaG5oQ2a8VgS%2Flu3ZX0bRAWDv2IzSvPCtpP6qnoBwJKZfgmbKn8mZIFIPeJg%2BM3YgEmMJEl%2Bjz3ND2GXPTq2qdLAKBI%2BNT4VZUdUomN3SlFe9ebIeMJyP1N0YnUDJqJ%2B1nae9n0hMyTmr35%2FLYXEUs4YRMbtUKDW5vKYJPQ2w75MFxMbBeql%2Bapw%2BhVd3tkSvI%2Fm9lgT8X1XwpaiiZKVqoN1thkD%2B8gzKyvBE6333I8BkwmiSQ5jU6wKJ5yQZ6%2FyHF34wHGE1FAzCDVI%2BAcDdc8388%2BR5CY7mX6XlMyIuK2ZoCT68iHswnqqIyAY6jQEyQn6%2BfdriURGwwXM1VVpJZxCZX9%2FpwJpajdqCxMx%2F7KaBDjIc1M17y9E9uMYPdqHOK4R%2Fs4ROHOk4%2FZZb3Ih6l1q%2FHUAWrqEGFsZSmwnjSoNs%2BQ9T3KYg%2FL1F3c5aXae3%2BeWcrIQmDKuupxRa4rXJBGwWFirog09742zlW15dRz60le0pcm2xR2hqZg4%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251029T151038Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIAW7FEDUVRZZZNPVWV%2F20251029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d36b6847a6c322bfbd4263702b8f7e97bcb8991ebd1d710409be17094d9537e3"
+  }
+}

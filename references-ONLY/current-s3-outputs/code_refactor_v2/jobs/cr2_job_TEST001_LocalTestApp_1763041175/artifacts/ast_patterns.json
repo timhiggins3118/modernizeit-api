@@ -1,0 +1,4441 @@
+{
+  "job_id": "cr2_job_TEST001_LocalTestApp_1763041175",
+  "source_hash": "9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74",
+  "generated_at": "2025-11-13T13:39:35.345893+00:00",
+  "summary": {
+    "total_files": 20,
+    "files_with_patterns": 11,
+    "total_patterns": 327,
+    "total_complexity": 927,
+    "pattern_type_breakdown": {
+      "paragraph_coupling": 269,
+      "data_structure_modernization": 8,
+      "excessive_global_variables": 2,
+      "complex_control_flow": 3,
+      "frequent_perform": 45
+    },
+    "recipe_type_breakdown": {
+      "extract_class": 269,
+      "pojo_with_enum": 7,
+      "introduce_encapsulation": 2,
+      "decompose_paragraph": 3,
+      "extract_service_method": 45,
+      "pojo_with_bigdecimal": 1
+    },
+    "refactorable_paragraphs": 317,
+    "data_structure_opportunities": 8
+  },
+  "files": [
+    {
+      "path": "IBMi-Cobol/Cobol/STATUSCODE.CBL",
+      "patterns": [
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  INVALID",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "88  INVALID-RECORD-LENGTH       VALUE \"04\"",
+            "88  INVALID-RELATIVE-KEY        VALUE \"14\"",
+            "88  INVALID-OPEN                VALUE \"37\"",
+            "88  INVALID-REWRITE-SIZE        VALUE \"44\"",
+            "88  INVALID-START-READ          VALUE \"46\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"88  INVALID\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  NO",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "88  NO-OPTIONAL-FILE            VALUE \"05\"",
+            "88  NO-OPTIONAL-FILE            VALUE \"35\"",
+            "88  NO-RECORD-POINTER           VALUE \"94\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"88  NO\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  OPEN",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "88  OPEN-FAILED-LOCKED-FILE     VALUE \"38\"",
+            "88  OPEN-INVALID-FOR-READ       VALUE \"47\"",
+            "88  OPEN-INVALID-FOR-WRITE      VALUE \"48\"",
+            "88  OPEN-INVALID-FOR-DELETE     VALUE \"49\"",
+            "88  OPEN-FAILED                 VALUE \"9P\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"88  OPEN\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  FILE",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "88  FILE-PREVIOUSLY-OPENED      VALUE \"41\"",
+            "88  FILE-PREVIOUSLY-CLOSED      VALUE \"42\"",
+            "88  FILE-PROBLEM                VALUE \"90\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"88  FILE\" suggest cohesive class"
+        }
+      ],
+      "pattern_count": 4,
+      "total_complexity": 0
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "patterns": [
+        {
+          "type": "data_structure_modernization",
+          "structure": "SPECIAL-WORK-FIELDS",
+          "line": 144,
+          "fields": 8,
+          "has_level88": true,
+          "has_comp3": false,
+          "recipe_type": "pojo_with_enum",
+          "confidence": 0.95,
+          "benefit": "Type safety, null safety, immutability",
+          "rationale": "COBOL record with Level-88 conditions and  can use modern Java types"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "FILE STATUS   STATUS",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "FILE STATUS   STATUS-CODES",
+            "FILE STATUS   STATUS-CODES",
+            "FILE STATUS   STATUS-CODES",
+            "FILE STATUS   STATUS-CODES",
+            "FILE STATUS   STATUS-CODES"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"FILE STATUS   STATUS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "COPY DDS",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "COPY DDS-CMFHCL00 OF CMLHCL00",
+            "COPY DDS-CMFDCL50 OF CMLDCL50",
+            "COPY DDS-UTFMTB00 OF UTLMTB00",
+            "COPY DDS-CMFDMO00 OF CMLDMO06",
+            "COPY DDS-CMFDCA00 OF CMLDCA01"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"COPY DDS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  WK",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "05  WK-HW-CLAIM",
+            "05  WK-HW-CLAIM-RD REDEFINES WK-HW-CLAIM",
+            "05  WK-RKRSNBR             PIC S9(011) VALUE ZEROS"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"05  WK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  RISK",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "88  RISK-EXPERIENCED               VALUE B\"1\"",
+            "88  RISK-INEXPERIENCED             VALUE B\"0\"",
+            "88  RISK-REPRESENTED               VALUE B\"1\"",
+            "88  RISK-UNREPRESENTED             VALUE B\"0\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"88  RISK\" suggest cohesive class"
+        }
+      ],
+      "pattern_count": 5,
+      "total_complexity": 0
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSDC00L.CBL",
+      "patterns": [
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  VALID",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "88  VALID-MONTH         VALUE 01 THRU 12",
+            "88  VALID-YEAR          VALUE 1901 THRU 2099",
+            "88  VALID-JULIAN-DATE       VALUE 00001 THRU 72684"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"88  VALID\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "10  MM",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "10  MM-ALPH-LC         PIC  X(010)",
+            "10  MM-ALPH-UC         PIC  X(010)",
+            "10  MM-ABBR-LC         PIC  X(005)",
+            "10  MM-ABBR-UC         PIC  X(004)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"10  MM\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "10  DD",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "10  DD-ALPH-LC         PIC  X(010)",
+            "10  DD-ALPH-UC         PIC  X(010)",
+            "10  DD-ABBR-LC         PIC  X(005)",
+            "10  DD-ABBR-UC         PIC  X(003)",
+            "10  DD-NUMBER          PIC  9(001)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"10  DD\" suggest cohesive class"
+        }
+      ],
+      "pattern_count": 3,
+      "total_complexity": 0
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/DATEFLIP.CBL",
+      "patterns": [
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  MM",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "05  MM-MONTH               PIC  9(002)",
+            "05  MM-MONTH               PIC  9(002)",
+            "05  MM-MONTH               PIC  9(002)",
+            "05  MM-MONTH               PIC  9(002)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"05  MM\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  DD",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "05  DD-DAY                 PIC  9(002)",
+            "05  DD-DAY                 PIC  9(002)",
+            "05  DD-DAY                 PIC  9(002)",
+            "05  DD-DAY                 PIC  9(002)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"05  DD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  YY",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "05  YY-YEAR                PIC  9(002)",
+            "05  YY-YEAR                PIC  9(002)",
+            "05  YY-YEAR                PIC  9(002)",
+            "05  YY-YEAR                PIC  9(002)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"05  YY\" suggest cohesive class"
+        }
+      ],
+      "pattern_count": 3,
+      "total_complexity": 0
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSUL10L.CBL",
+      "patterns": [
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  UL",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "05  UL-DATA                PIC  X(050)",
+            "05  UL-LENGTH              PIC  9(002)",
+            "05  UL-TRANSALTION         PIC  X(002)",
+            "05  UL-ACTION              PIC  X(001)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"05  UL\" suggest cohesive class"
+        }
+      ],
+      "pattern_count": 1,
+      "total_complexity": 0
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTXSFS00L.CBL",
+      "patterns": [
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05   STRING",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "05   STRING-CHARACTERS     PIC  X(512)         VALUE SPACES",
+            "05   STRING-LENGTH         PIC  9(005)         VALUE ZEROES",
+            "05   STRING-ACTION         PIC  X(001)         VALUE SPACES"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"05   STRING\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  STRING",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "88  STRING-LEFT            VALUE \"L\"",
+            "88  STRING-CENTER          VALUE \"C\"",
+            "88  STRING-RIGHT           VALUE \"R\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"88  STRING\" suggest cohesive class"
+        }
+      ],
+      "pattern_count": 2,
+      "total_complexity": 0
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+      "patterns": [
+        {
+          "type": "data_structure_modernization",
+          "structure": "SAVE-ERROR-TYPE",
+          "line": 117,
+          "fields": 1,
+          "has_level88": true,
+          "has_comp3": false,
+          "recipe_type": "pojo_with_enum",
+          "confidence": 0.95,
+          "benefit": "Type safety, null safety, immutability",
+          "rationale": "COBOL record with Level-88 conditions and  can use modern Java types"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "COPY DDS",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "COPY DDS-DIFWCC00 OF DIPWCC00",
+            "COPY DDS-CMFMCC00 OF CMPMCC00",
+            "COPY DDS-DIFWCC10 OF DIPWCC10",
+            "COPY DDS-DIFWCC10 OF DIPWCC10"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"COPY DDS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "01  CURRENT",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "01  CURRENT-DATE                PIC  9(008)",
+            "01  CURRENT-TIME                PIC 9(8)",
+            "01  CURRENT-TIME-RD REDEFINES CURRENT-TIME"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"01  CURRENT\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "01  SAVE",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "01  SAVE-WRK-REC",
+            "01  SAVE-DIPWCC10",
+            "01  SAVE-ERROR-TYPE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"01  SAVE\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "01  WK",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "01  WK-SRCCLAIM",
+            "01  WK-OBJCLAIM",
+            "01  WK-COMBTIME-RD REDEFINES WK-COMBTIME PIC 9(12)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"01  WK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 20000",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "PERFORM 20000-SEPARATE-BWC-CLAIM",
+            "PERFORM 20000-CONVERT-FORMAT",
+            "PERFORM 20000-SEPARATE-BWC-CLAIM",
+            "PERFORM 20000-SEPARATE-BWC-CLAIM"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"PERFORM 20000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "20000",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "20000-LEVEL-PROCESSING",
+            "20000-SEPARATE-BWC-CLAIM",
+            "20000-CONVERT-FORMAT"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"20000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "END",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "END-IF",
+            "END-IF",
+            "END-IF",
+            "END-IF"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"END\" suggest cohesive class"
+        },
+        {
+          "type": "excessive_global_variables",
+          "count": 15,
+          "recipe_type": "introduce_encapsulation",
+          "confidence": 0.75,
+          "rationale": "15 WORKING-STORAGE variables suggest need for encapsulation in classes"
+        }
+      ],
+      "pattern_count": 9,
+      "total_complexity": 0
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+      "patterns": [
+        {
+          "type": "data_structure_modernization",
+          "structure": "SPECIAL-WORK-FIELDS",
+          "line": 142,
+          "fields": 9,
+          "has_level88": true,
+          "has_comp3": false,
+          "recipe_type": "pojo_with_enum",
+          "confidence": 0.95,
+          "benefit": "Type safety, null safety, immutability",
+          "rationale": "COBOL record with Level-88 conditions and  can use modern Java types"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "FILE STATUS  STATUS",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "FILE STATUS  STATUS-CODES",
+            "FILE STATUS  STATUS-CODES",
+            "FILE STATUS  STATUS-CODES",
+            "FILE STATUS  STATUS-CODES",
+            "FILE STATUS  STATUS-CODES"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"FILE STATUS  STATUS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "COPY DDS",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "COPY DDS-CMFHCL00 OF CMLHCL00",
+            "COPY DDS-UTFMTB00 OF UTLMTB00",
+            "COPY DDS-CMFMRP00 OF CMLMRP00",
+            "COPY DDS-ADFWNP00 OF ADPWNP00",
+            "COPY DDS-CMFMRP10 OF CMLMRP10"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"COPY DDS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  WK",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "05  WK-RKRSNBR             PIC S9(011) VALUE ZEROS",
+            "05  WK-HW-CLAIM",
+            "05  WK-HW-CLAIM-RD REDEFINES WK-HW-CLAIM"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"05  WK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  RISK",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "88  RISK-EXPERIENCED               VALUE B\"1\"",
+            "88  RISK-INEXPERIENCED             VALUE B\"0\"",
+            "88  RISK-REPRESENTED               VALUE B\"1\"",
+            "88  RISK-UNREPRESENTED             VALUE B\"0\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"88  RISK\" suggest cohesive class"
+        }
+      ],
+      "pattern_count": 5,
+      "total_complexity": 0
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "patterns": [
+        {
+          "type": "complex_control_flow",
+          "paragraph": "3X/LJM 66  CMJHCL00-KEY-FLDS  RENAMES  CLPREFIX  THRU  CLNUMBER",
+          "line": 403,
+          "complexity": 566,
+          "recipe_type": "decompose_paragraph",
+          "confidence": 0.95,
+          "estimated_improvement": "complexity: 566 \u2192 141",
+          "rationale": "High cyclomatic complexity (566) makes testing and maintenance difficult"
+        },
+        {
+          "type": "complex_control_flow",
+          "paragraph": "TMSTMS*    *  lastly CMLHRK00",
+          "line": 8049,
+          "complexity": 40,
+          "recipe_type": "decompose_paragraph",
+          "confidence": 0.95,
+          "estimated_improvement": "complexity: 40 \u2192 10",
+          "rationale": "High cyclomatic complexity (40) makes testing and maintenance difficult"
+        },
+        {
+          "type": "complex_control_flow",
+          "paragraph": "JEP        END-IF",
+          "line": 8639,
+          "complexity": 319,
+          "recipe_type": "decompose_paragraph",
+          "confidence": 0.95,
+          "estimated_improvement": "complexity: 319 \u2192 79",
+          "rationale": "High cyclomatic complexity (319) makes testing and maintenance difficult"
+        },
+        {
+          "type": "data_structure_modernization",
+          "structure": "SPECIAL-WORK-FIELDS",
+          "line": 723,
+          "fields": 121,
+          "has_level88": true,
+          "has_comp3": true,
+          "recipe_type": "pojo_with_enum",
+          "confidence": 0.95,
+          "benefit": "Type safety, null safety, immutability",
+          "rationale": "COBOL record with Level-88 conditions and COMP-3 fields can use modern Java types"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "90090-CALL-UTXCMS10-FUNCTION",
+          "perform_count": 8,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.86,
+          "rationale": "Paragraph performed 8 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "29024-REQUEST-MORE-KEYS",
+          "perform_count": 29,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.9,
+          "rationale": "Paragraph performed 29 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "99900-CALL-UTCSDC00-FUNCTION",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "80102-READ-UTLMTB00-RANDOM",
+          "perform_count": 22,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.9,
+          "rationale": "Paragraph performed 22 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "21000-PROCESS-PANEL",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "90090-CALL-UTXCMS00-FUNCTION",
+          "perform_count": 9,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.8799999999999999,
+          "rationale": "Paragraph performed 9 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "29000-PROCESS-TIME-OUT",
+          "perform_count": 6,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.82,
+          "rationale": "Paragraph performed 6 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "99000-CALL-UTCSQM00-FUNCTION",
+          "perform_count": 9,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.8799999999999999,
+          "rationale": "Paragraph performed 9 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "80102-READ-CMLHCL00-RANDOM",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "80102-READ-CMLHCM00-RANDOM",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "81602-READ-CMLDCL50-RANDOM",
+          "perform_count": 6,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.82,
+          "rationale": "Paragraph performed 6 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "31000-EDIT-UPDATE-REQUEST",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "99000-CALL-UTCSCP00-FUNCTION",
+          "perform_count": 12,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.9,
+          "rationale": "Paragraph performed 12 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "99000-CALL-UTCSPM00-FUNCTION",
+          "perform_count": 9,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.8799999999999999,
+          "rationale": "Paragraph performed 9 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "99000-CALL-UTCCSV00-FUNCTION",
+          "perform_count": 6,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.82,
+          "rationale": "Paragraph performed 6 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "29012-REQUEST-CANCEL",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "81702-READ-CMLHRK00-RANDOM",
+          "perform_count": 9,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.8799999999999999,
+          "rationale": "Paragraph performed 9 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "80611-START-CMLDCL40-EQUAL",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "80603-READ-CMLDCL40-NEXT",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "80609-UNLCK-CMLDCL40-FILE",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "29099-REQUEST-EXIT-PANEL",
+          "perform_count": 28,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.9,
+          "rationale": "Paragraph performed 28 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "34000-CHK-ADJACENT-KEYS-RQST",
+          "perform_count": 6,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.82,
+          "rationale": "Paragraph performed 6 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52100-PROCESS-PANEL-01",
+          "perform_count": 9,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.8799999999999999,
+          "rationale": "Paragraph performed 9 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "29003-REQUEST-EXIT",
+          "perform_count": 6,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.82,
+          "rationale": "Paragraph performed 6 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "99000-NOTES-ERROR",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "99000-CALL-UTCWNT00-FUNCTION",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "81702-READ-CMLARK00-RANDOM",
+          "perform_count": 8,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.86,
+          "rationale": "Paragraph performed 8 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52100-PROCESS-PANEL-02",
+          "perform_count": 10,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Paragraph performed 10 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52310-TRIM-SPACES",
+          "perform_count": 6,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.82,
+          "rationale": "Paragraph performed 6 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52100-PROCESS-PANEL-04",
+          "perform_count": 10,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Paragraph performed 10 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52310-FORMAT-LOCAL-DATA-OUT-04",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52320-FORMAT-LOCAL-DATA-IN-04",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52310-EDIT-PANEL-DIRECTION",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52132-CHK-SFL-MODE-05",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "UNTIL",
+          "perform_count": 6,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.82,
+          "rationale": "Paragraph performed 6 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "51000-WRITE-SFL05A-RCD-05",
+          "perform_count": 9,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.8799999999999999,
+          "rationale": "Paragraph performed 9 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52100-PROCESS-PANEL-05",
+          "perform_count": 10,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Paragraph performed 10 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52310-FORMAT-LOCAL-DATA-OUT-05",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52320-FORMAT-LOCAL-DATA-IN-05",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "50000-SFL-READ-REL-RECORD-05",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52100-PROCESS-PANEL-07",
+          "perform_count": 12,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.9,
+          "rationale": "Paragraph performed 12 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52149-SFL-READ-REVISED-RCD-07",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "50000-SFL-REWRITE-RECORD-07",
+          "perform_count": 7,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.84,
+          "rationale": "Paragraph performed 7 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52310-FORMAT-LOCAL-DATA-OUT-07",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "frequent_perform",
+          "paragraph": "52320-FORMAT-LOCAL-DATA-IN-07",
+          "perform_count": 5,
+          "recipe_type": "extract_service_method",
+          "confidence": 0.7999999999999999,
+          "rationale": "Paragraph performed 5 times - candidate for service method extraction"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "FILE STATUS   STATUS",
+          "paragraph_count": 25,
+          "paragraphs": [
+            "FILE STATUS   STATUS-CODES",
+            "FILE STATUS   STATUS-CODES",
+            "FILE STATUS   STATUS-CODES",
+            "FILE STATUS   STATUS-CODES",
+            "FILE STATUS   STATUS-CODES"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "25 paragraphs with common prefix \"FILE STATUS   STATUS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "01  CMFHCL00",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "01  CMFHCL00-RECORD",
+            "01  CMFHCL00-HOLD",
+            "01  CMFHCL00-NEW"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"01  CMFHCL00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "COPY DDS",
+          "paragraph_count": 50,
+          "paragraphs": [
+            "COPY DDS-CMFHCL00 OF CMLHCL00",
+            "COPY DDS-CMFHCL90 OF CMLHCL90",
+            "COPY DDS-CMFDCL20 OF CMLDCL20",
+            "COPY DDS-CMFDCL40 OF CMLDCL40",
+            "COPY DDS-CMFHCM00 OF CMLHCM00"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "50 paragraphs with common prefix \"COPY DDS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "01  CMLDRK02",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "01  CMLDRK02-RECORD",
+            "01  CMLDRK02-CTRL",
+            "01  CMLDRK02-HOLD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"01  CMLDRK02\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  B",
+          "paragraph_count": 55,
+          "paragraphs": [
+            "05  B-CMSOCSEC             PIC 9(002)     VALUE 51",
+            "05  B-CLFILDTE             PIC 9(002)     VALUE 52",
+            "05  B-CLCRSTS              PIC 9(002)     VALUE 53",
+            "05  B-CLINJDTE             PIC 9(002)     VALUE 54",
+            "05  B-CLACTBLT             PIC 9(002)     VALUE 55"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "55 paragraphs with common prefix \"05  B\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  PR",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "05  PR-CLTYPE              PIC 9(002)     VALUE 41",
+            "05  PR-CLBWCLOC            PIC 9(002)     VALUE 42",
+            "05  PR-LEAD-CLM            PIC 9(002)     VALUE 71",
+            "05  PR-REP-NUM             PIC 9(002)     VALUE 72",
+            "05  PR-PNPCK05A            PIC S9(002)    VALUE 69"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"05  PR\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  N",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "05  N-PNCLAIM              PIC 9(002)     VALUE 81",
+            "05  N-CMSOCSEC             PIC 9(002)     VALUE 82",
+            "05  N-PNRISK1              PIC S9(002)    VALUE 86",
+            "05  N-PNRISK               PIC S9(002)    VALUE 85",
+            "05  N-RPNUMBER             PIC S9(002)    VALUE 93"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"05  N\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  S",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "05  S-PNNAME               PIC 9(002)     VALUE 83",
+            "05  S-REPNAME              PIC 9(002)     VALUE 87",
+            "05  S-EMPNAME              PIC 9(002)     VALUE 88"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"05  S\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "01  HOLD",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "01  HOLD-CMLHCL00",
+            "01  HOLD-CMLDCL20",
+            "01  HOLD-CMLDCL40",
+            "01  HOLD-CMLDCL50",
+            "01  HOLD-KEYS"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"01  HOLD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "10  QCLS",
+          "paragraph_count": 9,
+          "paragraphs": [
+            "10  QCLS-STRING        PIC  X(999)",
+            "10  QCLS-STRLEN        PIC S9(003) COMP-3",
+            "10  QCLS-STRPOS        PIC S9(003) COMP-3",
+            "10  QCLS-PATTERN       PIC  X(999)",
+            "10  QCLS-PATLEN        PIC S9(003) COMP-3"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "9 paragraphs with common prefix \"10  QCLS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "10  SWF",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "10  SWF-PREFIX         PIC  X(002)",
+            "10  SWF-SUFFIX         PIC  X(002)",
+            "10  SWF-NUMBER         PIC  X(006)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"10  SWF\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  WK",
+          "paragraph_count": 15,
+          "paragraphs": [
+            "05  WK-CLAISEQN            PIC  9(003)  VALUE ZEROS",
+            "05  WK-MISC-ALPHA-FLD      PIC  X(100)        VALUE SPACES",
+            "05  WK-PNRISK-SIZ          PIC S9(003) COMP-3 VALUE ZEROS",
+            "05  WK-RCD-NUM             PIC S9(005) COMP-3 VALUE ZEROS",
+            "05  WK-REMAINDER           PIC S9(001) COMP-3 VALUE ZEROS"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "15 paragraphs with common prefix \"05  WK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  HOLD",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "05  HOLD-RISK-ADDRESS",
+            "05  HOLD-PNNAME            PIC  X(050) VALUE SPACES",
+            "05  HOLD-SSN               PIC  9(009) VALUE ZEROS",
+            "05  HOLD-PNCLAIM           PIC  X(011) VALUE SPACES"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"05  HOLD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  HLD",
+          "paragraph_count": 12,
+          "paragraphs": [
+            "05  HLD-PGM-OPTION         PIC  X(002)",
+            "05  HLD-RKRSNBR LIKE RKRSNBR  OF CMFACL50     VALUE ZEROS",
+            "05  HLD-RKRSNBR1 LIKE RKRSNBR  OF CMFACL50    VALUE ZEROS",
+            "05  HLD-RKRSEMP LIKE RKRSEMP  OF CMFACL50     VALUE SPACES",
+            "05  HLD-RKRSDBAS LIKE RKRSDBAS OF CMFACL50    VALUE SPACES"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "12 paragraphs with common prefix \"05  HLD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  PANEL",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "05  PANEL-DATE             PIC  9(008) VALUE ZEROS",
+            "05  PANEL-TABLE",
+            "05  PANEL-TABLE-RD REDEFINES PANEL-TABLE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"05  PANEL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  RECORD",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "05  RECORD-CNT             PIC  9(003)  VALUE ZEROS",
+            "05  RECORD-NUMBER-04       PIC  9(005)         VALUE ZEROES",
+            "05  RECORD-NUMBER-05       PIC  9(005)         VALUE ZEROES",
+            "05  RECORD-NUMBER-07        PIC  9(005)        VALUE ZEROES"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"05  RECORD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  WORK",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "05  WORK-SSN               PIC  9(009) VALUE ZEROS",
+            "05  WORK-SSNX  REDEFINES  WORK-SSN",
+            "05  WORK-NAME-DATA",
+            "05  WORK-OPTION-TABLE",
+            "05  WORK-TABLE-RD REDEFINES WORK-OPTION-TABLE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"05  WORK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "10  FILLER             PIC  X(001) VALUE \"",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "10  FILLER             PIC  X(001) VALUE \"-\"",
+            "10  FILLER             PIC  X(001) VALUE \"-\"",
+            "10  FILLER             PIC  X(001) VALUE \"-\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"10  FILLER             PIC  X(001) VALUE \"\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  RISK",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "05  RISK-ADDRESS",
+            "05  RISK-ADDRESS-RD REDEFINES RISK-ADDRESS",
+            "05  RISK-ADDRESS-STATUS    PIC  X(001)      VALUE SPACES",
+            "05  RISK-HEADER-STATUS    PIC  X(001)      VALUE SPACES",
+            "05  RISK-ADDRESS-AUT       PIC  X(001)      VALUE SPACES"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"05  RISK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  NO",
+          "paragraph_count": 16,
+          "paragraphs": [
+            "88  NO-CITYSTZIP      VALUE SPACES",
+            "88  NO-CLFILDTE-EXISTS    VALUE \"N\"",
+            "88  NO-CLINJDTE-EXISTS    VALUE \"N\"",
+            "88  NO-RKRSNBR-EXISTS     VALUE \"N\"",
+            "88  NO-RKRSNBR-LOCAL-EXISTS     VALUE \"N\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "16 paragraphs with common prefix \"88  NO\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  WS",
+          "paragraph_count": 12,
+          "paragraphs": [
+            "05  WS-MESSAGE             PIC X(7)           VALUE SPACES",
+            "05  WS-CLAIM",
+            "05  WS-CLINJDTE  LIKE CLINJDTE OF CMFHCL00",
+            "05  WS-BWC-ADDR            PIC  X(081)",
+            "05  WS-CUR-ADDR            PIC  X(071)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "12 paragraphs with common prefix \"05  WS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "10  WK",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "10  WK-RPNUMBER-1      PIC S9(006)",
+            "10  WK-RPNUMBER-2      PIC S9(002)",
+            "10  WK-RPNUMBER-1      PIC ZZZZZ9",
+            "10  WK-RPNUMBER-2      PIC S9(002)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"10  WK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  NOT",
+          "paragraph_count": 8,
+          "paragraphs": [
+            "88  NOT-ADS-REP                VALUE SPACE",
+            "88  NOT-SEC-RISK               VALUE SPACE",
+            "88  NOT-CONTINUED-RISK-HDG     VALUE SPACES",
+            "88  NOT-IN-RKADDRUPDT-TABLE   VALUE \"N\"",
+            "88  NOT-REVISE-OPTION-02    VALUE \"N\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "8 paragraphs with common prefix \"88  NOT\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  SEC",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "88  SEC-RISK-ADS-REP           VALUE X\"39\"",
+            "88  SEC-RISK-NOT-ADS-REP       VALUE X\"21\"",
+            "88  SEC-RISK                   VALUE X\"21\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"88  SEC\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  SFL05",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "88  SFL05-DROP-MODE       VALUE  \"1\"",
+            "88  SFL05-FOLD-MODE       VALUE  ZERO",
+            "88  SFL05-SAVE-MODE       VALUES ZERO, \"1\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"88  SFL05\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  RISK",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "88  RISK-ADDRESS-EXISTS     VALUE \"Y\"",
+            "88  RISK-HEADER-EXISTS     VALUE \"Y\"",
+            "88  RISK-ADDRESS-MATCH      VALUE \"Y\"",
+            "88  RISK-ADDRESS-NO-MATCH   VALUE \"N\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"88  RISK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  IN",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "88  IN-RKADDRUPDT-TABLE       VALUE \"Y\"",
+            "88  IN-CLBWCLOC-TABLE       VALUE \"Y\"",
+            "88  IN-CLINJDTEUP-TABLE       VALUE \"Y\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"88  IN\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  REP",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "05  REP-PCN-TRACKING-STATUS PIC  X(001)      VALUE SPACES",
+            "05  REP-PREFIX              PIC 9(006)",
+            "05  REP-SUFFIX              PIC 9(002)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"05  REP\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  INT",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "88  INT-REP-NEEDED          VALUE \"Y\"",
+            "88  INT-REP-NOT-NEEDED      VALUE \"N\"",
+            "88  INT-RPNUMBER-EXIST      VALUE \"Y\"",
+            "88  INT-RPNUMBER-NOT-EXIST  VALUE \"N\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"88  INT\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  W",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "05  W-RISK                     PIC  9(11)",
+            "05  W-RISK-R REDEFINES W-RISK  PIC  X(11)",
+            "05  W-CLBWCLOC",
+            "05  W-PNCLBWCLOC"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"05  W\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  CLPPLFLG",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "88  CLPPLFLG-CHANGED-PL-Y   VALUE \"Y\"",
+            "88  CLPPLFLG-CHANGED-PL-N   VALUE \"N\"",
+            "88  CLPPLFLG-CHANGED-P-Y    VALUE \"Y\"",
+            "88  CLPPLFLG-CHANGED-P-N    VALUE \"N\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"88  CLPPLFLG\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "10  W",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "10  W-ADDR             PIC  X(002)",
+            "10  W-SECT             PIC  X(002)",
+            "10  W-AREA             PIC  X(002)",
+            "10  W-ADDR             PIC  X(002)",
+            "10  W-SECT             PIC  X(002)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"10  W\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "10  HLD",
+          "paragraph_count": 8,
+          "paragraphs": [
+            "10  HLD-RPADDR01 LIKE RPADDR01   OF CMFMRP00",
+            "10  HLD-RPADDR02 LIKE RPADDR02   OF CMFMRP00",
+            "10  HLD-RPADDR03 LIKE RPADDR03   OF CMFMRP00",
+            "10  HLD-RPCITY   LIKE RPCITY     OF CMFMRP00",
+            "10  HLD-RPSTATE  LIKE RPSTATE    OF CMFMRP00"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "8 paragraphs with common prefix \"10  HLD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "01  SFL",
+          "paragraph_count": 12,
+          "paragraphs": [
+            "01  SFL-DSPY-KEYS-04",
+            "01  SFL-HDDN-KEYS-04",
+            "01  SFL-NULL-KEYS-04",
+            "01  SFL-HOLD-FLDS-04",
+            "01  SFL-DSPY-KEYS-05"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "12 paragraphs with common prefix \"01  SFL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 90090",
+          "paragraph_count": 17,
+          "paragraphs": [
+            "PERFORM 90090-CALL-UTXCMS10-FUNCTION",
+            "PERFORM 90090-CALL-UTXCMS00-FUNCTION",
+            "PERFORM 90090-CALL-UTXCMS00-FUNCTION",
+            "PERFORM 90090-CALL-UTXCMS00-FUNCTION",
+            "PERFORM 90090-CALL-UTXCMS10-FUNCTION"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "17 paragraphs with common prefix \"PERFORM 90090\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 99000",
+          "paragraph_count": 48,
+          "paragraphs": [
+            "PERFORM 99000-CALL-UTXSSD00-FUNCTION",
+            "PERFORM 99000-RTV-USER-SPACE",
+            "PERFORM 99000-CALL-XACSCC00-FUNCTION",
+            "PERFORM 99000-CALL-CMCSCL60-FUNCTION",
+            "PERFORM 99000-CALL-UTCSCP00-FUNCTION"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "48 paragraphs with common prefix \"PERFORM 99000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 29024",
+          "paragraph_count": 8,
+          "paragraphs": [
+            "PERFORM 29024-REQUEST-MORE-KEYS",
+            "PERFORM 29024-REQUEST-MORE-KEYS",
+            "PERFORM 29024-REQUEST-MORE-KEYS",
+            "PERFORM 29024-REQUEST-MORE-KEYS",
+            "PERFORM 29024-REQUEST-MORE-KEYS"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "8 paragraphs with common prefix \"PERFORM 29024\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"1\"                      TO EXECUTE",
+          "paragraph_count": 25,
+          "paragraphs": [
+            "MOVE \"1\"                      TO EXECUTE-SETUP-LOGIC",
+            "MOVE \"1\"                      TO EXECUTE-BYPASS-LOGIC",
+            "MOVE \"1\"                      TO EXECUTE-KEY-ENTER-LOGIC",
+            "MOVE \"1\"                      TO EXECUTE-KEY-EDIT-LOGIC",
+            "MOVE \"1\"                      TO EXECUTE-KEY-EXIT-LOGIC"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "25 paragraphs with common prefix \"MOVE \"1\"                      TO EXECUTE\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"0\"                      TO EXECUTE",
+          "paragraph_count": 10,
+          "paragraphs": [
+            "MOVE \"0\"                      TO EXECUTE-ADJACENT-RECORD",
+            "MOVE \"0\"                      TO EXECUTE-ADJACENT-RANGE",
+            "MOVE \"0\"                      TO EXECUTE-ADJACENT-RANGE",
+            "MOVE \"0\"                      TO EXECUTE-ENTER-UPDATE",
+            "MOVE \"0\"                      TO EXECUTE-REVIEW-PANEL"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "10 paragraphs with common prefix \"MOVE \"0\"                      TO EXECUTE\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"1\"                      TO PGM",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE \"1\"                      TO PGM-CRT-OPTION",
+            "MOVE \"1\"                      TO PGM-RVS-OPTION",
+            "MOVE \"1\"                      TO PGM-DLT-OPTION"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE \"1\"                      TO PGM\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE SPACES                   TO FK",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "MOVE SPACES                   TO FK-LINE-TABLE",
+            "MOVE SPACES                   TO FK-LINE-TABLE",
+            "MOVE SPACES                   TO FK-LINE-TABLE",
+            "MOVE SPACES                   TO FK-LINE-TABLE",
+            "MOVE SPACES                   TO FK-LINE-TABLE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"MOVE SPACES                   TO FK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "DELIMITED \"\"        INTO FK",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "DELIMITED \"\"        INTO FK-LINE(001)",
+            "DELIMITED \"\"        INTO FK-LINE(002)",
+            "DELIMITED \"\"        INTO FK-LINE(002)",
+            "DELIMITED \"\"        INTO FK-LINE(002)",
+            "DELIMITED \"\"        INTO FK-LINE(002)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"DELIMITED \"\"        INTO FK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 13100",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "PERFORM 13100-EXECUTE-SETUP-LOGIC",
+            "PERFORM 13100-CHECK-ADDRESS-AUT",
+            "PERFORM 13100-CHECK-INJDATE-AUT",
+            "PERFORM 13100-CHECK-CLBWCLOC-AUT"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"PERFORM 13100\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 13300",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "PERFORM 13300-FORMAT-LOCAL-DATA-IN",
+            "PERFORM 13300-FORMAT-LOCAL-DATA-OUT",
+            "PERFORM 13300-FORMAT-LOCAL-DATA-IN",
+            "PERFORM 13300-FORMAT-LOCAL-DATA-IN"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"PERFORM 13300\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR FMT00",
+          "paragraph_count": 35,
+          "paragraphs": [
+            "MOVE CORR FMT00-I             TO CTRL-KEYS",
+            "MOVE CORR FMT00-I             TO FMT00-O",
+            "MOVE CORR FMT00-I             TO CMFHCL00",
+            "MOVE CORR FMT00-I             TO CTRL-KEYS",
+            "MOVE CORR FMT00-I             TO XACSCC00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "35 paragraphs with common prefix \"MOVE CORR FMT00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "13100",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "13100-EXECUTE-SETUP-LOGIC",
+            "13100-CHECK-ADDRESS-AUT",
+            "13100-CHECK-INJDATE-AUT",
+            "13100-CHECK-CLBWCLOC-AUT"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"13100\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET IND",
+          "paragraph_count": 50,
+          "paragraphs": [
+            "SET IND-OFF (OVERLAY-MSGCL) TO TRUE",
+            "SET IND-OFF(DATA-ENTERED) TO TRUE",
+            "SET IND-ON(B-CLFILDTE)     TO TRUE",
+            "SET IND-ON(B-CLINJDTE)     TO TRUE",
+            "SET IND-ON(B-CLFILDTE)     TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "50 paragraphs with common prefix \"SET IND\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET SAV",
+          "paragraph_count": 52,
+          "paragraphs": [
+            "SET SAV-OFF (OVERLAY-MSGCL) TO TRUE",
+            "SET SAV-OFF(N-CMSOCSEC)    TO TRUE",
+            "SET SAV-OFF(N-PNCLAIM)     TO TRUE",
+            "SET SAV-OFF(S-PNNAME)     TO TRUE",
+            "SET SAV-OFF(S-PNNAME)     TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "52 paragraphs with common prefix \"SET SAV\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET CMLDCL40",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "SET CMLDCL40-CLOSED           TO TRUE",
+            "SET CMLDCL40-OPEN          TO TRUE",
+            "SET CMLDCL40-OPEN          TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"SET CMLDCL40\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET FNCKEY",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "SET FNCKEY-06-NOT-HIT         TO TRUE",
+            "SET FNCKEY-03             TO TRUE",
+            "SET FNCKEY-03                 TO TRUE",
+            "SET FNCKEY-03                TO TRUE",
+            "SET FNCKEY-10             TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"SET FNCKEY\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET RETURN",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "SET RETURN-8-DIGIT            TO TRUE",
+            "SET RETURN-8-DIGIT            TO TRUE",
+            "SET RETURN-8-DIGIT            TO TRUE",
+            "SET RETURN-8-DIGIT            TO TRUE",
+            "SET RETURN-8-DIGIT            TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"SET RETURN\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 99900",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "PERFORM 99900-CALL-UTCSDC00-FUNCTION",
+            "PERFORM 99900-CALL-UTCSDC00-FUNCTION",
+            "PERFORM 99900-CALL-UTCSDC00-FUNCTION",
+            "PERFORM 99900-CALL-UTCSDC00-FUNCTION",
+            "PERFORM 99900-CALL-UTCSDC00-FUNCTION"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"PERFORM 99900\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE GREGORIAN",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "MOVE GREGORIAN-DATE           TO MMDDCCYY-DATE",
+            "MOVE GREGORIAN-DATE        TO CLFILDTE OF FMT01-I",
+            "MOVE GREGORIAN-DATE        TO CLINJDTE OF FMT01-I",
+            "MOVE GREGORIAN-DATE        TO CLRTNDTE OF FMT01-I",
+            "MOVE GREGORIAN-DATE        TO CLCMPNSDTE OF FMT01-I"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"MOVE GREGORIAN\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR MMDDCCYY",
+          "paragraph_count": 19,
+          "paragraphs": [
+            "MOVE CORR MMDDCCYY-DATE-RD    TO CCYYMMDD-DATE-RD",
+            "MOVE CORR MMDDCCYY-DATE-RD    TO CCYYMMDD-DATE-RD",
+            "MOVE CORR MMDDCCYY-DATE-RD    TO CCYYMMDD-DATE-RD",
+            "MOVE CORR MMDDCCYY-DATE-RD    TO CCYYMMDD-DATE-RD",
+            "MOVE CORR MMDDCCYY-DATE-RD    TO CCYYMMDD-DATE-RD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "19 paragraphs with common prefix \"MOVE CORR MMDDCCYY\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CCYYMMDD",
+          "paragraph_count": 19,
+          "paragraphs": [
+            "MOVE CCYYMMDD-DATE            TO CURRENT-DATE",
+            "MOVE CCYYMMDD-DATE            TO CLFILDTE OF CMFHCL00",
+            "MOVE CCYYMMDD-DATE            TO CLINJDTE OF CMFHCL00",
+            "MOVE CCYYMMDD-DATE            TO CLRTNDTE OF CMFHCL00",
+            "MOVE CCYYMMDD-DATE            TO CLSTLDTE OF CMFHCL00"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "19 paragraphs with common prefix \"MOVE CCYYMMDD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "END",
+          "paragraph_count": 169,
+          "paragraphs": [
+            "END-IF",
+            "END-IF",
+            "END-IF",
+            "END-IF",
+            "END-EVALUATE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "169 paragraphs with common prefix \"END\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 80102",
+          "paragraph_count": 32,
+          "paragraphs": [
+            "PERFORM 80102-READ-UTLMTB00-RANDOM",
+            "PERFORM 80102-READ-UTLMTB00-RANDOM",
+            "PERFORM 80102-READ-CMLHCL00-RANDOM",
+            "PERFORM 80102-READ-CMLHCL00-NO-LOCK",
+            "PERFORM 80102-READ-CMLHCL00-RANDOM"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "32 paragraphs with common prefix \"PERFORM 80102\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR LOCAL",
+          "paragraph_count": 21,
+          "paragraphs": [
+            "MOVE CORR LOCAL-DATA          TO FMT00-I",
+            "MOVE CORR LOCAL-DATA      TO FMT00-I",
+            "MOVE CORR LOCAL-DATA          TO FMT00-I",
+            "MOVE CORR LOCAL-DATA      TO FMT01-I",
+            "MOVE CORR LOCAL-DATA          TO FMT01-I"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "21 paragraphs with common prefix \"MOVE CORR LOCAL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET ENTER",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "SET ENTER-KEY                 TO TRUE",
+            "SET ENTER-KEY         TO TRUE",
+            "SET ENTER-KEY    TO TRUE",
+            "SET ENTER-KEY    TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"SET ENTER\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "WRITE PANEL",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "WRITE PANEL-RECORD            FROM MSGCL-O FORMAT \"MSGCL\"",
+            "WRITE PANEL-RECORD            FROM MSGCL-O FORMAT \"MSGCL\"",
+            "WRITE PANEL-RECORD            FROM MSGCL-O FORMAT \"MSGCL\"",
+            "WRITE PANEL-RECORD            FROM MSGCL-O FORMAT \"MSGCL\"",
+            "WRITE PANEL-RECORD            FROM MSGCL-O FORMAT \"MSGCL\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"WRITE PANEL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "INDICATORS ARE INDICATOR",
+          "paragraph_count": 32,
+          "paragraphs": [
+            "INDICATORS ARE INDICATOR-AREA",
+            "INDICATORS ARE INDICATOR-AREA",
+            "INDICATORS ARE INDICATOR-AREA",
+            "INDICATORS ARE INDICATOR-AREA",
+            "INDICATORS ARE INDICATOR-AREA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "32 paragraphs with common prefix \"INDICATORS ARE INDICATOR\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE INDICATOR",
+          "paragraph_count": 16,
+          "paragraphs": [
+            "MOVE INDICATOR-SAVE           TO INDICATOR-AREA",
+            "MOVE INDICATOR-SAVE       TO INDICATOR-AREA",
+            "MOVE INDICATOR-SAVE           TO INDICATOR-AREA",
+            "MOVE INDICATOR-SAVE           TO INDICATOR-AREA",
+            "MOVE INDICATOR-SAVE           TO INDICATOR-AREA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "16 paragraphs with common prefix \"MOVE INDICATOR\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE ZEROES                   TO PANEL",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE ZEROES                   TO PANEL-EDITS",
+            "MOVE ZEROES                   TO PANEL-NUMBER",
+            "MOVE ZEROES                   TO PANEL-NUMBER"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE ZEROES                   TO PANEL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "INSPECT PANEL",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "INSPECT PANEL-RECORD TALLYING CHAR-COUNT FOR ALL \"?\"",
+            "INSPECT PANEL-RECORD TALLYING CHAR-COUNT FOR ALL \"?\"",
+            "INSPECT PANEL-RECORD TALLYING CHAR-COUNT FOR ALL \"?\"",
+            "INSPECT PANEL-RECORD TALLYING CHAR-COUNT FOR ALL \"?\"",
+            "INSPECT PANEL-RECORD TALLYING CHAR-COUNT FOR ALL \"?\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"INSPECT PANEL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 21510",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 21510-SP-KEY-EDIT-LOGIC",
+            "PERFORM 21510-SP-VERIFY-CLAIM-NUMBER",
+            "PERFORM 21510-SP-VERIFY-OLD-CLAIM"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 21510\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 21700",
+          "paragraph_count": 9,
+          "paragraphs": [
+            "PERFORM 21700-SP-CONTROL-LOGIC",
+            "PERFORM 21700-PROCESS-WORK-REQUEST",
+            "PERFORM 21700-FORMAT-DATES",
+            "PERFORM 21700-CHECK-PAPERLESS",
+            "PERFORM 21700-SETUP-RISK-OPTIONS"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "9 paragraphs with common prefix \"PERFORM 21700\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "21510",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "21510-SP-KEY-EDIT-LOGIC",
+            "21510-SP-VERIFY-CLAIM-NUMBER",
+            "21510-SP-VERIFY-OLD-CLAIM"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"21510\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET EDT",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "SET EDT-REQUIRED(01)          TO TRUE",
+            "SET EDT-REQUIRED(07)          TO TRUE",
+            "SET EDT-REQUIRED(07)      TO TRUE",
+            "SET EDT-ON(PANEL-NUMBER)  TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"SET EDT\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE HOLD",
+          "paragraph_count": 9,
+          "paragraphs": [
+            "MOVE HOLD-ADJACENT-RANGE      TO EXECUTE-ADJACENT-RANGE",
+            "MOVE HOLD-PNNAME              TO PNNAME   OF FMT02-O",
+            "MOVE HOLD-SSN                 TO CMSOCSEC OF FMT02-O",
+            "MOVE HOLD-PNNAME              TO PNNAME   OF CTL04-O",
+            "MOVE HOLD-SSN                 TO CMSOCSEC OF CTL04-O"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "9 paragraphs with common prefix \"MOVE HOLD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "21700",
+          "paragraph_count": 12,
+          "paragraphs": [
+            "21700-SP-CONTROL-LOGIC",
+            "21700-PROCESS-WORK-REQUEST",
+            "21700-CHECK-DEATH-CLAIM",
+            "21700-FORMAT-DATES",
+            "21700-LOG-CLAIM-ACCESS"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "12 paragraphs with common prefix \"21700\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR CCYYMMDD",
+          "paragraph_count": 18,
+          "paragraphs": [
+            "MOVE CORR CCYYMMDD-DATE-RD    TO MMDDCCYY-DATE-RD",
+            "MOVE CORR CCYYMMDD-DATE-RD    TO MMDDCCYY-DATE-RD",
+            "MOVE CORR CCYYMMDD-DATE-RD    TO MMDDCCYY-DATE-RD",
+            "MOVE CORR CCYYMMDD-DATE-RD    TO MMDDCCYY-DATE-RD",
+            "MOVE CORR CCYYMMDD-DATE-RD    TO MMDDCCYY-DATE-RD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "18 paragraphs with common prefix \"MOVE CORR CCYYMMDD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE MMDDCCYY",
+          "paragraph_count": 18,
+          "paragraphs": [
+            "MOVE MMDDCCYY-DATE            TO CLFILDTE OF CMFHCL00",
+            "MOVE MMDDCCYY-DATE            TO CLINJDTE OF CMFHCL00",
+            "MOVE MMDDCCYY-DATE            TO CLRTNDTE OF CMFHCL00",
+            "MOVE MMDDCCYY-DATE            TO CLSTLDTE OF CMFHCL00",
+            "MOVE MMDDCCYY-DATE            TO CLCRVSD OF CMFHCL00"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "18 paragraphs with common prefix \"MOVE MMDDCCYY\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 81602",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 81602-READ-CMLDCL50-RANDOM",
+            "PERFORM 81602-READ-CMLDCL50-RANDOM",
+            "PERFORM 81602-READ-CMLDCL50-RANDOM"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 81602\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET NO",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "SET NO-RKRSNBR-LOCAL-EXISTS TO TRUE",
+            "SET NO-IR-MOTIONS-EXIST       TO TRUE",
+            "SET NO-MESSAGES               TO TRUE",
+            "SET NO-CLINJDTE-EXISTS     TO TRUE",
+            "SET NO-RISK-ADDRESS-EXISTS TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"SET NO\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "INITIALIZE                       UTXSNC10",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "INITIALIZE                       UTXSNC10-DATA",
+            "INITIALIZE                       UTXSNC10-DATA",
+            "INITIALIZE                       UTXSNC10-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"INITIALIZE                       UTXSNC10\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET  NC",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "SET  NC-FIRST-LAST            TO TRUE",
+            "SET  NC-FIRST-LAST            TO TRUE",
+            "SET  NC-FIRST-LAST            TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"SET  NC\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "OF CMFHCM00",
+          "paragraph_count": 12,
+          "paragraphs": [
+            "OF CMFHCM00-RECORD          TO NC-LAST-NAME",
+            "OF CMFHCM00-RECORD          TO NC-FRST-NAME",
+            "OF CMFHCM00-RECORD          TO NC-MDDL-INIT",
+            "OF CMFHCM00-RECORD          TO NC-SUFFIX",
+            "OF CMFHCM00-RECORD          TO NC-LAST-NAME"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "12 paragraphs with common prefix \"OF CMFHCM00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "CALL \"UTXSNC10\"            USING UTXSNC10",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "CALL \"UTXSNC10\"            USING UTXSNC10-DATA",
+            "CALL \"UTXSNC10\"            USING UTXSNC10-DATA",
+            "CALL \"UTXSNC10\"            USING UTXSNC10-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"CALL \"UTXSNC10\"            USING UTXSNC10\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CP",
+          "paragraph_count": 20,
+          "paragraphs": [
+            "MOVE CP-CURSOR-ROW            TO PNROW OF FMT00-I",
+            "MOVE CP-CURSOR-COL            TO PNCOL OF FMT00-I",
+            "MOVE CP-CURSOR-ROW            TO PNROW OF FMT01-I",
+            "MOVE CP-CURSOR-COL            TO PNCOL OF FMT01-I",
+            "MOVE CP-CURSOR-ROW            TO PNROW OF FMT02-I"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "20 paragraphs with common prefix \"MOVE CP\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 31110",
+          "paragraph_count": 8,
+          "paragraphs": [
+            "PERFORM 31110-SP-UPDATE-LOGIC",
+            "PERFORM 31110-FORMAT-DATES",
+            "PERFORM 31110-FORMAT-RISK-DATA",
+            "PERFORM 31110-CHECK-RECAL-CLTOTAMT",
+            "PERFORM 31110-CHECK-FOR-DATA-REQUEST"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "8 paragraphs with common prefix \"PERFORM 31110\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "31110",
+          "paragraph_count": 13,
+          "paragraphs": [
+            "31110-SP-UPDATE-LOGIC",
+            "31110-SETUP-CREATE-FLDS",
+            "31110-FORMAT-DATES",
+            "31110-FORMAT-RISK-DATA",
+            "31110-REWRITE-RISK-RECORD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "13 paragraphs with common prefix \"31110\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE USRPRF OF UTXSSD00",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "MOVE USRPRF OF UTXSSD00-DATA  TO CLRVSUSR OF CMFHCL00",
+            "MOVE USRPRF OF UTXSSD00-DATA  TO UPUSRPRF OF XACSRQ00-DATA",
+            "MOVE USRPRF OF UTXSSD00-DATA  TO CLCRTUSR OF CMFHCL00",
+            "MOVE USRPRF OF UTXSSD00-DATA TO RKRSCRTU OF CMFACL50",
+            "MOVE USRPRF OF UTXSSD00-DATA  TO USRPRF OF IMCSIR00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"MOVE USRPRF OF UTXSSD00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CURRENT",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "MOVE CURRENT-DATE             TO CLRVSDTE OF CMFHCL00",
+            "MOVE CURRENT-DATE             TO CLCRTDTE OF CMFHCL00",
+            "MOVE CURRENT-DATE         TO RKRSCRTD OF CMFACL50",
+            "MOVE CURRENT-DATE             TO RQCCRTDT OF CMFTRQ00",
+            "MOVE CURRENT-DATE             TO CLRPSTSD OF CMFDCL40"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"MOVE CURRENT\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 81702",
+          "paragraph_count": 10,
+          "paragraphs": [
+            "PERFORM 81702-READ-CMLHRK00-RANDOM",
+            "PERFORM 81702-READ-CMLARK00-RANDOM",
+            "PERFORM 81702-READ-CMLHRK00-RANDOM",
+            "PERFORM 81702-READ-CMLHRK00-RANDOM",
+            "PERFORM 81702-READ-CMLARK00-RANDOM"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "10 paragraphs with common prefix \"PERFORM 81702\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET  IND",
+          "paragraph_count": 27,
+          "paragraphs": [
+            "SET  IND-OFF(CMD11)           TO TRUE",
+            "SET  IND-ON(B-RKRSCITY)   TO TRUE",
+            "SET  IND-ON(B-RKRSTATE)   TO TRUE",
+            "SET  IND-ON(B-RKRSZIP)    TO TRUE",
+            "SET  IND-ON(B-RKRSZIP)    TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "27 paragraphs with common prefix \"SET  IND\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 32110",
+          "paragraph_count": 11,
+          "paragraphs": [
+            "PERFORM 32110-SP-DELETE-LOGIC",
+            "PERFORM 32110-DELETE-CMLDCL50",
+            "PERFORM 32110-DELETE-CMLACL50",
+            "PERFORM 32110-DELETE-CMLDCL20",
+            "PERFORM 32110-DELETE-CMLDCL40"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "11 paragraphs with common prefix \"PERFORM 32110\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "32110",
+          "paragraph_count": 13,
+          "paragraphs": [
+            "32110-SP-DELETE-LOGIC",
+            "32110-DELETE-CMLDCL50",
+            "32110-DELETE-CMLACL50",
+            "32110-DELETE-CMLDCL20",
+            "32110-DELETE-CMLDCL20-RECORDS"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "13 paragraphs with common prefix \"32110\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "OPEN I",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "OPEN I-O CMLDCL20-FILE",
+            "OPEN I-O CMLDCL40-FILE",
+            "OPEN I-O CMLDCL60-FILE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"OPEN I\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 80409",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 80409-UNLCK-CMLDCL20-FILE",
+            "PERFORM 80409-UNLCK-CMLDCL20-FILE",
+            "PERFORM 80409-UNLCK-CMLDCL20-FILE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 80409\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 80611",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 80611-START-CMLDCL40-EQUAL",
+            "PERFORM 80611-START-CMLDCL40-EQUAL",
+            "PERFORM 80611-START-CMLDCL40-EQUAL"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 80611\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 80609",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "PERFORM 80609-UNLCK-CMLDCL40-FILE",
+            "PERFORM 80609-UNLCK-CMLDCL40-FILE",
+            "PERFORM 80609-UNLCK-CMLDCL40-FILE",
+            "PERFORM 80609-UNLCK-CMLDCL40-FILE",
+            "PERFORM 80609-UNLCK-CMLDCL40-FILE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"PERFORM 80609\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 80603",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 80603-READ-CMLDCL40-NEXT",
+            "PERFORM 80603-READ-CMLDCL40-NXT-NO-LCK",
+            "PERFORM 80603-READ-CMLDCL40-NEXT"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 80603\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE WS",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "MOVE WS-CLAIM                 TO NTKEY1 OF UTCSNT10-DATA",
+            "MOVE WS-CLAIM                 TO NTKEY1 OF UTCSNT00-DATA",
+            "MOVE WS-CLTYPE2               TO TBSUBC OF UTFMTB00",
+            "MOVE WS-CLAIM                 TO NTKEY1 OF UTCSNT00-DATA",
+            "MOVE WS-CLAIM                 TO NTKEY1 OF UTCSNT00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"MOVE WS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "50000",
+          "paragraph_count": 65,
+          "paragraphs": [
+            "50000-ENTER-PANEL-01",
+            "50000-SETUP-PANEL-OPTIONS-01",
+            "50000-SETUP-FNCKEY-LINES-01",
+            "50000-ENTER-PANEL-02",
+            "50000-SETUP-PANEL-OPTIONS-02"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "65 paragraphs with common prefix \"50000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 50000",
+          "paragraph_count": 70,
+          "paragraphs": [
+            "PERFORM 50000-SETUP-PANEL-OPTIONS-01",
+            "PERFORM 50000-SETUP-FNCKEY-LINES-01",
+            "PERFORM 50000-SETUP-PANEL-OPTIONS-02",
+            "PERFORM 50000-SETUP-FNCKEY-LINES-02",
+            "PERFORM 50000-SETUP-PANEL-OPTIONS-04"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "70 paragraphs with common prefix \"PERFORM 50000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE ZEROES                   TO FK",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "MOVE ZEROES                   TO FK-CURR-LINE-NBR",
+            "MOVE ZEROES                   TO FK-CURR-LINE-NBR",
+            "MOVE ZEROES                   TO FK-CURR-LINE-NBR",
+            "MOVE ZEROES                   TO FK-CURR-LINE-NBR",
+            "MOVE ZEROES                   TO FK-CURR-LINE-NBR"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"MOVE ZEROES                   TO FK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 51000",
+          "paragraph_count": 70,
+          "paragraphs": [
+            "PERFORM 51000-SP-ENTER-LOGIC-01",
+            "PERFORM 51000-PROCESS-NOTES-01",
+            "PERFORM 51000-PROCESS-SECURITY-01",
+            "PERFORM 51000-RETRIEVE-PNINJDGN",
+            "PERFORM 51000-RETRIEVE-PNACCTYP"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "70 paragraphs with common prefix \"PERFORM 51000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE PANEL",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "MOVE PANEL-NUMBER             TO PRESENT-PANEL",
+            "MOVE PANEL-NUMBER             TO PRESENT-PANEL",
+            "MOVE PANEL-NUMBER             TO PRESENT-PANEL",
+            "MOVE PANEL-NUMBER             TO PRESENT-PANEL",
+            "MOVE PANEL-NUMBER             TO PRESENT-PANEL"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"MOVE PANEL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52140",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "PERFORM 52140-SP-PROCESSING-01",
+            "PERFORM 52140-SP-PROCESSING-01",
+            "PERFORM 52140-SP-PROCESSING-02",
+            "PERFORM 52140-SP-PROCESSING-02",
+            "PERFORM 52140-SP-PROCESSING-02"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"PERFORM 52140\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "UNTIL PRESENT",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "UNTIL PRESENT-PANEL NOT = PANEL-NUMBER",
+            "UNTIL PRESENT-PANEL NOT = PANEL-NUMBER",
+            "UNTIL PRESENT-PANEL NOT = PANEL-NUMBER",
+            "UNTIL PRESENT-PANEL NOT = PANEL-NUMBER",
+            "UNTIL PRESENT-PANEL NOT = PANEL-NUMBER"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"UNTIL PRESENT\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR FMT01",
+          "paragraph_count": 8,
+          "paragraphs": [
+            "MOVE CORR FMT01-I         TO CMFHCL00",
+            "MOVE CORR FMT01-O             TO WS-CLAIM",
+            "MOVE CORR FMT01-I             TO FMT01-O",
+            "MOVE CORR FMT01-I             TO SPECIAL-WORK-FIELDS",
+            "MOVE CORR FMT01-I             TO CMFHCM00"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "8 paragraphs with common prefix \"MOVE CORR FMT01\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE 002                      TO FK",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE 002                      TO FK-LINE-COUNT",
+            "MOVE 002                      TO FK-LINE-COUNT",
+            "MOVE 002                      TO FK-LINE-COUNT"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE 002                      TO FK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "DELIMITED \"\"    INTO FK",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "DELIMITED \"\"    INTO FK-LINE(001)",
+            "DELIMITED \"\"    INTO FK-LINE(001)",
+            "DELIMITED \"\"    INTO FK-LINE(001)",
+            "DELIMITED \"\"    INTO FK-LINE(001)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"DELIMITED \"\"    INTO FK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "51000",
+          "paragraph_count": 62,
+          "paragraphs": [
+            "51000-SP-ENTER-LOGIC-01",
+            "51000-PROCESS-NOTES-01",
+            "51000-CHECK-CMSOCSEC-01",
+            "51000-CHECK-PNCLAIM-01",
+            "51000-PROCESS-SECURITY-01"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "62 paragraphs with common prefix \"51000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET F21",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "SET F21-NOT-HIT TO TRUE",
+            "SET F21-HIT         TO TRUE",
+            "SET F21-NOT-HIT               TO TRUE",
+            "SET F21-NOT-HIT               TO TRUE",
+            "SET F21-HIT                TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"SET F21\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "INITIALIZE                       UTCSNT00",
+          "paragraph_count": 15,
+          "paragraphs": [
+            "INITIALIZE                       UTCSNT00-DATA",
+            "INITIALIZE                       UTCSNT00-DATA",
+            "INITIALIZE                       UTCSNT00-DATA",
+            "INITIALIZE                       UTCSNT00-DATA",
+            "INITIALIZE                       UTCSNT00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "15 paragraphs with common prefix \"INITIALIZE                       UTCSNT00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"CMNOTES\"                TO NTTYPE OF UTCSNT00",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "MOVE \"CMNOTES\"                TO NTTYPE OF UTCSNT00-DATA",
+            "MOVE \"CMNOTES\"                TO NTTYPE OF UTCSNT00-DATA",
+            "MOVE \"CMNOTES\"                TO NTTYPE OF UTCSNT00-DATA",
+            "MOVE \"CMNOTES\"                TO NTTYPE OF UTCSNT00-DATA",
+            "MOVE \"CMNOTES\"                TO NTTYPE OF UTCSNT00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"MOVE \"CMNOTES\"                TO NTTYPE OF UTCSNT00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "CALL \"UTCSNT00\"            USING UTCSNT00",
+          "paragraph_count": 15,
+          "paragraphs": [
+            "CALL \"UTCSNT00\"            USING UTCSNT00-DATA",
+            "CALL \"UTCSNT00\"            USING UTCSNT00-DATA",
+            "CALL \"UTCSNT00\"            USING UTCSNT00-DATA",
+            "CALL \"UTCSNT00\"            USING UTCSNT00-DATA",
+            "CALL \"UTCSNT00\"            USING UTCSNT00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "15 paragraphs with common prefix \"CALL \"UTCSNT00\"            USING UTCSNT00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"CLNOTES\"                TO NTTYPE OF UTCSNT00",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "MOVE \"CLNOTES\"                TO NTTYPE OF UTCSNT00-DATA",
+            "MOVE \"CLNOTES\"                TO NTTYPE OF UTCSNT00-DATA",
+            "MOVE \"CLNOTES\"                TO NTTYPE OF UTCSNT00-DATA",
+            "MOVE \"CLNOTES\"                TO NTTYPE OF UTCSNT00-DATA",
+            "MOVE \"CLNOTES\"                TO NTTYPE OF UTCSNT00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"MOVE \"CLNOTES\"                TO NTTYPE OF UTCSNT00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "INITIALIZE                       CMCSSC00",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "INITIALIZE                       CMCSSC00-DATA",
+            "INITIALIZE                       CMCSSC00-DATA",
+            "INITIALIZE                       CMCSSC00-DATA",
+            "INITIALIZE                       CMCSSC00-DATA",
+            "INITIALIZE                       CMCSSC00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"INITIALIZE                       CMCSSC00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "TO CMSOCSEC OF CMCSSC00",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "TO CMSOCSEC OF CMCSSC00-DATA",
+            "TO CMSOCSEC OF CMCSSC00-DATA",
+            "TO CMSOCSEC OF CMCSSC00-DATA",
+            "TO CMSOCSEC OF CMCSSC00-DATA",
+            "TO CMSOCSEC OF CMCSSC00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"TO CMSOCSEC OF CMCSSC00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CMSECFLG OF CMFHCM00     TO CMSECFLG OF CMCSSC00",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "MOVE CMSECFLG OF CMFHCM00     TO CMSECFLG OF CMCSSC00-DATA",
+            "MOVE CMSECFLG OF CMFHCM00     TO CMSECFLG OF CMCSSC00-DATA",
+            "MOVE CMSECFLG OF CMFHCM00     TO CMSECFLG OF CMCSSC00-DATA",
+            "MOVE CMSECFLG OF CMFHCM00     TO CMSECFLG OF CMCSSC00-DATA",
+            "MOVE CMSECFLG OF CMFHCM00     TO CMSECFLG OF CMCSSC00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"MOVE CMSECFLG OF CMFHCM00     TO CMSECFLG OF CMCSSC00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "CALL \"CMCSSC00\"            USING CMCSSC00",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "CALL \"CMCSSC00\"            USING CMCSSC00-DATA",
+            "CALL \"CMCSSC00\"            USING CMCSSC00-DATA",
+            "CALL \"CMCSSC00\"            USING CMCSSC00-DATA",
+            "CALL \"CMCSSC00\"            USING CMCSSC00-DATA",
+            "CALL \"CMCSSC00\"            USING CMCSSC00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"CALL \"CMCSSC00\"            USING CMCSSC00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "CALL \"XACSCT00\" USING XACSCT00",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "CALL \"XACSCT00\" USING XACSCT00-DATA",
+            "CALL \"XACSCT00\" USING XACSCT00-DATA",
+            "CALL \"XACSCT00\" USING XACSCT00-DATA",
+            "CALL \"XACSCT00\" USING XACSCT00-DATA",
+            "CALL \"XACSCT00\" USING XACSCT00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"CALL \"XACSCT00\" USING XACSCT00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CLTYPE",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "MOVE CLTYPE-DESC TO PNCLTYPE OF FMT01-O",
+            "MOVE CLTYPE-DESC TO PNCLTYPE OF FMT02-O",
+            "MOVE CLTYPE-DESC TO PNCLTYPE OF CTL04-O",
+            "MOVE CLTYPE-DESC TO PNCLTYPE OF CTL05-O",
+            "MOVE CLTYPE-DESC TO PNCLTYPE OF CTL07-O"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"MOVE CLTYPE\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52000",
+          "paragraph_count": 14,
+          "paragraphs": [
+            "52000-DISPLAY-PANEL-01",
+            "52000-DISPLAY-PANEL-02",
+            "52000-DISPLAY-PANEL-04",
+            "52000-SFL-SETUP-PAGE-04",
+            "52000-CHK-DUP-KEY-04"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "14 paragraphs with common prefix \"52000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 34000",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "PERFORM 34000-CHK-ADJACENT-KEYS-RQST",
+            "PERFORM 34000-CHK-ADJACENT-KEYS-RQST",
+            "PERFORM 34000-CHK-ADJACENT-KEYS-RQST",
+            "PERFORM 34000-CHK-ADJACENT-KEYS-RQST",
+            "PERFORM 34000-CHK-ADJACENT-KEYS-RQST"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"PERFORM 34000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52800",
+          "paragraph_count": 16,
+          "paragraphs": [
+            "PERFORM 52800-PROCESS-OTHER-FNCKEYS-01",
+            "PERFORM 52800-SP-PROCESS-NOTES-01",
+            "PERFORM 52800-CHECK-NOTES-EXIST-01",
+            "PERFORM 52800-PROCESS-OTHER-FNCKEYS-02",
+            "PERFORM 52800-SP-PROCESS-NOTES-02"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "16 paragraphs with common prefix \"PERFORM 52800\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52100",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "52100-PROCESS-PANEL-01",
+            "52100-PROCESS-PANEL-02",
+            "52100-PROCESS-PANEL-04",
+            "52100-PROCESS-PANEL-05",
+            "52100-PROCESS-PANEL-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"52100\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52120",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 52120-CHECK-QMARK-REQUEST-01",
+            "PERFORM 52120-CHECK-QMARK-REQUEST-02",
+            "PERFORM 52120-CHECK-QMARK-REQUEST-02"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 52120\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52130",
+          "paragraph_count": 27,
+          "paragraphs": [
+            "PERFORM 52130-VALIDATE-PANEL-01",
+            "PERFORM 52130-VALIDATE-CMSOCSEC-01",
+            "PERFORM 52130-CHECK-CLFILDTE-RANGE-01",
+            "PERFORM 52130-VALIDATE-CLINJDGN-01",
+            "PERFORM 52130-VALIDATE-CLRTNDTE-01"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "27 paragraphs with common prefix \"PERFORM 52130\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 41000",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 41000-PROCESS-CONTROL",
+            "PERFORM 41000-PROCESS-CONTROL",
+            "PERFORM 41000-PROCESS-CONTROL"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 41000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52130",
+          "paragraph_count": 37,
+          "paragraphs": [
+            "52130-VALIDATE-PANEL-01",
+            "52130-VALIDATE-CLTYPE-01",
+            "52130-VALIDATE-CMSOCSEC-01",
+            "52130-STRING-NAME-01",
+            "52130-GET-CLHMELOC-01"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "37 paragraphs with common prefix \"52130\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET GREGORIAN",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "SET GREGORIAN-JULIAN          TO TRUE",
+            "SET GREGORIAN-JULIAN          TO TRUE",
+            "SET GREGORIAN-JULIAN          TO TRUE",
+            "SET GREGORIAN-JULIAN          TO TRUE",
+            "SET GREGORIAN-JULIAN          TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"SET GREGORIAN\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52140",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "52140-SP-PROCESSING-01",
+            "52140-GET-PNHMELOC-01",
+            "52140-SP-PROCESSING-02",
+            "52140-SFL-CHECK-NEXT-OPTION-04",
+            "52140-SFL-CHECK-NEXT-OPTION-05"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"52140\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52200",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "52200-PROCESS-PROMPT-01",
+            "52200-PROCESS-PROMPT-02",
+            "52200-PROCESS-PROMPT-04",
+            "52200-PROCESS-PROMPT-05",
+            "52200-PROCESS-PROMPT-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"52200\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52310",
+          "paragraph_count": 31,
+          "paragraphs": [
+            "PERFORM 52310-FORMAT-LOCAL-DATA-OUT-01",
+            "PERFORM 52310-FORMAT-LOCAL-DATA-OUT-01",
+            "PERFORM 52310-LEFT-JUSTIFY-02",
+            "PERFORM 52310-VALIDATE-PNRISK-02",
+            "PERFORM 52310-VALIDATE-RKRSEMP-02"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "31 paragraphs with common prefix \"PERFORM 52310\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52320",
+          "paragraph_count": 13,
+          "paragraphs": [
+            "PERFORM 52320-FORMAT-LOCAL-DATA-IN-01",
+            "PERFORM 52320-FORMAT-LOCAL-DATA-IN-01",
+            "PERFORM 52320-FORMAT-LOCAL-DATA-IN-02",
+            "PERFORM 52320-FORMAT-LOCAL-DATA-IN-02",
+            "PERFORM 52320-FORMAT-LOCAL-DATA-IN-04"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "13 paragraphs with common prefix \"PERFORM 52320\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52300",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "52300-REQUEST-SERVICES-01",
+            "52300-REQUEST-SERVICES-02",
+            "52300-REQUEST-SERVICES-04",
+            "52300-REQUEST-SERVICES-05",
+            "52300-REQUEST-SERVICES-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"52300\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52310",
+          "paragraph_count": 30,
+          "paragraphs": [
+            "52310-FORMAT-LOCAL-DATA-OUT-01",
+            "52310-TRIM-SPACES",
+            "52310-LEFT-JUSTIFY-02",
+            "52310-VALIDATE-PNRISK-02",
+            "52310-CONVERT-RISK-02"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "30 paragraphs with common prefix \"52310\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52320",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "52320-FORMAT-LOCAL-DATA-IN-01",
+            "52320-FORMAT-LOCAL-DATA-IN-02",
+            "52320-FORMAT-LOCAL-DATA-IN-04",
+            "52320-FORMAT-LOCAL-DATA-IN-05",
+            "52320-FORMAT-LOCAL-DATA-IN-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"52320\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52800",
+          "paragraph_count": 54,
+          "paragraphs": [
+            "52800-PROCESS-OTHER-FNCKEYS-01",
+            "52800-PROCESS-NOTES-01",
+            "52800-SP-PROCESS-NOTES-01",
+            "52800-CMSOCSEC-NOTES-01",
+            "52800-PNCLAIM-NOTES-01"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "54 paragraphs with common prefix \"52800\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE DSP",
+          "paragraph_count": 13,
+          "paragraphs": [
+            "MOVE DSP-CURSOR-LOC(1:1)      TO HEX(2:1)",
+            "MOVE DSP-CURSOR-LOC(2:1)      TO HEX(2:1)",
+            "MOVE DSP-CURSOR-LOC(1:1)      TO HEX(2:1)",
+            "MOVE DSP-CURSOR-LOC(2:1)      TO HEX(2:1)",
+            "MOVE DSP-REL-PAGE-NUM     TO SUBFILE-PAGE-NUMBER"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "13 paragraphs with common prefix \"MOVE DSP\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE HEX",
+          "paragraph_count": 10,
+          "paragraphs": [
+            "MOVE HEX-RD                   TO PNROW OF FMT01-I",
+            "MOVE HEX-RD                   TO PNCOL OF FMT01-I",
+            "MOVE HEX-RD                   TO PNROW OF FMT02-I",
+            "MOVE HEX-RD                   TO PNCOL OF FMT02-I",
+            "MOVE HEX-RD                   TO PNROW OF CTL04-I"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "10 paragraphs with common prefix \"MOVE HEX\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"CMNOTES\"                TO NTTYPE OF LOCAL",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "MOVE \"CMNOTES\"                TO NTTYPE OF LOCAL-DATA",
+            "MOVE \"CMNOTES\"                TO NTTYPE OF LOCAL-DATA",
+            "MOVE \"CMNOTES\"                TO NTTYPE OF LOCAL-DATA",
+            "MOVE \"CMNOTES\"                TO NTTYPE OF LOCAL-DATA",
+            "MOVE \"CMNOTES\"                TO NTTYPE OF LOCAL-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"MOVE \"CMNOTES\"                TO NTTYPE OF LOCAL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "NTKEY6 OF LOCAL",
+          "paragraph_count": 14,
+          "paragraphs": [
+            "NTKEY6 OF LOCAL-DATA",
+            "NTKEY6 OF LOCAL-DATA",
+            "NTKEY6 OF LOCAL-DATA",
+            "NTKEY6 OF LOCAL-DATA",
+            "NTKEY6 OF LOCAL-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "14 paragraphs with common prefix \"NTKEY6 OF LOCAL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"CLNOTES\"                TO NTTYPE OF LOCAL",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "MOVE \"CLNOTES\"                TO NTTYPE OF LOCAL-DATA",
+            "MOVE \"CLNOTES\"                TO NTTYPE OF LOCAL-DATA",
+            "MOVE \"CLNOTES\"                TO NTTYPE OF LOCAL-DATA",
+            "MOVE \"CLNOTES\"                TO NTTYPE OF LOCAL-DATA",
+            "MOVE \"CLNOTES\"                TO NTTYPE OF LOCAL-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"MOVE \"CLNOTES\"                TO NTTYPE OF LOCAL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR CMFACL50            TO FMT02",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "MOVE CORR CMFACL50            TO FMT02-O",
+            "MOVE CORR CMFACL50            TO FMT02-I",
+            "MOVE CORR CMFACL50            TO FMT02-O",
+            "MOVE CORR CMFACL50            TO FMT02-I"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"MOVE CORR CMFACL50            TO FMT02\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE ",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "MOVE -05                      TO BACK-PANEL",
+            "MOVE -94                   TO BACK-PANEL",
+            "MOVE -93                   TO BACK-PANEL",
+            "MOVE -91                   TO BACK-PANEL"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"MOVE \" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CMSOCSEC OF CMFHCL00 TO NTKEY1 OF UTCSNT00",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "MOVE CMSOCSEC OF CMFHCL00 TO NTKEY1 OF UTCSNT00-DATA",
+            "MOVE CMSOCSEC OF CMFHCL00 TO NTKEY1 OF UTCSNT00-DATA",
+            "MOVE CMSOCSEC OF CMFHCL00 TO NTKEY1 OF UTCSNT00-DATA",
+            "MOVE CMSOCSEC OF CMFHCL00 TO NTKEY1 OF UTCSNT00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"MOVE CMSOCSEC OF CMFHCL00 TO NTKEY1 OF UTCSNT00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR FMT02",
+          "paragraph_count": 9,
+          "paragraphs": [
+            "MOVE CORR FMT02-O             TO WS-CLAIM",
+            "MOVE CORR FMT02-I             TO FMT02-O",
+            "MOVE CORR FMT02-I             TO SPECIAL-WORK-FIELDS",
+            "MOVE CORR FMT02-I             TO RISK-ADDRESS",
+            "MOVE CORR FMT02-I             TO LOCAL-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "9 paragraphs with common prefix \"MOVE CORR FMT02\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"RKNOTES\"                TO NTTYPE OF UTCSNT00",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE \"RKNOTES\"                TO NTTYPE OF UTCSNT00-DATA",
+            "MOVE \"RKNOTES\"                TO NTTYPE OF UTCSNT00-DATA",
+            "MOVE \"RKNOTES\"                TO NTTYPE OF UTCSNT00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE \"RKNOTES\"                TO NTTYPE OF UTCSNT00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE RKRSNBR OF FMT02",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "MOVE RKRSNBR OF FMT02-O       TO NTKEY1 OF UTCSNT00-DATA",
+            "MOVE RKRSNBR OF FMT02-O       TO RKRSNBR OF CMFARK00",
+            "MOVE RKRSNBR OF FMT02-I       TO RKRSNBR OF CMFARK00",
+            "MOVE RKRSNBR OF FMT02-I       TO RKRSNBR OF CMFARK00"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"MOVE RKRSNBR OF FMT02\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"RKRSNBR\"                TO NTKEY2 OF UTCSNT00",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE \"RKRSNBR\"                TO NTKEY2 OF UTCSNT00-DATA",
+            "MOVE \"RKRSNBR\"                TO NTKEY2 OF UTCSNT00-DATA",
+            "MOVE \"RKRSNBR\"                TO NTKEY2 OF UTCSNT00-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE \"RKRSNBR\"                TO NTKEY2 OF UTCSNT00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "INITIALIZE                    XACSRC10",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "INITIALIZE                    XACSRC10-DATA",
+            "INITIALIZE                    XACSRC10-DATA",
+            "INITIALIZE                    XACSRC10-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"INITIALIZE                    XACSRC10\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"2\"                      TO XACSRC10",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE \"2\"                      TO XACSRC10-INPUT-FMT-IND",
+            "MOVE \"2\"                      TO XACSRC10-INPUT-FMT-IND",
+            "MOVE \"2\"                      TO XACSRC10-INPUT-FMT-IND"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE \"2\"                      TO XACSRC10\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"3\"                      TO XACSRC10",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE \"3\"                      TO XACSRC10-OUTPUT-FMT-IND",
+            "MOVE \"3\"                      TO XACSRC10-OUTPUT-FMT-IND",
+            "MOVE \"3\"                      TO XACSRC10-OUTPUT-FMT-IND"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE \"3\"                      TO XACSRC10\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "CALL \"XACSRC10\" USING XACSRC10",
+          "paragraph_count": 8,
+          "paragraphs": [
+            "CALL \"XACSRC10\" USING XACSRC10-DATA",
+            "CALL \"XACSRC10\" USING XACSRC10-DATA",
+            "CALL \"XACSRC10\" USING XACSRC10-DATA",
+            "CALL \"XACSRC10\" USING XACSRC10-DATA",
+            "CALL \"XACSRC10\" USING XACSRC10-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "8 paragraphs with common prefix \"CALL \"XACSRC10\" USING XACSRC10\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE PNRISK OF FMT02",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE PNRISK OF FMT02-O       TO STRING-CHARACTERS",
+            "MOVE PNRISK OF FMT02-O        TO WCIS-RISK-NUMBER",
+            "MOVE PNRISK OF FMT02-O      TO XACSRC10-INPUT-RISK-NO"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE PNRISK OF FMT02\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"2\"                    TO XACSRC10",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "MOVE \"2\"                    TO XACSRC10-OUTPUT-FMT-IND",
+            "MOVE \"2\"                    TO XACSRC10-INPUT-FMT-IND",
+            "MOVE \"2\"                    TO XACSRC10-OUTPUT-FMT-IND",
+            "MOVE \"2\"                    TO XACSRC10-INPUT-FMT-IND",
+            "MOVE \"2\"                    TO XACSRC10-OUTPUT-FMT-IND"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"MOVE \"2\"                    TO XACSRC10\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE W",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "MOVE W-RISK                   TO RKRSNBR OF FMT02-O",
+            "MOVE W-RISK-R               TO XACSRC10-INPUT-RISK-NO",
+            "MOVE W-RISK-R               TO XACSRC10-INPUT-RISK-NO",
+            "MOVE W-RISK                   TO RKRSNBR OF SFL07-O"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"MOVE W\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE UL",
+          "paragraph_count": 10,
+          "paragraphs": [
+            "MOVE UL-DATA              TO RKRSEMP OF FMT02-I",
+            "MOVE UL-DATA               TO RKRSDBAS OF FMT02-I",
+            "MOVE UL-DATA               TO RKRSREF OF FMT02-I",
+            "MOVE UL-DATA               TO RKRSADR1 OF FMT02-I",
+            "MOVE UL-DATA               TO RKRSADR2 OF FMT02-I"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "10 paragraphs with common prefix \"MOVE UL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE ADDR",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE ADDR-FLD            TO RKRSADR1 OF FMT02-I",
+            "MOVE ADDR-FLD                 TO QCLS-STRING",
+            "MOVE ADDR-FLD            TO RKRSADR2 OF FMT02-I"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE ADDR\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "INITIALIZE                       QCLSCAN",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "INITIALIZE                       QCLSCAN-DATA",
+            "INITIALIZE                       QCLSCAN-DATA",
+            "INITIALIZE                       QCLSCAN-DATA",
+            "INITIALIZE                       QCLSCAN-DATA",
+            "INITIALIZE                       QCLSCAN-DATA"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"INITIALIZE                       QCLSCAN\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE 035                      TO QCLS",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "MOVE 035                      TO QCLS-STRLEN",
+            "MOVE 035                      TO QCLS-STRLEN",
+            "MOVE 035                      TO QCLS-STRLEN",
+            "MOVE 035                      TO QCLS-STRLEN",
+            "MOVE 035                      TO QCLS-STRLEN"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"MOVE 035                      TO QCLS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE 001                      TO QCLS",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "MOVE 001                      TO QCLS-STRPOS",
+            "MOVE 001                      TO QCLS-STRPOS",
+            "MOVE 001                      TO QCLS-STRPOS",
+            "MOVE 001                      TO QCLS-STRPOS",
+            "MOVE 001                      TO QCLS-STRPOS"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"MOVE 001                      TO QCLS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE 007                      TO QCLS",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "MOVE 007                      TO QCLS-PATLEN",
+            "MOVE 007                      TO QCLS-PATLEN",
+            "MOVE 007                      TO QCLS-PATLEN",
+            "MOVE 007                      TO QCLS-PATLEN"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"MOVE 007                      TO QCLS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE \"0\"                      TO QCLS",
+          "paragraph_count": 10,
+          "paragraphs": [
+            "MOVE \"0\"                      TO QCLS-TRANSLATE",
+            "MOVE \"0\"                      TO QCLS-TRIM",
+            "MOVE \"0\"                      TO QCLS-TRANSLATE",
+            "MOVE \"0\"                      TO QCLS-TRIM",
+            "MOVE \"0\"                      TO QCLS-TRANSLATE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "10 paragraphs with common prefix \"MOVE \"0\"                      TO QCLS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "INITIALIZE                       QCLS",
+          "paragraph_count": 10,
+          "paragraphs": [
+            "INITIALIZE                       QCLS-WILD",
+            "INITIALIZE                       QCLS-RESULT",
+            "INITIALIZE                       QCLS-WILD",
+            "INITIALIZE                       QCLS-RESULT",
+            "INITIALIZE                       QCLS-WILD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "10 paragraphs with common prefix \"INITIALIZE                       QCLS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "QCLS",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "QCLS-RESULT",
+            "QCLS-RESULT",
+            "QCLS-RESULT",
+            "QCLS-RESULT",
+            "QCLS-RESULT"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"QCLS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE RKRSADR2 OF FMT02",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE RKRSADR2 OF FMT02-I TO ADDR-FLD",
+            "MOVE RKRSADR2 OF FMT02-I      TO QCLS-STRING",
+            "MOVE RKRSADR2 OF FMT02-I      TO QCLS-STRING"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE RKRSADR2 OF FMT02\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SFL",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "SFL-NULL-KEYS-04",
+            "SFL-NULL-KEYS-05",
+            "SFL-NULL-KEYS-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"SFL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET  EDT",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "SET  EDT-OFF(PANEL-NUMBER)    TO TRUE",
+            "SET  EDT-OFF(PANEL-NUMBER)    TO TRUE",
+            "SET  EDT-OFF(PANEL-NUMBER)    TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"SET  EDT\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "AND RECORD",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "AND RECORD-COUNT >= SUBFILE-SIZE)",
+            "AND RECORD-COUNT >= SUBFILE-SIZE)",
+            "AND RECORD-COUNT >= SUBFILE-SIZE)",
+            "AND RECORD-COUNT >= SUBFILE-SIZE)",
+            "AND RECORD-COUNT >= SUBFILE-SIZE)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"AND RECORD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 54000",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 54000-SP-EXIT-LOGIC-04",
+            "PERFORM 54000-SP-EXIT-LOGIC-05",
+            "PERFORM 54000-SP-EXIT-LOGIC-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 54000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE SPACES                   TO SUBFILE",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE SPACES                   TO SUBFILE-OPTION",
+            "MOVE SPACES                   TO SUBFILE-OPTION",
+            "MOVE SPACES                   TO SUBFILE-OPTION"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE SPACES                   TO SUBFILE\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE 9999                     TO WORK",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE 9999                     TO WORK-REMAINDER",
+            "MOVE 9999                     TO WORK-REMAINDER",
+            "MOVE 9999                     TO WORK-REMAINDER"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE 9999                     TO WORK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SEARCH",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "SEARCH-RECORD",
+            "SEARCH-RECORD",
+            "SEARCH-RECORD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"SEARCH\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR SFL",
+          "paragraph_count": 10,
+          "paragraphs": [
+            "MOVE CORR SFL-HDDN-KEYS-04    TO SFL04-I",
+            "MOVE CORR SFL-DSPY-KEYS-04    TO CMFDCL20",
+            "MOVE CORR SFL-DSPY-KEYS-04    TO CMFDCL20",
+            "MOVE CORR SFL-HDDN-KEYS-05    TO SFL05-I",
+            "MOVE CORR SFL-DSPY-KEYS-05    TO CMFDCL40"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "10 paragraphs with common prefix \"MOVE CORR SFL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET SELECT",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "SET SELECT-RECORD             TO TRUE",
+            "SET SELECT-RECORD             TO TRUE",
+            "SET SELECT-RECORD             TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"SET SELECT\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "REMAINDER WORK",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "REMAINDER WORK-REMAINDER",
+            "REMAINDER WORK-REMAINDER",
+            "REMAINDER WORK-REMAINDER"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"REMAINDER WORK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR SFL04",
+          "paragraph_count": 15,
+          "paragraphs": [
+            "MOVE CORR SFL04-I             TO CMFHCM00",
+            "MOVE CORR SFL04-I             TO SFL04-O",
+            "MOVE CORR SFL04-I             TO SFL04-O",
+            "MOVE CORR SFL04-I             TO SFL-DSPY-KEYS-04",
+            "MOVE CORR SFL04-I             TO SFL04-O"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "15 paragraphs with common prefix \"MOVE CORR SFL04\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "ADD 01                        TO RECORD",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "ADD 01                        TO RECORD-COUNT",
+            "ADD 01                        TO RECORD-NUMBER",
+            "ADD 01                        TO RECORD-COUNT",
+            "ADD 01                        TO RECORD-NUMBER",
+            "ADD 01                        TO RECORD-COUNT"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"ADD 01                        TO RECORD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE RECORD",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "MOVE RECORD-COUNT             TO RECORD-NUMBER",
+            "MOVE RECORD-COUNT         TO DSP-REL-PAGE-NUM",
+            "MOVE RECORD-COUNT             TO RECORD-NUMBER",
+            "MOVE RECORD-COUNT         TO DSP-REL-PAGE-NUM",
+            "MOVE RECORD-COUNT             TO RECORD-NUMBER"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"MOVE RECORD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "READ SUBFILE PANEL",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "READ SUBFILE PANEL-FILE       INTO SFL04-I FORMAT \"SFL04\"",
+            "READ SUBFILE PANEL-FILE       INTO SFL05-I FORMAT \"SFL05\"",
+            "READ SUBFILE PANEL-FILE       INTO SFL07-I FORMAT \"SFL07\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"READ SUBFILE PANEL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR PANEL",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE CORR PANEL-TABLE         TO FMT98-I",
+            "MOVE CORR PANEL-TABLE         TO FMT98-I",
+            "MOVE CORR PANEL-TABLE TO FMT98-I"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE CORR PANEL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR CTL04",
+          "paragraph_count": 14,
+          "paragraphs": [
+            "MOVE CORR CTL04-O             TO WS-CLAIM",
+            "MOVE CORR CTL04-I             TO CTL04-O",
+            "MOVE CORR CTL04-I             TO SPECIAL-WORK-FIELDS",
+            "MOVE CORR CTL04-O             TO CMFDCL20",
+            "MOVE CORR CTL04-I             TO CMFDCL20"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "14 paragraphs with common prefix \"MOVE CORR CTL04\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52000",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "PERFORM 52000-SFL-SETUP-PAGE-04",
+            "PERFORM 52000-CHK-DUP-KEY-04",
+            "PERFORM 52000-SFL-SETUP-PAGE-05",
+            "PERFORM 52000-CHK-DUP-KEY-05",
+            "PERFORM 52000-SFL-SETUP-PAGE-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"PERFORM 52000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52149",
+          "paragraph_count": 10,
+          "paragraphs": [
+            "PERFORM 52149-SFL-READ-REVISED-RCD-04",
+            "PERFORM 52149-SFL-READ-REVISED-RCD-04",
+            "PERFORM 52149-SFL-READ-REVISED-RCD-04",
+            "PERFORM 52149-SFL-READ-REVISED-RCD-05",
+            "PERFORM 52149-SFL-READ-REVISED-RCD-05"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "10 paragraphs with common prefix \"PERFORM 52149\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "OR END",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "OR END-OF-SUBFILE",
+            "OR END-OF-SUBFILE",
+            "OR END-OF-SUBFILE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"OR END\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52141",
+          "paragraph_count": 11,
+          "paragraphs": [
+            "PERFORM 52141-SFL-DUPKEY-PROCESS-04",
+            "PERFORM 52141-CHECK-QMARK-REQUEST-04",
+            "PERFORM 52141-SFL-DUPKEY-PROCESS-04",
+            "PERFORM 52141-SFL-DUPKEY-SETUP-04",
+            "PERFORM 52141-SFL-DUPKEY-PROCESS-05"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "11 paragraphs with common prefix \"PERFORM 52141\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52110",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 52110-CHECK-QMARK-REQUEST-04",
+            "PERFORM 52110-CHECK-QMARK-REQUEST-05",
+            "PERFORM 52110-CHECK-QMARK-REQUEST-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 52110\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "OR MESSAGES",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "OR MESSAGES-EXIST",
+            "OR MESSAGES-EXIST",
+            "OR MESSAGES-EXIST"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"OR MESSAGES\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52400",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "PERFORM 52400-RESEQUENCE-PANEL-04",
+            "PERFORM 52400-RESEQUENCE-PANEL-05",
+            "PERFORM 52400-RESEQUENCE-PANEL-05",
+            "PERFORM 52400-RESEQUENCE-PANEL-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"PERFORM 52400\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52110",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "52110-CHECK-QMARK-REQUEST-04",
+            "52110-CHECK-QMARK-REQUEST-05",
+            "52110-CHECK-QMARK-REQUEST-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"52110\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52131",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "PERFORM 52131-CTL-VALIDATE-PANEL-04",
+            "PERFORM 52131-CTL-VALIDATE-PANEL-05",
+            "PERFORM 52131-CTL-VALIDATE-PANEL-07",
+            "PERFORM 52131-CHECK-RISK-ADDRESS-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"PERFORM 52131\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52132",
+          "paragraph_count": 8,
+          "paragraphs": [
+            "PERFORM 52132-SP-CTL-PROCESS-PANEL-04",
+            "PERFORM 52132-CHK-SFL-MODE-05",
+            "PERFORM 52132-SP-CTL-PROCESS-PANEL-05",
+            "PERFORM 52132-RTV-SFL-MODE-05",
+            "PERFORM 52132-CHK-SFL-MODE-05"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "8 paragraphs with common prefix \"PERFORM 52132\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52131",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "52131-CTL-VALIDATE-PANEL-04",
+            "52131-CTL-VALIDATE-PANEL-05",
+            "52131-CTL-VALIDATE-PANEL-07",
+            "52131-CHECK-RISK-ADDRESS-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"52131\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52132",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "52132-SP-CTL-PROCESS-PANEL-04",
+            "52132-SP-CTL-PROCESS-PANEL-05",
+            "52132-RTV-SFL-MODE-05",
+            "52132-CHK-SFL-MODE-05",
+            "52132-SP-CTL-PROCESS-PANEL-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"52132\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52142",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 52142-SP-SFL-ENTER-LOGIC-04",
+            "PERFORM 52142-SP-SFL-ENTER-LOGIC-05",
+            "PERFORM 52142-SP-SFL-ENTER-LOGIC-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 52142\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52144",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 52144-SFL-VALIDATE-DLT-OPT-04",
+            "PERFORM 52144-SFL-VALIDATE-DLT-OPT-05",
+            "PERFORM 52144-SFL-VALIDATE-DLT-OPT-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 52144\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52147",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "PERFORM 52147-DELETE-RECORD-04",
+            "PERFORM 52147-SP-DELETE-LOGIC-04",
+            "PERFORM 52147-DELETE-RECORD-05",
+            "PERFORM 52147-SP-DELETE-LOGIC-05",
+            "PERFORM 52147-DELETE-RECORD-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"PERFORM 52147\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET DETAIL",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "SET DETAIL-UPDATE         TO TRUE",
+            "SET DETAIL-UPDATE         TO TRUE",
+            "SET DETAIL-UPDATE         TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"SET DETAIL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52148",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "PERFORM 52148-SP-SFL-EXIT-LOGIC-04",
+            "PERFORM 52148-SP-SFL-EXIT-LOGIC-05",
+            "PERFORM 52148-SET-PR-REP-NUM-05",
+            "PERFORM 52148-SP-SFL-EXIT-LOGIC-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"PERFORM 52148\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52141",
+          "paragraph_count": 12,
+          "paragraphs": [
+            "52141-CHECK-QMARK-REQUEST-04",
+            "52141-SFL-DUPKEY-PROCESS-04",
+            "52141-SFL-DUPKEY-SETUP-04",
+            "52141-SFL-DUPKEY-MAPPING-04",
+            "52141-CHECK-QMARK-REQUEST-05"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "12 paragraphs with common prefix \"52141\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE SFL04",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "MOVE SFL04-I                  TO SFL04-O",
+            "MOVE SFL04-I              TO SFL04-H",
+            "MOVE SFL04-O                  TO SFL04-I",
+            "MOVE SFL04-H(SUB:1)       TO SFL04-O(SUB:1)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"MOVE SFL04\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SUBTRACT 01                 FROM RECORD",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "SUBTRACT 01                 FROM RECORD-NUMBER",
+            "SUBTRACT 01                 FROM RECORD-NUMBER",
+            "SUBTRACT 01                 FROM RECORD-NUMBER"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"SUBTRACT 01                 FROM RECORD\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "ACCEPT IO",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "ACCEPT IO-FEEDBACK-AREA     FROM IO-FEEDBACK",
+            "ACCEPT IO-FEEDBACK-AREA     FROM IO-FEEDBACK",
+            "ACCEPT IO-FEEDBACK-AREA     FROM IO-FEEDBACK"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"ACCEPT IO\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "OR CHAR",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "OR CHAR-COUNT = 0",
+            "OR CHAR-COUNT = 0",
+            "OR CHAR-COUNT = 0"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"OR CHAR\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52142",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "52142-SP-SFL-ENTER-LOGIC-04",
+            "52142-SP-SFL-ENTER-LOGIC-05",
+            "52142-SP-SFL-ENTER-LOGIC-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"52142\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52143",
+          "paragraph_count": 45,
+          "paragraphs": [
+            "52143-SFL-VALIDATE-RVS-OPT-04",
+            "52143-VALIDATE-CLAIMANT-04",
+            "52143-VALIDATE-CMSOCSEC-04",
+            "52143-VALIDATE-CLRLREL-04",
+            "52143-SFL-VALIDATE-RVS-OPT-05"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "45 paragraphs with common prefix \"52143\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52143",
+          "paragraph_count": 21,
+          "paragraphs": [
+            "PERFORM 52143-VALIDATE-CLAIMANT-04",
+            "PERFORM 52143-VALIDATE-CMSOCSEC-04",
+            "PERFORM 52143-VALIDATE-CLRLREL-04",
+            "PERFORM 52143-SFL-VAL-RVS-DLT-OPT-05",
+            "PERFORM 52143-CHECK-REP-STAT"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "21 paragraphs with common prefix \"PERFORM 52143\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52144",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "52144-SFL-VALIDATE-DLT-OPT-04",
+            "52144-SFL-VALIDATE-DLT-OPT-05",
+            "52144-SFL-VALIDATE-DLT-OPT-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"52144\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52145",
+          "paragraph_count": 8,
+          "paragraphs": [
+            "52145-CREATE-RECORD-04",
+            "52145-SP-CREATE-LOGIC-04",
+            "52145-CREATE-RECORD-05",
+            "52145-SP-CREATE-LOGIC-05",
+            "52145-CREATE-RECORD-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "8 paragraphs with common prefix \"52145\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52145",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 52145-SP-CREATE-LOGIC-04",
+            "PERFORM 52145-SP-CREATE-LOGIC-05",
+            "PERFORM 52145-SP-CREATE-LOGIC-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 52145\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52146",
+          "paragraph_count": 9,
+          "paragraphs": [
+            "52146-REVISE-RECORD-04",
+            "52146-SP-REVISE-LOGIC-04",
+            "52146-SP-COMPARE-IMAGES-04",
+            "52146-REVISE-RECORD-05",
+            "52146-SP-REVISE-LOGIC-05"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "9 paragraphs with common prefix \"52146\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE SFL",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "MOVE SFL-HDDN-KEYS-04         TO SFL-DSPY-KEYS-04",
+            "MOVE SFL-HDDN-KEYS-04         TO SFL-DSPY-KEYS-04",
+            "MOVE SFL-HDDN-KEYS-05         TO SFL-DSPY-KEYS-05",
+            "MOVE SFL-HDDN-KEYS-05         TO SFL-DSPY-KEYS-05",
+            "MOVE SFL-HDDN-KEYS-05         TO SFL-DSPY-KEYS-05"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"MOVE SFL\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52146",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "PERFORM 52146-SP-REVISE-LOGIC-04",
+            "PERFORM 52146-SP-COMPARE-IMAGES-04",
+            "PERFORM 52146-SP-REVISE-LOGIC-05",
+            "PERFORM 52146-SP-COMPARE-IMAGES-05",
+            "PERFORM 52146-SP-REVISE-LOGIC-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"PERFORM 52146\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "SET UPDATE",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "SET UPDATE-REQUIRED           TO TRUE",
+            "SET UPDATE-REQUIRED           TO TRUE",
+            "SET UPDATE-REQUIRED           TO TRUE",
+            "SET UPDATE-REQUIRED           TO TRUE",
+            "SET UPDATE-REQUIRED           TO TRUE"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"SET UPDATE\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52147",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "52147-DELETE-RECORD-04",
+            "52147-SP-DELETE-LOGIC-04",
+            "52147-DELETE-RECORD-05",
+            "52147-SP-DELETE-LOGIC-05",
+            "52147-DELETE-RECORD-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"52147\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52148",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "52148-SP-SFL-EXIT-LOGIC-04",
+            "52148-SP-SFL-EXIT-LOGIC-05",
+            "52148-SET-PR-REP-NUM-05",
+            "52148-SP-SFL-EXIT-LOGIC-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"52148\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52149",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "52149-SFL-READ-REVISED-RCD-04",
+            "52149-SFL-READ-REVISED-RCD-05",
+            "52149-SFL-READ-REVISED-RCD-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"52149\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE SPACES               TO SUBFILE",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE SPACES               TO SUBFILE-OPTION",
+            "MOVE SPACES               TO SUBFILE-OPTION",
+            "MOVE SPACES               TO SUBFILE-OPTION"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE SPACES               TO SUBFILE\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "PERFORM 52220",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "PERFORM 52220-CTL-PROMPT-04",
+            "PERFORM 52220-CTL-PROMPT-05",
+            "PERFORM 52220-CTL-PROMPT-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"PERFORM 52220\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52210",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "52210-SFL-PROMPT-04",
+            "52210-SFL-PROMPT-05",
+            "52210-SFL-PROMPT-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"52210\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52220",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "52220-CTL-PROMPT-04",
+            "52220-CTL-PROMPT-05",
+            "52220-CTL-PROMPT-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"52220\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "52400",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "52400-RESEQUENCE-PANEL-04",
+            "52400-RESEQUENCE-PANEL-05",
+            "52400-RESEQUENCE-PANEL-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"52400\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "54000",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "54000-SP-EXIT-LOGIC-04",
+            "54000-SP-EXIT-LOGIC-05",
+            "54000-SP-EXIT-LOGIC-07"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"54000\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR SFL05",
+          "paragraph_count": 20,
+          "paragraphs": [
+            "MOVE CORR SFL05-I             TO CMFMRP00",
+            "MOVE CORR SFL05-I             TO SFL05-O",
+            "MOVE CORR SFL05-I             TO SFL05-O",
+            "MOVE CORR SFL05-I             TO SFL-DSPY-KEYS-05",
+            "MOVE CORR SFL05-I             TO SFL05-O"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "20 paragraphs with common prefix \"MOVE CORR SFL05\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE WK",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE WK-SFL05A-RISK-HDG-DATA  TO PNDATA OF SFL05A-O",
+            "MOVE WK-SFL05A-RISK-DATA   TO PNDATA OF SFL05A-O",
+            "MOVE WK-SFL05A-REP-HDG-DATA  TO PNDATA OF SFL05A-O"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE WK\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR CTL05",
+          "paragraph_count": 21,
+          "paragraphs": [
+            "MOVE CORR CTL05-O             TO WS-CLAIM",
+            "MOVE CORR CTL05-I             TO CTL05-O",
+            "MOVE CORR CTL05-I             TO SPECIAL-WORK-FIELDS",
+            "MOVE CORR CTL05-O             TO CMFDCL40",
+            "MOVE CORR CTL05-I             TO CMFDCL40"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "21 paragraphs with common prefix \"MOVE CORR CTL05\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE SFL05",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "MOVE SFL05-I                  TO SFL05-O",
+            "MOVE SFL05-I              TO SFL05-H",
+            "MOVE SFL05-O                  TO SFL05-I",
+            "MOVE SFL05-H(SUB:1)       TO SFL05-O(SUB:1)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"MOVE SFL05\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR SFL07",
+          "paragraph_count": 16,
+          "paragraphs": [
+            "MOVE CORR SFL07-I         TO CMFHRK00 OF CMLHRK00-RECORD",
+            "MOVE CORR SFL07-I             TO SFL07-O",
+            "MOVE CORR SFL07-I             TO SFL07-O",
+            "MOVE CORR SFL07-I             TO SFL-DSPY-KEYS-07",
+            "MOVE CORR SFL07-I             TO SFL07-O"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "16 paragraphs with common prefix \"MOVE CORR SFL07\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE CORR CTL07",
+          "paragraph_count": 16,
+          "paragraphs": [
+            "MOVE CORR CTL07-O             TO WS-CLAIM",
+            "MOVE CORR CTL07-I             TO CTL07-O",
+            "MOVE CORR CTL07-I             TO SPECIAL-WORK-FIELDS",
+            "MOVE CORR CTL07-O             TO CMFDCL50",
+            "MOVE CORR CTL07-I             TO CMFDCL50"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "16 paragraphs with common prefix \"MOVE CORR CTL07\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE SFL07",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE SFL07-I                  TO SFL07-H",
+            "MOVE SFL07-I              TO SFL07-H",
+            "MOVE SFL07-H(SUB:1)       TO SFL07-O(SUB:1)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE SFL07\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE PNRISK OF SFL07",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "MOVE PNRISK OF SFL07-I       TO STRING-CHARACTERS",
+            "MOVE PNRISK OF SFL07-I        TO WCIS-RISK-NUMBER",
+            "MOVE PNRISK OF SFL07-I      TO XACSRC10-INPUT-RISK-NO"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"MOVE PNRISK OF SFL07\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "80102",
+          "paragraph_count": 9,
+          "paragraphs": [
+            "80102-READ-CMLHCL00-RANDOM",
+            "80102-READ-CMLHCL00-NO-LOCK",
+            "80102-READ-CMLHCM00-RANDOM",
+            "80102-READ-CMLHRK05-RANDOM",
+            "80102-READ-UTLMTB00-RANDOM"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "9 paragraphs with common prefix \"80102\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "READ CMLHCL00",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "READ CMLHCL00-FILE",
+            "READ CMLHCL00-FILE NO LOCK",
+            "READ CMLHCL00-FILE NEXT  RECORD",
+            "READ CMLHCL00-FILE PRIOR RECORD",
+            "READ CMLHCL00-FILE FIRST RECORD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"READ CMLHCL00\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE LOW",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "MOVE LOW-VALUES               TO CMFHCL00-RECORD",
+            "MOVE LOW-VALUES               TO CMFACL50",
+            "MOVE LOW-VALUES               TO CMFDCL20",
+            "MOVE LOW-VALUES               TO CMFDCL40",
+            "MOVE LOW-VALUES               TO CMFDCL50"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"MOVE LOW\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "READ CMLACL50",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "READ CMLACL50-FILE",
+            "READ CMLACL50-FILE NEXT  RECORD",
+            "READ CMLACL50-FILE PRIOR RECORD",
+            "READ CMLACL50-FILE FIRST RECORD",
+            "READ CMLACL50-FILE LAST RECORD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"READ CMLACL50\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "READ CMLDCL20",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "READ CMLDCL20-FILE",
+            "READ CMLDCL20-FILE NEXT  RECORD",
+            "READ CMLDCL20-FILE NEXT NO LOCK",
+            "READ CMLDCL20-FILE PRIOR RECORD",
+            "READ CMLDCL20-FILE FIRST RECORD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"READ CMLDCL20\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "READ CMLDCL40",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "READ CMLDCL40-FILE",
+            "READ CMLDCL40-FILE NEXT  RECORD",
+            "READ CMLDCL40-FILE NEXT NO LOCK",
+            "READ CMLDCL40-FILE PRIOR RECORD",
+            "READ CMLDCL40-FILE FIRST RECORD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"READ CMLDCL40\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "READ CMLDCL50",
+          "paragraph_count": 6,
+          "paragraphs": [
+            "READ CMLDCL50-FILE",
+            "READ CMLDCL50-FILE NEXT  RECORD",
+            "READ CMLDCL50-FILE NEXT NO LOCK",
+            "READ CMLDCL50-FILE PRIOR RECORD",
+            "READ CMLDCL50-FILE FIRST RECORD"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "6 paragraphs with common prefix \"READ CMLDCL50\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "99999",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "99999-CLOSE-PROGRAM",
+            "99999-SP-CLOSE-PGM-LOGIC",
+            "99999-EXIT-PROGRAM"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"99999\" suggest cohesive class"
+        },
+        {
+          "type": "excessive_global_variables",
+          "count": 66,
+          "recipe_type": "introduce_encapsulation",
+          "confidence": 0.75,
+          "rationale": "66 WORKING-STORAGE variables suggest need for encapsulation in classes"
+        }
+      ],
+      "pattern_count": 284,
+      "total_complexity": 927
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSC101L.CBL",
+      "patterns": [
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  BAD",
+          "paragraph_count": 5,
+          "paragraphs": [
+            "88  BAD-ZIP            VALUE \"UC10100\"",
+            "88  BAD-ADDR           VALUE \"UC10110\"",
+            "88  BAD-STREET         VALUE \"UC10120\"",
+            "88  BAD-HOUSE          VALUE \"UC10130\"",
+            "88  BAD-APT            VALUE \"UC10140\""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "5 paragraphs with common prefix \"88  BAD\" suggest cohesive class"
+        }
+      ],
+      "pattern_count": 1,
+      "total_complexity": 0
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+      "patterns": [
+        {
+          "type": "data_structure_modernization",
+          "structure": "UTFMTB00-RECORD",
+          "line": 39,
+          "fields": 0,
+          "has_level88": false,
+          "has_comp3": true,
+          "recipe_type": "pojo_with_bigdecimal",
+          "confidence": 0.95,
+          "benefit": "Type safety, null safety, immutability",
+          "rationale": "COBOL record with COMP-3 fields can use modern Java types"
+        },
+        {
+          "type": "data_structure_modernization",
+          "structure": "SPECIAL-CHARACTERS",
+          "line": 58,
+          "fields": 0,
+          "has_level88": true,
+          "has_comp3": false,
+          "recipe_type": "pojo_with_enum",
+          "confidence": 0.95,
+          "benefit": "Type safety, null safety, immutability",
+          "rationale": "COBOL record with Level-88 conditions and  can use modern Java types"
+        },
+        {
+          "type": "data_structure_modernization",
+          "structure": "FILE-OPENS",
+          "line": 106,
+          "fields": 1,
+          "has_level88": true,
+          "has_comp3": false,
+          "recipe_type": "pojo_with_enum",
+          "confidence": 0.95,
+          "benefit": "Type safety, null safety, immutability",
+          "rationale": "COBOL record with Level-88 conditions and  can use modern Java types"
+        },
+        {
+          "type": "data_structure_modernization",
+          "structure": "UPPER-CASE-WORDS",
+          "line": 113,
+          "fields": 1,
+          "has_level88": true,
+          "has_comp3": false,
+          "recipe_type": "pojo_with_enum",
+          "confidence": 0.95,
+          "benefit": "Type safety, null safety, immutability",
+          "rationale": "COBOL record with Level-88 conditions and  can use modern Java types"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "10  UC",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "10  UC-TYPE           PIC  X(06)",
+            "10  UC-WORD           PIC  X(10)",
+            "10  UC-NEXT-CHAR      PIC  X(06)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"10  UC\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "88  NEXT",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "88  NEXT-CHAR-UPPER          VALUE \"*UPPER\"",
+            "88  NEXT-CHAR-LOWER          VALUE \"*LOWER\"",
+            "88  NEXT-CHAR-SAME           VALUE \"*SAME \""
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"88  NEXT\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "05  QCLS",
+          "paragraph_count": 9,
+          "paragraphs": [
+            "05  QCLS-STRING            PIC  X(050)",
+            "05  QCLS-STRLEN            PIC S9(003) COMP-3",
+            "05  QCLS-STRPOS            PIC S9(003) COMP-3",
+            "05  QCLS-PATTERN           PIC  X(010)",
+            "05  QCLS-PATLEN            PIC S9(003) COMP-3"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "9 paragraphs with common prefix \"05  QCLS\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "MOVE UPPER",
+          "paragraph_count": 4,
+          "paragraphs": [
+            "MOVE UPPER-CASE(BSUB)  TO UL-DATA(1:1)",
+            "MOVE UPPER-CASE(BSUB)     TO UL-DATA(ASUB:1)",
+            "MOVE UPPER-CASE(BSUB)         TO UL-DATA(ASUB:1)",
+            "MOVE UPPER-CASE(BSUB)     TO UL-DATA(ASUB:1)"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8500000000000001,
+          "rationale": "4 paragraphs with common prefix \"MOVE UPPER\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "END",
+          "paragraph_count": 7,
+          "paragraphs": [
+            "END-PERFORM",
+            "END-PERFORM",
+            "END-IF",
+            "END-IF",
+            "END-IF"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.9,
+          "rationale": "7 paragraphs with common prefix \"END\" suggest cohesive class"
+        },
+        {
+          "type": "paragraph_coupling",
+          "prefix": "COMPUTE X = QCLS",
+          "paragraph_count": 3,
+          "paragraphs": [
+            "COMPUTE X = QCLS-RESULT - 1",
+            "COMPUTE X = QCLS-RESULT + WK-PATLEN",
+            "COMPUTE X = QCLS-RESULT + WK-PATLEN"
+          ],
+          "recipe_type": "extract_class",
+          "confidence": 0.8,
+          "rationale": "3 paragraphs with common prefix \"COMPUTE X = QCLS\" suggest cohesive class"
+        }
+      ],
+      "pattern_count": 10,
+      "total_complexity": 0
+    }
+  ]
+}

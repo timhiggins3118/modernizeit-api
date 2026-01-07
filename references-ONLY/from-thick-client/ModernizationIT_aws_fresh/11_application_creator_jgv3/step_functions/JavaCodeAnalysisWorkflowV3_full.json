@@ -1,0 +1,31 @@
+{
+  "stateMachineArn": "arn:aws:states:us-east-1:376129851858:stateMachine:JavaCodeAnalysisWorkflowV3",
+  "name": "JavaCodeAnalysisWorkflowV3",
+  "status": "ACTIVE",
+  "definition": "{\n  \"Comment\": \"Java Generation V3 - Code Analysis Workflow (Flow 2)\",\n  \"StartAt\": \"ValidateJavaCode\",\n  \"States\": {\n    \"ValidateJavaCode\": {\n      \"Type\": \"Task\",\n      \"Resource\": \"arn:aws:states:::lambda:invoke\",\n      \"Parameters\": {\n        \"FunctionName\": \"arn:aws:lambda:us-east-1:376129851858:function:ValidationEngineV3\",\n        \"Payload\": {\n          \"job_id.$\": \"$.job_id\",\n          \"scout_account_id.$\": \"$.scout_account_id\",\n          \"application_name.$\": \"$.application_name\"\n        }\n      },\n      \"ResultPath\": \"$.validation_result\",\n      \"ResultSelector\": {\n        \"validation_passed.$\": \"$.Payload.validation_passed\",\n        \"total_files.$\": \"$.Payload.total_files\",\n        \"files_with_errors.$\": \"$.Payload.files_with_errors\",\n        \"report_key.$\": \"$.Payload.report_key\"\n      },\n      \"Retry\": [\n        {\n          \"ErrorEquals\": [\n            \"Lambda.ServiceException\",\n            \"Lambda.AWSLambdaException\",\n            \"Lambda.SdkClientException\"\n          ],\n          \"IntervalSeconds\": 2,\n          \"MaxAttempts\": 3,\n          \"BackoffRate\": 2.0\n        }\n      ],\n      \"Catch\": [\n        {\n          \"ErrorEquals\": [\"States.ALL\"],\n          \"ResultPath\": \"$.error\",\n          \"Next\": \"ValidationFailed\"\n        }\n      ],\n      \"Next\": \"CheckValidationResult\"\n    },\n    \"CheckValidationResult\": {\n      \"Type\": \"Choice\",\n      \"Choices\": [\n        {\n          \"Variable\": \"$.validation_result.validation_passed\",\n          \"BooleanEquals\": true,\n          \"Next\": \"ValidationPassed\"\n        }\n      ],\n      \"Default\": \"ValidationHasErrors\"\n    },\n    \"ValidationPassed\": {\n      \"Type\": \"Succeed\",\n      \"Comment\": \"All Java code validated successfully\"\n    },\n    \"ValidationHasErrors\": {\n      \"Type\": \"Succeed\",\n      \"Comment\": \"Validation completed with errors - proceed to Flow 3 to fix\"\n    },\n    \"ValidationFailed\": {\n      \"Type\": \"Fail\",\n      \"Error\": \"ValidationError\",\n      \"Cause\": \"Java code validation failed with unexpected error\"\n    }\n  }\n}\n",
+  "roleArn": "arn:aws:iam::376129851858:role/StepFunctionsExecutionRole",
+  "type": "STANDARD",
+  "creationDate": "2025-10-17 09:58:13.114000-05:00",
+  "loggingConfiguration": {
+    "level": "OFF",
+    "includeExecutionData": false
+  },
+  "tracingConfiguration": {
+    "enabled": false
+  },
+  "encryptionConfiguration": {
+    "type": "AWS_OWNED_KEY"
+  },
+  "ResponseMetadata": {
+    "RequestId": "7c029329-2b57-4330-aa5b-d81bb6eefd22",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "x-amzn-requestid": "7c029329-2b57-4330-aa5b-d81bb6eefd22",
+      "date": "Wed, 29 Oct 2025 15:12:17 GMT",
+      "content-type": "application/x-amz-json-1.0",
+      "content-length": "2865",
+      "connection": "keep-alive"
+    },
+    "RetryAttempts": 0
+  }
+}

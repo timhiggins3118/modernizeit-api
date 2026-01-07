@@ -1,0 +1,13 @@
+{
+  "job_id": "ar2_job_0U812_TestApp01_1762440236_d06e31f2",
+  "function": "architecture_v2",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "created_at": "2025-11-06T14:43:56.318412+00:00",
+  "input_sources": {
+    "discovery_v2": "dv2_job_0U812_TestApp01_1762440076_890f28c3",
+    "data_analysis_v2": "da2_job_0U812_TestApp01_1762439897_08497588",
+    "code_analysis_v3": "ca3_job_0U812_TestApp01_1762439063_c998bcd9",
+    "code_refactor_v2": "rf2_job_0U812_TestApp01_1762439638_48cf051e"
+  }
+}

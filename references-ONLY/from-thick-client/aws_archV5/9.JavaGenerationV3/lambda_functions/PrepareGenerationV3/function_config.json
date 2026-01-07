@@ -1,0 +1,39 @@
+{
+  "FunctionName": "PrepareGenerationV3",
+  "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:PrepareGenerationV3",
+  "Role": "arn:aws:iam::376129851858:role/evaluation_lambda_role",
+  "CodeSize": 0,
+  "Description": "",
+  "Timeout": 300,
+  "MemorySize": 1024,
+  "LastModified": "2025-11-06T03:56:59.000+0000",
+  "CodeSha256": "76929c8d8af34bc6d138c6059fe50524c88a4615dea21fce86d5211d76946e55",
+  "Version": "$LATEST",
+  "Environment": {
+    "Variables": {
+      "OUTPUT_BUCKET": "code-transformation-v3",
+      "INPUT_BUCKET": "code-transformation-v2"
+    }
+  },
+  "TracingConfig": {
+    "Mode": "PassThrough"
+  },
+  "RevisionId": "244c6e44-fd49-40d7-9d21-af28cce89e85",
+  "State": "Active",
+  "LastUpdateStatus": "Successful",
+  "PackageType": "Image",
+  "Architectures": [
+    "x86_64"
+  ],
+  "EphemeralStorage": {
+    "Size": 512
+  },
+  "SnapStart": {
+    "ApplyOn": "None",
+    "OptimizationStatus": "Off"
+  },
+  "LoggingConfig": {
+    "LogFormat": "Text",
+    "LogGroup": "/aws/lambda/PrepareGenerationV3"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "DIPWCC00.CBL",
+  "timestamp": "2025-11-06T16:41:15.569607Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This COBOL copybook defines data structures for handling claim-related transactions and transfers, likely used for claims processing or data migration between systems",
+    "content": "Contains two main data structures: DIPWCC00-DATA and DIPWCC00-DATA-R (a redefine of the first structure). The first structure stores claim-related fields including source/object claim numbers and combination details. The redefine structure appears to handle transaction counts and date ranges.",
+    "usage": "This copybook is included in other COBOL programs that need to process claim transactions or transfers. The comment references program DICPCC00 which likely uses this copybook for data loading operations.",
+    "dependencies": [
+      "DICPCC00"
+    ],
+    "modernization_approach": "1. Create equivalent modern data structures (e.g., Java/C# classes)\n2. Maintain field names and sizes for compatibility\n3. Consider creating separate classes for each structure rather than using a redefine\n4. Add proper data typing (dates as Date objects, numbers as numeric types)\n5. Consider adding validation logic for the fields",
+    "complexity": "LOW",
+    "complexity_reasoning": "Simple data structure definition with straightforward fields and one redefine. No complex logic or relationships. Standard COBOL copybook pattern that's well-documented and easily convertible to modern data structures."
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

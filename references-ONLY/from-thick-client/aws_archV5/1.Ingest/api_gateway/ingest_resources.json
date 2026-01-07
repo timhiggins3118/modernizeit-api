@@ -1,0 +1,17 @@
+[
+  {
+    "id": "rikf4y",
+    "parentId": "fgv6e8dfwg",
+    "pathPart": "ingest",
+    "path": "/ingest"
+  },
+  {
+    "id": "v58pre",
+    "parentId": "rikf4y",
+    "pathPart": "upload",
+    "path": "/ingest/upload",
+    "resourceMethods": {
+      "POST": {}
+    }
+  }
+]

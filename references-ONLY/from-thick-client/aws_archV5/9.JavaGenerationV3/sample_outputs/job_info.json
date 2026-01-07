@@ -1,0 +1,19 @@
+{
+  "job_id": "jgv3_job_0U812_TestApp01_1762440725_142a562d",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "source_hash": "9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74",
+  "created_at": "2025-11-06T14:52:05.693732+00:00",
+  "input_artifacts": {
+    "business_processes": "0U812/TestApp01/discovery_v2/jobs/dv2_job_0U812_TestApp01_1762440076_890f28c3/artifacts/business_processes.json",
+    "api_patterns": "0U812/TestApp01/discovery_v2/jobs/dv2_job_0U812_TestApp01_1762440076_890f28c3/artifacts/api_patterns.json",
+    "erd": "0U812/TestApp01/data_analysis_v2/jobs/da2_job_0U812_TestApp01_1762439897_08497588/artifacts/erd.json",
+    "static_analysis": "0U812/TestApp01/code_analysis_v3/jobs/ca3_job_0U812_TestApp01_1762439063_c998bcd9/artifacts/static_analysis.json",
+    "refactor_recipes": "0U812/TestApp01/code_refactor_v2/jobs/rf2_job_0U812_TestApp01_1762439638_48cf051e/artifacts/refactor_recipes.json",
+    "microservice_boundaries": "0U812/TestApp01/dependency_mapper_v2/jobs/dmv2_job_0U812_TestApp01_1762439738_3581cb90/artifacts/microservice_boundaries.json",
+    "dependency_graph": "0U812/TestApp01/dependency_mapper_v2/jobs/dmv2_job_0U812_TestApp01_1762439738_3581cb90/artifacts/dependency_graph.json",
+    "decomposition_strategy": "0U812/TestApp01/monolith_identifier_v2/jobs/miv2_job_0U812_TestApp01_1762440368_7754f811/artifacts/decomposition_strategy.json",
+    "aws_recommendations": "0U812/TestApp01/architecture_v2/jobs/ar2_job_0U812_TestApp01_1762440236_d06e31f2/artifacts/architecture_recommendations.json"
+  },
+  "status": "initiated"
+}

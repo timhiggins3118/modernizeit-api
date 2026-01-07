@@ -1,0 +1,10 @@
+{
+  "FunctionName": "ArchitectureRecommenderV2StartJob",
+  "Runtime": "python3.11",
+  "Handler": "start_architecture_v2_handler.lambda_handler",
+  "Timeout": 60,
+  "MemorySize": 256,
+  "PackageType": "Zip",
+  "Environment": null,
+  "Layers": null
+}

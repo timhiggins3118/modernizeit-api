@@ -1,0 +1,536 @@
+{
+  "suggested_services": [
+    {
+      "service_name": "Service16",
+      "programs": [
+        "UTCSNT10",
+        "IMCSIR00",
+        "CMCSRP73",
+        "XACSCT00",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+        "XACSCV00"
+      ],
+      "program_count": 6,
+      "internal_coupling": 0.125,
+      "external_coupling": 0.875,
+      "cohesion_score": 0.833,
+      "justification": "High internal cohesion (12.5%), low external coupling"
+    },
+    {
+      "service_name": "Service13",
+      "programs": [
+        "UTCSDC00",
+        "IBMi-Cobol/Cobol/UTCSDC00C.CBL",
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "UTCSNG00",
+        "XACSCC00"
+      ],
+      "program_count": 5,
+      "internal_coupling": 1.0,
+      "external_coupling": 0.0,
+      "cohesion_score": 0.86,
+      "justification": "High internal cohesion (100.0%), low external coupling"
+    },
+    {
+      "service_name": "Service28",
+      "programs": [
+        "UTXSFS00",
+        "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+        "QCLSCAN"
+      ],
+      "program_count": 3,
+      "internal_coupling": 0.25,
+      "external_coupling": 0.75,
+      "cohesion_score": 0.9,
+      "justification": "High internal cohesion (25.0%), low external coupling"
+    },
+    {
+      "service_name": "Service3",
+      "programs": [
+        "CMCSRP00",
+        "IBMi-Cobol/Cobol/CMCSRP00C.CBL"
+      ],
+      "program_count": 2,
+      "internal_coupling": 1.0,
+      "external_coupling": 0.0,
+      "cohesion_score": 0.95,
+      "justification": "High internal cohesion (100.0%), low external coupling"
+    },
+    {
+      "service_name": "Service12",
+      "programs": [
+        "CMCSCL50",
+        "IBMi-Cobol/Cobol/CMCSCL50C.CBL"
+      ],
+      "program_count": 2,
+      "internal_coupling": 1.0,
+      "external_coupling": 0.0,
+      "cohesion_score": 0.95,
+      "justification": "High internal cohesion (100.0%), low external coupling"
+    },
+    {
+      "service_name": "Service0",
+      "programs": [
+        "IBMi-Cobol/Cobol/STATUSCODE.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service1",
+      "programs": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service2",
+      "programs": [
+        "IBMi-Cobol/Cobol/UTCSDC00L.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service4",
+      "programs": [
+        "IBMi-Cobol/Cobol/ADCPSH21L.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service5",
+      "programs": [
+        "IBMi-Cobol/Cobol/DATEFLIP.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service6",
+      "programs": [
+        "IBMi-Cobol/Cobol/DIPWCC00.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service7",
+      "programs": [
+        "IBMi-Cobol/Cobol/DIPWCC01.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service8",
+      "programs": [
+        "IBMi-Cobol/Cobol/UTCSUL10L.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service9",
+      "programs": [
+        "IBMi-Cobol/Cobol/CMCSCL50L.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service10",
+      "programs": [
+        "IBMi-Cobol/Cobol/XACSCC00L.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service11",
+      "programs": [
+        "IBMi-Cobol/Cobol/UTXSFS00L.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service14",
+      "programs": [
+        "IBMi-Cobol/Cobol/CMCSRP00L.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service15",
+      "programs": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    },
+    {
+      "service_name": "Service17",
+      "programs": [
+        "XACSCV10"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service18",
+      "programs": [
+        "UTXSNC10"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service19",
+      "programs": [
+        "FMCSPL00"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service20",
+      "programs": [
+        "XACSRQ00"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service21",
+      "programs": [
+        "IMCSIR10"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service22",
+      "programs": [
+        "UTXSRM00"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service23",
+      "programs": [
+        "UTCSNT00"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service24",
+      "programs": [
+        "CMCSSC00"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service25",
+      "programs": [
+        "UTCSUL00"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service26",
+      "programs": [
+        "XACSZC00"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service27",
+      "programs": [
+        "XACSRC10"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service29",
+      "programs": [
+        "XACSRC30"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service30",
+      "programs": [
+        "UTXSC100"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service31",
+      "programs": [
+        "CMCSRP72"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service32",
+      "programs": [
+        "CMCSRP10"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service33",
+      "programs": [
+        "UTXCEF00"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0.0,
+      "external_coupling": 1.0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0.0%), low external coupling"
+    },
+    {
+      "service_name": "Service34",
+      "programs": [
+        "IBMi-Cobol/Cobol/UTCSC101L.CBL"
+      ],
+      "program_count": 1,
+      "internal_coupling": 0,
+      "external_coupling": 0,
+      "cohesion_score": 1.0,
+      "justification": "High internal cohesion (0%), low external coupling"
+    }
+  ],
+  "shared_components": [
+    {
+      "component": "STDPROCESS",
+      "component_type": "copybook",
+      "used_by_services_count": 4,
+      "used_by_programs_count": 4,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "DDS-UTFMTB00",
+      "component_type": "copybook",
+      "used_by_services_count": 4,
+      "used_by_programs_count": 4,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "DATEFLIP",
+      "component_type": "copybook",
+      "used_by_services_count": 4,
+      "used_by_programs_count": 4,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "STATUSCODE",
+      "component_type": "copybook",
+      "used_by_services_count": 4,
+      "used_by_programs_count": 4,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "UTCSDC00L",
+      "component_type": "copybook",
+      "used_by_services_count": 4,
+      "used_by_programs_count": 4,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "DDS-CMFHCL00",
+      "component_type": "copybook",
+      "used_by_services_count": 3,
+      "used_by_programs_count": 5,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "UTCSDC00C",
+      "component_type": "copybook",
+      "used_by_services_count": 3,
+      "used_by_programs_count": 3,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "DDS-CMFDCL50",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 3,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "DDS-CMFDMO00",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 2,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "DDS-CMFHMO00",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 2,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "CMCSCL50L",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 2,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "CMCSRP00L",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 2,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "CMCSRP00C",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 2,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "UTCSUL10L",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 2,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "XACSCC00L",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 2,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "DDS-CMFMRP00",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 2,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "DDS-XAFMZC00",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 2,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    },
+    {
+      "component": "UTXSFS00L",
+      "component_type": "copybook",
+      "used_by_services_count": 2,
+      "used_by_programs_count": 2,
+      "recommendation": "Create shared library or duplicate to avoid cross-service dependencies"
+    }
+  ],
+  "summary": {
+    "total_services_suggested": 35,
+    "total_shared_components": 18
+  },
+  "generated_at": "2025-11-06T14:36:05.906537+00:00",
+  "source_job_id": "dmv2_job_0U812_TestApp01_1762439738_3581cb90"
+}

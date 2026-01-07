@@ -1,0 +1,51 @@
+{
+  "file_name": "CMCSCL50C.CBL",
+  "file_type": "UNKNOWN",
+  "confidence": 0.3,
+  "paragraphs": [],
+  "paragraph_count": 0,
+  "units": [
+    {
+      "name": "SYN-BLOCK-1",
+      "start_line": 1,
+      "end_line": 6,
+      "line_count": 6,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 2,
+          "operation": "CALL",
+          "source": "99000-CALL-CMCSCL50-FUNCTION.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 2,
+            "unit": "SYN-BLOCK-1"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 4,
+          "operation": "CALL",
+          "source": "CALL \"CMCSCL50\" USING CMCSCL50-DATA.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 4,
+            "unit": "SYN-BLOCK-1"
+          }
+        }
+      ],
+      "statement_count": 2,
+      "synthetic": true,
+      "generation_method": "statement_grouping"
+    }
+  ],
+  "unit_type": "synthetic",
+  "traceability": {
+    "enabled": true,
+    "version": "v3.0",
+    "statement_id_format": "s{n}",
+    "line_numbers_present": true
+  },
+  "raw_content": "      *---------------------------------------------------------------*\r\n       99000-CALL-CMCSCL50-FUNCTION.\r\n      *---------------------------------------------------------------*\r\n           CALL \"CMCSCL50\" USING CMCSCL50-DATA.\r\n      *---------------------------------------------------------------*\r\n",
+  "raw_content_truncated": false
+}

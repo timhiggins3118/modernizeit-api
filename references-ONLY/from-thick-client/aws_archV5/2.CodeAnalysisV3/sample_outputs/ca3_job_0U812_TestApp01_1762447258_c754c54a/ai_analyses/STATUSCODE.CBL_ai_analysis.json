@@ -1,0 +1,26 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "STATUSCODE.CBL",
+  "timestamp": "2025-11-06T16:41:16.707117Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This file defines standard status codes and their meanings for file operations and system responses in a COBOL application. It serves as a centralized definition of return codes that can be used across the application for consistent error handling and status checking.",
+    "content": "The file contains two main data structures: STATUS-CODES (2 characters) and EXTEND-CODES (4 characters). It primarily consists of level-88 condition names that map specific status code values to meaningful business conditions, covering file operations, system states, and error conditions.",
+    "usage": "This copybook is likely included (COPY statement) by multiple COBOL programs that perform file operations or need to check operation status codes. Programs would reference these condition names in their logic for error handling and flow control rather than using hard-coded values.",
+    "dependencies": [],
+    "modernization_approach": "1. Create an enumeration or constant class in the target language (e.g., Java enum, C# enum)\n2. Consider implementing as a proper error handling system using exceptions\n3. Maintain the same code values for compatibility if interfacing with legacy systems\n4. Add proper documentation for each status code\n5. Consider grouping related codes into categories\n6. Implement as part of a broader error handling framework",
+    "complexity": "LOW",
+    "complexity_reasoning": "The file is straightforward, well-structured, and serves a single clear purpose. It contains only constant definitions without complex logic or interdependencies. The main challenge in modernization would be ensuring all programs using these codes are updated consistently."
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

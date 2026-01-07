@@ -1,0 +1,108 @@
+{
+  "summary": {
+    "application_type": "batch_processing",
+    "recommended_architecture": "serverless",
+    "confidence": 0.7,
+    "key_characteristics": [
+      "batch-oriented",
+      "data-centric",
+      "low-complexity"
+    ]
+  },
+  "service_mappings": [
+    {
+      "cobol_program": "UNKNOWN",
+      "aws_service": "Lambda",
+      "function_name": "BatchProcessor",
+      "runtime": "java17",
+      "memory_mb": 1024,
+      "timeout_seconds": 900,
+      "trigger": "CloudWatch Events",
+      "confidence": 0.8,
+      "reasoning": "Batch nature suggests periodic execution, suitable for Lambda with CloudWatch Events trigger"
+    }
+  ],
+  "database_strategy": {
+    "primary_database": "Aurora PostgreSQL",
+    "instance_class": "db.t4g.medium",
+    "storage_gb": 100,
+    "multi_az": true,
+    "confidence": 0.7,
+    "reasoning": "34 data entities suggest relational structure, Aurora provides scalability and compatibility",
+    "migration_strategy": "AWS DMS"
+  },
+  "api_design": {
+    "required": false,
+    "api_type": "None",
+    "authentication": "None",
+    "reasoning": "Batch processing nature doesn't indicate need for API"
+  },
+  "compute_summary": {
+    "lambda_functions": 1,
+    "ecs_services": 0,
+    "ec2_instances": 0
+  },
+  "storage_strategy": {
+    "s3_buckets": [
+      {
+        "name": "input-files",
+        "purpose": "Input files",
+        "storage_class": "S3 Standard"
+      },
+      {
+        "name": "output-files",
+        "purpose": "Output files",
+        "storage_class": "S3 Standard"
+      },
+      {
+        "name": "archive",
+        "purpose": "Archive",
+        "storage_class": "S3 IA"
+      }
+    ]
+  },
+  "security_recommendations": {
+    "vpc_required": true,
+    "encryption_at_rest": "AWS KMS",
+    "encryption_in_transit": "TLS 1.2+",
+    "iam_roles_needed": [
+      "LambdaExecutionRole",
+      "RDSAccessRole"
+    ]
+  },
+  "migration_phases": [
+    {
+      "phase": 1,
+      "name": "Data Migration",
+      "duration_weeks": 4,
+      "risk": "medium",
+      "tasks": [
+        "Set up Aurora PostgreSQL",
+        "Configure DMS",
+        "Migrate data"
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "Batch Logic Migration",
+      "duration_weeks": 6,
+      "risk": "medium",
+      "tasks": [
+        "Refactor COBOL to Java",
+        "Implement Lambda function",
+        "Set up CloudWatch Events"
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "Testing and Optimization",
+      "duration_weeks": 4,
+      "risk": "low",
+      "tasks": [
+        "Parallel testing",
+        "Performance tuning",
+        "Cutover planning"
+      ]
+    }
+  ]
+}

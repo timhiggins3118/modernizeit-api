@@ -1,0 +1,10 @@
+{
+  "FunctionName": "DataAnalysisV2BedrockAnalyzerBatch",
+  "Runtime": "python3.11",
+  "Handler": "bedrock_data_analyzer_batch_v2_handler.lambda_handler",
+  "Timeout": 300,
+  "MemorySize": 512,
+  "PackageType": "Zip",
+  "Environment": null,
+  "Layers": null
+}

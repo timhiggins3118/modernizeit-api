@@ -1,0 +1,12 @@
+{
+  "job_id": "da2_job_0U812_TestApp01_1762439897_08497588",
+  "function": "data_analysis_v2",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "created_at": "2025-11-06T14:38:17.728994+00:00",
+  "source_hash": "9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74",
+  "ingest_paths": {
+    "extracted": "0U812/TestApp01/shared/uploads/9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74/extracted/",
+    "classified_catalog": "0U812/TestApp01/shared/catalogs/9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74/classified_catalog.json"
+  }
+}

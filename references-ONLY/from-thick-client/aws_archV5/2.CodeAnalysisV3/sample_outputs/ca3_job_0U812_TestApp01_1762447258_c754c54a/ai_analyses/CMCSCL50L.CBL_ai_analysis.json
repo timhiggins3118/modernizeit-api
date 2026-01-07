@@ -1,0 +1,26 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "CMCSCL50L.CBL",
+  "timestamp": "2025-11-06T16:41:16.891425Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This COBOL copybook appears to define a data structure related to claim or client processing, likely used for business workflow control (BWC) reporting functionality",
+    "content": "Contains a single 01-level data structure CMCSCL50-DATA with fields for claim/client identifiers (prefix, suffix, numbers) and workflow control flags. Includes condition names (88-levels) for BWC report processing logic",
+    "usage": "This copybook is likely included in COBOL programs that process claims or client records and need to handle business workflow control reporting. The structure suggests it's used as a standardized record layout across multiple programs",
+    "dependencies": [],
+    "modernization_approach": "1. Map this structure to a modern class/object definition\n2. Convert the numeric fields to appropriate integer types\n3. Convert the BWC-REP-NEEDED-FLAG to a boolean\n4. Consider combining related fields (CLACPRE/CLACSUF/CLACNBR) into a single composite identifier\n5. Use enums or constants for the flag values",
+    "complexity": "LOW",
+    "complexity_reasoning": "Simple data structure with straightforward field definitions, no complex data types or relationships, and clear business meaning in field names. The 88-level conditions provide clear boolean logic that's easily convertible to modern constructs"
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

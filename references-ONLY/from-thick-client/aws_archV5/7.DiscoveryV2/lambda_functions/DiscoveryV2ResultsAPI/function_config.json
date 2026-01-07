@@ -1,0 +1,10 @@
+{
+  "FunctionName": "DiscoveryV2ResultsAPI",
+  "Runtime": "python3.11",
+  "Handler": "discovery_results_v2_handler.lambda_handler",
+  "Timeout": 60,
+  "MemorySize": 512,
+  "PackageType": "Zip",
+  "Environment": null,
+  "Layers": null
+}

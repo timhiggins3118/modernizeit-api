@@ -1,0 +1,4402 @@
+{
+  "generated_at": "2025-11-06T14:40:30.095305+00:00",
+  "summary": {
+    "total_entities": 34,
+    "total_relationships": 0
+  },
+  "entities": [
+    {
+      "id": "entity_001",
+      "name": "SpecialWorkFields",
+      "source": {
+        "cobol_record": "SPECIAL-WORK-FIELDS",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "wk_hw_claim",
+          "cobol_field": "WK-HW-CLAIM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Hw Claim field"
+        },
+        {
+          "name": "clacpre",
+          "cobol_field": "CLACPRE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Clacpre field"
+        },
+        {
+          "name": "clacsuf",
+          "cobol_field": "CLACSUF",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Clacsuf field"
+        },
+        {
+          "name": "clacnbr",
+          "cobol_field": "CLACNBR",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(006)",
+          "business_meaning": "Clacnbr field"
+        },
+        {
+          "name": "wk_hw_claim_rd",
+          "cobol_field": "WK-HW-CLAIM-RD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Hw Claim Rd field"
+        },
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(006)",
+          "business_meaning": "Clnumber field"
+        },
+        {
+          "name": "wk_rkrsnbr",
+          "cobol_field": "WK-RKRSNBR",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(011)",
+          "business_meaning": "Wk Rkrsnbr field"
+        },
+        {
+          "name": "wk_rkrsnbr_rd",
+          "cobol_field": "WK-RKRSNBR-RD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Rkrsnbr Rd field"
+        },
+        {
+          "name": "issue",
+          "cobol_field": "ISSUE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(005)",
+          "business_meaning": "Issue field"
+        },
+        {
+          "name": "si_risk_stat",
+          "cobol_field": "SI-RISK-STAT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "1",
+          "business_meaning": "Si Risk Stat field"
+        },
+        {
+          "name": "risk_experience_stat",
+          "cobol_field": "RISK-EXPERIENCE-STAT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "1",
+          "business_meaning": "Risk Experience Stat field"
+        },
+        {
+          "name": "risk_represented_stat",
+          "cobol_field": "RISK-REPRESENTED-STAT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "1",
+          "business_meaning": "Risk Represented Stat field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_002",
+      "name": "Cmldca01Ctrl",
+      "source": {
+        "cobol_record": "CMLDCA01-CTRL",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        },
+        {
+          "name": "prprcseq",
+          "cobol_field": "PRPRCSEQ",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Prprcseq field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_003",
+      "name": "Cmldca01Hold",
+      "source": {
+        "cobol_record": "CMLDCA01-HOLD",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        },
+        {
+          "name": "prprcseq",
+          "cobol_field": "PRPRCSEQ",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Prprcseq field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_004",
+      "name": "Cmldmo06Ctrl",
+      "source": {
+        "cobol_record": "CMLDMO06-CTRL",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        },
+        {
+          "name": "prprcseq",
+          "cobol_field": "PRPRCSEQ",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Prprcseq field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_005",
+      "name": "Cmldmo06Hold",
+      "source": {
+        "cobol_record": "CMLDMO06-HOLD",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        },
+        {
+          "name": "prprcseq",
+          "cobol_field": "PRPRCSEQ",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Prprcseq field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_006",
+      "name": "WkSrcclaim",
+      "source": {
+        "cobol_record": "WK-SRCCLAIM",
+        "files": [
+          "IBMi-Cobol/Cobol/DICPCC00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "srcclmpr",
+          "cobol_field": "SRCCLMPR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Srcclmpr field"
+        },
+        {
+          "name": "srcclmsu",
+          "cobol_field": "SRCCLMSU",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Srcclmsu field"
+        },
+        {
+          "name": "srcclmnum",
+          "cobol_field": "SRCCLMNUM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(006)",
+          "business_meaning": "Srcclmnum field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_007",
+      "name": "WkObjclaim",
+      "source": {
+        "cobol_record": "WK-OBJCLAIM",
+        "files": [
+          "IBMi-Cobol/Cobol/DICPCC00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "objclmpr",
+          "cobol_field": "OBJCLMPR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Objclmpr field"
+        },
+        {
+          "name": "objclmsu",
+          "cobol_field": "OBJCLMSU",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Objclmsu field"
+        },
+        {
+          "name": "objclmnum",
+          "cobol_field": "OBJCLMNUM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(006)",
+          "business_meaning": "Objclmnum field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_008",
+      "name": "Loops",
+      "source": {
+        "cobol_record": "LOOPS",
+        "files": [
+          "IBMi-Cobol/Cobol/DICPCC00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "num_di_loaded",
+          "cobol_field": "NUM-DI-LOADED",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(003)",
+          "business_meaning": "Num Di Loaded field"
+        },
+        {
+          "name": "loop1",
+          "cobol_field": "LOOP1",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(003)",
+          "business_meaning": "Loop1 field"
+        },
+        {
+          "name": "loop2",
+          "cobol_field": "LOOP2",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(003)",
+          "business_meaning": "Loop2 field"
+        },
+        {
+          "name": "beg_loop2",
+          "cobol_field": "BEG-LOOP2",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(003)",
+          "business_meaning": "Beg Loop2 field"
+        },
+        {
+          "name": "end_loop1",
+          "cobol_field": "END-LOOP1",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(003)",
+          "business_meaning": "End Loop1 field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_009",
+      "name": "SpecialWorkFields",
+      "source": {
+        "cobol_record": "SPECIAL-WORK-FIELDS",
+        "files": [
+          "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "wk_rkrsnbr",
+          "cobol_field": "WK-RKRSNBR",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(011)",
+          "business_meaning": "Wk Rkrsnbr field"
+        },
+        {
+          "name": "wk_rkrsnbr_rd",
+          "cobol_field": "WK-RKRSNBR-RD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Rkrsnbr Rd field"
+        },
+        {
+          "name": "issue",
+          "cobol_field": "ISSUE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(005)",
+          "business_meaning": "Issue field"
+        },
+        {
+          "name": "wk_hw_claim",
+          "cobol_field": "WK-HW-CLAIM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Hw Claim field"
+        },
+        {
+          "name": "clacpre",
+          "cobol_field": "CLACPRE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Clacpre field"
+        },
+        {
+          "name": "clacsuf",
+          "cobol_field": "CLACSUF",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Clacsuf field"
+        },
+        {
+          "name": "clacnbr",
+          "cobol_field": "CLACNBR",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(006)",
+          "business_meaning": "Clacnbr field"
+        },
+        {
+          "name": "wk_hw_claim_rd",
+          "cobol_field": "WK-HW-CLAIM-RD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Hw Claim Rd field"
+        },
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(006)",
+          "business_meaning": "Clnumber field"
+        },
+        {
+          "name": "files_open_stat",
+          "cobol_field": "FILES-OPEN-STAT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Files Open Stat field"
+        },
+        {
+          "name": "si_risk_stat",
+          "cobol_field": "SI-RISK-STAT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "1",
+          "business_meaning": "Si Risk Stat field"
+        },
+        {
+          "name": "risk_experience_stat",
+          "cobol_field": "RISK-EXPERIENCE-STAT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "1",
+          "business_meaning": "Risk Experience Stat field"
+        },
+        {
+          "name": "risk_represented_stat",
+          "cobol_field": "RISK-REPRESENTED-STAT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "1",
+          "business_meaning": "Risk Represented Stat field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_010",
+      "name": "Panel",
+      "source": {
+        "cobol_record": "PANEL-RECORD",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "file_section"
+      },
+      "attributes": [
+        {
+          "name": "b_cmsocsec",
+          "cobol_field": "B-CMSOCSEC",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Cmsocsec field"
+        },
+        {
+          "name": "b_clfildte",
+          "cobol_field": "B-CLFILDTE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clfildte field"
+        },
+        {
+          "name": "b_clcrsts",
+          "cobol_field": "B-CLCRSTS",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clcrsts field"
+        },
+        {
+          "name": "b_clinjdte",
+          "cobol_field": "B-CLINJDTE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clinjdte field"
+        },
+        {
+          "name": "b_clactblt",
+          "cobol_field": "B-CLACTBLT",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clactblt field"
+        },
+        {
+          "name": "b_clrtndte",
+          "cobol_field": "B-CLRTNDTE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clrtndte field"
+        },
+        {
+          "name": "b_clacctyp",
+          "cobol_field": "B-CLACCTYP",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clacctyp field"
+        },
+        {
+          "name": "b_clsolepr",
+          "cobol_field": "B-CLSOLEPR",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clsolepr field"
+        },
+        {
+          "name": "b_clsettle",
+          "cobol_field": "B-CLSETTLE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clsettle field"
+        },
+        {
+          "name": "b_clstldte",
+          "cobol_field": "B-CLSTLDTE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clstldte field"
+        },
+        {
+          "name": "b_clhndprc",
+          "cobol_field": "B-CLHNDPRC",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clhndprc field"
+        },
+        {
+          "name": "b_cltype",
+          "cobol_field": "B-CLTYPE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Type classification"
+        },
+        {
+          "name": "b_clhmeovr",
+          "cobol_field": "B-CLHMEOVR",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clhmeovr field"
+        },
+        {
+          "name": "b_cldeath",
+          "cobol_field": "B-CLDEATH",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Cldeath field"
+        },
+        {
+          "name": "b_clinjdgn",
+          "cobol_field": "B-CLINJDGN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clinjdgn field"
+        },
+        {
+          "name": "b_clrvsdte",
+          "cobol_field": "B-CLRVSDTE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clrvsdte field"
+        },
+        {
+          "name": "b_clcoemp",
+          "cobol_field": "B-CLCOEMP",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clcoemp field"
+        },
+        {
+          "name": "b_cltotind",
+          "cobol_field": "B-CLTOTIND",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Cltotind field"
+        },
+        {
+          "name": "b_cltotmed",
+          "cobol_field": "B-CLTOTMED",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Cltotmed field"
+        },
+        {
+          "name": "b_clcmpnsdte",
+          "cobol_field": "B-CLCMPNSDTE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clcmpnsdte field"
+        },
+        {
+          "name": "b_clmdcldte",
+          "cobol_field": "B-CLMDCLDTE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clmdcldte field"
+        },
+        {
+          "name": "pr_cltype",
+          "cobol_field": "PR-CLTYPE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Type classification"
+        },
+        {
+          "name": "pr_clbwcloc",
+          "cobol_field": "PR-CLBWCLOC",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Pr Clbwcloc field"
+        },
+        {
+          "name": "b_pnrisk",
+          "cobol_field": "B-PNRISK",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Pnrisk field"
+        },
+        {
+          "name": "b_clrstyp",
+          "cobol_field": "B-CLRSTYP",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clrstyp field"
+        },
+        {
+          "name": "b_rkrsemp",
+          "cobol_field": "B-RKRSEMP",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrsemp field"
+        },
+        {
+          "name": "b_rkrsdbas",
+          "cobol_field": "B-RKRSDBAS",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrsdbas field"
+        },
+        {
+          "name": "b_rkrsref",
+          "cobol_field": "B-RKRSREF",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrsref field"
+        },
+        {
+          "name": "b_rkrsadr1",
+          "cobol_field": "B-RKRSADR1",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrsadr1 field"
+        },
+        {
+          "name": "b_rkrsadr2",
+          "cobol_field": "B-RKRSADR2",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrsadr2 field"
+        },
+        {
+          "name": "b_rkrscity",
+          "cobol_field": "B-RKRSCITY",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "City name"
+        },
+        {
+          "name": "b_rkrstate",
+          "cobol_field": "B-RKRSTATE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "State or province"
+        },
+        {
+          "name": "b_rkrszip",
+          "cobol_field": "B-RKRSZIP",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Postal code"
+        },
+        {
+          "name": "b_rpname",
+          "cobol_field": "B-RPNAME",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rpname field"
+        },
+        {
+          "name": "b_rkrscnln",
+          "cobol_field": "B-RKRSCNLN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrscnln field"
+        },
+        {
+          "name": "b_rkrscnfn",
+          "cobol_field": "B-RKRSCNFN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrscnfn field"
+        },
+        {
+          "name": "b_rkrscnmi",
+          "cobol_field": "B-RKRSCNMI",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrscnmi field"
+        },
+        {
+          "name": "b_rkrsphon",
+          "cobol_field": "B-RKRSPHON",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrsphon field"
+        },
+        {
+          "name": "b_rkfcntry",
+          "cobol_field": "B-RKFCNTRY",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkfcntry field"
+        },
+        {
+          "name": "b_pnclaim",
+          "cobol_field": "B-PNCLAIM",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Pnclaim field"
+        },
+        {
+          "name": "b_clactype",
+          "cobol_field": "B-CLACTYPE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Type classification"
+        },
+        {
+          "name": "pr_lead_clm",
+          "cobol_field": "PR-LEAD-CLM",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Pr Lead Clm field"
+        },
+        {
+          "name": "b_cmssntyp",
+          "cobol_field": "B-CMSSNTYP",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Cmssntyp field"
+        },
+        {
+          "name": "b_clrlrel",
+          "cobol_field": "B-CLRLREL",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clrlrel field"
+        },
+        {
+          "name": "b_claitype",
+          "cobol_field": "B-CLAITYPE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Type classification"
+        },
+        {
+          "name": "b_claicode",
+          "cobol_field": "B-CLAICODE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Claicode field"
+        },
+        {
+          "name": "b_clairefd",
+          "cobol_field": "B-CLAIREFD",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clairefd field"
+        },
+        {
+          "name": "b_rpnumber",
+          "cobol_field": "B-RPNUMBER",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rpnumber field"
+        },
+        {
+          "name": "b_clrprel",
+          "cobol_field": "B-CLRPREL",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clrprel field"
+        },
+        {
+          "name": "b_clrpsts",
+          "cobol_field": "B-CLRPSTS",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Clrpsts field"
+        },
+        {
+          "name": "pr_rep_num",
+          "cobol_field": "PR-REP-NUM",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Pr Rep Num field"
+        },
+        {
+          "name": "sfl_drop",
+          "cobol_field": "SFL-DROP",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Sfl Drop field"
+        },
+        {
+          "name": "b_rkrsmann",
+          "cobol_field": "B-RKRSMANN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrsmann field"
+        },
+        {
+          "name": "b_rkrsflg",
+          "cobol_field": "B-RKRSFLG",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Rkrsflg field"
+        },
+        {
+          "name": "b_slct01",
+          "cobol_field": "B-SLCT01",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Slct01 field"
+        },
+        {
+          "name": "b_slct02",
+          "cobol_field": "B-SLCT02",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Slct02 field"
+        },
+        {
+          "name": "b_slct03",
+          "cobol_field": "B-SLCT03",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Slct03 field"
+        },
+        {
+          "name": "n_pnclaim",
+          "cobol_field": "N-PNCLAIM",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "N Pnclaim field"
+        },
+        {
+          "name": "n_cmsocsec",
+          "cobol_field": "N-CMSOCSEC",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "N Cmsocsec field"
+        },
+        {
+          "name": "n_pnrisk1",
+          "cobol_field": "N-PNRISK1",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "N Pnrisk1 field"
+        },
+        {
+          "name": "s_pnname",
+          "cobol_field": "S-PNNAME",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "S Pnname field"
+        },
+        {
+          "name": "s_repname",
+          "cobol_field": "S-REPNAME",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "S Repname field"
+        },
+        {
+          "name": "s_empname",
+          "cobol_field": "S-EMPNAME",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "S Empname field"
+        },
+        {
+          "name": "b_protect",
+          "cobol_field": "B-PROTECT",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "B Protect field"
+        },
+        {
+          "name": "hi_pndata",
+          "cobol_field": "HI-PNDATA",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "Hi Pndata field"
+        },
+        {
+          "name": "pr_pnpck05a",
+          "cobol_field": "PR-PNPCK05A",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "Pr Pnpck05A field"
+        },
+        {
+          "name": "b_pnpck05a",
+          "cobol_field": "B-PNPCK05A",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "B Pnpck05A field"
+        },
+        {
+          "name": "overlay_msgcl",
+          "cobol_field": "OVERLAY-MSGCL",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "Overlay Msgcl field"
+        },
+        {
+          "name": "n_pnrisk",
+          "cobol_field": "N-PNRISK",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "N Pnrisk field"
+        },
+        {
+          "name": "n_rpnumber",
+          "cobol_field": "N-RPNUMBER",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "N Rpnumber field"
+        },
+        {
+          "name": "sfldsp_05a",
+          "cobol_field": "SFLDSP-05A",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "Sfldsp 05A field"
+        },
+        {
+          "name": "sflctl_05a",
+          "cobol_field": "SFLCTL-05A",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "Sflctl 05A field"
+        },
+        {
+          "name": "sflend_05a",
+          "cobol_field": "SFLEND-05A",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "Sflend 05A field"
+        },
+        {
+          "name": "p_paperless",
+          "cobol_field": "P-PAPERLESS",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "P Paperless field"
+        },
+        {
+          "name": "b_pnclbwcloc",
+          "cobol_field": "B-PNCLBWCLOC",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "B Pnclbwcloc field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_011",
+      "name": "FunctionKeyLabels",
+      "source": {
+        "cobol_record": "FUNCTION-KEY-LABELS",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "f01",
+          "cobol_field": "F01",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F01 field"
+        },
+        {
+          "name": "f02",
+          "cobol_field": "F02",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F02 field"
+        },
+        {
+          "name": "f03",
+          "cobol_field": "F03",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F03 field"
+        },
+        {
+          "name": "f04",
+          "cobol_field": "F04",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F04 field"
+        },
+        {
+          "name": "f05",
+          "cobol_field": "F05",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F05 field"
+        },
+        {
+          "name": "f06",
+          "cobol_field": "F06",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F06 field"
+        },
+        {
+          "name": "f07",
+          "cobol_field": "F07",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F07 field"
+        },
+        {
+          "name": "f08",
+          "cobol_field": "F08",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F08 field"
+        },
+        {
+          "name": "f09",
+          "cobol_field": "F09",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F09 field"
+        },
+        {
+          "name": "f10",
+          "cobol_field": "F10",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F10 field"
+        },
+        {
+          "name": "f11",
+          "cobol_field": "F11",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F11 field"
+        },
+        {
+          "name": "f12",
+          "cobol_field": "F12",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F12 field"
+        },
+        {
+          "name": "f13",
+          "cobol_field": "F13",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F13 field"
+        },
+        {
+          "name": "f14",
+          "cobol_field": "F14",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F14 field"
+        },
+        {
+          "name": "f15",
+          "cobol_field": "F15",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F15 field"
+        },
+        {
+          "name": "f16",
+          "cobol_field": "F16",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F16 field"
+        },
+        {
+          "name": "f17",
+          "cobol_field": "F17",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F17 field"
+        },
+        {
+          "name": "f18",
+          "cobol_field": "F18",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F18 field"
+        },
+        {
+          "name": "f19",
+          "cobol_field": "F19",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F19 field"
+        },
+        {
+          "name": "f20",
+          "cobol_field": "F20",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F20 field"
+        },
+        {
+          "name": "f21",
+          "cobol_field": "F21",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F21 field"
+        },
+        {
+          "name": "f22",
+          "cobol_field": "F22",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F22 field"
+        },
+        {
+          "name": "f23",
+          "cobol_field": "F23",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F23 field"
+        },
+        {
+          "name": "f24",
+          "cobol_field": "F24",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "F24 field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_012",
+      "name": "CtrlKeys",
+      "source": {
+        "cobol_record": "CTRL-KEYS",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_013",
+      "name": "CtrlRange",
+      "source": {
+        "cobol_record": "CTRL-RANGE",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_014",
+      "name": "HoldKeys",
+      "source": {
+        "cobol_record": "HOLD-KEYS",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_015",
+      "name": "HoldRange",
+      "source": {
+        "cobol_record": "HOLD-RANGE",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_016",
+      "name": "NullKeys",
+      "source": {
+        "cobol_record": "NULL-KEYS",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_017",
+      "name": "NullRange",
+      "source": {
+        "cobol_record": "NULL-RANGE",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_018",
+      "name": "SpecialWorkFields",
+      "source": {
+        "cobol_record": "SPECIAL-WORK-FIELDS",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "alt_f10",
+          "cobol_field": "ALT-F10",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(022)",
+          "business_meaning": "Alt F10 field"
+        },
+        {
+          "name": "qclscan_data",
+          "cobol_field": "QCLSCAN-DATA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Qclscan Data field"
+        },
+        {
+          "name": "qcls_string",
+          "cobol_field": "QCLS-STRING",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(999)",
+          "business_meaning": "Qcls String field"
+        },
+        {
+          "name": "qcls_strlen",
+          "cobol_field": "QCLS-STRLEN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Qcls Strlen field"
+        },
+        {
+          "name": "qcls_strpos",
+          "cobol_field": "QCLS-STRPOS",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Qcls Strpos field"
+        },
+        {
+          "name": "qcls_pattern",
+          "cobol_field": "QCLS-PATTERN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(999)",
+          "business_meaning": "Qcls Pattern field"
+        },
+        {
+          "name": "qcls_patlen",
+          "cobol_field": "QCLS-PATLEN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Qcls Patlen field"
+        },
+        {
+          "name": "qcls_translate",
+          "cobol_field": "QCLS-TRANSLATE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Qcls Translate field"
+        },
+        {
+          "name": "qcls_trim",
+          "cobol_field": "QCLS-TRIM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Qcls Trim field"
+        },
+        {
+          "name": "qcls_wild",
+          "cobol_field": "QCLS-WILD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Qcls Wild field"
+        },
+        {
+          "name": "qcls_result",
+          "cobol_field": "QCLS-RESULT",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Qcls Result field"
+        },
+        {
+          "name": "swf_claim",
+          "cobol_field": "SWF-CLAIM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Swf Claim field"
+        },
+        {
+          "name": "swf_prefix",
+          "cobol_field": "SWF-PREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Swf Prefix field"
+        },
+        {
+          "name": "swf_suffix",
+          "cobol_field": "SWF-SUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Swf Suffix field"
+        },
+        {
+          "name": "swf_number",
+          "cobol_field": "SWF-NUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(006)",
+          "business_meaning": "Number field"
+        },
+        {
+          "name": "assoc_lead",
+          "cobol_field": "ASSOC-LEAD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Assoc Lead field"
+        },
+        {
+          "name": "assoc",
+          "cobol_field": "ASSOC",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(010)",
+          "business_meaning": "Assoc field"
+        },
+        {
+          "name": "lead",
+          "cobol_field": "LEAD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(010)",
+          "business_meaning": "Lead field"
+        },
+        {
+          "name": "wk_claiseqn",
+          "cobol_field": "WK-CLAISEQN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(003)",
+          "business_meaning": "Wk Claiseqn field"
+        },
+        {
+          "name": "hold_risk_address",
+          "cobol_field": "HOLD-RISK-ADDRESS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Address field"
+        },
+        {
+          "name": "rkrsemp",
+          "cobol_field": "RKRSEMP",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(016)",
+          "business_meaning": "Rkrsemp field"
+        },
+        {
+          "name": "rkrsdbas",
+          "cobol_field": "RKRSDBAS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsdbas field"
+        },
+        {
+          "name": "rkrsref",
+          "cobol_field": "RKRSREF",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsref field"
+        },
+        {
+          "name": "rkrsadr1",
+          "cobol_field": "RKRSADR1",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsadr1 field"
+        },
+        {
+          "name": "rkrsadr2",
+          "cobol_field": "RKRSADR2",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsadr2 field"
+        },
+        {
+          "name": "rkrscity",
+          "cobol_field": "RKRSCITY",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "City name"
+        },
+        {
+          "name": "rkrstate",
+          "cobol_field": "RKRSTATE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "State or province"
+        },
+        {
+          "name": "rkrszip",
+          "cobol_field": "RKRSZIP",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Postal code"
+        },
+        {
+          "name": "rkfcntry",
+          "cobol_field": "RKFCNTRY",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkfcntry field"
+        },
+        {
+          "name": "rkrscnln",
+          "cobol_field": "RKRSCNLN",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrscnln field"
+        },
+        {
+          "name": "rkrscnfn",
+          "cobol_field": "RKRSCNFN",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrscnfn field"
+        },
+        {
+          "name": "rkrscnmi",
+          "cobol_field": "RKRSCNMI",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrscnmi field"
+        },
+        {
+          "name": "rkrsphon",
+          "cobol_field": "RKRSPHON",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsphon field"
+        },
+        {
+          "name": "new_risk_address",
+          "cobol_field": "NEW-RISK-ADDRESS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Address field"
+        },
+        {
+          "name": "hld_pgm_option",
+          "cobol_field": "HLD-PGM-OPTION",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Hld Pgm Option field"
+        },
+        {
+          "name": "x",
+          "cobol_field": "X",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(001)",
+          "business_meaning": "X field"
+        },
+        {
+          "name": "previous_panel",
+          "cobol_field": "PREVIOUS-PANEL",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Previous Panel field"
+        },
+        {
+          "name": "current_date",
+          "cobol_field": "CURRENT-DATE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(008)",
+          "business_meaning": "Date field"
+        },
+        {
+          "name": "filed_date",
+          "cobol_field": "FILED-DATE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(008)",
+          "business_meaning": "Date field"
+        },
+        {
+          "name": "injury_date",
+          "cobol_field": "INJURY-DATE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(008)",
+          "business_meaning": "Date field"
+        },
+        {
+          "name": "panel_date",
+          "cobol_field": "PANEL-DATE",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(008)",
+          "business_meaning": "Date field"
+        },
+        {
+          "name": "hold_pnname",
+          "cobol_field": "HOLD-PNNAME",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(050)",
+          "business_meaning": "Hold Pnname field"
+        },
+        {
+          "name": "hold_ssn",
+          "cobol_field": "HOLD-SSN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(009)",
+          "business_meaning": "Hold Ssn field"
+        },
+        {
+          "name": "record_cnt",
+          "cobol_field": "RECORD-CNT",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(003)",
+          "business_meaning": "Record Cnt field"
+        },
+        {
+          "name": "current_time_8",
+          "cobol_field": "CURRENT-TIME-8",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(008)",
+          "business_meaning": "Time field"
+        },
+        {
+          "name": "current_time",
+          "cobol_field": "CURRENT-TIME",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(006)",
+          "business_meaning": "Time field"
+        },
+        {
+          "name": "hold_pnclaim",
+          "cobol_field": "HOLD-PNCLAIM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(011)",
+          "business_meaning": "Hold Pnclaim field"
+        },
+        {
+          "name": "work_ssn",
+          "cobol_field": "WORK-SSN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(009)",
+          "business_meaning": "Work Ssn field"
+        },
+        {
+          "name": "work_ssnx",
+          "cobol_field": "WORK-SSNX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Work Ssnx field"
+        },
+        {
+          "name": "part1",
+          "cobol_field": "PART1",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(003)",
+          "business_meaning": "Part1 field"
+        },
+        {
+          "name": "part2",
+          "cobol_field": "PART2",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Part2 field"
+        },
+        {
+          "name": "part3",
+          "cobol_field": "PART3",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(004)",
+          "business_meaning": "Part3 field"
+        },
+        {
+          "name": "edit_ssn",
+          "cobol_field": "EDIT-SSN",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Edit Ssn field"
+        },
+        {
+          "name": "dash1",
+          "cobol_field": "DASH1",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Dash1 field"
+        },
+        {
+          "name": "dash2",
+          "cobol_field": "DASH2",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Dash2 field"
+        },
+        {
+          "name": "man_nbr",
+          "cobol_field": "MAN-NBR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Man Nbr field"
+        },
+        {
+          "name": "rkrsmann",
+          "cobol_field": "RKRSMANN",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(004)",
+          "business_meaning": "Rkrsmann field"
+        },
+        {
+          "name": "work_name_data",
+          "cobol_field": "WORK-NAME-DATA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Name field"
+        },
+        {
+          "name": "cmfstnam",
+          "cobol_field": "CMFSTNAM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(015)",
+          "business_meaning": "Cmfstnam field"
+        },
+        {
+          "name": "cmmdlint",
+          "cobol_field": "CMMDLINT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Cmmdlint field"
+        },
+        {
+          "name": "cmlstnam",
+          "cobol_field": "CMLSTNAM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(020)",
+          "business_meaning": "Cmlstnam field"
+        },
+        {
+          "name": "pnname",
+          "cobol_field": "PNNAME",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(030)",
+          "business_meaning": "Pnname field"
+        },
+        {
+          "name": "panel_table",
+          "cobol_field": "PANEL-TABLE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Panel Table field"
+        },
+        {
+          "name": "slct01",
+          "cobol_field": "SLCT01",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Slct01 field"
+        },
+        {
+          "name": "slct02",
+          "cobol_field": "SLCT02",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Slct02 field"
+        },
+        {
+          "name": "slct03",
+          "cobol_field": "SLCT03",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Slct03 field"
+        },
+        {
+          "name": "panel_table_rd",
+          "cobol_field": "PANEL-TABLE-RD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Panel Table Rd field"
+        },
+        {
+          "name": "panel_table_data",
+          "cobol_field": "PANEL-TABLE-DATA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Panel Table Data field"
+        },
+        {
+          "name": "panel_pick",
+          "cobol_field": "PANEL-PICK",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "PIC",
+          "business_meaning": "Panel Pick field"
+        },
+        {
+          "name": "window_panel",
+          "cobol_field": "WINDOW-PANEL",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Window Panel field"
+        },
+        {
+          "name": "claim_data",
+          "cobol_field": "CLAIM-DATA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Claim Data field"
+        },
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(006)",
+          "business_meaning": "Clnumber field"
+        },
+        {
+          "name": "cltype",
+          "cobol_field": "CLTYPE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(004)",
+          "business_meaning": "Type classification"
+        },
+        {
+          "name": "validate_claim",
+          "cobol_field": "VALIDATE-CLAIM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Date field"
+        },
+        {
+          "name": "work_option_table",
+          "cobol_field": "WORK-OPTION-TABLE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Work Option Table field"
+        },
+        {
+          "name": "work_table_rd",
+          "cobol_field": "WORK-TABLE-RD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Work Table Rd field"
+        },
+        {
+          "name": "work_option",
+          "cobol_field": "WORK-OPTION",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(002)",
+          "business_meaning": "Work Option field"
+        },
+        {
+          "name": "risk_address",
+          "cobol_field": "RISK-ADDRESS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Address field"
+        },
+        {
+          "name": "risk_address_rd",
+          "cobol_field": "RISK-ADDRESS-RD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Address field"
+        },
+        {
+          "name": "citystzip",
+          "cobol_field": "CITYSTZIP",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(039)",
+          "business_meaning": "City name"
+        },
+        {
+          "name": "addr_fld",
+          "cobol_field": "ADDR-FLD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Addr Fld field"
+        },
+        {
+          "name": "hld_rkrsnbr",
+          "cobol_field": "HLD-RKRSNBR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rkrsnbr field"
+        },
+        {
+          "name": "hld_rkrsnbr1",
+          "cobol_field": "HLD-RKRSNBR1",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rkrsnbr1 field"
+        },
+        {
+          "name": "hld_rkrsemp",
+          "cobol_field": "HLD-RKRSEMP",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rkrsemp field"
+        },
+        {
+          "name": "hld_rkrsdbas",
+          "cobol_field": "HLD-RKRSDBAS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rkrsdbas field"
+        },
+        {
+          "name": "hld_rkrsadr1",
+          "cobol_field": "HLD-RKRSADR1",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rkrsadr1 field"
+        },
+        {
+          "name": "hld_rkrsadr2",
+          "cobol_field": "HLD-RKRSADR2",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rkrsadr2 field"
+        },
+        {
+          "name": "hld_rkrscity",
+          "cobol_field": "HLD-RKRSCITY",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "City name"
+        },
+        {
+          "name": "hld_rkrstate",
+          "cobol_field": "HLD-RKRSTATE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "State or province"
+        },
+        {
+          "name": "hld_rkrszip",
+          "cobol_field": "HLD-RKRSZIP",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Postal code"
+        },
+        {
+          "name": "hld_rkfcntry",
+          "cobol_field": "HLD-RKFCNTRY",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rkfcntry field"
+        },
+        {
+          "name": "ws_message",
+          "cobol_field": "WS-MESSAGE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(7)",
+          "business_meaning": "Ws Message field"
+        },
+        {
+          "name": "wk_misc_alpha_fld",
+          "cobol_field": "WK-MISC-ALPHA-FLD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(100)",
+          "business_meaning": "Wk Misc Alpha Fld field"
+        },
+        {
+          "name": "wk_pnrisk_siz",
+          "cobol_field": "WK-PNRISK-SIZ",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Wk Pnrisk Siz field"
+        },
+        {
+          "name": "wk_rcd_num",
+          "cobol_field": "WK-RCD-NUM",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(005)",
+          "business_meaning": "Wk Rcd Num field"
+        },
+        {
+          "name": "wk_remainder",
+          "cobol_field": "WK-REMAINDER",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(001)",
+          "business_meaning": "Wk Remainder field"
+        },
+        {
+          "name": "wk_rpnumber",
+          "cobol_field": "WK-RPNUMBER",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(008)",
+          "business_meaning": "Wk Rpnumber field"
+        },
+        {
+          "name": "wk_rpnumber_rd",
+          "cobol_field": "WK-RPNUMBER-RD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Rpnumber Rd field"
+        },
+        {
+          "name": "wk_rpnumber_1",
+          "cobol_field": "WK-RPNUMBER-1",
+          "data_type": "DECIMAL",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "ZZZZZ9",
+          "business_meaning": "Wk Rpnumber 1 field"
+        },
+        {
+          "name": "wk_rpnumber_2",
+          "cobol_field": "WK-RPNUMBER-2",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "Wk Rpnumber 2 field"
+        },
+        {
+          "name": "inter_rpnumber",
+          "cobol_field": "INTER-RPNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(008)",
+          "business_meaning": "Inter Rpnumber field"
+        },
+        {
+          "name": "inter_rpnumber_rd",
+          "cobol_field": "INTER-RPNUMBER-RD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Inter Rpnumber Rd field"
+        },
+        {
+          "name": "wk_sfl_pag_num",
+          "cobol_field": "WK-SFL-PAG-NUM",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(004)",
+          "business_meaning": "Wk Sfl Pag Num field"
+        },
+        {
+          "name": "wk_edit_rep",
+          "cobol_field": "WK-EDIT-REP",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Edit Rep field"
+        },
+        {
+          "name": "edit_rpnum_1",
+          "cobol_field": "EDIT-RPNUM-1",
+          "data_type": "DECIMAL",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "ZZZZZ9",
+          "business_meaning": "Edit Rpnum 1 field"
+        },
+        {
+          "name": "edit_rpnum_2",
+          "cobol_field": "EDIT-RPNUM-2",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(002)",
+          "business_meaning": "Edit Rpnum 2 field"
+        },
+        {
+          "name": "wk_sfl05a_rep_data",
+          "cobol_field": "WK-SFL05A-REP-DATA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Sfl05A Rep Data field"
+        },
+        {
+          "name": "ads_rep_sts",
+          "cobol_field": "ADS-REP-STS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Ads Rep Sts field"
+        },
+        {
+          "name": "rpdspnam",
+          "cobol_field": "RPDSPNAM",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(029)",
+          "business_meaning": "Rpdspnam field"
+        },
+        {
+          "name": "rkrpsts",
+          "cobol_field": "RKRPSTS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Rkrpsts field"
+        },
+        {
+          "name": "rkrpstsd",
+          "cobol_field": "RKRPSTSD",
+          "data_type": "DECIMAL",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "Z9/99/9999",
+          "business_meaning": "Rkrpstsd field"
+        },
+        {
+          "name": "rpstsrvu",
+          "cobol_field": "RPSTSRVU",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(010)",
+          "business_meaning": "Rpstsrvu field"
+        },
+        {
+          "name": "rpstsrvd",
+          "cobol_field": "RPSTSRVD",
+          "data_type": "DECIMAL",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "Z9/99/9999",
+          "business_meaning": "Rpstsrvd field"
+        },
+        {
+          "name": "wk_sfl05a_rep_hdg_data",
+          "cobol_field": "WK-SFL05A-REP-HDG-DATA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Sfl05A Rep Hdg Data field"
+        },
+        {
+          "name": "wk_sfl05a_risk_data",
+          "cobol_field": "WK-SFL05A-RISK-DATA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Sfl05A Risk Data field"
+        },
+        {
+          "name": "pnrisk",
+          "cobol_field": "PNRISK",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(012)",
+          "business_meaning": "Pnrisk field"
+        },
+        {
+          "name": "sav_lin_attrib_sts",
+          "cobol_field": "SAV-LIN-ATTRIB-STS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Sav Lin Attrib Sts field"
+        },
+        {
+          "name": "risk_sec_sts",
+          "cobol_field": "RISK-SEC-STS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Risk Sec Sts field"
+        },
+        {
+          "name": "rkrscrtu",
+          "cobol_field": "RKRSCRTU",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(010)",
+          "business_meaning": "Rkrscrtu field"
+        },
+        {
+          "name": "rkrscrtd",
+          "cobol_field": "RKRSCRTD",
+          "data_type": "DECIMAL",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "Z9/99/9999",
+          "business_meaning": "Rkrscrtd field"
+        },
+        {
+          "name": "rkrsrvsu",
+          "cobol_field": "RKRSRVSU",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(010)",
+          "business_meaning": "Rkrsrvsu field"
+        },
+        {
+          "name": "rkrsrvsd",
+          "cobol_field": "RKRSRVSD",
+          "data_type": "DECIMAL",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "Z9/99/9999",
+          "business_meaning": "Rkrsrvsd field"
+        },
+        {
+          "name": "wk_sfl05a_risk_hdg_data",
+          "cobol_field": "WK-SFL05A-RISK-HDG-DATA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Wk Sfl05A Risk Hdg Data field"
+        },
+        {
+          "name": "wk_sfl05a_sfl_siz",
+          "cobol_field": "WK-SFL05A-SFL-SIZ",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(004)",
+          "business_meaning": "Wk Sfl05A Sfl Siz field"
+        },
+        {
+          "name": "wk_unimportant",
+          "cobol_field": "WK-UNIMPORTANT",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(005)",
+          "business_meaning": "Wk Unimportant field"
+        },
+        {
+          "name": "sfl05_mode_status",
+          "cobol_field": "SFL05-MODE-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "cmldcl20_status",
+          "cobol_field": "CMLDCL20-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "cmldcl40_status",
+          "cobol_field": "CMLDCL40-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "cmldcl60_status",
+          "cobol_field": "CMLDCL60-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "cmlacl50_status",
+          "cobol_field": "CMLACL50-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "fnckey_06_status",
+          "cobol_field": "FNCKEY-06-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "clfildte_status",
+          "cobol_field": "CLFILDTE-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "clinjdte_status",
+          "cobol_field": "CLINJDTE-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "rkrsnbr_status",
+          "cobol_field": "RKRSNBR-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "rkrsnbr_local_status",
+          "cobol_field": "RKRSNBR-LOCAL-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "risk_address_status",
+          "cobol_field": "RISK-ADDRESS-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Address field"
+        },
+        {
+          "name": "ovrd_address_status",
+          "cobol_field": "OVRD-ADDRESS-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Address field"
+        },
+        {
+          "name": "risk_header_status",
+          "cobol_field": "RISK-HEADER-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "rkrsadr_status_1_2",
+          "cobol_field": "RKRSADR-STATUS-1-2",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "rkrsmann_status",
+          "cobol_field": "RKRSMANN-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "risk_address_aut",
+          "cobol_field": "RISK-ADDRESS-AUT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Address field"
+        },
+        {
+          "name": "date_status",
+          "cobol_field": "DATE-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Date field"
+        },
+        {
+          "name": "revise_status_02",
+          "cobol_field": "REVISE-STATUS-02",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "cmfacl50_status",
+          "cobol_field": "CMFACL50-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "rep_pcn_tracking_status",
+          "cobol_field": "REP-PCN-TRACKING-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "ir_motions_exist_stat",
+          "cobol_field": "IR-MOTIONS-EXIST-STAT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Ir Motions Exist Stat field"
+        },
+        {
+          "name": "delete_cmlacl50_status",
+          "cobol_field": "DELETE-CMLACL50-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "int_rep_status",
+          "cobol_field": "INT-REP-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "int_rpnumber_status",
+          "cobol_field": "INT-RPNUMBER-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "ws_claim",
+          "cobol_field": "WS-CLAIM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Ws Claim field"
+        },
+        {
+          "name": "fnckey_21_hit",
+          "cobol_field": "FNCKEY-21-HIT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Fnckey 21 Hit field"
+        },
+        {
+          "name": "w_risk",
+          "cobol_field": "W-RISK",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(11)",
+          "business_meaning": "W Risk field"
+        },
+        {
+          "name": "w_risk_r",
+          "cobol_field": "W-RISK-R",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(11)",
+          "business_meaning": "W Risk R field"
+        },
+        {
+          "name": "risk_address_check",
+          "cobol_field": "RISK-ADDRESS-CHECK",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Address field"
+        },
+        {
+          "name": "clbwcloc_table_status",
+          "cobol_field": "CLBWCLOC-TABLE-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "clpplflg_pl_status",
+          "cobol_field": "CLPPLFLG-PL-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "clpplflg_p_status",
+          "cobol_field": "CLPPLFLG-P-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "paper_changed_status",
+          "cobol_field": "PAPER-CHANGED-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "bwcloc_status",
+          "cobol_field": "BWCLOC-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "cltype_valid_flag",
+          "cobol_field": "CLTYPE-VALID-FLAG",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Boolean flag"
+        },
+        {
+          "name": "work_clpplflg",
+          "cobol_field": "WORK-CLPPLFLG",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Work Clpplflg field"
+        },
+        {
+          "name": "wrk_clbwcloc",
+          "cobol_field": "WRK-CLBWCLOC",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(080)",
+          "business_meaning": "Wrk Clbwcloc field"
+        },
+        {
+          "name": "hld_paper_status",
+          "cobol_field": "HLD-PAPER-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "hld_pnbwcloc",
+          "cobol_field": "HLD-PNBWCLOC",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(041)",
+          "business_meaning": "Hld Pnbwcloc field"
+        },
+        {
+          "name": "wrk_rkrsnbr",
+          "cobol_field": "WRK-RKRSNBR",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(011)",
+          "business_meaning": "Wrk Rkrsnbr field"
+        },
+        {
+          "name": "no_changes_p_status",
+          "cobol_field": "NO-CHANGES-P-STATUS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Status indicator"
+        },
+        {
+          "name": "w_clbwcloc",
+          "cobol_field": "W-CLBWCLOC",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "W Clbwcloc field"
+        },
+        {
+          "name": "w_addr",
+          "cobol_field": "W-ADDR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "W Addr field"
+        },
+        {
+          "name": "w_sect",
+          "cobol_field": "W-SECT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "W Sect field"
+        },
+        {
+          "name": "w_area",
+          "cobol_field": "W-AREA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "W Area field"
+        },
+        {
+          "name": "w_pnclbwcloc",
+          "cobol_field": "W-PNCLBWCLOC",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "W Pnclbwcloc field"
+        },
+        {
+          "name": "posx",
+          "cobol_field": "POSX",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(001)",
+          "business_meaning": "Posx field"
+        },
+        {
+          "name": "num",
+          "cobol_field": "NUM",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(001)",
+          "business_meaning": "Num field"
+        },
+        {
+          "name": "hyphen_cnt",
+          "cobol_field": "HYPHEN-CNT",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(001)",
+          "business_meaning": "Hyphen Cnt field"
+        },
+        {
+          "name": "prv_msgcnt",
+          "cobol_field": "PRV-MSGCNT",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "99",
+          "business_meaning": "Prv Msgcnt field"
+        },
+        {
+          "name": "f21_for_code1",
+          "cobol_field": "F21-FOR-CODE1",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "F21 For Code1 field"
+        },
+        {
+          "name": "clinjdte_aut",
+          "cobol_field": "CLINJDTE-AUT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Clinjdte Aut field"
+        },
+        {
+          "name": "ws_clinjdte",
+          "cobol_field": "WS-CLINJDTE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Ws Clinjdte field"
+        },
+        {
+          "name": "recal_cltotamt",
+          "cobol_field": "RECAL-CLTOTAMT",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Recal Cltotamt field"
+        },
+        {
+          "name": "ws_bwc_addr",
+          "cobol_field": "WS-BWC-ADDR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(081)",
+          "business_meaning": "Ws Bwc Addr field"
+        },
+        {
+          "name": "ws_cur_addr",
+          "cobol_field": "WS-CUR-ADDR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(071)",
+          "business_meaning": "Ws Cur Addr field"
+        },
+        {
+          "name": "ws_inp_addr",
+          "cobol_field": "WS-INP-ADDR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(081)",
+          "business_meaning": "Ws Inp Addr field"
+        },
+        {
+          "name": "ws_out_addr",
+          "cobol_field": "WS-OUT-ADDR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(081)",
+          "business_meaning": "Ws Out Addr field"
+        },
+        {
+          "name": "ws_ovr_addr",
+          "cobol_field": "WS-OVR-ADDR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(081)",
+          "business_meaning": "Ws Ovr Addr field"
+        },
+        {
+          "name": "space_flag",
+          "cobol_field": "SPACE-FLAG",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Boolean flag"
+        },
+        {
+          "name": "size_out_addr",
+          "cobol_field": "SIZE-OUT-ADDR",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "9(003)",
+          "business_meaning": "Size Out Addr field"
+        },
+        {
+          "name": "loop",
+          "cobol_field": "LOOP",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Loop field"
+        },
+        {
+          "name": "loop2",
+          "cobol_field": "LOOP2",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Loop2 field"
+        },
+        {
+          "name": "hld_rpzip5",
+          "cobol_field": "HLD-RPZIP5",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(005)",
+          "business_meaning": "Postal code"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_019",
+      "name": "RepRiskMsgData",
+      "source": {
+        "cobol_record": "REP-RISK-MSG-DATA",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "rep_msg_data",
+          "cobol_field": "REP-MSG-DATA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rep Msg Data field"
+        },
+        {
+          "name": "rep_prefix",
+          "cobol_field": "REP-PREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(006)",
+          "business_meaning": "Rep Prefix field"
+        },
+        {
+          "name": "rep_suffix",
+          "cobol_field": "REP-SUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(002)",
+          "business_meaning": "Rep Suffix field"
+        },
+        {
+          "name": "risk_msg_data",
+          "cobol_field": "RISK-MSG-DATA",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(011)",
+          "business_meaning": "Risk Msg Data field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_020",
+      "name": "HldRepAddress",
+      "source": {
+        "cobol_record": "HLD-REP-ADDRESS",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "hld_rep_address_flds",
+          "cobol_field": "HLD-REP-ADDRESS-FLDS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Address field"
+        },
+        {
+          "name": "hld_rpaddr01",
+          "cobol_field": "HLD-RPADDR01",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rpaddr01 field"
+        },
+        {
+          "name": "hld_rpaddr02",
+          "cobol_field": "HLD-RPADDR02",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rpaddr02 field"
+        },
+        {
+          "name": "hld_rpaddr03",
+          "cobol_field": "HLD-RPADDR03",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rpaddr03 field"
+        },
+        {
+          "name": "hld_rpcity",
+          "cobol_field": "HLD-RPCITY",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "City name"
+        },
+        {
+          "name": "hld_rpstate",
+          "cobol_field": "HLD-RPSTATE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "State or province"
+        },
+        {
+          "name": "hld_rpcnty",
+          "cobol_field": "HLD-RPCNTY",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rpcnty field"
+        },
+        {
+          "name": "hld_rpfcntry",
+          "cobol_field": "HLD-RPFCNTRY",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hld Rpfcntry field"
+        },
+        {
+          "name": "hld_rpzip",
+          "cobol_field": "HLD-RPZIP",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Postal code"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_021",
+      "name": "WsCltype",
+      "source": {
+        "cobol_record": "WS-CLTYPE",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "ws_cltype1",
+          "cobol_field": "WS-CLTYPE1",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Type classification"
+        },
+        {
+          "name": "ws_cltype2",
+          "cobol_field": "WS-CLTYPE2",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Type classification"
+        },
+        {
+          "name": "ws_cltype3",
+          "cobol_field": "WS-CLTYPE3",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Type classification"
+        },
+        {
+          "name": "ws_cltype4",
+          "cobol_field": "WS-CLTYPE4",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Type classification"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_022",
+      "name": "WsDocketVariables",
+      "source": {
+        "cobol_record": "WS-DOCKET-VARIABLES",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "emp_docketing_rep_cl",
+          "cobol_field": "EMP-DOCKETING-REP-CL",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(008)",
+          "business_meaning": "Emp Docketing Rep Cl field"
+        },
+        {
+          "name": "designated_sts_cl",
+          "cobol_field": "DESIGNATED-STS-CL",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "1",
+          "business_meaning": "Designated Sts Cl field"
+        },
+        {
+          "name": "emp_docketing_rep_rl",
+          "cobol_field": "EMP-DOCKETING-REP-RL",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(008)",
+          "business_meaning": "Emp Docketing Rep Rl field"
+        },
+        {
+          "name": "designated_sts_rl",
+          "cobol_field": "DESIGNATED-STS-RL",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "1",
+          "business_meaning": "Designated Sts Rl field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_023",
+      "name": "Cmldcl50Ctrl",
+      "source": {
+        "cobol_record": "CMLDCL50-CTRL",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_024",
+      "name": "Cmldcl50Hold",
+      "source": {
+        "cobol_record": "CMLDCL50-HOLD",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_field": "CLPREFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clprefix field"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_field": "CLSUFFIX",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clsuffix field"
+        },
+        {
+          "name": "clnumber",
+          "cobol_field": "CLNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clnumber field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_025",
+      "name": "DefaultValues",
+      "source": {
+        "cobol_record": "DEFAULT-VALUES",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "cldeath",
+          "cobol_field": "CLDEATH",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Cldeath field"
+        },
+        {
+          "name": "clsettle",
+          "cobol_field": "CLSETTLE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Clsettle field"
+        },
+        {
+          "name": "clinjdgn",
+          "cobol_field": "CLINJDGN",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Clinjdgn field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_026",
+      "name": "SflDspyKeys05",
+      "source": {
+        "cobol_record": "SFL-DSPY-KEYS-05",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clrpsts",
+          "cobol_field": "CLRPSTS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clrpsts field"
+        },
+        {
+          "name": "clrpstsd",
+          "cobol_field": "CLRPSTSD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clrpstsd field"
+        },
+        {
+          "name": "rpnumber",
+          "cobol_field": "RPNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rpnumber field"
+        },
+        {
+          "name": "clrprel",
+          "cobol_field": "CLRPREL",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clrprel field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_027",
+      "name": "SflHddnKeys05",
+      "source": {
+        "cobol_record": "SFL-HDDN-KEYS-05",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "hdrpsts",
+          "cobol_field": "HDRPSTS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hdrpsts field"
+        },
+        {
+          "name": "hdrpstsd",
+          "cobol_field": "HDRPSTSD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hdrpstsd field"
+        },
+        {
+          "name": "hdnumber",
+          "cobol_field": "HDNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hdnumber field"
+        },
+        {
+          "name": "hdrprel",
+          "cobol_field": "HDRPREL",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hdrprel field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_028",
+      "name": "SflNullKeys05",
+      "source": {
+        "cobol_record": "SFL-NULL-KEYS-05",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "clrpsts",
+          "cobol_field": "CLRPSTS",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clrpsts field"
+        },
+        {
+          "name": "clrpstsd",
+          "cobol_field": "CLRPSTSD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clrpstsd field"
+        },
+        {
+          "name": "rpnumber",
+          "cobol_field": "RPNUMBER",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rpnumber field"
+        },
+        {
+          "name": "clrprel",
+          "cobol_field": "CLRPREL",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Clrprel field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_029",
+      "name": "SflDspyKeys07",
+      "source": {
+        "cobol_record": "SFL-DSPY-KEYS-07",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "rkrsnbr",
+          "cobol_field": "RKRSNBR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsnbr field"
+        },
+        {
+          "name": "pnrisk",
+          "cobol_field": "PNRISK",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Pnrisk field"
+        },
+        {
+          "name": "rkrsmann",
+          "cobol_field": "RKRSMANN",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsmann field"
+        },
+        {
+          "name": "rkrsflg",
+          "cobol_field": "RKRSFLG",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsflg field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_030",
+      "name": "SflHddnKeys07",
+      "source": {
+        "cobol_record": "SFL-HDDN-KEYS-07",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "hdrsnbr",
+          "cobol_field": "HDRSNBR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hdrsnbr field"
+        },
+        {
+          "name": "hdrisk",
+          "cobol_field": "HDRISK",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hdrisk field"
+        },
+        {
+          "name": "hdrsmann",
+          "cobol_field": "HDRSMANN",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hdrsmann field"
+        },
+        {
+          "name": "hdrsflg",
+          "cobol_field": "HDRSFLG",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Hdrsflg field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_031",
+      "name": "SflNullKeys07",
+      "source": {
+        "cobol_record": "SFL-NULL-KEYS-07",
+        "files": [
+          "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "rkrsnbr",
+          "cobol_field": "RKRSNBR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsnbr field"
+        },
+        {
+          "name": "pnrisk",
+          "cobol_field": "PNRISK",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Pnrisk field"
+        },
+        {
+          "name": "rkrsmann",
+          "cobol_field": "RKRSMANN",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsmann field"
+        },
+        {
+          "name": "rkrsflg",
+          "cobol_field": "RKRSFLG",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Rkrsflg field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_032",
+      "name": "CaseTranslationRd",
+      "source": {
+        "cobol_record": "CASE-TRANSLATION-RD",
+        "files": [
+          "IBMi-Cobol/Cobol/UTCSUL10.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "case_table",
+          "cobol_field": "CASE-TABLE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Case Table field"
+        },
+        {
+          "name": "upper_case",
+          "cobol_field": "UPPER-CASE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Upper Case field"
+        },
+        {
+          "name": "lower_case",
+          "cobol_field": "LOWER-CASE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Lower Case field"
+        }
+      ],
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_033",
+      "name": "case_conversion_rules",
+      "source": {
+        "cobol_record": "UPPER-CASE-WORDS",
+        "files": [
+          "IBMi-Cobol/Cobol/UTCSUL10.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "uc_table",
+          "cobol_field": "UC-TABLE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "N/A",
+          "business_meaning": "Uc Table field"
+        },
+        {
+          "name": "lc_word",
+          "cobol_field": "LC-WORD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(10)",
+          "business_meaning": "Lc Word field"
+        },
+        {
+          "name": "uc_type",
+          "cobol_field": "UC-TYPE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(06)",
+          "business_meaning": "Type classification"
+        },
+        {
+          "name": "uc_word",
+          "cobol_field": "UC-WORD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(10)",
+          "business_meaning": "Uc Word field"
+        },
+        {
+          "name": "uc_next_char",
+          "cobol_field": "UC-NEXT-CHAR",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(06)",
+          "business_meaning": "Uc Next Char field"
+        }
+      ],
+      "business_purpose": "Stores rules for converting words between upper and lower case",
+      "confidence": 0.85
+    },
+    {
+      "id": "entity_034",
+      "name": "QclscanData",
+      "source": {
+        "cobol_record": "QCLSCAN-DATA",
+        "files": [
+          "IBMi-Cobol/Cobol/UTCSUL10.CBL"
+        ],
+        "section": "working_storage"
+      },
+      "attributes": [
+        {
+          "name": "qcls_string",
+          "cobol_field": "QCLS-STRING",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(050)",
+          "business_meaning": "Qcls String field"
+        },
+        {
+          "name": "qcls_strlen",
+          "cobol_field": "QCLS-STRLEN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Qcls Strlen field"
+        },
+        {
+          "name": "qcls_strpos",
+          "cobol_field": "QCLS-STRPOS",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Qcls Strpos field"
+        },
+        {
+          "name": "qcls_pattern",
+          "cobol_field": "QCLS-PATTERN",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(010)",
+          "business_meaning": "Qcls Pattern field"
+        },
+        {
+          "name": "qcls_patlen",
+          "cobol_field": "QCLS-PATLEN",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Qcls Patlen field"
+        },
+        {
+          "name": "qcls_translate",
+          "cobol_field": "QCLS-TRANSLATE",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Qcls Translate field"
+        },
+        {
+          "name": "qcls_trim",
+          "cobol_field": "QCLS-TRIM",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Qcls Trim field"
+        },
+        {
+          "name": "qcls_wild",
+          "cobol_field": "QCLS-WILD",
+          "data_type": "VARCHAR",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "X(001)",
+          "business_meaning": "Qcls Wild field"
+        },
+        {
+          "name": "qcls_result",
+          "cobol_field": "QCLS-RESULT",
+          "data_type": "INTEGER",
+          "is_primary_key": false,
+          "nullable": true,
+          "source_pic": "S9(003)",
+          "business_meaning": "Qcls Result field"
+        }
+      ],
+      "confidence": 0.85
+    }
+  ],
+  "relationships": []
+}

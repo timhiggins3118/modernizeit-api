@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "source_language": "COBOL",
+  "target_language": "Java",
+  "mappings": {
+    "numeric_with_decimal": {
+      "description": "Numeric fields with decimal places",
+      "detection_rules": [
+        "contains 'V' (implied decimal point)",
+        "contains '.' (explicit decimal point)",
+        "contains '$' (currency symbol)",
+        "contains 'Z' (zero suppression with decimal)",
+        "contains ',' (grouping with decimal)"
+      ],
+      "sql_type": "DECIMAL",
+      "java_type": "BigDecimal",
+      "examples": [
+        "9(7)V99",
+        "S9(5)V9(2)",
+        "$$,$$$,$$9.99",
+        "ZZZ,ZZ9.99"
+      ]
+    },
+    "numeric_integer": {
+      "description": "Whole number fields without decimals",
+      "detection_rules": [
+        "9(n) with no V or .",
+        "S9(n) with no V or .",
+        "COMP or COMP-3 or BINARY"
+      ],
+      "sql_type": "INTEGER",
+      "java_type": "Integer",
+      "examples": [
+        "9(5)",
+        "S9(9)",
+        "9(4) COMP",
+        "COMP-3"
+      ]
+    },
+    "alphanumeric": {
+      "description": "Text fields",
+      "detection_rules": [
+        "X(n)",
+        "A(n)"
+      ],
+      "sql_type": "VARCHAR",
+      "java_type": "String",
+      "examples": [
+        "X(50)",
+        "A(20)"
+      ]
+    },
+    "date": {
+      "description": "Date fields (8 digits YYYYMMDD)",
+      "detection_rules": [
+        "9(8)",
+        "PIC 9(8)"
+      ],
+      "sql_type": "DATE",
+      "java_type": "LocalDate",
+      "examples": [
+        "9(8)"
+      ]
+    }
+  },
+  "default_mapping": {
+    "sql_type": "VARCHAR",
+    "java_type": "String"
+  },
+  "generated_at": "2025-11-06T16:39:50.294260+00:00",
+  "source_hash": "9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74"
+}

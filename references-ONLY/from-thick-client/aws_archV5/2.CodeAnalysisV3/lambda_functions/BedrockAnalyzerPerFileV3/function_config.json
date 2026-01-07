@@ -1,0 +1,38 @@
+{
+    "FunctionName": "BedrockAnalyzerPerFileV3",
+    "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:BedrockAnalyzerPerFileV3",
+    "Role": "arn:aws:iam::376129851858:role/BedrockTimestreamLambdaRole",
+    "CodeSize": 0,
+    "Description": "V3 AI analysis for COBOL files - per-file Bedrock analysis with internal batching",
+    "Timeout": 900,
+    "MemorySize": 2048,
+    "LastModified": "2025-11-05T19:22:26.000+0000",
+    "CodeSha256": "6cd30b21bfb719e52a812bffdca4c9d983c8d48ff43950115781918be1d43ddf",
+    "Version": "$LATEST",
+    "Environment": {
+        "Variables": {
+            "BEDROCK_MOCK_MODE": "false"
+        }
+    },
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "d70597a0-7bed-4049-a4ed-7384fa9b20bd",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Image",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    },
+    "SnapStart": {
+        "ApplyOn": "None",
+        "OptimizationStatus": "Off"
+    },
+    "LoggingConfig": {
+        "LogFormat": "Text",
+        "LogGroup": "/aws/lambda/BedrockAnalyzerPerFileV3"
+    }
+}

@@ -1,0 +1,67 @@
+{
+  "file_name": "UTCSDC00L.CBL",
+  "file_type": "COPYBOOK",
+  "copybook_type": "DATA",
+  "confidence": 0.9,
+  "data_dictionary": [
+    {
+      "level": 5,
+      "name": "GREGORIAN-DATE",
+      "pic": "9(008).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "JULIAN-DATE",
+      "pic": "S9(005).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "JULIAN-DATE-RD",
+      "pic": "X(005).",
+      "usage": null,
+      "redefines": "JULIAN-DATE",
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "DATE-FLAG",
+      "pic": "X(003).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "RETURN-DATE-FORMAT",
+      "pic": "9(001).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    }
+  ],
+  "data_items_count": 5,
+  "paragraphs": [],
+  "paragraph_count": 0,
+  "note": "Copybook - data dictionary only (NESTED structure)",
+  "units": [],
+  "unit_type": "synthetic",
+  "traceability": {
+    "enabled": true,
+    "version": "v3.0",
+    "statement_id_format": "s{n}",
+    "line_numbers_present": true
+  },
+  "raw_content": "      *---------------------------------------------------------------*\r\n      *  Date Processing                            Program: UTCSDC00 *\r\n      *---------------------------------------------------------------*\r\n       01  UTCSDC00-DATA.\r\n      *---------------------------------------------------------------*\r\n           05  GREGORIAN-DATE         PIC  9(008).\r\n           05  GREGORIAN-DATE-RD      REDEFINES GREGORIAN-DATE.\r\n               10  MM                 PIC  9(002).\r\n                   88  VALID-MONTH         VALUE 01 THRU 12.\r\n               10  DD                 PIC  9(002).\r\n               10  CCYY               PIC  9(004).\r\n                   88  VALID-YEAR          VALUE 1901 THRU 2099.\r\n               10  CCYY-RD            REDEFINES CCYY.\r\n                   15  CC             PIC  9(002).\r\n                       88  21ST            VALUE 20.\r\n                       88  20TH            VALUE 19.\r\n                   15  YY             PIC  9(002).\r\n\r\n           05  JULIAN-DATE            PIC S9(005).\r\n               88  VALID-JULIAN-DATE       VALUE 00001 THRU 72684.\r\n               88  20TH-CENT               VALUE 00001 THRU 36159.\r\n               88  21ST-CENT               VALUE 36160 THRU 72684.\r\n           05  JULIAN-DATE-RD         REDEFINES JULIAN-DATE\r\n                                      PIC  X(005).\r\n\r\n           05  ALPHA-DATA.\r\n               10  ALPH-MMDDYY        PIC  X(030).\r\n               10  ALPH-DATE          PIC  X(030).\r\n               10  MM-ALPH-LC         PIC  X(010).\r\n               10  MM-ALPH-UC         PIC  X(010).\r\n               10  MM-ABBR-LC         PIC  X(005).\r\n               10  MM-ABBR-UC         PIC  X(004).\r\n               10  DD-ALPH-LC         PIC  X(010).\r\n               10  DD-ALPH-UC         PIC  X(010).\r\n               10  DD-ABBR-LC         PIC  X(005).\r\n               10  DD-ABBR-UC         PIC  X(003).\r\n\r\n           05  NUMERIC-DATA.\r\n               10  DD-NUMBER          PIC  9(001).\r\n               10  DD-OCCURANCE       PIC  9(001).\r\n               10  WEEK-NUMBER        PIC  9(002).\r\n               10  DAY-OF-YR          PIC  9(003).\r\n               10  DAYS-LEFT          PIC  9(003).\r\n\r\n           05  DATE-FLAG              PIC  X(003).\r\n               88  RETRIEVE-DATE           VALUE \"RD \".\r\n               88  GREGORIAN-JULIAN        VALUE \"GJ \".\r\n               88  JULIAN-GREGORIAN        VALUE \"JG \".\r\n               88  AGE-CURRENT             VALUE \"AC \".\r\n               88  AGE-DATE                VALUE \"AD \" \"AC\".\r\n               88  GOOD-DATE               VALUE \"YES\".\r\n               88  BAD-DATE                VALUE \"NO \".\r\n               88  VALID-REQUEST           VALUE \"RD \" \"GJ \" \"JG \"\r\n                                                 \"AD \".\r\n\r\n           05  RETURN-DATE-FORMAT     PIC  9(001).\r\n               88  RETURN-6-DIGIT          VALUE 6.\r\n               88  RETURN-8-DIGIT          VALUE 8.\r\n",
+  "raw_content_truncated": false
+}

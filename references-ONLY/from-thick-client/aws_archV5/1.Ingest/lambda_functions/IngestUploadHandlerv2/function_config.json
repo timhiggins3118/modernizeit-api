@@ -1,0 +1,38 @@
+{
+    "FunctionName": "IngestUploadHandlerv2",
+    "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:IngestUploadHandlerv2",
+    "Runtime": "python3.9",
+    "Role": "arn:aws:iam::376129851858:role/BedrockAgentRole-CodeRefactor",
+    "Handler": "ingest_upload_handler.lambda_handler",
+    "CodeSize": 5608,
+    "Description": "Ingest upload handler v2 - content-addressed storage with SHA-256 hashing",
+    "Timeout": 60,
+    "MemorySize": 512,
+    "LastModified": "2025-10-11T16:44:05.000+0000",
+    "CodeSha256": "Yw5OL5yNadMXvjHGBmUZMV6moTjMeGr3g1LJDqDRIQE=",
+    "Version": "$LATEST",
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "437cb337-6ffb-4202-b197-ad3ef82e545d",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    },
+    "SnapStart": {
+        "ApplyOn": "None",
+        "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+        "RuntimeVersionArn": "arn:aws:lambda:us-east-1::runtime:135242d7c34858d81f7e9d62d65e5164b1d6afc6d6d3a1289380dbb6d2cb48dd"
+    },
+    "LoggingConfig": {
+        "LogFormat": "Text",
+        "LogGroup": "/aws/lambda/IngestUploadHandlerv2"
+    }
+}

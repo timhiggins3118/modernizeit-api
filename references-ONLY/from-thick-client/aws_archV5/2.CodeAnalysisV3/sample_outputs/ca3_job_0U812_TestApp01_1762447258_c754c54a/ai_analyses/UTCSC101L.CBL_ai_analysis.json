@@ -1,0 +1,29 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "UTCSC101L.CBL",
+  "timestamp": "2025-11-06T16:41:30.175329Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This COBOL copybook appears to define a data structure for handling address validation and standardization responses, likely used in address verification/cleansing operations",
+    "content": "A COBOL data structure (01 level) containing address-related fields (firm name, multiple address lines, city, state, zip) and status codes with condition names (88 levels) for various address validation scenarios",
+    "usage": "This copybook is likely included in COBOL programs that perform address validation, standardization, or verification operations. The condition names (88 levels) suggest it's used to handle response codes from an address validation service",
+    "dependencies": [
+      "Address validation service or database",
+      "Programs that include this copybook for address processing"
+    ],
+    "modernization_approach": "1. Map the structure to a modern class/object (e.g., AddressValidationResponse)\n2. Convert 88-level conditions to enumerated types or status codes\n3. Consider implementing as a response DTO in a REST API\n4. Maintain field lengths during conversion to preserve data integrity\n5. Document the meaning of the P9OPR* fields for proper conversion",
+    "complexity": "LOW",
+    "complexity_reasoning": "The structure is straightforward with clear field definitions and standard data types. The 88-level conditions provide clear business rules. No complex data manipulations or relationships are present. The main complexity lies in understanding the specific meaning of certain fields (P9OPR*) and validation codes."
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

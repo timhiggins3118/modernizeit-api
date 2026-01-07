@@ -1,0 +1,65 @@
+{
+  "detected_patterns": {
+    "god_programs": [
+      {
+        "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+        "loc": 9024,
+        "complexity": 2442,
+        "responsibilities": 6,
+        "severity": "high"
+      },
+      {
+        "program": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "loc": 0,
+        "complexity": 0,
+        "responsibilities": 4,
+        "severity": "high"
+      },
+      {
+        "program": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "loc": 0,
+        "complexity": 0,
+        "responsibilities": 5,
+        "severity": "high"
+      }
+    ],
+    "tight_coupling": [
+      {
+        "program": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "efferent_coupling": 6,
+        "afferent_coupling": 2,
+        "severity": "high"
+      },
+      {
+        "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+        "efferent_coupling": 160,
+        "afferent_coupling": 5,
+        "severity": "high"
+      }
+    ],
+    "shared_data_hotspots": [],
+    "circular_dependencies": [],
+    "database_bottlenecks": [],
+    "batch_monoliths": [],
+    "spaghetti_code": [
+      {
+        "program": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "complexity": 98,
+        "cohesion": 0.23,
+        "severity": "medium"
+      },
+      {
+        "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+        "complexity": 2442,
+        "cohesion": 0.03,
+        "severity": "medium"
+      }
+    ]
+  },
+  "summary": {
+    "total_patterns": 7,
+    "critical": 0,
+    "high": 5,
+    "medium": 2
+  }
+}

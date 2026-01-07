@@ -1,0 +1,510 @@
+{
+  "generated_at": "2025-11-06T14:40:30.096081+00:00",
+  "summary": {
+    "total_flows": 38
+  },
+  "flows": [
+    {
+      "flow_name": "Claim Representative Data Retrieval",
+      "source_file": "Unknown (possibly a database or file)",
+      "source_type": "unknown",
+      "transformations": [
+        {
+          "operation": "TRANSFORM",
+          "program": "IBMi-Cobol/Cobol/CMCSRP00C.CBL",
+          "description": "CALL \"CMCSRP00\" USING CMCSRP00-DATA"
+        }
+      ],
+      "destination_file": "CMCSRP00-DATA structure (in-memory)",
+      "destination_type": "unknown",
+      "business_impact": "Retrieval of claim representative information for further processing"
+    },
+    {
+      "flow_name": "External call to UTCSDC00",
+      "source_file": "Caller program (unknown)",
+      "source_type": "unknown",
+      "transformations": [
+        {
+          "operation": "TRANSFORM",
+          "program": "IBMi-Cobol/Cobol/UTCSDC00C.CBL",
+          "description": "Date processing (details not visible)"
+        }
+      ],
+      "destination_file": "Caller program (unknown)",
+      "destination_type": "unknown",
+      "business_impact": "Likely critical for date-based calculations or validations"
+    },
+    {
+      "flow_name": "Address Validation Process",
+      "source_file": "Likely an input file or database containing customer addresses",
+      "source_type": "unknown",
+      "transformations": [
+        {
+          "operation": "TRANSFORM",
+          "program": "IBMi-Cobol/Cobol/UTCSC101L.CBL",
+          "description": "Address validation logic (not visible in this code snippet)"
+        }
+      ],
+      "destination_file": "UTCSC101-DATA structure, potentially written to a file or database",
+      "destination_type": "unknown",
+      "business_impact": "Critical for ensuring accurate customer address information"
+    },
+    {
+      "flow_name": "Upper Case Words Loading",
+      "source_file": "UTLMTB00-FILE (indexed file)",
+      "source_type": "unknown",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+          "description": "Read into UPPER-CASE-WORDS table (90000-BUILD-UC-WORDS, not shown in snippet)"
+        }
+      ],
+      "destination_file": "In-memory UPPER-CASE-WORDS table",
+      "destination_type": "unknown",
+      "business_impact": ""
+    },
+    {
+      "source_file": "CMLHCL00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLDCL50-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "UTLMTB00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLDMO06-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLDCA01-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLHMO00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "DIPWCC00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMPMCC00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "DIPWCC10-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLMRP00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "ADPWNP00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLMRP10-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "XALMZC04-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "XALDTR02-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLHCL90-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLDCL20-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLDCL40-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLHCM00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "XALHDS00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "XALDDS01-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLMLT00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "AMPTRQ00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLDMO00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMJHCL00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLTRQ00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLACL50-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLHRK00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLDRK02-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLARK00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "FMLHCF00-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "XAJMLC02-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLDCL60-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "CMLHRK05-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    },
+    {
+      "source_file": "PANEL-FILE",
+      "source_type": "indexed_file",
+      "transformations": [
+        {
+          "operation": "READ",
+          "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+          "paragraph": "UNKNOWN"
+        }
+      ],
+      "destination_file": "UNKNOWN",
+      "destination_type": "unknown"
+    }
+  ]
+}

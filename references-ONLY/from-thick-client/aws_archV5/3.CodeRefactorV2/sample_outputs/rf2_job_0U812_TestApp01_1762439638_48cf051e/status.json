@@ -1,0 +1,1 @@
+{"state":"completed","phase":"completed","message":"Recipe generation completed successfully","outputs":{"refactor_recipes":"s3://code-transformation-v2/0U812/TestApp01/code_refactor_v2/jobs/rf2_job_0U812_TestApp01_1762439638_48cf051e/artifacts/refactor_recipes.json"},"completed_at":"2025-11-06T14:34:04.106Z","started_at":"2025-11-06T14:33:58.662Z"}

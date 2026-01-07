@@ -1,0 +1,26 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "DATEFLIP.CBL",
+  "timestamp": "2025-11-06T16:41:14.469916Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This COBOL copybook defines standard date format structures to handle different date representations and enable date format conversions",
+    "content": "Contains 4 main date format definitions with their corresponding redefinitions: MMDDYY (6 digits), YYMMDD (6 digits), MMDDCCYY (8 digits), and CCYYMMDD (8 digits). Each format is broken down into component fields for month, day, year, and century where applicable",
+    "usage": "This copybook is likely included in COBOL programs that need to perform date handling, format conversions, or standardize date representations across different parts of the application",
+    "dependencies": [],
+    "modernization_approach": "1. Create a modern date utility class/module that handles these format conversions\n2. Replace with standard ISO date formats where possible\n3. Consider using built-in date functions in target language\n4. Map these structures to modern date/time objects\n5. Maintain format conversion capabilities for legacy system integration",
+    "complexity": "LOW",
+    "complexity_reasoning": "The file is straightforward, containing only basic date format definitions without complex logic. The structures are well-organized and follow clear patterns. The main complexity comes from handling different date formats rather than the code itself."
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

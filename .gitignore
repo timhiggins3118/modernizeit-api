@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# ModernizeIT Specific
+modernizeit_output/
+data/
+aws_creds/
+*.log
+logs/
+
+# Compiled Tree-Sitter Grammar (platform-specific, built on each deployment)
+engines/code_analysis/grammar/cobol.so
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temporary
+*.tmp
+temp/
+tmp/

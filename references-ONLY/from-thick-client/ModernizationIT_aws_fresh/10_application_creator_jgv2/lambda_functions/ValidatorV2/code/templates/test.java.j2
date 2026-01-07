@@ -1,0 +1,184 @@
+package {{ package_name }}.services;
+
+import {{ package_name }}.entities.{{ entity_name }};
+import {{ package_name }}.repositories.{{ repository_name }};
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import static org.assertj.core.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.Mockito.*;
+
+/**
+ * Unit tests for {{ service_class_name }}
+ * Generated from COBOL program: {{ cobol_program_name }}
+ * Uses Mockito for dependency mocking and AssertJ for assertions
+ */
+@ExtendWith(MockitoExtension.class)
+@DisplayName("{{ service_class_name }} Tests")
+class {{ service_class_name }}Test {
+
+    @Mock
+    private {{ repository_name }} {{ repository_name_camel }};
+
+    @InjectMocks
+    private {{ service_class_name }} {{ service_class_name_camel }};
+
+    private {{ entity_name }} test{{ entity_name }};
+
+    @BeforeEach
+    void setUp() {
+        // Initialize test data
+        test{{ entity_name }} = new {{ entity_name }}();
+        // TODO: Set test entity properties
+    }
+
+    @Test
+    @DisplayName("Should find all {{ entity_name_plural }}")
+    void shouldFindAll{{ entity_name_plural }}() {
+        // Arrange
+        List<{{ entity_name }}> expected{{ entity_name_plural }} = Arrays.asList(test{{ entity_name }});
+        when({{ repository_name_camel }}.findAll()).thenReturn(expected{{ entity_name_plural }});
+
+        // Act
+        List<{{ entity_name }}> actual{{ entity_name_plural }} = {{ service_class_name_camel }}.findAll();
+
+        // Assert
+        assertThat(actual{{ entity_name_plural }})
+            .isNotNull()
+            .hasSize(1)
+            .containsExactly(test{{ entity_name }});
+
+        verify({{ repository_name_camel }}, times(1)).findAll();
+    }
+
+    @Test
+    @DisplayName("Should find {{ entity_name }} by ID")
+    void shouldFind{{ entity_name }}ById() {
+        // Arrange
+        Long testId = 1L;
+        when({{ repository_name_camel }}.findById(testId)).thenReturn(Optional.of(test{{ entity_name }}));
+
+        // Act
+        Optional<{{ entity_name }}> result = {{ service_class_name_camel }}.findById(testId);
+
+        // Assert
+        assertThat(result)
+            .isPresent()
+            .contains(test{{ entity_name }});
+
+        verify({{ repository_name_camel }}, times(1)).findById(testId);
+    }
+
+    @Test
+    @DisplayName("Should return empty when {{ entity_name }} not found")
+    void shouldReturnEmptyWhen{{ entity_name }}NotFound() {
+        // Arrange
+        Long testId = 999L;
+        when({{ repository_name_camel }}.findById(testId)).thenReturn(Optional.empty());
+
+        // Act
+        Optional<{{ entity_name }}> result = {{ service_class_name_camel }}.findById(testId);
+
+        // Assert
+        assertThat(result).isEmpty();
+
+        verify({{ repository_name_camel }}, times(1)).findById(testId);
+    }
+
+    @Test
+    @DisplayName("Should create new {{ entity_name }}")
+    void shouldCreateNew{{ entity_name }}() {
+        // Arrange
+        when({{ repository_name_camel }}.save(any({{ entity_name }}.class))).thenReturn(test{{ entity_name }});
+
+        // Act
+        {{ entity_name }} created{{ entity_name }} = {{ service_class_name_camel }}.save(test{{ entity_name }});
+
+        // Assert
+        assertThat(created{{ entity_name }}).isNotNull();
+
+        verify({{ repository_name_camel }}, times(1)).save(test{{ entity_name }});
+    }
+
+    @Test
+    @DisplayName("Should update existing {{ entity_name }}")
+    void shouldUpdateExisting{{ entity_name }}() {
+        // Arrange
+        Long testId = 1L;
+        when({{ repository_name_camel }}.findById(testId)).thenReturn(Optional.of(test{{ entity_name }}));
+        when({{ repository_name_camel }}.save(any({{ entity_name }}.class))).thenReturn(test{{ entity_name }});
+
+        // Act
+        {{ entity_name }} updated{{ entity_name }} = {{ service_class_name_camel }}.update(testId, test{{ entity_name }});
+
+        // Assert
+        assertThat(updated{{ entity_name }}).isNotNull();
+
+        verify({{ repository_name_camel }}, times(1)).findById(testId);
+        verify({{ repository_name_camel }}, times(1)).save(test{{ entity_name }});
+    }
+
+    @Test
+    @DisplayName("Should delete {{ entity_name }} by ID")
+    void shouldDelete{{ entity_name }}ById() {
+        // Arrange
+        Long testId = 1L;
+        when({{ repository_name_camel }}.existsById(testId)).thenReturn(true);
+        doNothing().when({{ repository_name_camel }}).deleteById(testId);
+
+        // Act
+        {{ service_class_name_camel }}.deleteById(testId);
+
+        // Assert
+        verify({{ repository_name_camel }}, times(1)).deleteById(testId);
+    }
+
+    @Test
+    @DisplayName("Should validate {{ entity_name }} data")
+    void shouldValidate{{ entity_name }}Data() {
+        // Arrange
+        {{ entity_name }} invalid{{ entity_name }} = new {{ entity_name }}();
+        // TODO: Set invalid properties
+
+        // Act & Assert
+        // Add validation test logic based on business rules
+        // Example:
+        // assertThatThrownBy(() -> {{ service_class_name_camel }}.validate(invalid{{ entity_name }}))
+        //     .isInstanceOf(ValidationException.class)
+        //     .hasMessageContaining("Invalid data");
+    }
+
+    {% if has_business_methods %}
+    {% for method in business_methods %}
+    @Test
+    @DisplayName("{{ method.description }}")
+    void {{ method.test_method_name }}() {
+        // Arrange
+        // TODO: Setup test data and mocks for {{ method.name }}
+
+        // Act
+        // TODO: Call {{ method.name }}
+
+        // Assert
+        // TODO: Verify expected behavior
+    }
+    {% endfor %}
+    {% endif %}
+
+    // TODO: Add additional test cases based on COBOL business logic:
+    // - Edge cases (null values, empty collections, boundary conditions)
+    // - Error handling (exceptions, validation failures)
+    // - Business rule validations
+    // - Transaction rollback scenarios
+    // - Concurrent access scenarios
+}

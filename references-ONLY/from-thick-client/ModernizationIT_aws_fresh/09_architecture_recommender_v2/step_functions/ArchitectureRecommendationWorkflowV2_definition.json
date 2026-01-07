@@ -1,0 +1,125 @@
+{
+  "Comment": "Architecture Recommender V2 - AWS Architecture Recommendation Workflow",
+  "StartAt": "LoadAllV2Reports",
+  "States": {
+    "LoadAllV2Reports": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:376129851858:function:ArchitectureRecommenderV2LoadReports",
+      "ResultPath": "$.load_reports_result",
+      "Next": "ArchitectureAnalysis",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "Fail"
+        }
+      ]
+    },
+    "ArchitectureAnalysis": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:376129851858:function:ArchitectureRecommenderV2BedrockAnalyzer",
+      "Parameters": {
+        "job_id.$": "$.job_id",
+        "scout_account_id.$": "$.scout_account_id",
+        "application_name.$": "$.application_name"
+      },
+      "ResultPath": "$.architecture_analysis",
+      "Next": "CostEstimation",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "Fail"
+        }
+      ]
+    },
+    "CostEstimation": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:376129851858:function:ArchitectureRecommenderV2CostEstimator",
+      "Parameters": {
+        "job_id.$": "$.job_id",
+        "scout_account_id.$": "$.scout_account_id",
+        "application_name.$": "$.application_name",
+        "service_mappings.$": "$.architecture_analysis.service_mappings",
+        "database_strategy.$": "$.architecture_analysis.database_strategy"
+      },
+      "ResultPath": "$.cost_estimates",
+      "Next": "GenerateIaC",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "Fail"
+        }
+      ]
+    },
+    "GenerateIaC": {
+      "Type": "Task",
+      "Resource": "arn:aws:lambda:us-east-1:376129851858:function:ArchitectureRecommenderV2IaCGenerator",
+      "Parameters": {
+        "job_id.$": "$.job_id",
+        "scout_account_id.$": "$.scout_account_id",
+        "application_name.$": "$.application_name"
+      },
+      "ResultPath": "$.iac_result",
+      "Next": "Success",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "Fail"
+        }
+      ]
+    },
+    "Success": {
+      "Type": "Succeed"
+    },
+    "Fail": {
+      "Type": "Fail"
+    }
+  }
+}

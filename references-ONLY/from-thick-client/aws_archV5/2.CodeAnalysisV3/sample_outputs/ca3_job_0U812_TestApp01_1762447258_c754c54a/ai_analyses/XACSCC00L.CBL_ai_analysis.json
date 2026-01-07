@@ -1,0 +1,29 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "XACSCC00L.CBL",
+  "timestamp": "2025-11-06T16:41:22.952114Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This copybook defines the data structure for claim number conversion operations, specifically used by program XACSCC00 to handle different claim number formats",
+    "content": "Contains a single 01-level data structure (XACSCC00-DATA) with fields for storing and manipulating claim numbers, including prefix/suffix components, numeric portions, and control fields for processing options and error handling",
+    "usage": "Included by COBOL programs (primarily XACSCC00) that need to process or convert claim numbers between different formats, with functionality to either combine or separate claim number components",
+    "dependencies": [
+      "XACSCC00 (main program)",
+      "Any programs that include this copybook for claim number processing"
+    ],
+    "modernization_approach": "Convert to a modern data structure class/interface with validation logic. Consider creating a ClaimNumber class with methods for format conversion and validation. Maintain the business rules for claim number formatting. The 88-level conditions should be converted to enumerated types or constants in the target language.",
+    "complexity": "LOW",
+    "complexity_reasoning": "Simple data structure with clear purpose, straightforward field definitions, and basic conditional values. No complex logic or relationships within the copybook itself. The structure and intent are well-documented and easily translatable to modern programming constructs."
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

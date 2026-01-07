@@ -1,0 +1,10 @@
+{
+  "FunctionName": "DiscoveryV2PrepareDiscoveryBatches",
+  "Runtime": "python3.11",
+  "Handler": "prepare_discovery_batches_v2_handler.lambda_handler",
+  "Timeout": 60,
+  "MemorySize": 256,
+  "PackageType": "Zip",
+  "Environment": null,
+  "Layers": null
+}

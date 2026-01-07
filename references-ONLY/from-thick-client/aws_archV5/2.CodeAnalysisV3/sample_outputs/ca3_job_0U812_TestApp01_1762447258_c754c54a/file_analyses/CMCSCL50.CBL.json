@@ -1,0 +1,1895 @@
+{
+  "file_name": "CMCSCL50.CBL",
+  "file_type": "COBOL_PROGRAM",
+  "confidence": 1.0,
+  "divisions": [
+    {
+      "name": "IDENTIFICATION",
+      "line": 2
+    },
+    {
+      "name": "ENVIRONMENT",
+      "line": 32
+    },
+    {
+      "name": "DATA",
+      "line": 82
+    }
+  ],
+  "sections": [
+    {
+      "name": "CONFIGURATION",
+      "line": 34
+    },
+    {
+      "name": "INPUT-OUTPUT",
+      "line": 41
+    },
+    {
+      "name": "FILE",
+      "line": 83
+    },
+    {
+      "name": "WORKING-STORAGE",
+      "line": 128
+    },
+    {
+      "name": "LINKAGE",
+      "line": 206
+    }
+  ],
+  "paragraphs": [
+    {
+      "name": "FILE-CONTROL",
+      "start_line": 42,
+      "end_line": 211,
+      "line_count": 169,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "00000-MAIN-CONTROL-ROUTINE",
+      "start_line": 212,
+      "end_line": 220,
+      "line_count": 8,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 214,
+          "operation": "PERFORM",
+          "source": "PERFORM 10000-INITIALIZE-PROGRAM",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 214,
+            "unit": "00000-MAIN-CONTROL-ROUTINE"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 215,
+          "operation": "PERFORM",
+          "source": "PERFORM 20000-PROCESS-RECORDS",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 215,
+            "unit": "00000-MAIN-CONTROL-ROUTINE"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 216,
+          "operation": "PERFORM",
+          "source": "PERFORM 99999-CLOSE-PROGRAM",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 216,
+            "unit": "00000-MAIN-CONTROL-ROUTINE"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 217,
+          "operation": "GO TO",
+          "source": "GO TO   99999-EXIT-PROGRAM",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 217,
+            "unit": "00000-MAIN-CONTROL-ROUTINE"
+          }
+        }
+      ],
+      "statement_count": 4
+    },
+    {
+      "name": "10000-INITIALIZE-PROGRAM",
+      "start_line": 221,
+      "end_line": 235,
+      "line_count": 14,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 223,
+          "operation": "OPEN",
+          "source": "OPEN INPUT CMLHCL00-FILE",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 223,
+            "unit": "10000-INITIALIZE-PROGRAM"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 231,
+          "operation": "MOVE",
+          "source": "MOVE LINK-DATA                TO CMCSCL50-DATA",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 231,
+            "unit": "10000-INITIALIZE-PROGRAM"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 232,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMCSCL50-DATA       TO WK-HW-CLAIM",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 232,
+            "unit": "10000-INITIALIZE-PROGRAM"
+          }
+        }
+      ],
+      "statement_count": 3
+    },
+    {
+      "name": "20000-PROCESS-RECORDS",
+      "start_line": 236,
+      "end_line": 279,
+      "line_count": 43,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 240,
+          "operation": "PERFORM",
+          "source": "PERFORM 20100-GET-CLAIM-HEADER",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 240,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 242,
+          "operation": "IF",
+          "source": "IF BWC-REP-NOT-NEEDED",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 242,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 243,
+          "operation": "PERFORM",
+          "source": "PERFORM 20200-CHECK-RL-CLAIM",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 243,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 244,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 244,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 246,
+          "operation": "IF",
+          "source": "IF BWC-REP-NOT-NEEDED",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 246,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 247,
+          "operation": "PERFORM",
+          "source": "PERFORM 20300-CHECK-RM-CLAIM",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 247,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 248,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 248,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 250,
+          "operation": "IF",
+          "source": "IF BWC-REP-NOT-NEEDED",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 250,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 251,
+          "operation": "PERFORM",
+          "source": "PERFORM 20400-CHECK-27-CLAIM",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 251,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 252,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 252,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 254,
+          "operation": "IF",
+          "source": "IF BWC-REP-NOT-NEEDED",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 254,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 255,
+          "operation": "PERFORM",
+          "source": "PERFORM 20500-CHECK-BANKRUPT-SI",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 255,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s13",
+          "line": 256,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s13",
+            "line": 256,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s14",
+          "line": 258,
+          "operation": "IF",
+          "source": "IF BWC-REP-NOT-NEEDED",
+          "traceability": {
+            "stmt_id": "s14",
+            "line": 258,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s15",
+          "line": 259,
+          "operation": "PERFORM",
+          "source": "PERFORM 20600-CHECK-FILED-BY-BWC",
+          "traceability": {
+            "stmt_id": "s15",
+            "line": 259,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s16",
+          "line": 260,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s16",
+            "line": 260,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s17",
+          "line": 262,
+          "operation": "IF",
+          "source": "IF BWC-REP-NOT-NEEDED",
+          "traceability": {
+            "stmt_id": "s17",
+            "line": 262,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s18",
+          "line": 263,
+          "operation": "PERFORM",
+          "source": "PERFORM 20700-CHECK-SI-RISK",
+          "traceability": {
+            "stmt_id": "s18",
+            "line": 263,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s19",
+          "line": 265,
+          "operation": "IF",
+          "source": "IF NON-SI-RISK",
+          "traceability": {
+            "stmt_id": "s19",
+            "line": 265,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s20",
+          "line": 266,
+          "operation": "PERFORM",
+          "source": "PERFORM 20800-CHECK-RISK-EXPERIENCE",
+          "traceability": {
+            "stmt_id": "s20",
+            "line": 266,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s21",
+          "line": 268,
+          "operation": "IF",
+          "source": "IF RISK-INEXPERIENCED",
+          "traceability": {
+            "stmt_id": "s21",
+            "line": 268,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s22",
+          "line": 269,
+          "operation": "PERFORM",
+          "source": "PERFORM 20900-CHECK-RISK-REPRESENTED",
+          "traceability": {
+            "stmt_id": "s22",
+            "line": 269,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s23",
+          "line": 270,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s23",
+            "line": 270,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s24",
+          "line": 272,
+          "operation": "IF",
+          "source": "IF RISK-EXPERIENCED",
+          "traceability": {
+            "stmt_id": "s24",
+            "line": 272,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s25",
+          "line": 274,
+          "operation": "PERFORM",
+          "source": "PERFORM 20A00-CHECK-ISSUES",
+          "traceability": {
+            "stmt_id": "s25",
+            "line": 274,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s26",
+          "line": 275,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s26",
+            "line": 275,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s27",
+          "line": 276,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s27",
+            "line": 276,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        },
+        {
+          "stmt_id": "s28",
+          "line": 277,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s28",
+            "line": 277,
+            "unit": "20000-PROCESS-RECORDS"
+          }
+        }
+      ],
+      "statement_count": 28
+    },
+    {
+      "name": "20100-GET-CLAIM-HEADER",
+      "start_line": 280,
+      "end_line": 286,
+      "line_count": 6,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 283,
+          "operation": "MOVE",
+          "source": "MOVE CORR WK-HW-CLAIM-RD   TO CMFHCL00",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 283,
+            "unit": "20100-GET-CLAIM-HEADER"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 284,
+          "operation": "PERFORM",
+          "source": "PERFORM 80102-READ-CMLHCL00-RANDOM",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 284,
+            "unit": "20100-GET-CLAIM-HEADER"
+          }
+        }
+      ],
+      "statement_count": 2
+    },
+    {
+      "name": "20200-CHECK-RL-CLAIM",
+      "start_line": 287,
+      "end_line": 298,
+      "line_count": 11,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 289,
+          "operation": "IF",
+          "source": "IF CLACPRE OF CMCSCL50-DATA = \"RL\"",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 289,
+            "unit": "20200-CHECK-RL-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 292,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 292,
+            "unit": "20200-CHECK-RL-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 293,
+          "operation": "IF",
+          "source": "IF CLTYPE OF CMFHCL00 (4:1) = \"4\"",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 293,
+            "unit": "20200-CHECK-RL-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 295,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 295,
+            "unit": "20200-CHECK-RL-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 296,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 296,
+            "unit": "20200-CHECK-RL-CLAIM"
+          }
+        }
+      ],
+      "statement_count": 5
+    },
+    {
+      "name": "20300-CHECK-RM-CLAIM",
+      "start_line": 299,
+      "end_line": 310,
+      "line_count": 11,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 301,
+          "operation": "IF",
+          "source": "IF CLACPRE OF CMCSCL50-DATA = \"RM\"",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 301,
+            "unit": "20300-CHECK-RM-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 304,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 304,
+            "unit": "20300-CHECK-RM-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 305,
+          "operation": "IF",
+          "source": "IF CLTYPE OF CMFHCL00 (4:1) = \"3\"",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 305,
+            "unit": "20300-CHECK-RM-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 307,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 307,
+            "unit": "20300-CHECK-RM-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 308,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 308,
+            "unit": "20300-CHECK-RM-CLAIM"
+          }
+        }
+      ],
+      "statement_count": 5
+    },
+    {
+      "name": "20400-CHECK-27-CLAIM",
+      "start_line": 311,
+      "end_line": 322,
+      "line_count": 11,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 313,
+          "operation": "IF",
+          "source": "IF CLACSUF OF CMCSCL50-DATA = \"27\"",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 313,
+            "unit": "20400-CHECK-27-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 316,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 316,
+            "unit": "20400-CHECK-27-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 317,
+          "operation": "IF",
+          "source": "IF CLTYPE OF CMFHCL00 (1:1) = \"1\"",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 317,
+            "unit": "20400-CHECK-27-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 319,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 319,
+            "unit": "20400-CHECK-27-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 320,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 320,
+            "unit": "20400-CHECK-27-CLAIM"
+          }
+        }
+      ],
+      "statement_count": 5
+    },
+    {
+      "name": "20500-CHECK-BANKRUPT-SI",
+      "start_line": 323,
+      "end_line": 339,
+      "line_count": 16,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 326,
+          "operation": "MOVE",
+          "source": "MOVE CORR WK-HW-CLAIM-RD   TO CMFDCL50",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 326,
+            "unit": "20500-CHECK-BANKRUPT-SI"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 327,
+          "operation": "PERFORM",
+          "source": "PERFORM 80202-READ-CMLDCL50-RANDOM",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 327,
+            "unit": "20500-CHECK-BANKRUPT-SI"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 330,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMFDCL50         TO CMCSRK20-DATA",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 330,
+            "unit": "20500-CHECK-BANKRUPT-SI"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 331,
+          "operation": "MOVE",
+          "source": "MOVE CLTYPE OF CMFHCL00    TO CLTYPE OF CMCSRK20-DATA",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 331,
+            "unit": "20500-CHECK-BANKRUPT-SI"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 332,
+          "operation": "PERFORM",
+          "source": "PERFORM 99000-CALL-CMCSRK20-FUNCTION",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 332,
+            "unit": "20500-CHECK-BANKRUPT-SI"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 335,
+          "operation": "IF",
+          "source": "IF BANKRUPT-SI",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 335,
+            "unit": "20500-CHECK-BANKRUPT-SI"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 337,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 337,
+            "unit": "20500-CHECK-BANKRUPT-SI"
+          }
+        }
+      ],
+      "statement_count": 7
+    },
+    {
+      "name": "20600-CHECK-FILED-BY-BWC",
+      "start_line": 340,
+      "end_line": 352,
+      "line_count": 12,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 342,
+          "operation": "IF",
+          "source": "IF  CLPREFIX OF CMCSCL50-DATA = CLACPRE OF CMCSCL50-DATA",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 342,
+            "unit": "20600-CHECK-FILED-BY-BWC"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 345,
+          "operation": "PERFORM",
+          "source": "PERFORM 20610-CHECK-1ST-LEVEL",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 345,
+            "unit": "20600-CHECK-FILED-BY-BWC"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 347,
+          "operation": "IF",
+          "source": "IF ( NOT BWC-REP-NEEDED )",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 347,
+            "unit": "20600-CHECK-FILED-BY-BWC"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 348,
+          "operation": "PERFORM",
+          "source": "PERFORM 20620-CHECK-2ND-LEVEL",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 348,
+            "unit": "20600-CHECK-FILED-BY-BWC"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 349,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 349,
+            "unit": "20600-CHECK-FILED-BY-BWC"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 350,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 350,
+            "unit": "20600-CHECK-FILED-BY-BWC"
+          }
+        }
+      ],
+      "statement_count": 6
+    },
+    {
+      "name": "20610-CHECK-1ST-LEVEL",
+      "start_line": 353,
+      "end_line": 377,
+      "line_count": 24,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 356,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMCSCL50-DATA       TO CMFDMO00",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 356,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 357,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMFDMO00            TO CMLDMO06-HOLD",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 357,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 358,
+          "operation": "PERFORM",
+          "source": "PERFORM 80511-START-CMLDMO06-EQUAL",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 358,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 359,
+          "operation": "PERFORM",
+          "source": "PERFORM 80503-READ-CMLDMO06-NEXT",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 359,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 361,
+          "operation": "PERFORM",
+          "source": "PERFORM UNTIL NOT OK",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 361,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 366,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMFDMO00          TO CMFHMO00",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 366,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 367,
+          "operation": "PERFORM",
+          "source": "PERFORM 80602-READ-CMLHMO00-RANDOM",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 367,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 369,
+          "operation": "IF",
+          "source": "IF CLMOFILB OF CMFHMO00 = 3 OR 5 OR 6 OR 8",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 369,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 371,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 371,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 372,
+          "operation": "PERFORM",
+          "source": "PERFORM 80503-READ-CMLDMO06-NEXT",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 372,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 373,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 373,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 375,
+          "operation": "PERFORM",
+          "source": "END-PERFORM",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 375,
+            "unit": "20610-CHECK-1ST-LEVEL"
+          }
+        }
+      ],
+      "statement_count": 12
+    },
+    {
+      "name": "20620-CHECK-2ND-LEVEL",
+      "start_line": 378,
+      "end_line": 398,
+      "line_count": 20,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 381,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMCSCL50-DATA       TO CMFDCA00",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 381,
+            "unit": "20620-CHECK-2ND-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 382,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMCSCL50-DATA       TO CMLDCA01-HOLD",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 382,
+            "unit": "20620-CHECK-2ND-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 383,
+          "operation": "PERFORM",
+          "source": "PERFORM 80411-START-CMLDCA01-EQUAL",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 383,
+            "unit": "20620-CHECK-2ND-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 384,
+          "operation": "PERFORM",
+          "source": "PERFORM 80403-READ-CMLDCA01-NEXT",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 384,
+            "unit": "20620-CHECK-2ND-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 386,
+          "operation": "PERFORM",
+          "source": "PERFORM UNTIL NOT OK",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 386,
+            "unit": "20620-CHECK-2ND-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 390,
+          "operation": "IF",
+          "source": "IF CAFILBY OF CMFDCA00 = 3 OR 5 OR 6",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 390,
+            "unit": "20620-CHECK-2ND-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 392,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 392,
+            "unit": "20620-CHECK-2ND-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 393,
+          "operation": "PERFORM",
+          "source": "PERFORM 80403-READ-CMLDCA01-NEXT",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 393,
+            "unit": "20620-CHECK-2ND-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 394,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 394,
+            "unit": "20620-CHECK-2ND-LEVEL"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 396,
+          "operation": "PERFORM",
+          "source": "END-PERFORM",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 396,
+            "unit": "20620-CHECK-2ND-LEVEL"
+          }
+        }
+      ],
+      "statement_count": 10
+    },
+    {
+      "name": "20700-CHECK-SI-RISK",
+      "start_line": 399,
+      "end_line": 414,
+      "line_count": 15,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 401,
+          "operation": "IF",
+          "source": "IF (CLACSUF OF CMCSCL50-DATA  = \"22\" AND",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 401,
+            "unit": "20700-CHECK-SI-RISK"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 406,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 406,
+            "unit": "20700-CHECK-SI-RISK"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 407,
+          "operation": "IF",
+          "source": "IF RKRSTYP OF CMCSRK20-DATA = \"SI\"",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 407,
+            "unit": "20700-CHECK-SI-RISK"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 409,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 409,
+            "unit": "20700-CHECK-SI-RISK"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 411,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 411,
+            "unit": "20700-CHECK-SI-RISK"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 412,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 412,
+            "unit": "20700-CHECK-SI-RISK"
+          }
+        }
+      ],
+      "statement_count": 6
+    },
+    {
+      "name": "20800-CHECK-RISK-EXPERIENCE",
+      "start_line": 415,
+      "end_line": 434,
+      "line_count": 19,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 425,
+          "operation": "PERFORM",
+          "source": "PERFORM 99900-CALL-UTCSDC00-FUNCTION",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 425,
+            "unit": "20800-CHECK-RISK-EXPERIENCE"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 427,
+          "operation": "MOVE",
+          "source": "MOVE GREGORIAN-DATE           TO MMDDCCYY-DATE",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 427,
+            "unit": "20800-CHECK-RISK-EXPERIENCE"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 428,
+          "operation": "MOVE",
+          "source": "MOVE CORR MMDDCCYY-DATE-RD    TO CCYYMMDD-DATE-RD",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 428,
+            "unit": "20800-CHECK-RISK-EXPERIENCE"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 430,
+          "operation": "IF",
+          "source": "IF CCYYMMDD-DATE - CLINJDTE OF CMFHCL00 >= 00050000",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 430,
+            "unit": "20800-CHECK-RISK-EXPERIENCE"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 432,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 432,
+            "unit": "20800-CHECK-RISK-EXPERIENCE"
+          }
+        }
+      ],
+      "statement_count": 5
+    },
+    {
+      "name": "20900-CHECK-RISK-REPRESENTED",
+      "start_line": 435,
+      "end_line": 453,
+      "line_count": 18,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 440,
+          "operation": "MOVE",
+          "source": "MOVE CORR WK-HW-CLAIM-RD      TO CLAIM OF CMCSRP00-DATA",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 440,
+            "unit": "20900-CHECK-RISK-REPRESENTED"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 441,
+          "operation": "PERFORM",
+          "source": "PERFORM 99000-CALL-CMCSRP00-FUNCTION",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 441,
+            "unit": "20900-CHECK-RISK-REPRESENTED"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 443,
+          "operation": "PERFORM",
+          "source": "PERFORM VARYING SSUB FROM 1 BY 1",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 443,
+            "unit": "20900-CHECK-RISK-REPRESENTED"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 447,
+          "operation": "IF",
+          "source": "IF CLRPREL OF REP-DATA-ITEM(SSUB) = 2",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 447,
+            "unit": "20900-CHECK-RISK-REPRESENTED"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 449,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 449,
+            "unit": "20900-CHECK-RISK-REPRESENTED"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 451,
+          "operation": "PERFORM",
+          "source": "END-PERFORM",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 451,
+            "unit": "20900-CHECK-RISK-REPRESENTED"
+          }
+        }
+      ],
+      "statement_count": 6
+    },
+    {
+      "name": "20A00-CHECK-ISSUES",
+      "start_line": 454,
+      "end_line": 486,
+      "line_count": 32,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 457,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMCSCL50-DATA       TO CMFDMO00",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 457,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 458,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMFDMO00            TO CMLDMO06-HOLD",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 458,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 459,
+          "operation": "PERFORM",
+          "source": "PERFORM 80511-START-CMLDMO06-EQUAL",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 459,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 460,
+          "operation": "PERFORM",
+          "source": "PERFORM 80503-READ-CMLDMO06-NEXT",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 460,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 462,
+          "operation": "PERFORM",
+          "source": "PERFORM UNTIL NOT OK",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 462,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 467,
+          "operation": "MOVE",
+          "source": "MOVE \"TB\"                   TO TBTYPE OF UTFMTB00",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 467,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 468,
+          "operation": "MOVE",
+          "source": "MOVE \"BWCLAWISS\"            TO TBFLDN OF UTFMTB00",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 468,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 469,
+          "operation": "MOVE",
+          "source": "MOVE ISISSUE OF CMFDMO00    TO ISSUE",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 469,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 470,
+          "operation": "MOVE",
+          "source": "MOVE ISSUE                  TO TBCODE OF UTFMTB00",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 470,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 471,
+          "operation": "PERFORM",
+          "source": "PERFORM 80311-START-UTLMTB00-EQUAL",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 471,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 472,
+          "operation": "PERFORM",
+          "source": "PERFORM 80303-READ-UTLMTB00-NEXT",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 472,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 477,
+          "operation": "IF",
+          "source": "IF OK AND TBSUBC OF UTFMTB00 = \"Y\"",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 477,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s13",
+          "line": 479,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s13",
+            "line": 479,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s14",
+          "line": 481,
+          "operation": "PERFORM",
+          "source": "PERFORM 80503-READ-CMLDMO06-NEXT",
+          "traceability": {
+            "stmt_id": "s14",
+            "line": 481,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        },
+        {
+          "stmt_id": "s15",
+          "line": 483,
+          "operation": "PERFORM",
+          "source": "END-PERFORM",
+          "traceability": {
+            "stmt_id": "s15",
+            "line": 483,
+            "unit": "20A00-CHECK-ISSUES"
+          }
+        }
+      ],
+      "statement_count": 15
+    },
+    {
+      "name": "80102-READ-CMLHCL00-RANDOM",
+      "start_line": 487,
+      "end_line": 491,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 489,
+          "operation": "READ",
+          "source": "READ CMLHCL00-FILE.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 489,
+            "unit": "80102-READ-CMLHCL00-RANDOM"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80202-READ-CMLDCL50-RANDOM",
+      "start_line": 492,
+      "end_line": 496,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 494,
+          "operation": "READ",
+          "source": "READ CMLDCL50-FILE.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 494,
+            "unit": "80202-READ-CMLDCL50-RANDOM"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80302-READ-UTLMTB00-RANDOM",
+      "start_line": 497,
+      "end_line": 501,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 499,
+          "operation": "READ",
+          "source": "READ UTLMTB00-FILE.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 499,
+            "unit": "80302-READ-UTLMTB00-RANDOM"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80303-READ-UTLMTB00-NEXT",
+      "start_line": 502,
+      "end_line": 506,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 504,
+          "operation": "READ",
+          "source": "READ UTLMTB00-FILE NEXT.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 504,
+            "unit": "80303-READ-UTLMTB00-NEXT"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80311-START-UTLMTB00-EQUAL",
+      "start_line": 507,
+      "end_line": 513,
+      "line_count": 6,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "80403-READ-CMLDCA01-NEXT",
+      "start_line": 514,
+      "end_line": 519,
+      "line_count": 5,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 516,
+          "operation": "READ",
+          "source": "READ CMLDCA01-FILE NEXT.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 516,
+            "unit": "80403-READ-CMLDCA01-NEXT"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 518,
+          "operation": "IF",
+          "source": "IF OK",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 518,
+            "unit": "80403-READ-CMLDCA01-NEXT"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 519,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMFDCA00         TO CMLDCA01-CTRL",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 519,
+            "unit": "80403-READ-CMLDCA01-NEXT"
+          }
+        }
+      ],
+      "statement_count": 3
+    },
+    {
+      "name": "END-IF",
+      "start_line": 520,
+      "end_line": 522,
+      "line_count": 2,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "80411-START-CMLDCA01-EQUAL",
+      "start_line": 523,
+      "end_line": 530,
+      "line_count": 7,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "80503-READ-CMLDMO06-NEXT",
+      "start_line": 531,
+      "end_line": 536,
+      "line_count": 5,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 533,
+          "operation": "READ",
+          "source": "READ CMLDMO06-FILE NEXT.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 533,
+            "unit": "80503-READ-CMLDMO06-NEXT"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 535,
+          "operation": "IF",
+          "source": "IF OK",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 535,
+            "unit": "80503-READ-CMLDMO06-NEXT"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 536,
+          "operation": "MOVE",
+          "source": "MOVE CORR CMFDMO00         TO CMLDMO06-CTRL",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 536,
+            "unit": "80503-READ-CMLDMO06-NEXT"
+          }
+        }
+      ],
+      "statement_count": 3
+    },
+    {
+      "name": "END-IF",
+      "start_line": 537,
+      "end_line": 539,
+      "line_count": 2,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "80511-START-CMLDMO06-EQUAL",
+      "start_line": 540,
+      "end_line": 547,
+      "line_count": 7,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "80602-READ-CMLHMO00-RANDOM",
+      "start_line": 548,
+      "end_line": 557,
+      "line_count": 9,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 550,
+          "operation": "READ",
+          "source": "READ CMLHMO00-FILE.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 550,
+            "unit": "80602-READ-CMLHMO00-RANDOM"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "99999-CLOSE-PROGRAM",
+      "start_line": 558,
+      "end_line": 569,
+      "line_count": 11,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 560,
+          "operation": "MOVE",
+          "source": "MOVE CMCSCL50-DATA            TO LINK-DATA",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 560,
+            "unit": "99999-CLOSE-PROGRAM"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 562,
+          "operation": "CLOSE",
+          "source": "CLOSE CMLHCL00-FILE",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 562,
+            "unit": "99999-CLOSE-PROGRAM"
+          }
+        }
+      ],
+      "statement_count": 2
+    },
+    {
+      "name": "99999-EXIT-PROGRAM",
+      "start_line": 570,
+      "end_line": 573,
+      "line_count": 3,
+      "statements": [],
+      "statement_count": 0
+    }
+  ],
+  "paragraph_count": 30,
+  "data_dictionary": [
+    {
+      "level": 5,
+      "name": "WK-RKRSNBR",
+      "pic": "S9(011)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "WK-RKRSNBR-RD",
+      "pic": "X(011).",
+      "usage": null,
+      "redefines": "WK-RKRSNBR",
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "ISSUE",
+      "pic": "S9(005)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "SI-RISK-STAT",
+      "pic": "1.",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "RISK-EXPERIENCE-STAT",
+      "pic": "1.",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "RISK-REPRESENTED-STAT",
+      "pic": "1.",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    }
+  ],
+  "dependencies": {
+    "copybooks": [
+      {
+        "name": "STDPROCESS",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "DDS-CMFHCL00",
+        "of": "CMLHCL00"
+      },
+      {
+        "name": "DDS-CMFDCL50",
+        "of": "CMLDCL50"
+      },
+      {
+        "name": "DDS-UTFMTB00",
+        "of": "UTLMTB00"
+      },
+      {
+        "name": "DDS-CMFDMO00",
+        "of": "CMLDMO06"
+      },
+      {
+        "name": "DDS-CMFDCA00",
+        "of": "CMLDCA01"
+      },
+      {
+        "name": "DDS-CMFHMO00",
+        "of": "CMLHMO00"
+      },
+      {
+        "name": "CMCSCL50L",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "CMCSRP00L",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "DATEFLIP",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "STATUSCODE",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "UTCSDC00L",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "CMCSRK20L",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "UTCSDC00C",
+        "of": "UTILLIB-QCPYCBL"
+      },
+      {
+        "name": "CMCSRP00C",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "CMCSRK20C",
+        "of": "QCPYCBL"
+      }
+    ],
+    "files": [
+      "CMLDCA01-FILE",
+      "CMLDCL50-FILE",
+      "CMLDMO06-FILE",
+      "CMLHCL00-FILE",
+      "CMLHMO00-FILE",
+      "UTLMTB00-FILE"
+    ],
+    "calls": [],
+    "sql_count": 0
+  },
+  "total_lines": 573,
+  "unit_type": "paragraph",
+  "traceability": {
+    "enabled": true,
+    "version": "v3.0",
+    "statement_id_format": "s{n}",
+    "line_numbers_present": true
+  }
+}

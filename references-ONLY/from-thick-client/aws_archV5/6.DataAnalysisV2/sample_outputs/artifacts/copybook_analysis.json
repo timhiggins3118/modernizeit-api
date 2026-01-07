@@ -1,0 +1,913 @@
+{
+  "generated_at": "2025-11-06T14:40:30.096360+00:00",
+  "summary": {
+    "total_copybooks": 125
+  },
+  "copybooks": [
+    {
+      "name": "STDPROCESS",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFHCL00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFDCL50",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-UTFMTB00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFDMO00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFDCA00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFHMO00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSCL50L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSRP00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DATEFLIP",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "STATUSCODE",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/UTCSUL10.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSDC00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSRK20L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSDC00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSRP00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSRK20C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-DIFWCC00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFMCC00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-DIFWCC10",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DIPWCC00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DIPWCC01",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSUL10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/UTCSUL10.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSC101L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSCC00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFMRP00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-ADFWNP00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFMRP10",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-XAFMZC00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-XAFDTR00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "ADCPSH21L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSCL50C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFHCL90",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFDCL20",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFDCL40",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFHCM00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-XAFHDS00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-XAFDDS00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFMLT00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-AMFTRQ00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFTRQ00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFACL50",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFHRK00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFDRK00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFARK00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-FMFHCF00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-XAFMLC00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CMFDCL60",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "KEYRCDMNT",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "EXTSUPINF",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "LOCALDATA",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTXCMS00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTXSSD00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSCP00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSPM00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSNT00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSNT10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSRQ00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSCT00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSCT10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSSC00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSUL00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSRC10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSRC30L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTXSFS00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTXSRM00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTXSNC10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSZC00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSCV00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSCV10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSCS00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSCL01L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSRP10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSCL10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "F21WS",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "IMCSIR00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "IMCSIR10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "FMCSPL00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCPRP40L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSC100L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSCL60L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-FMT00-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-FMT00-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-FMT01-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-FMT01-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-FMT02-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-FMT02-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-SFL04-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-SFL04-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CTL04-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CTL04-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-SFL05-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-SFL05-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CTL05-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CTL05-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-SFL05A-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-SFL05A-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CTL05A-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CTL05A-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-SFL07-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-SFL07-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CTL07-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-CTL07-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-FMT98-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-FMT98-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-MSGSF",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "DDS-MSGCL-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCCSV00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTXCMS00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTXCMS10C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSCP00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTXSSD00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSPM00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCSQM00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSCC00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSRC10C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "UTCWNT00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSCL01C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSCL10C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "IMCSIR00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "IMCSIR10C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCPRP40C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "CMCSCL60C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "F21PRC",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "USRSPCCTL",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "name": "XACSCT10C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    }
+  ]
+}

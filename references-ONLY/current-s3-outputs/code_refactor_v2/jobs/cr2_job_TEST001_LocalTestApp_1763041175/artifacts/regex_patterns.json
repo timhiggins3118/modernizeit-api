@@ -1,0 +1,3879 @@
+{
+  "job_id": "cr2_job_TEST001_LocalTestApp_1763041175",
+  "source_hash": "9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74",
+  "generated_at": "2025-11-13T13:39:35.328712+00:00",
+  "summary": {
+    "total_files": 20,
+    "files_with_patterns": 12,
+    "total_patterns": 295,
+    "pattern_type_breakdown": {
+      "magic_numbers": 10,
+      "goto_usage": 4,
+      "duplicated_code": 223,
+      "level88_conditions": 56,
+      "sequential_file_io": 2
+    },
+    "recipe_type_breakdown": {
+      "extract_constants": 10,
+      "state_machine": 4,
+      "extract_common_method": 223,
+      "enum_pattern": 56,
+      "stream_api": 2
+    },
+    "average_confidence": 0.9
+  },
+  "files": [
+    {
+      "path": "IBMi-Cobol/Cobol/STATUSCODE.CBL",
+      "patterns": [
+        {
+          "type": "magic_numbers",
+          "count": 78,
+          "sample_values": [
+            "07",
+            "05",
+            "88",
+            "02",
+            "002",
+            "04"
+          ],
+          "recipe_type": "extract_constants",
+          "confidence": 0.8,
+          "rationale": "78 magic numbers found. Extract to named constants for clarity."
+        }
+      ],
+      "pattern_count": 1
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "patterns": [
+        {
+          "type": "goto_usage",
+          "count": 1,
+          "locations": [
+            {
+              "line": 217,
+              "target": "99999-EXIT-PROGRAM"
+            }
+          ],
+          "recipe_type": "state_machine",
+          "confidence": 0.78,
+          "rationale": "1 GO TO statements create spaghetti code. State machine pattern enables testing and clarity."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            44,
+            50,
+            56,
+            76
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            294,
+            306,
+            318
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            373,
+            394,
+            449
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": null,
+          "condition_count": 2,
+          "conditions": [
+            "SI-RISK",
+            "NON-SI-RISK"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "RISK-EXPERIENCE-STAT",
+          "condition_count": 2,
+          "conditions": [
+            "RISK-EXPERIENCED",
+            "RISK-INEXPERIENCED"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "RISK-REPRESENTED-STAT",
+          "condition_count": 2,
+          "conditions": [
+            "RISK-REPRESENTED",
+            "RISK-UNREPRESENTED"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "magic_numbers",
+          "count": 119,
+          "sample_values": [
+            "2022",
+            "57955",
+            "22",
+            "2010",
+            "2020",
+            "08",
+            "10",
+            "11",
+            "28"
+          ],
+          "recipe_type": "extract_constants",
+          "confidence": 0.8,
+          "rationale": "119 magic numbers found. Extract to named constants for clarity."
+        }
+      ],
+      "pattern_count": 8
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSDC00L.CBL",
+      "patterns": [
+        {
+          "type": "level88_conditions",
+          "parent_field": null,
+          "condition_count": 4,
+          "conditions": [
+            "VALID-MONTH",
+            "VALID-YEAR",
+            "21ST",
+            "20TH"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "4 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "JULIAN-DATE",
+          "condition_count": 3,
+          "conditions": [
+            "VALID-JULIAN-DATE",
+            "20TH-CENT",
+            "21ST-CENT"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "3 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "JULIAN-DATE-RD",
+          "condition_count": 8,
+          "conditions": [
+            "RETRIEVE-DATE",
+            "GREGORIAN-JULIAN",
+            "JULIAN-GREGORIAN",
+            "AGE-CURRENT",
+            "AGE-DATE",
+            "GOOD-DATE",
+            "BAD-DATE",
+            "VALID-REQUEST"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "8 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "magic_numbers",
+          "count": 77,
+          "sample_values": [
+            "05",
+            "88",
+            "10",
+            "12",
+            "002",
+            "008"
+          ],
+          "recipe_type": "extract_constants",
+          "confidence": 0.8,
+          "rationale": "77 magic numbers found. Extract to named constants for clarity."
+        }
+      ],
+      "pattern_count": 4
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/DATEFLIP.CBL",
+      "patterns": [
+        {
+          "type": "magic_numbers",
+          "count": 32,
+          "sample_values": [
+            "002",
+            "05",
+            "006"
+          ],
+          "recipe_type": "extract_constants",
+          "confidence": 0.8,
+          "rationale": "32 magic numbers found. Extract to named constants for clarity."
+        }
+      ],
+      "pattern_count": 1
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/DIPWCC00.CBL",
+      "patterns": [
+        {
+          "type": "magic_numbers",
+          "count": 25,
+          "sample_values": [
+            "002",
+            "05",
+            "006"
+          ],
+          "recipe_type": "extract_constants",
+          "confidence": 0.8,
+          "rationale": "25 magic numbers found. Extract to named constants for clarity."
+        }
+      ],
+      "pattern_count": 1
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSUL10L.CBL",
+      "patterns": [
+        {
+          "type": "level88_conditions",
+          "parent_field": null,
+          "condition_count": 3,
+          "conditions": [
+            "UPPER-TO-LOWER",
+            "LOWER-TO-UPPER",
+            "CAPITALIZE"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "3 Level-88 conditions can be modernized to Java Enum for type safety"
+        }
+      ],
+      "pattern_count": 1
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/XACSCC00L.CBL",
+      "patterns": [
+        {
+          "type": "level88_conditions",
+          "parent_field": null,
+          "condition_count": 2,
+          "conditions": [
+            "COMBINE-CLAIM-NBR",
+            "SEPARATE-CLAIM-NBR"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        }
+      ],
+      "pattern_count": 1
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+      "patterns": [
+        {
+          "type": "goto_usage",
+          "count": 1,
+          "locations": [
+            {
+              "line": 161,
+              "target": "99999-EXIT-PROGRAM"
+            }
+          ],
+          "recipe_type": "state_machine",
+          "confidence": 0.78,
+          "rationale": "1 GO TO statements create spaghetti code. State machine pattern enables testing and clarity."
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": null,
+          "condition_count": 3,
+          "conditions": [
+            "NO-ERROR-FOUND",
+            "DUPLICATE-ERROR",
+            "INVERSE-ERROR"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "3 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "magic_numbers",
+          "count": 110,
+          "sample_values": [
+            "15",
+            "07",
+            "05",
+            "18",
+            "31",
+            "08",
+            "11"
+          ],
+          "recipe_type": "extract_constants",
+          "confidence": 0.8,
+          "rationale": "110 magic numbers found. Extract to named constants for clarity."
+        }
+      ],
+      "pattern_count": 3
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+      "patterns": [
+        {
+          "type": "goto_usage",
+          "count": 1,
+          "locations": [
+            {
+              "line": 195,
+              "target": "99999-EXIT-PROGRAM"
+            }
+          ],
+          "recipe_type": "state_machine",
+          "confidence": 0.78,
+          "rationale": "1 GO TO statements create spaghetti code. State machine pattern enables testing and clarity."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            43,
+            49,
+            55,
+            66,
+            72
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": null,
+          "condition_count": 2,
+          "conditions": [
+            "FILES-OPEN",
+            "FILES-NOT-OPEN"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "SI-RISK-STAT",
+          "condition_count": 2,
+          "conditions": [
+            "SI-RISK",
+            "NON-SI-RISK"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "RISK-EXPERIENCE-STAT",
+          "condition_count": 2,
+          "conditions": [
+            "RISK-EXPERIENCED",
+            "RISK-INEXPERIENCED"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "magic_numbers",
+          "count": 120,
+          "sample_values": [
+            "96",
+            "97",
+            "04",
+            "229",
+            "10",
+            "03",
+            "11",
+            "28"
+          ],
+          "recipe_type": "extract_constants",
+          "confidence": 0.8,
+          "rationale": "120 magic numbers found. Extract to named constants for clarity."
+        }
+      ],
+      "pattern_count": 6
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "patterns": [
+        {
+          "type": "goto_usage",
+          "count": 1,
+          "locations": [
+            {
+              "line": 1498,
+              "target": "99999-EXIT-PROGRAM"
+            }
+          ],
+          "recipe_type": "state_machine",
+          "confidence": 0.78,
+          "rationale": "1 GO TO statements create spaghetti code. State machine pattern enables testing and clarity."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 13,
+          "locations": [
+            121,
+            127,
+            147,
+            153,
+            159
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 13 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            133,
+            140,
+            218,
+            225,
+            270
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            134,
+            141,
+            219,
+            226,
+            271
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            171,
+            177,
+            194,
+            200
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            671,
+            678,
+            685,
+            699,
+            706
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            672,
+            679,
+            686,
+            700,
+            707
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            751,
+            766,
+            858
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            752,
+            767,
+            859
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            753,
+            768,
+            860
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            754,
+            769,
+            861
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            755,
+            770,
+            862
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 6,
+          "locations": [
+            1786,
+            3497,
+            4896,
+            6801,
+            8524
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 6 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2296,
+            3732,
+            6545
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2297,
+            3733,
+            6546
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2298,
+            3734,
+            6547
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2299,
+            3735,
+            6548
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2300,
+            3736,
+            6549
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2301,
+            3737,
+            6550
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2302,
+            3738,
+            6551
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2303,
+            3739,
+            6552
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2304,
+            3740,
+            6553
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2305,
+            3741,
+            6554
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2306,
+            3742,
+            6555
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            2307,
+            3743,
+            6556
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3177,
+            4451,
+            11268
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3186,
+            4460,
+            11277
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3226,
+            4514,
+            10127
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3227,
+            4515,
+            10128
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3246,
+            6617,
+            10370
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            3247,
+            4557,
+            6618,
+            10371
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 12,
+          "locations": [
+            3253,
+            3265,
+            3278,
+            4563,
+            4575
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 12 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3254,
+            4564,
+            6625
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3255,
+            4565,
+            6626
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3256,
+            4566,
+            6627
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3262,
+            3275,
+            4572
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3263,
+            3276,
+            4573
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3264,
+            3277,
+            4574
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3266,
+            4576,
+            6637,
+            7928,
+            10391
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3267,
+            4577,
+            6638,
+            7929,
+            10392
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            3268,
+            4578,
+            6639,
+            10393
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            3269,
+            4579,
+            6640,
+            10394
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3327,
+            4668,
+            6697,
+            8370,
+            10444
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3328,
+            4669,
+            6698,
+            8371,
+            10445
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3329,
+            4670,
+            6699,
+            8372,
+            10446
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3330,
+            4671,
+            6700,
+            8373,
+            10447
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3331,
+            4672,
+            6701,
+            8374,
+            10448
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3341,
+            4682,
+            6711,
+            8384,
+            10458
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3342,
+            4683,
+            6712,
+            8385,
+            10459
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3343,
+            4684,
+            6713,
+            8386,
+            10460
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3344,
+            4685,
+            6714,
+            8387,
+            10461
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3345,
+            4686,
+            6715,
+            8388,
+            10462
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3346,
+            4687,
+            6716,
+            8389,
+            10463
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3352,
+            4708,
+            6722,
+            8415,
+            10484
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3353,
+            4709,
+            6723,
+            8416,
+            10485
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3354,
+            4710,
+            6724,
+            8417,
+            10486
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 10,
+          "locations": [
+            3360,
+            3370,
+            4716,
+            4726,
+            6730
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 10 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3366,
+            4722,
+            6736,
+            8429,
+            10498
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3367,
+            4723,
+            6737,
+            8430,
+            10499
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3368,
+            4724,
+            6738,
+            8431,
+            10500
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3369,
+            4725,
+            6739,
+            8432,
+            10501
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3380,
+            6571,
+            7127
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 16,
+          "locations": [
+            3396,
+            3397,
+            3413,
+            3414,
+            3430
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 16 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 6,
+          "locations": [
+            3398,
+            3415,
+            3432,
+            3470,
+            3910
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 6 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3493,
+            4892,
+            11314
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            3494,
+            4893,
+            11315
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3515,
+            4914,
+            6819,
+            8542,
+            10581
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 6,
+          "locations": [
+            3787,
+            3819,
+            3948,
+            3984,
+            4015
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 6 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 6,
+          "locations": [
+            3788,
+            3820,
+            3949,
+            3985,
+            4016
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 6 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 6,
+          "locations": [
+            3790,
+            3822,
+            3951,
+            3987,
+            4018
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 6 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            3821,
+            3950,
+            3986,
+            4017,
+            4118
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            3967,
+            4003,
+            4034,
+            4135
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            3968,
+            4004,
+            4035,
+            4136
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4324,
+            6100,
+            7351,
+            11642
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4325,
+            6101,
+            7352,
+            11643
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4326,
+            6102,
+            7353,
+            11644
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            4348,
+            6126,
+            7375,
+            9801,
+            11676
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            4349,
+            6127,
+            7376,
+            9802,
+            11677
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            4350,
+            6128,
+            7377,
+            9803,
+            11678
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 10,
+          "locations": [
+            4359,
+            4372,
+            6137,
+            6150,
+            7386
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 10 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 10,
+          "locations": [
+            4360,
+            4373,
+            6138,
+            6151,
+            7387
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 10 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 14,
+          "locations": [
+            4361,
+            4374,
+            6139,
+            6152,
+            6163
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 14 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4386,
+            6191,
+            7413,
+            9920
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4387,
+            6192,
+            7414,
+            9921
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4388,
+            6193,
+            7415,
+            9922
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            4414,
+            6219,
+            7430,
+            9988,
+            11749
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            4415,
+            6220,
+            7431,
+            9989,
+            11750
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            4417,
+            6222,
+            7433,
+            9991,
+            11752
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            4418,
+            6223,
+            7434,
+            9992,
+            11753
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            4419,
+            6224,
+            7435,
+            9993,
+            11754
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            4420,
+            6225,
+            7436,
+            9994,
+            11755
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4457,
+            4458,
+            11274,
+            11275
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4666,
+            6695,
+            8368,
+            10442
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4667,
+            6696,
+            8369,
+            10443
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            4736,
+            9133,
+            10253
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            4737,
+            9134,
+            10254
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            4764,
+            5910,
+            6236
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            4765,
+            5911,
+            5951,
+            6237,
+            10724
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4766,
+            5912,
+            5952,
+            6238
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4767,
+            5913,
+            5953,
+            6239
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4847,
+            6754,
+            8447,
+            10516
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4848,
+            6755,
+            8448,
+            10517
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4849,
+            6756,
+            8449,
+            10518
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 8,
+          "locations": [
+            4850,
+            4858,
+            6757,
+            6765,
+            8450
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 8 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4851,
+            6758,
+            8451,
+            10520
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4852,
+            6759,
+            8452,
+            10521
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4853,
+            6760,
+            8453,
+            10522
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4854,
+            6761,
+            8454,
+            10523
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4855,
+            6762,
+            8455,
+            10524
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4856,
+            6763,
+            8456,
+            10525
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4857,
+            6764,
+            8457,
+            10526
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4859,
+            6766,
+            8459,
+            10528
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4860,
+            6767,
+            8460,
+            10529
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4861,
+            6768,
+            8461,
+            10530
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4940,
+            4941,
+            11332,
+            11333
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            4942,
+            4943,
+            11334,
+            11335
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 12,
+          "locations": [
+            5083,
+            5093,
+            5165,
+            5175,
+            5185
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 12 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 12,
+          "locations": [
+            5084,
+            5094,
+            5166,
+            5176,
+            5186
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 12 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 12,
+          "locations": [
+            5085,
+            5095,
+            5167,
+            5177,
+            5187
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 12 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            5201,
+            5202,
+            5345,
+            5346
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            5359,
+            5360,
+            11191,
+            11192
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            5361,
+            11193,
+            11194
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            5541,
+            5569,
+            5692,
+            5722
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            5542,
+            5570,
+            5598,
+            5693,
+            5723
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            5543,
+            5571,
+            5599,
+            5694,
+            5724
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            5544,
+            5572,
+            5600,
+            5695,
+            5725
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            5545,
+            5573,
+            5601,
+            5696,
+            5726
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 7,
+          "locations": [
+            5546,
+            5574,
+            5602,
+            5624,
+            5646
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 7 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 7,
+          "locations": [
+            5547,
+            5575,
+            5603,
+            5625,
+            5647
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 7 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 7,
+          "locations": [
+            5548,
+            5576,
+            5604,
+            5626,
+            5648
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 7 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 7,
+          "locations": [
+            5549,
+            5577,
+            5605,
+            5627,
+            5649
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 7 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 7,
+          "locations": [
+            5550,
+            5578,
+            5606,
+            5628,
+            5650
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 7 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 5,
+          "locations": [
+            5551,
+            5579,
+            5607,
+            5702,
+            5732
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 5 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6161,
+            9836,
+            11715
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 4,
+          "locations": [
+            6162,
+            9837,
+            9851,
+            11716
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.8999999999999999,
+          "rationale": "Code block repeated 4 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6226,
+            9995,
+            11756
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6227,
+            9996,
+            11757
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6358,
+            7478,
+            10086
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6359,
+            7479,
+            10087
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6360,
+            7480,
+            10088
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 6,
+          "locations": [
+            6368,
+            7332,
+            7488,
+            9744,
+            10096
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 6 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6369,
+            7489,
+            10097
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6387,
+            7507,
+            10115
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6388,
+            7508,
+            10116
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6389,
+            7509,
+            10117
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6438,
+            7574,
+            10152
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6439,
+            7575,
+            10153
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6440,
+            7576,
+            10154
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6441,
+            7577,
+            10155
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6459,
+            7595,
+            10173
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 6,
+          "locations": [
+            6460,
+            6461,
+            7596,
+            7597,
+            10174
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 6 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6502,
+            7639,
+            10217
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6503,
+            7640,
+            10218
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6504,
+            7641,
+            10219
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6789,
+            8511,
+            10551
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6794,
+            8517,
+            10556
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6795,
+            8518,
+            10557
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6844,
+            8567,
+            10606
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6845,
+            8568,
+            10607
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6846,
+            8569,
+            10608
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6847,
+            8570,
+            10609
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6848,
+            8571,
+            10610
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6849,
+            8572,
+            10611
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6850,
+            8573,
+            10612
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6851,
+            8574,
+            10613
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6885,
+            8609,
+            10654
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6886,
+            8610,
+            10655
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6887,
+            8611,
+            10656
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6888,
+            8612,
+            10657
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6889,
+            8613,
+            10658
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6890,
+            8614,
+            10659
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 6,
+          "locations": [
+            6891,
+            6892,
+            8615,
+            8616,
+            10660
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 6 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6893,
+            8617,
+            10662
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6894,
+            8618,
+            10663
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6895,
+            8619,
+            10664
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6906,
+            8640,
+            10675
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6907,
+            8641,
+            10676
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6908,
+            8642,
+            10677
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6909,
+            8643,
+            10678
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6910,
+            8644,
+            10679
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6911,
+            8645,
+            10680
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6912,
+            8646,
+            10681
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6913,
+            8647,
+            10682
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            6914,
+            8648,
+            10683
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7003,
+            8760,
+            10999
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7004,
+            8761,
+            11000
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7073,
+            8831,
+            10947
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7153,
+            9342,
+            11361
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7154,
+            9343,
+            11362
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7194,
+            9399,
+            11439
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7195,
+            9400,
+            11440
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7241,
+            7242,
+            7243
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7262,
+            9626,
+            11540
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7263,
+            9627,
+            11541
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7333,
+            9745,
+            11615
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7428,
+            9986,
+            11747
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7429,
+            9987,
+            11748
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7444,
+            10053,
+            11775
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7445,
+            10054,
+            11776
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7446,
+            10055,
+            11777
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7447,
+            10056,
+            11778
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7900,
+            7921,
+            7937
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7901,
+            7922,
+            7938
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7902,
+            7923,
+            7939
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7903,
+            7924,
+            7940
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7904,
+            7925,
+            7941
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7905,
+            7926,
+            7942
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            7906,
+            7927,
+            7943
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            8080,
+            8179,
+            8240
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 10,
+          "locations": [
+            8101,
+            8102,
+            8114,
+            8115,
+            8133
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 10 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            9238,
+            9289,
+            9318
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            9239,
+            9290,
+            9319
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            9240,
+            9291,
+            9320
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            9241,
+            9292,
+            9321
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            10279,
+            11155,
+            11210
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 13,
+          "locations": [
+            10735,
+            10742,
+            10768,
+            10783,
+            10790
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 13 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 19,
+          "locations": [
+            10741,
+            10749,
+            10758,
+            10767,
+            10774
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 19 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 6,
+          "locations": [
+            10750,
+            10759,
+            10775,
+            10832,
+            10842
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 6 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 6,
+          "locations": [
+            10751,
+            10760,
+            10776,
+            10833,
+            10843
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.95,
+          "rationale": "Code block repeated 6 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "duplicated_code",
+          "occurrences": 3,
+          "locations": [
+            11512,
+            11513,
+            11514
+          ],
+          "recipe_type": "extract_common_method",
+          "confidence": 0.85,
+          "rationale": "Code block repeated 3 times. Extract to reusable method for DRY principle."
+        },
+        {
+          "type": "sequential_file_io",
+          "location": "Line 1782",
+          "lines": [
+            1782
+          ],
+          "recipe_type": "stream_api",
+          "confidence": 0.85,
+          "rationale": "Sequential file processing can use Java Stream API for cleaner, more functional code"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "SWF-CLAIM",
+          "condition_count": 3,
+          "conditions": [
+            "REPRESENTATIVES",
+            "RISK",
+            "RELATED-CLAIMANTS"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "3 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "X",
+          "condition_count": 2,
+          "conditions": [
+            "GOOD-CLAIM-DATA",
+            "BAD-CLAIM-DATA"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "ADDR-FLD",
+          "condition_count": 4,
+          "conditions": [
+            "ADS-REP",
+            "NOT-ADS-REP",
+            "SEC-RISK-ADS-REP",
+            "SEC-RISK-NOT-ADS-REP"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "4 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "WK-SFL05A-REP-HDG-DATA",
+          "condition_count": 4,
+          "conditions": [
+            "SAV-LIN-ATTRIB",
+            "KILL-LIN-ATTRIB",
+            "SEC-RISK",
+            "NOT-SEC-RISK"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "4 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "WK-SFL05A-RISK-HDG-DATA",
+          "condition_count": 2,
+          "conditions": [
+            "CONTINUED-RISK-HDG",
+            "NOT-CONTINUED-RISK-HDG"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "WK-SFL05A-SFL-SIZ",
+          "condition_count": 3,
+          "conditions": [
+            "SFL05-DROP-MODE",
+            "SFL05-FOLD-MODE",
+            "SFL05-SAVE-MODE"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "3 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CMLDCL20-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "CMLDCL20-OPEN",
+            "CMLDCL20-CLOSED"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CMLDCL40-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "CMLDCL40-OPEN",
+            "CMLDCL40-CLOSED"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CMLDCL60-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "CMLDCL60-OPEN",
+            "CMLDCL60-CLOSED"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CMLACL50-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "FIRST-READ-CMLACL50",
+            "CMLACL50-READ"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "FNCKEY-06-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "FNCKEY-06-HIT",
+            "FNCKEY-06-NOT-HIT"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CLFILDTE-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "CLFILDTE-EXISTS",
+            "NO-CLFILDTE-EXISTS"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CLINJDTE-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "CLINJDTE-EXISTS",
+            "NO-CLINJDTE-EXISTS"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "RKRSNBR-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "RKRSNBR-EXISTS",
+            "NO-RKRSNBR-EXISTS"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "RKRSNBR-LOCAL-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "RKRSNBR-LOCAL-EXISTS",
+            "NO-RKRSNBR-LOCAL-EXISTS"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "RISK-ADDRESS-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "RISK-ADDRESS-EXISTS",
+            "NO-RISK-ADDRESS-EXISTS"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "OVRD-ADDRESS-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "OVRD-ADDRESS-EXISTS",
+            "NO-OVRD-ADDRESS-EXISTS"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "RISK-HEADER-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "RISK-HEADER-EXISTS",
+            "NO-RISK-HEADER-EXISTS"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "RKRSADR-STATUS-1-2",
+          "condition_count": 3,
+          "conditions": [
+            "RKRSADR1-OOB-EXISTS",
+            "RKRSADR2-OOB-EXISTS",
+            "NO-OUT-OF-BUSINESS"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "3 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "RKRSMANN-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "RKRSMANN-EXISTS",
+            "NO-RKRSMANN-EXISTS"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "RISK-ADDRESS-AUT",
+          "condition_count": 2,
+          "conditions": [
+            "IN-RKADDRUPDT-TABLE",
+            "NOT-IN-RKADDRUPDT-TABLE"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "DATE-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "SETTLE-DATE-REQUIRED",
+            "NO-SETTLE-DATE-REQUIRED"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "REVISE-STATUS-02",
+          "condition_count": 2,
+          "conditions": [
+            "REVISE-OPTION-02",
+            "NOT-REVISE-OPTION-02"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CMFACL50-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "CMFACL50-CHG",
+            "NO-CMFACL50-CHG"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "REP-PCN-TRACKING-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "REP-PCN-TRACKING",
+            "NOT-REP-PCN-TRACKING"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "IR-MOTIONS-EXIST-STAT",
+          "condition_count": 2,
+          "conditions": [
+            "IR-MOTIONS-EXIST",
+            "NO-IR-MOTIONS-EXIST"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "DELETE-CMLACL50-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "CMLACL50-DELETE-OCCURRED",
+            "NO-CMLACL50-DELETE-OCCURRED"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "INT-REP-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "INT-REP-NEEDED",
+            "INT-REP-NOT-NEEDED"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "INT-RPNUMBER-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "INT-RPNUMBER-EXIST",
+            "INT-RPNUMBER-NOT-EXIST"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "WS-CLAIM",
+          "condition_count": 2,
+          "conditions": [
+            "F21-NOT-HIT",
+            "F21-HIT"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "W-RISK",
+          "condition_count": 2,
+          "conditions": [
+            "RISK-ADDRESS-MATCH",
+            "RISK-ADDRESS-NO-MATCH"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CLBWCLOC-TABLE-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "IN-CLBWCLOC-TABLE",
+            "NOT-IN-CLBWCLOC-TABLE"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CLPPLFLG-PL-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "CLPPLFLG-CHANGED-PL-Y",
+            "CLPPLFLG-CHANGED-PL-N"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CLPPLFLG-P-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "CLPPLFLG-CHANGED-P-Y",
+            "CLPPLFLG-CHANGED-P-N"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "PAPER-CHANGED-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "PAPER-CHANGED-Y",
+            "PAPER-CHANGED-N"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "BWCLOC-STATUS",
+          "condition_count": 2,
+          "conditions": [
+            "BWCLOC-FOUND",
+            "BWCLOC-NOT-FOUND"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CLTYPE-VALID-FLAG",
+          "condition_count": 2,
+          "conditions": [
+            "CLTYPE-VALID",
+            "CLTYPE-NOT-VALID"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "WORK-CLPPLFLG",
+          "condition_count": 2,
+          "conditions": [
+            "NO-CHANGES-P-YES",
+            "NO-CHANGES-P-NO"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "W-CLBWCLOC",
+          "condition_count": 2,
+          "conditions": [
+            "CODE1-CHECK-ON",
+            "CODE1-CHECK-OFF"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "CLINJDTE-AUT",
+          "condition_count": 2,
+          "conditions": [
+            "IN-CLINJDTEUP-TABLE",
+            "NOT-IN-CLINJDTEUP-TABLE"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "WS-CLINJDTE",
+          "condition_count": 2,
+          "conditions": [
+            "SPACE-FOUND",
+            "NON-SPACE-FOUND"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "magic_numbers",
+          "count": 4150,
+          "sample_values": [
+            "14",
+            "13",
+            "16",
+            "07",
+            "91",
+            "10",
+            "92",
+            "03"
+          ],
+          "recipe_type": "extract_constants",
+          "confidence": 0.8,
+          "rationale": "4150 magic numbers found. Extract to named constants for clarity."
+        }
+      ],
+      "pattern_count": 263
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSC101L.CBL",
+      "patterns": [
+        {
+          "type": "level88_conditions",
+          "parent_field": null,
+          "condition_count": 9,
+          "conditions": [
+            "GOOD-MATCH",
+            "BAD-ZIP",
+            "BAD-ADDR",
+            "BAD-STREET",
+            "BAD-HOUSE",
+            "BAD-APT",
+            "EXPIRED-DB",
+            "MULTI-MATCH",
+            "EXT-MATCH"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "9 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "magic_numbers",
+          "count": 36,
+          "sample_values": [
+            "010",
+            "040",
+            "05",
+            "035"
+          ],
+          "recipe_type": "extract_constants",
+          "confidence": 0.8,
+          "rationale": "36 magic numbers found. Extract to named constants for clarity."
+        }
+      ],
+      "pattern_count": 2
+    },
+    {
+      "path": "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+      "patterns": [
+        {
+          "type": "sequential_file_io",
+          "location": "Line 394",
+          "lines": [
+            394
+          ],
+          "recipe_type": "stream_api",
+          "confidence": 0.85,
+          "rationale": "Sequential file processing can use Java Stream API for cleaner, more functional code"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "FILLER",
+          "condition_count": 2,
+          "conditions": [
+            "UTLMTB00-CLOSED",
+            "UTLMTB00-OPENED"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "2 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "level88_conditions",
+          "parent_field": "UC-TABLE",
+          "condition_count": 5,
+          "conditions": [
+            "WHOLE-WORD",
+            "PARTIAL-WORD",
+            "NEXT-CHAR-UPPER",
+            "NEXT-CHAR-LOWER",
+            "NEXT-CHAR-SAME"
+          ],
+          "recipe_type": "enum_pattern",
+          "confidence": 0.97,
+          "rationale": "5 Level-88 conditions can be modernized to Java Enum for type safety"
+        },
+        {
+          "type": "magic_numbers",
+          "count": 158,
+          "sample_values": [
+            "77",
+            "96",
+            "09",
+            "91",
+            "422",
+            "08",
+            "005",
+            "04",
+            "28"
+          ],
+          "recipe_type": "extract_constants",
+          "confidence": 0.8,
+          "rationale": "158 magic numbers found. Extract to named constants for clarity."
+        }
+      ],
+      "pattern_count": 4
+    }
+  ]
+}

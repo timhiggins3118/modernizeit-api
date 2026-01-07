@@ -1,0 +1,58 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "7f7caafb-4d28-48d9-8012-695e82c2222b",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 29 Oct 2025 15:10:46 GMT",
+      "content-type": "application/json",
+      "content-length": "1680",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "7f7caafb-4d28-48d9-8012-695e82c2222b"
+    },
+    "RetryAttempts": 0
+  },
+  "Configuration": {
+    "FunctionName": "EntityGeneratorV3",
+    "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:EntityGeneratorV3",
+    "Role": "arn:aws:iam::376129851858:role/evaluation_lambda_role",
+    "CodeSize": 0,
+    "Description": "",
+    "Timeout": 300,
+    "MemorySize": 2048,
+    "LastModified": "2025-10-23T23:03:01.000+0000",
+    "CodeSha256": "07e27f3fc2fcd1dd00d94f4718babbef9d8746368fdd38e55cf22403fbbb6321",
+    "Version": "$LATEST",
+    "Environment": {
+      "Variables": {
+        "JAVA_HOME": "/usr/lib/jvm/java-17-amazon-corretto",
+        "BUCKET_NAME": "code-transformation-v3"
+      }
+    },
+    "TracingConfig": {
+      "Mode": "PassThrough"
+    },
+    "RevisionId": "34d8f09a-63b9-4279-9b2a-a0afb6bb4ae2",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Image",
+    "Architectures": [
+      "x86_64"
+    ],
+    "EphemeralStorage": {
+      "Size": 512
+    },
+    "SnapStart": {
+      "ApplyOn": "None",
+      "OptimizationStatus": "Off"
+    },
+    "LoggingConfig": {
+      "LogFormat": "Text",
+      "LogGroup": "/aws/lambda/EntityGeneratorV3"
+    }
+  },
+  "Code": {
+    "RepositoryType": "ECR",
+    "ImageUri": "376129851858.dkr.ecr.us-east-1.amazonaws.com/entity-generator-v3:latest",
+    "ResolvedImageUri": "376129851858.dkr.ecr.us-east-1.amazonaws.com/entity-generator-v3@sha256:07e27f3fc2fcd1dd00d94f4718babbef9d8746368fdd38e55cf22403fbbb6321"
+  }
+}

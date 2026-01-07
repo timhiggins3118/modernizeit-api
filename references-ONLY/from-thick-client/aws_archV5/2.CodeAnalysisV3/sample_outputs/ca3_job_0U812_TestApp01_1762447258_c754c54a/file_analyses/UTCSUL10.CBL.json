@@ -1,0 +1,2021 @@
+{
+  "file_name": "UTCSUL10.CBL",
+  "file_type": "COBOL_PROGRAM",
+  "confidence": 1.0,
+  "divisions": [
+    {
+      "name": "IDENTIFICATION",
+      "line": 1
+    },
+    {
+      "name": "ENVIRONMENT",
+      "line": 21
+    },
+    {
+      "name": "DATA",
+      "line": 33
+    }
+  ],
+  "sections": [
+    {
+      "name": "CONFIGURATION",
+      "line": 22
+    },
+    {
+      "name": "INPUT-OUTPUT",
+      "line": 25
+    },
+    {
+      "name": "FILE",
+      "line": 34
+    },
+    {
+      "name": "WORKING-STORAGE",
+      "line": 43
+    },
+    {
+      "name": "LINKAGE",
+      "line": 143
+    }
+  ],
+  "paragraphs": [
+    {
+      "name": "FILE-CONTROL",
+      "start_line": 26,
+      "end_line": 147,
+      "line_count": 121,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 106,
+          "operation": "OPEN",
+          "source": "01  FILE-OPENS.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 106,
+            "unit": "FILE-CONTROL"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 109,
+          "operation": "CLOSE",
+          "source": "88  UTLMTB00-CLOSED         VALUE \"0\".",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 109,
+            "unit": "FILE-CONTROL"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 110,
+          "operation": "OPEN",
+          "source": "88  UTLMTB00-OPENED         VALUE \"1\".",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 110,
+            "unit": "FILE-CONTROL"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 129,
+          "operation": "STRING",
+          "source": "05  QCLS-STRING            PIC  X(050).",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 129,
+            "unit": "FILE-CONTROL"
+          }
+        }
+      ],
+      "statement_count": 4
+    },
+    {
+      "name": "00000-MAIN-CONTROL-ROUTINE",
+      "start_line": 148,
+      "end_line": 151,
+      "line_count": 3,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "CSUB",
+      "start_line": 152,
+      "end_line": 181,
+      "line_count": 29,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 154,
+          "operation": "IF",
+          "source": "IF UTLMTB00-CLOSED",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 154,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 155,
+          "operation": "PERFORM",
+          "source": "PERFORM 90000-BUILD-UC-WORDS.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 155,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 157,
+          "operation": "IF",
+          "source": "IF UL-LENGTH = 000",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 157,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 158,
+          "operation": "MOVE",
+          "source": "MOVE 050                  TO UL-LENGTH.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 158,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 161,
+          "operation": "MOVE",
+          "source": "MOVE 01                       TO BSUB.",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 161,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 163,
+          "operation": "SEARCH",
+          "source": "SEARCH CASE-TABLE VARYING BSUB",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 163,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 164,
+          "operation": "WHEN",
+          "source": "WHEN UL-DATA(1:1)            = UPPER-CASE(BSUB)",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 164,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 166,
+          "operation": "MOVE",
+          "source": "MOVE UPPER-CASE(BSUB)  TO UL-DATA(1:1).",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 166,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 168,
+          "operation": "PERFORM",
+          "source": "PERFORM 10000-CASE-TRANSALATION",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 168,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 172,
+          "operation": "IF",
+          "source": "IF JUSTIFICATION-REQUESTED",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 172,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 173,
+          "operation": "MOVE",
+          "source": "MOVE UL-LENGTH            TO STRING-LENGTH",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 173,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 174,
+          "operation": "MOVE",
+          "source": "MOVE UL-ACTION            TO STRING-ACTION",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 174,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s13",
+          "line": 175,
+          "operation": "MOVE",
+          "source": "MOVE UL-DATA              TO STRING-CHARACTERS",
+          "traceability": {
+            "stmt_id": "s13",
+            "line": 175,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s14",
+          "line": 176,
+          "operation": "CALL",
+          "source": "CALL \"UTXSFS00\"        USING UTXSFS00-DATA",
+          "traceability": {
+            "stmt_id": "s14",
+            "line": 176,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s15",
+          "line": 177,
+          "operation": "MOVE",
+          "source": "MOVE STRING-CHARACTERS    TO UL-DATA.",
+          "traceability": {
+            "stmt_id": "s15",
+            "line": 177,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s16",
+          "line": 179,
+          "operation": "EVALUATE",
+          "source": "EVALUATE TRUE",
+          "traceability": {
+            "stmt_id": "s16",
+            "line": 179,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s17",
+          "line": 180,
+          "operation": "WHEN",
+          "source": "WHEN UPPER-TO-LOWER",
+          "traceability": {
+            "stmt_id": "s17",
+            "line": 180,
+            "unit": "CSUB"
+          }
+        },
+        {
+          "stmt_id": "s18",
+          "line": 181,
+          "operation": "PERFORM",
+          "source": "PERFORM 20000-UPPER-LOWER-WORDS.",
+          "traceability": {
+            "stmt_id": "s18",
+            "line": 181,
+            "unit": "CSUB"
+          }
+        }
+      ],
+      "statement_count": 18
+    },
+    {
+      "name": "GOBACK",
+      "start_line": 182,
+      "end_line": 185,
+      "line_count": 3,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "10000-CASE-TRANSALATION",
+      "start_line": 186,
+      "end_line": 196,
+      "line_count": 10,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 189,
+          "operation": "MOVE",
+          "source": "MOVE 01                       TO BSUB.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 189,
+            "unit": "10000-CASE-TRANSALATION"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 191,
+          "operation": "SEARCH",
+          "source": "SEARCH CASE-TABLE VARYING BSUB",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 191,
+            "unit": "10000-CASE-TRANSALATION"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 192,
+          "operation": "WHEN",
+          "source": "WHEN UL-DATA(ASUB:1)         = UPPER-CASE(BSUB)",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 192,
+            "unit": "10000-CASE-TRANSALATION"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 194,
+          "operation": "PERFORM",
+          "source": "PERFORM 11000-TRANSLATION.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 194,
+            "unit": "10000-CASE-TRANSALATION"
+          }
+        }
+      ],
+      "statement_count": 4
+    },
+    {
+      "name": "11000-TRANSLATION",
+      "start_line": 197,
+      "end_line": 207,
+      "line_count": 10,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 199,
+          "operation": "EVALUATE",
+          "source": "EVALUATE TRUE",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 199,
+            "unit": "11000-TRANSLATION"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 200,
+          "operation": "WHEN",
+          "source": "WHEN UPPER-TO-LOWER",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 200,
+            "unit": "11000-TRANSLATION"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 201,
+          "operation": "PERFORM",
+          "source": "PERFORM 11100-UPPER-LOWER",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 201,
+            "unit": "11000-TRANSLATION"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 202,
+          "operation": "WHEN",
+          "source": "WHEN LOWER-TO-UPPER",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 202,
+            "unit": "11000-TRANSLATION"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 203,
+          "operation": "PERFORM",
+          "source": "PERFORM 11200-LOWER-UPPER",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 203,
+            "unit": "11000-TRANSLATION"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 204,
+          "operation": "WHEN",
+          "source": "WHEN CAPITALIZE",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 204,
+            "unit": "11000-TRANSLATION"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 205,
+          "operation": "PERFORM",
+          "source": "PERFORM 11300-CAPITALIZE.",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 205,
+            "unit": "11000-TRANSLATION"
+          }
+        }
+      ],
+      "statement_count": 7
+    },
+    {
+      "name": "11100-UPPER-LOWER",
+      "start_line": 208,
+      "end_line": 225,
+      "line_count": 17,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 210,
+          "operation": "COMPUTE",
+          "source": "COMPUTE CSUB                   = ASUB - 01.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 210,
+            "unit": "11100-UPPER-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 211,
+          "operation": "COMPUTE",
+          "source": "COMPUTE DSUB                   = ASUB + 01.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 211,
+            "unit": "11100-UPPER-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 213,
+          "operation": "IF",
+          "source": "IF DSUB > UL-LENGTH",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 213,
+            "unit": "11100-UPPER-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 214,
+          "operation": "MOVE",
+          "source": "MOVE 01                   TO DSUB.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 214,
+            "unit": "11100-UPPER-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 216,
+          "operation": "IF",
+          "source": "IF   (UL-DATA(CSUB:1)       ALPHABETIC",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 216,
+            "unit": "11100-UPPER-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 221,
+          "operation": "MOVE",
+          "source": "MOVE LOWER-CASE(BSUB)     TO UL-DATA(ASUB:1)",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 221,
+            "unit": "11100-UPPER-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 222,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 222,
+            "unit": "11100-UPPER-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 223,
+          "operation": "MOVE",
+          "source": "MOVE UPPER-CASE(BSUB)     TO UL-DATA(ASUB:1).",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 223,
+            "unit": "11100-UPPER-LOWER"
+          }
+        }
+      ],
+      "statement_count": 8
+    },
+    {
+      "name": "11200-LOWER-UPPER",
+      "start_line": 226,
+      "end_line": 230,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 228,
+          "operation": "MOVE",
+          "source": "MOVE UPPER-CASE(BSUB)         TO UL-DATA(ASUB:1).",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 228,
+            "unit": "11200-LOWER-UPPER"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "11300-CAPITALIZE",
+      "start_line": 231,
+      "end_line": 242,
+      "line_count": 11,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 234,
+          "operation": "COMPUTE",
+          "source": "COMPUTE CSUB                   = ASUB - 01.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 234,
+            "unit": "11300-CAPITALIZE"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 236,
+          "operation": "IF",
+          "source": "IF CSUB > 00",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 236,
+            "unit": "11300-CAPITALIZE"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 237,
+          "operation": "MOVE",
+          "source": "MOVE UL-DATA(CSUB:)       TO SPECIAL-CHARACTERS.",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 237,
+            "unit": "11300-CAPITALIZE"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 239,
+          "operation": "IF",
+          "source": "IF SPECIAL-CHARACTER",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 239,
+            "unit": "11300-CAPITALIZE"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 240,
+          "operation": "MOVE",
+          "source": "MOVE UPPER-CASE(BSUB)     TO UL-DATA(ASUB:1).",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 240,
+            "unit": "11300-CAPITALIZE"
+          }
+        }
+      ],
+      "statement_count": 5
+    },
+    {
+      "name": "20000-UPPER-LOWER-WORDS",
+      "start_line": 243,
+      "end_line": 249,
+      "line_count": 6,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 245,
+          "operation": "MOVE",
+          "source": "MOVE 01                       TO ASUB.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 245,
+            "unit": "20000-UPPER-LOWER-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 247,
+          "operation": "PERFORM",
+          "source": "PERFORM 21000-CHECK-UL-WORDS.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 247,
+            "unit": "20000-UPPER-LOWER-WORDS"
+          }
+        }
+      ],
+      "statement_count": 2
+    },
+    {
+      "name": "21000-CHECK-UL-WORDS",
+      "start_line": 250,
+      "end_line": 282,
+      "line_count": 32,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 252,
+          "operation": "PERFORM",
+          "source": "PERFORM UNTIL ASUB > 250",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 252,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 255,
+          "operation": "COMPUTE",
+          "source": "PERFORM 21100-COMPUTE-PATTERN-LENGTH",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 255,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 258,
+          "operation": "MOVE",
+          "source": "MOVE UL-DATA                TO QCLS-STRING",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 258,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 259,
+          "operation": "MOVE",
+          "source": "MOVE UL-LENGTH              TO QCLS-STRLEN",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 259,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 260,
+          "operation": "MOVE",
+          "source": "MOVE 1                      TO QCLS-STRPOS",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 260,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 261,
+          "operation": "MOVE",
+          "source": "MOVE LC-WORD(ASUB)          TO QCLS-PATTERN",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 261,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 262,
+          "operation": "MOVE",
+          "source": "MOVE WK-PATLEN              TO QCLS-PATLEN",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 262,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 263,
+          "operation": "MOVE",
+          "source": "MOVE \"0\"                    TO QCLS-TRANSLATE",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 263,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 264,
+          "operation": "MOVE",
+          "source": "MOVE \"0\"                    TO QCLS-TRIM",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 264,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 265,
+          "operation": "CALL",
+          "source": "CALL \"QCLSCAN\"           USING QCLS-STRING",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 265,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 275,
+          "operation": "IF",
+          "source": "IF PATTERN-FOUND",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 275,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 276,
+          "operation": "PERFORM",
+          "source": "PERFORM 21100-REPLACE-PATTERN",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 276,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s13",
+          "line": 278,
+          "operation": "ADD",
+          "source": "ADD 1                    TO QCLS-STRPOS",
+          "traceability": {
+            "stmt_id": "s13",
+            "line": 278,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s14",
+          "line": 279,
+          "operation": "PERFORM",
+          "source": "PERFORM 21200-CONTINUE-SCAN",
+          "traceability": {
+            "stmt_id": "s14",
+            "line": 279,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s15",
+          "line": 280,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s15",
+            "line": 280,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s16",
+          "line": 282,
+          "operation": "ADD",
+          "source": "ADD 1                       TO ASUB",
+          "traceability": {
+            "stmt_id": "s16",
+            "line": 282,
+            "unit": "21000-CHECK-UL-WORDS"
+          }
+        }
+      ],
+      "statement_count": 16
+    },
+    {
+      "name": "END-PERFORM",
+      "start_line": 283,
+      "end_line": 286,
+      "line_count": 3,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 284,
+          "operation": "PERFORM",
+          "source": "END-PERFORM.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 284,
+            "unit": "END-PERFORM"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "21100-COMPUTE-PATTERN-LENGTH",
+      "start_line": 287,
+      "end_line": 295,
+      "line_count": 8,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 289,
+          "operation": "MOVE",
+          "source": "MOVE 10                       TO X.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 289,
+            "unit": "21100-COMPUTE-PATTERN-LENGTH"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 291,
+          "operation": "PERFORM",
+          "source": "PERFORM VARYING X FROM X BY -1",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 291,
+            "unit": "21100-COMPUTE-PATTERN-LENGTH"
+          }
+        }
+      ],
+      "statement_count": 2
+    },
+    {
+      "name": "END-PERFORM",
+      "start_line": 296,
+      "end_line": 301,
+      "line_count": 5,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 297,
+          "operation": "PERFORM",
+          "source": "END-PERFORM.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 297,
+            "unit": "END-PERFORM"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 299,
+          "operation": "MOVE",
+          "source": "MOVE X                        TO WK-PATLEN.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 299,
+            "unit": "END-PERFORM"
+          }
+        }
+      ],
+      "statement_count": 2
+    },
+    {
+      "name": "21100-REPLACE-PATTERN",
+      "start_line": 302,
+      "end_line": 307,
+      "line_count": 5,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 304,
+          "operation": "COMPUTE",
+          "source": "COMPUTE X = QCLS-RESULT - 1.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 304,
+            "unit": "21100-REPLACE-PATTERN"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 306,
+          "operation": "IF",
+          "source": "IF X NOT = ZERO",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 306,
+            "unit": "21100-REPLACE-PATTERN"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 307,
+          "operation": "MOVE",
+          "source": "MOVE UL-DATA(X:1)          TO SPECIAL-CHARACTERS",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 307,
+            "unit": "21100-REPLACE-PATTERN"
+          }
+        }
+      ],
+      "statement_count": 3
+    },
+    {
+      "name": "END-IF",
+      "start_line": 308,
+      "end_line": 336,
+      "line_count": 28,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 310,
+          "operation": "IF",
+          "source": "IF X = ZERO",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 310,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 312,
+          "operation": "IF",
+          "source": "IF WHOLE-WORD(ASUB)",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 312,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 313,
+          "operation": "COMPUTE",
+          "source": "COMPUTE X = QCLS-RESULT + WK-PATLEN",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 313,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 315,
+          "operation": "IF",
+          "source": "IF X NOT > UL-LENGTH",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 315,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 316,
+          "operation": "MOVE",
+          "source": "MOVE UL-DATA (X:1)   TO SPECIAL-CHARACTERS",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 316,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 317,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 317,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 318,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 318,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 320,
+          "operation": "IF",
+          "source": "IF PARTIAL-WORD(ASUB)",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 320,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 323,
+          "operation": "MOVE",
+          "source": "MOVE UC-WORD(ASUB) (1:WK-PATLEN)",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 323,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 327,
+          "operation": "IF",
+          "source": "IF PARTIAL-WORD(ASUB)",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 327,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 328,
+          "operation": "IF",
+          "source": "IF NEXT-CHAR-UPPER(ASUB)",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 328,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 329,
+          "operation": "PERFORM",
+          "source": "PERFORM 21110-CONVERT-NEXT-CHAR-UPPER",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 329,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s13",
+          "line": 330,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s13",
+            "line": 330,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s14",
+          "line": 332,
+          "operation": "IF",
+          "source": "IF NEXT-CHAR-LOWER(ASUB)",
+          "traceability": {
+            "stmt_id": "s14",
+            "line": 332,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s15",
+          "line": 333,
+          "operation": "PERFORM",
+          "source": "PERFORM 21120-CONVERT-NEXT-CHAR-LOWER",
+          "traceability": {
+            "stmt_id": "s15",
+            "line": 333,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s16",
+          "line": 334,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s16",
+            "line": 334,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s17",
+          "line": 335,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s17",
+            "line": 335,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s18",
+          "line": 336,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s18",
+            "line": 336,
+            "unit": "END-IF"
+          }
+        }
+      ],
+      "statement_count": 18
+    },
+    {
+      "name": "END-IF",
+      "start_line": 337,
+      "end_line": 339,
+      "line_count": 2,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "21110-CONVERT-NEXT-CHAR-UPPER",
+      "start_line": 340,
+      "end_line": 350,
+      "line_count": 10,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 342,
+          "operation": "COMPUTE",
+          "source": "COMPUTE X = QCLS-RESULT + WK-PATLEN.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 342,
+            "unit": "21110-CONVERT-NEXT-CHAR-UPPER"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 345,
+          "operation": "IF",
+          "source": "IF X <= UL-LENGTH",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 345,
+            "unit": "21110-CONVERT-NEXT-CHAR-UPPER"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 346,
+          "operation": "SEARCH",
+          "source": "SEARCH CASE-TABLE",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 346,
+            "unit": "21110-CONVERT-NEXT-CHAR-UPPER"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 347,
+          "operation": "WHEN",
+          "source": "WHEN UL-DATA(X:1) = LOWER-CASE(IDX)",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 347,
+            "unit": "21110-CONVERT-NEXT-CHAR-UPPER"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 348,
+          "operation": "MOVE",
+          "source": "MOVE UPPER-CASE(IDX)",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 348,
+            "unit": "21110-CONVERT-NEXT-CHAR-UPPER"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 350,
+          "operation": "SEARCH",
+          "source": "END-SEARCH",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 350,
+            "unit": "21110-CONVERT-NEXT-CHAR-UPPER"
+          }
+        }
+      ],
+      "statement_count": 6
+    },
+    {
+      "name": "END-IF",
+      "start_line": 351,
+      "end_line": 353,
+      "line_count": 2,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "21120-CONVERT-NEXT-CHAR-LOWER",
+      "start_line": 354,
+      "end_line": 364,
+      "line_count": 10,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 356,
+          "operation": "COMPUTE",
+          "source": "COMPUTE X = QCLS-RESULT + WK-PATLEN.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 356,
+            "unit": "21120-CONVERT-NEXT-CHAR-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 359,
+          "operation": "IF",
+          "source": "IF X <= UL-LENGTH",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 359,
+            "unit": "21120-CONVERT-NEXT-CHAR-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 360,
+          "operation": "SEARCH",
+          "source": "SEARCH CASE-TABLE",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 360,
+            "unit": "21120-CONVERT-NEXT-CHAR-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 361,
+          "operation": "WHEN",
+          "source": "WHEN UL-DATA(X:1) = UPPER-CASE(IDX)",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 361,
+            "unit": "21120-CONVERT-NEXT-CHAR-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 362,
+          "operation": "MOVE",
+          "source": "MOVE LOWER-CASE(IDX)",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 362,
+            "unit": "21120-CONVERT-NEXT-CHAR-LOWER"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 364,
+          "operation": "SEARCH",
+          "source": "END-SEARCH",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 364,
+            "unit": "21120-CONVERT-NEXT-CHAR-LOWER"
+          }
+        }
+      ],
+      "statement_count": 6
+    },
+    {
+      "name": "END-IF",
+      "start_line": 365,
+      "end_line": 367,
+      "line_count": 2,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "21200-CONTINUE-SCAN",
+      "start_line": 368,
+      "end_line": 387,
+      "line_count": 19,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 370,
+          "operation": "PERFORM",
+          "source": "PERFORM UNTIL QCLS-STRPOS > UL-LENGTH",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 370,
+            "unit": "21200-CONTINUE-SCAN"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 373,
+          "operation": "CALL",
+          "source": "CALL \"QCLSCAN\"           USING QCLS-STRING",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 373,
+            "unit": "21200-CONTINUE-SCAN"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 383,
+          "operation": "IF",
+          "source": "IF PATTERN-FOUND",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 383,
+            "unit": "21200-CONTINUE-SCAN"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 384,
+          "operation": "PERFORM",
+          "source": "PERFORM 21100-REPLACE-PATTERN",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 384,
+            "unit": "21200-CONTINUE-SCAN"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 385,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 385,
+            "unit": "21200-CONTINUE-SCAN"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 387,
+          "operation": "ADD",
+          "source": "ADD 1                       TO QCLS-STRPOS",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 387,
+            "unit": "21200-CONTINUE-SCAN"
+          }
+        }
+      ],
+      "statement_count": 6
+    },
+    {
+      "name": "END-PERFORM",
+      "start_line": 388,
+      "end_line": 391,
+      "line_count": 3,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 389,
+          "operation": "PERFORM",
+          "source": "END-PERFORM.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 389,
+            "unit": "END-PERFORM"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80103-READ-UTLMTB00-NEXT",
+      "start_line": 392,
+      "end_line": 396,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 394,
+          "operation": "READ",
+          "source": "READ UTLMTB00-FILE NEXT  RECORD.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 394,
+            "unit": "80103-READ-UTLMTB00-NEXT"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80111-START-UTLMTB00-EQUAL",
+      "start_line": 397,
+      "end_line": 402,
+      "line_count": 5,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "80199-CHECK-UTLMTB00-RANGE",
+      "start_line": 403,
+      "end_line": 409,
+      "line_count": 6,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 405,
+          "operation": "IF",
+          "source": "IF  TBTYPE    OF UTFMTB00 NOT = \"TB\"",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 405,
+            "unit": "80199-CHECK-UTLMTB00-RANGE"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "90000-BUILD-UC-WORDS",
+      "start_line": 410,
+      "end_line": 430,
+      "line_count": 20,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 412,
+          "operation": "OPEN",
+          "source": "SET  UTLMTB00-OPENED      TO TRUE",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 412,
+            "unit": "90000-BUILD-UC-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 413,
+          "operation": "OPEN",
+          "source": "OPEN INPUT UTLMTB00-FILE",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 413,
+            "unit": "90000-BUILD-UC-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 416,
+          "operation": "MOVE",
+          "source": "MOVE \"TB\"                     TO TBTYPE OF UTFMTB00.",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 416,
+            "unit": "90000-BUILD-UC-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 417,
+          "operation": "MOVE",
+          "source": "MOVE \"ULWORDS\"                TO TBFLDN OF UTFMTB00.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 417,
+            "unit": "90000-BUILD-UC-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 419,
+          "operation": "PERFORM",
+          "source": "PERFORM 80111-START-UTLMTB00-EQUAL.",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 419,
+            "unit": "90000-BUILD-UC-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 420,
+          "operation": "PERFORM",
+          "source": "PERFORM 80103-READ-UTLMTB00-NEXT.",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 420,
+            "unit": "90000-BUILD-UC-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 421,
+          "operation": "PERFORM",
+          "source": "PERFORM 80199-CHECK-UTLMTB00-RANGE.",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 421,
+            "unit": "90000-BUILD-UC-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 423,
+          "operation": "PERFORM",
+          "source": "PERFORM 90000-BUILD-UC-WORD-TABLE",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 423,
+            "unit": "90000-BUILD-UC-WORDS"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 428,
+          "operation": "CLOSE",
+          "source": "CLOSE UTLMTB00-FILE.",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 428,
+            "unit": "90000-BUILD-UC-WORDS"
+          }
+        }
+      ],
+      "statement_count": 9
+    },
+    {
+      "name": "90000-BUILD-UC-WORD-TABLE",
+      "start_line": 431,
+      "end_line": 440,
+      "line_count": 9,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 433,
+          "operation": "MOVE",
+          "source": "MOVE TBCODE                   TO LC-WORD(ASUB).",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 433,
+            "unit": "90000-BUILD-UC-WORD-TABLE"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 434,
+          "operation": "MOVE",
+          "source": "MOVE TBSUBC                   TO UC-TYPE(ASUB).",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 434,
+            "unit": "90000-BUILD-UC-WORD-TABLE"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 435,
+          "operation": "MOVE",
+          "source": "MOVE TBXREF                   TO UC-WORD(ASUB).",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 435,
+            "unit": "90000-BUILD-UC-WORD-TABLE"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 436,
+          "operation": "MOVE",
+          "source": "MOVE TBDESC                   TO UC-NEXT-CHAR(ASUB).",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 436,
+            "unit": "90000-BUILD-UC-WORD-TABLE"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 438,
+          "operation": "PERFORM",
+          "source": "PERFORM 80103-READ-UTLMTB00-NEXT.",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 438,
+            "unit": "90000-BUILD-UC-WORD-TABLE"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 439,
+          "operation": "PERFORM",
+          "source": "PERFORM 80199-CHECK-UTLMTB00-RANGE.",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 439,
+            "unit": "90000-BUILD-UC-WORD-TABLE"
+          }
+        }
+      ],
+      "statement_count": 6
+    }
+  ],
+  "paragraph_count": 28,
+  "data_dictionary": [
+    {
+      "level": 1,
+      "name": "SPECIAL-CHARACTERS",
+      "pic": "X(001).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "FILLER",
+      "pic": "X(002)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "UTILTB00-STATUS",
+      "pic": "X(001)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "QCLS-STRING",
+      "pic": "X(050).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "QCLS-STRLEN",
+      "pic": "S9(003)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "QCLS-STRPOS",
+      "pic": "S9(003)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "QCLS-PATTERN",
+      "pic": "X(010).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "QCLS-PATLEN",
+      "pic": "S9(003)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "QCLS-TRANSLATE",
+      "pic": "X(001).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "QCLS-TRIM",
+      "pic": "X(001).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "QCLS-WILD",
+      "pic": "X(001).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "QCLS-RESULT",
+      "pic": "S9(003)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    }
+  ],
+  "dependencies": {
+    "copybooks": [
+      {
+        "name": "DDS-UTFMTB00",
+        "of": "UTLMTB00"
+      },
+      {
+        "name": "STATUSCODE",
+        "of": "UTILLIB-QCPYCBL"
+      },
+      {
+        "name": "UTXSFS00L",
+        "of": "UTILLIB-QCPYCBL"
+      },
+      {
+        "name": "UTCSUL10L",
+        "of": "UTILLIB-QCPYCBL"
+      }
+    ],
+    "files": [
+      "UTLMTB00-FILE"
+    ],
+    "calls": [
+      "QCLSCAN",
+      "UTXSFS00"
+    ],
+    "sql_count": 0
+  },
+  "total_lines": 440,
+  "unit_type": "paragraph",
+  "traceability": {
+    "enabled": true,
+    "version": "v3.0",
+    "statement_id_format": "s{n}",
+    "line_numbers_present": true
+  }
+}

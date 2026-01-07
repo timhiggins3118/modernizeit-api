@@ -1,0 +1,213 @@
+{
+  "file_name": "UTCSC101L.CBL",
+  "file_type": "COPYBOOK",
+  "copybook_type": "DATA",
+  "confidence": 0.9,
+  "data_dictionary": [
+    {
+      "level": 5,
+      "name": "FNCNAM",
+      "pic": "X(010).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1FIRM",
+      "pic": "X(035).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1ADDR01",
+      "pic": "X(040).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1ADDR02",
+      "pic": "X(040).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1ADDR03",
+      "pic": "X(040).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1STREET",
+      "pic": "X(080).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1CITY",
+      "pic": "X(030).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1STATE",
+      "pic": "X(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1ZIP9",
+      "pic": "X(009).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1CNTY",
+      "pic": "X(003).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1CNTYN",
+      "pic": "9(003).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "MSGID",
+      "pic": "X(010).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1P9OPRB",
+      "pic": "X(001).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1P9OPRA",
+      "pic": "X(001).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "C1P9OSMA",
+      "pic": "X(001).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    }
+  ],
+  "data_items_count": 15,
+  "paragraphs": [],
+  "paragraph_count": 0,
+  "note": "Copybook - data dictionary only (NESTED structure)",
+  "units": [
+    {
+      "name": "SYN-BLOCK-1",
+      "start_line": 1,
+      "end_line": 28,
+      "line_count": 28,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 6,
+          "operation": "ADD",
+          "source": "05  C1ADDR01               PIC  X(040).",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 6,
+            "unit": "SYN-BLOCK-1"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 7,
+          "operation": "ADD",
+          "source": "05  C1ADDR02               PIC  X(040).",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 7,
+            "unit": "SYN-BLOCK-1"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 8,
+          "operation": "ADD",
+          "source": "05  C1ADDR03               PIC  X(040).",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 8,
+            "unit": "SYN-BLOCK-1"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 18,
+          "operation": "ADD",
+          "source": "88  BAD-ADDR           VALUE \"UC10110\".",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 18,
+            "unit": "SYN-BLOCK-1"
+          }
+        }
+      ],
+      "statement_count": 4,
+      "synthetic": true,
+      "generation_method": "statement_grouping"
+    }
+  ],
+  "unit_type": "synthetic",
+  "traceability": {
+    "enabled": true,
+    "version": "v3.0",
+    "statement_id_format": "s{n}",
+    "line_numbers_present": true
+  },
+  "raw_content": "      *---------------------------------------------------------------*\r\n       01  UTCSC101-DATA.\r\n      *---------------------------------------------------------------*\r\n           05  FNCNAM                 PIC  X(010).\r\n           05  C1FIRM                 PIC  X(035).\r\n           05  C1ADDR01               PIC  X(040).\r\n           05  C1ADDR02               PIC  X(040).\r\n           05  C1ADDR03               PIC  X(040).\r\n           05  C1STREET               PIC  X(080).\r\n           05  C1CITY                 PIC  X(030).\r\n           05  C1STATE                PIC  X(002).\r\n           05  C1ZIP9                 PIC  X(009).\r\n           05  C1CNTY                 PIC  X(003).\r\n           05  C1CNTYN                PIC  9(003).\r\n           05  MSGID                  PIC  X(010).\r\n               88  GOOD-MATCH         VALUE \"       \".\r\n               88  BAD-ZIP            VALUE \"UC10100\".\r\n               88  BAD-ADDR           VALUE \"UC10110\".\r\n               88  BAD-STREET         VALUE \"UC10120\".\r\n               88  BAD-HOUSE          VALUE \"UC10130\".\r\n               88  BAD-APT            VALUE \"UC10140\".\r\n               88  EXPIRED-DB         VALUE \"UC10150\".\r\n               88  MULTI-MATCH        VALUE \"UC10160\".\r\n               88  EXT-MATCH          VALUE \"UC10170\".\r\n           05  C1P9OPRB               PIC  X(001).\r\n           05  C1P9OPRA               PIC  X(001).\r\n           05  C1P9OSMA               PIC  X(001).\r\n",
+  "raw_content_truncated": false
+}

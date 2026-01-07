@@ -1,0 +1,222 @@
+{
+  "Comment": "Java Generation V3 - Code Finalization Workflow (Flow 3) - Fix errors and package results",
+  "StartAt": "InitializeFixLoop",
+  "States": {
+    "InitializeFixLoop": {
+      "Type": "Pass",
+      "Result": {
+        "fix_iteration": 0,
+        "max_iterations": 3
+      },
+      "ResultPath": "$.loop_state",
+      "Next": "ApplyFixes"
+    },
+    "ApplyFixes": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:376129851858:function:ErrorFixerV3",
+        "Payload": {
+          "job_id.$": "$.job_id",
+          "scout_account_id.$": "$.scout_account_id",
+          "application_name.$": "$.application_name",
+          "max_fix_passes": 1
+        }
+      },
+      "ResultPath": "$.fix_result",
+      "ResultSelector": {
+        "fixes_applied.$": "$.Payload.fixes_applied",
+        "files_fixed.$": "$.Payload.files_fixed",
+        "remaining_errors.$": "$.Payload.remaining_errors"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "ResultPath": "$.error",
+          "Next": "FixingFailed"
+        }
+      ],
+      "Next": "RevalidateAfterFix"
+    },
+    "RevalidateAfterFix": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:376129851858:function:ValidationEngineV3",
+        "Payload": {
+          "job_id.$": "$.job_id",
+          "scout_account_id.$": "$.scout_account_id",
+          "application_name.$": "$.application_name"
+        }
+      },
+      "ResultPath": "$.revalidation_result",
+      "ResultSelector": {
+        "validation_passed.$": "$.Payload.validation_passed",
+        "total_files.$": "$.Payload.total_files",
+        "files_with_errors.$": "$.Payload.files_with_errors"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Next": "IncrementFixIteration"
+    },
+    "IncrementFixIteration": {
+      "Type": "Pass",
+      "Parameters": {
+        "fix_iteration.$": "States.MathAdd($.loop_state.fix_iteration, 1)",
+        "max_iterations.$": "$.loop_state.max_iterations"
+      },
+      "ResultPath": "$.loop_state",
+      "Next": "CheckIfMoreFixingNeeded"
+    },
+    "CheckIfMoreFixingNeeded": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "And": [
+            {
+              "Variable": "$.revalidation_result.validation_passed",
+              "BooleanEquals": false
+            },
+            {
+              "Variable": "$.fix_result.fixes_applied",
+              "NumericGreaterThan": 0
+            },
+            {
+              "Variable": "$.loop_state.fix_iteration",
+              "NumericLessThan": 3
+            }
+          ],
+          "Next": "ApplyFixes",
+          "Comment": "More fixes possible - loop again"
+        }
+      ],
+      "Default": "PackageResults"
+    },
+    "PackageResults": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:376129851858:function:PackageResultsV3",
+        "Payload": {
+          "job_id.$": "$.job_id",
+          "scout_account_id.$": "$.scout_account_id",
+          "application_name.$": "$.application_name"
+        }
+      },
+      "ResultPath": "$.package_result",
+      "ResultSelector": {
+        "zip_key.$": "$.Payload.zip_key",
+        "files_packaged.$": "$.Payload.files_packaged",
+        "zip_size_bytes.$": "$.Payload.zip_size_bytes"
+      },
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "Lambda.ServiceException",
+            "Lambda.AWSLambdaException",
+            "Lambda.SdkClientException"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "ResultPath": "$.package_error",
+          "Next": "UpdateCompletionStatus"
+        }
+      ],
+      "Next": "BuildFinalResult"
+    },
+    "BuildFinalResult": {
+      "Type": "Pass",
+      "Parameters": {
+        "job_id.$": "$.job_id",
+        "validation_passed.$": "$.revalidation_result.validation_passed",
+        "total_files.$": "$.revalidation_result.total_files",
+        "files_with_errors.$": "$.revalidation_result.files_with_errors",
+        "total_fixes_applied.$": "$.fix_result.fixes_applied",
+        "fix_iterations.$": "$.loop_state.fix_iteration",
+        "zip_key.$": "$.package_result.zip_key",
+        "files_packaged.$": "$.package_result.files_packaged",
+        "status": "completed",
+        "message": "Java generation completed"
+      },
+      "ResultPath": "$.final_result",
+      "Next": "UpdateCompletionStatus"
+    },
+    "UpdateCompletionStatus": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "arn:aws:lambda:us-east-1:376129851858:function:UpdateJobStatusV3",
+        "Payload": {
+          "job_id.$": "$.job_id",
+          "scout_account_id.$": "$.scout_account_id",
+          "application_name.$": "$.application_name",
+          "state": "completed",
+          "phase": "finalized",
+          "progress": 100,
+          "message": "Java generation completed successfully"
+        }
+      },
+      "ResultPath": null,
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "IntervalSeconds": 1,
+          "MaxAttempts": 2
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "ResultPath": "$.status_update_error",
+          "Next": "FinalizationComplete"
+        }
+      ],
+      "Next": "FinalizationComplete"
+    },
+    "FinalizationComplete": {
+      "Type": "Succeed",
+      "Comment": "Java code finalized (with or without remaining errors)"
+    },
+    "FixingFailed": {
+      "Type": "Fail",
+      "Error": "FixingError",
+      "Cause": "Error fixing process failed with unexpected error"
+    }
+  }
+}

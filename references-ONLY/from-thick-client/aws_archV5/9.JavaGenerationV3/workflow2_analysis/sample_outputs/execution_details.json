@@ -1,0 +1,20 @@
+{
+    "executionArn": "arn:aws:states:us-east-1:376129851858:execution:JavaCodeAnalysisWorkflowV3:5d89cf4f-70b3-4687-8a08-648eb5217c69",
+    "stateMachineArn": "arn:aws:states:us-east-1:376129851858:stateMachine:JavaCodeAnalysisWorkflowV3",
+    "name": "5d89cf4f-70b3-4687-8a08-648eb5217c69",
+    "status": "SUCCEEDED",
+    "startDate": "2025-11-06T08:52:26.027000-06:00",
+    "stopDate": "2025-11-06T08:52:30.435000-06:00",
+    "input": "{\"job_id\":\"jgv3_job_0U812_TestApp01_1762440725_142a562d\",\"scout_account_id\":\"0U812\",\"application_name\":\"TestApp01\"}",
+    "inputDetails": {
+        "included": true
+    },
+    "output": "{\"ChecksumCRC32\":\"4EdB9w==\",\"ChecksumType\":\"FULL_OBJECT\",\"ETag\":\"\\\"96fdf594a57548505aa8a607d35ff4f5\\\"\",\"ServerSideEncryption\":\"AES256\",\"VersionId\":\"NKbuLQuWK8C491w87e.wVly.vuZAG1rD\"}",
+    "outputDetails": {
+        "included": true
+    },
+    "traceHeader": "Root=1-690cb629-6ac645441b23a3c0429f4b4f;Sampled=1",
+    "redriveCount": 0,
+    "redriveStatus": "NOT_REDRIVABLE",
+    "redriveStatusReason": "Execution is SUCCEEDED and cannot be redriven"
+}

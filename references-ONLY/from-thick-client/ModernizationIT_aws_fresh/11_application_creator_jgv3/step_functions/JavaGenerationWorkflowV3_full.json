@@ -1,0 +1,31 @@
+{
+  "stateMachineArn": "arn:aws:states:us-east-1:376129851858:stateMachine:JavaGenerationWorkflowV3",
+  "name": "JavaGenerationWorkflowV3",
+  "status": "ACTIVE",
+  "definition": "{\n  \"Comment\": \"Java Generation V3 Workflow - Enterprise Tools\",\n  \"StartAt\": \"PrepareGeneration\",\n  \"States\": {\n    \"PrepareGeneration\": {\n      \"Type\": \"Task\",\n      \"Resource\": \"arn:aws:lambda:us-east-1:376129851858:function:PrepareGenerationV3\",\n      \"ResultPath\": \"$.preparation_result\",\n      \"Next\": \"ProjectSetup\",\n      \"Retry\": [\n        {\n          \"ErrorEquals\": [\"States.ALL\"],\n          \"IntervalSeconds\": 2,\n          \"MaxAttempts\": 2,\n          \"BackoffRate\": 2.0\n        }\n      ],\n      \"Catch\": [\n        {\n          \"ErrorEquals\": [\"States.ALL\"],\n          \"ResultPath\": \"$.error\",\n          \"Next\": \"Failed\"\n        }\n      ]\n    },\n    \"ProjectSetup\": {\n      \"Type\": \"Task\",\n      \"Resource\": \"arn:aws:lambda:us-east-1:376129851858:function:ProjectSetupV3\",\n      \"ResultPath\": \"$.project_setup_result\",\n      \"Next\": \"ParallelGeneration\",\n      \"Retry\": [\n        {\n          \"ErrorEquals\": [\"States.ALL\"],\n          \"IntervalSeconds\": 2,\n          \"MaxAttempts\": 2,\n          \"BackoffRate\": 2.0\n        }\n      ],\n      \"Catch\": [\n        {\n          \"ErrorEquals\": [\"States.ALL\"],\n          \"ResultPath\": \"$.error\",\n          \"Next\": \"Failed\"\n        }\n      ]\n    },\n    \"ParallelGeneration\": {\n      \"Type\": \"Parallel\",\n      \"Next\": \"Success\",\n      \"Catch\": [\n        {\n          \"ErrorEquals\": [\"States.ALL\"],\n          \"ResultPath\": \"$.error\",\n          \"Next\": \"Failed\"\n        }\n      ],\n      \"Branches\": [\n        {\n          \"StartAt\": \"GenerateEntities\",\n          \"States\": {\n            \"GenerateEntities\": {\n              \"Type\": \"Task\",\n              \"Resource\": \"arn:aws:lambda:us-east-1:376129851858:function:EntityGeneratorV3\",\n              \"End\": true,\n              \"Retry\": [\n                {\n                  \"ErrorEquals\": [\"States.ALL\"],\n                  \"IntervalSeconds\": 2,\n                  \"MaxAttempts\": 2,\n                  \"BackoffRate\": 2.0\n                }\n              ]\n            }\n          }\n        },\n        {\n          \"StartAt\": \"GenerateServices\",\n          \"States\": {\n            \"GenerateServices\": {\n              \"Type\": \"Task\",\n              \"Resource\": \"arn:aws:lambda:us-east-1:376129851858:function:ServiceGeneratorV3\",\n              \"End\": true,\n              \"Retry\": [\n                {\n                  \"ErrorEquals\": [\"States.ALL\"],\n                  \"IntervalSeconds\": 2,\n                  \"MaxAttempts\": 2,\n                  \"BackoffRate\": 2.0\n                }\n              ]\n            }\n          }\n        },\n        {\n          \"StartAt\": \"GenerateRepositories\",\n          \"States\": {\n            \"GenerateRepositories\": {\n              \"Type\": \"Task\",\n              \"Resource\": \"arn:aws:lambda:us-east-1:376129851858:function:RepositoryGeneratorV3\",\n              \"End\": true,\n              \"Retry\": [\n                {\n                  \"ErrorEquals\": [\"States.ALL\"],\n                  \"IntervalSeconds\": 2,\n                  \"MaxAttempts\": 2,\n                  \"BackoffRate\": 2.0\n                }\n              ]\n            }\n          }\n        },\n        {\n          \"StartAt\": \"GenerateAPIs\",\n          \"States\": {\n            \"GenerateAPIs\": {\n              \"Type\": \"Task\",\n              \"Resource\": \"arn:aws:lambda:us-east-1:376129851858:function:APIGeneratorV3\",\n              \"End\": true,\n              \"Retry\": [\n                {\n                  \"ErrorEquals\": [\"States.ALL\"],\n                  \"IntervalSeconds\": 2,\n                  \"MaxAttempts\": 2,\n                  \"BackoffRate\": 2.0\n                }\n              ]\n            }\n          }\n        },\n        {\n          \"StartAt\": \"GenerateTests\",\n          \"States\": {\n            \"GenerateTests\": {\n              \"Type\": \"Task\",\n              \"Resource\": \"arn:aws:lambda:us-east-1:376129851858:function:TestGeneratorV3\",\n              \"End\": true,\n              \"Retry\": [\n                {\n                  \"ErrorEquals\": [\"States.ALL\"],\n                  \"IntervalSeconds\": 2,\n                  \"MaxAttempts\": 2,\n                  \"BackoffRate\": 2.0\n                }\n              ]\n            }\n          }\n        }\n      ]\n    },\n    \"Success\": {\n      \"Type\": \"Succeed\"\n    },\n    \"Failed\": {\n      \"Type\": \"Fail\",\n      \"Error\": \"WorkflowFailed\",\n      \"Cause\": \"Java Generation V3 workflow failed\"\n    }\n  }\n}\n",
+  "roleArn": "arn:aws:iam::376129851858:role/StepFunctionsExecutionRole-CodeRefactor",
+  "type": "STANDARD",
+  "creationDate": "2025-10-16 14:18:51.197000-05:00",
+  "loggingConfiguration": {
+    "level": "OFF",
+    "includeExecutionData": false
+  },
+  "tracingConfiguration": {
+    "enabled": false
+  },
+  "encryptionConfiguration": {
+    "type": "AWS_OWNED_KEY"
+  },
+  "ResponseMetadata": {
+    "RequestId": "634869d7-7dae-4264-9831-a39016c2d336",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "x-amzn-requestid": "634869d7-7dae-4264-9831-a39016c2d336",
+      "date": "Wed, 29 Oct 2025 15:12:18 GMT",
+      "content-type": "application/x-amz-json-1.0",
+      "content-length": "5401",
+      "connection": "keep-alive"
+    },
+    "RetryAttempts": 0
+  }
+}

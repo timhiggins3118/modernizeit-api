@@ -1,0 +1,298 @@
+{
+  "Comment": "Java Generation V2 Workflow - AI-Powered COBOL to Java Transformation",
+  "StartAt": "CaptureStartTime",
+  "States": {
+    "CaptureStartTime": {
+      "Type": "Pass",
+      "Comment": "Capture workflow start time",
+      "Result": {
+        "workflow_name": "JavaGenerationV2",
+        "version": "2.0"
+      },
+      "ResultPath": "$.workflow_info",
+      "Next": "PrepareGeneration"
+    },
+    "PrepareGeneration": {
+      "Type": "Task",
+      "Comment": "Read all V2 flow outputs and build generation plan",
+      "Resource": "arn:aws:lambda:us-east-1:376129851858:function:PrepareJavaGenV2",
+      "ResultPath": "$.generation_plan",
+      "TimeoutSeconds": 300,
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.TaskFailed",
+            "States.Timeout"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 2,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "ResultPath": "$.error",
+          "Next": "FailureState"
+        }
+      ],
+      "Next": "ProjectSetup"
+    },
+    "ProjectSetup": {
+      "Type": "Task",
+      "Comment": "Create Maven project structure and Spring Boot skeleton",
+      "Resource": "arn:aws:lambda:us-east-1:376129851858:function:ProjectSetupV2",
+      "ResultPath": "$.project_setup",
+      "TimeoutSeconds": 300,
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.TaskFailed",
+            "States.Timeout"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 2,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "ResultPath": "$.error",
+          "Next": "FailureState"
+        }
+      ],
+      "Next": "ParallelGeneration"
+    },
+    "ParallelGeneration": {
+      "Type": "Parallel",
+      "Comment": "Generate code in parallel - entities, repos, services, APIs, AWS integrations",
+      "ResultPath": "$.parallel_results",
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "ResultPath": "$.error",
+          "Next": "FailureState"
+        }
+      ],
+      "Branches": [
+        {
+          "StartAt": "GenerateEntities",
+          "States": {
+            "GenerateEntities": {
+              "Type": "Task",
+              "Comment": "Generate JPA entity classes from ERD",
+              "Resource": "arn:aws:lambda:us-east-1:376129851858:function:EntityGeneratorV2",
+              "TimeoutSeconds": 600,
+              "Retry": [
+                {
+                  "ErrorEquals": [
+                    "States.TaskFailed",
+                    "States.Timeout"
+                  ],
+                  "IntervalSeconds": 3,
+                  "MaxAttempts": 2,
+                  "BackoffRate": 2.0
+                }
+              ],
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "GenerateRepositories",
+          "States": {
+            "GenerateRepositories": {
+              "Type": "Task",
+              "Comment": "Generate Spring Data JPA repositories",
+              "Resource": "arn:aws:lambda:us-east-1:376129851858:function:RepositoryGeneratorV2",
+              "TimeoutSeconds": 600,
+              "Retry": [
+                {
+                  "ErrorEquals": [
+                    "States.TaskFailed",
+                    "States.Timeout"
+                  ],
+                  "IntervalSeconds": 3,
+                  "MaxAttempts": 2,
+                  "BackoffRate": 2.0
+                }
+              ],
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "GenerateServices",
+          "States": {
+            "GenerateServices": {
+              "Type": "Task",
+              "Comment": "AI-powered service generation using Bedrock + Recipes (CROWN JEWEL)",
+              "Resource": "arn:aws:lambda:us-east-1:376129851858:function:ServiceGeneratorV2",
+              "TimeoutSeconds": 900,
+              "Retry": [
+                {
+                  "ErrorEquals": [
+                    "States.TaskFailed",
+                    "States.Timeout"
+                  ],
+                  "IntervalSeconds": 5,
+                  "MaxAttempts": 2,
+                  "BackoffRate": 2.0
+                }
+              ],
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "GenerateAPIs",
+          "States": {
+            "GenerateAPIs": {
+              "Type": "Task",
+              "Comment": "Generate REST API controllers from patterns",
+              "Resource": "arn:aws:lambda:us-east-1:376129851858:function:APIGeneratorV2",
+              "TimeoutSeconds": 600,
+              "Retry": [
+                {
+                  "ErrorEquals": [
+                    "States.TaskFailed",
+                    "States.Timeout"
+                  ],
+                  "IntervalSeconds": 3,
+                  "MaxAttempts": 2,
+                  "BackoffRate": 2.0
+                }
+              ],
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "GenerateAWSIntegrations",
+          "States": {
+            "GenerateAWSIntegrations": {
+              "Type": "Task",
+              "Comment": "Generate AWS service integrations (DynamoDB, SQS, S3, EventBridge)",
+              "Resource": "arn:aws:lambda:us-east-1:376129851858:function:AWSIntegrationGeneratorV2",
+              "TimeoutSeconds": 600,
+              "Retry": [
+                {
+                  "ErrorEquals": [
+                    "States.TaskFailed",
+                    "States.Timeout"
+                  ],
+                  "IntervalSeconds": 3,
+                  "MaxAttempts": 2,
+                  "BackoffRate": 2.0
+                }
+              ],
+              "End": true
+            }
+          }
+        }
+      ],
+      "Next": "GenerateTests"
+    },
+    "GenerateTests": {
+      "Type": "Task",
+      "Comment": "Generate JUnit 5 unit tests for all services",
+      "Resource": "arn:aws:lambda:us-east-1:376129851858:function:TestGeneratorV2",
+      "ResultPath": "$.test_generation",
+      "TimeoutSeconds": 600,
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.TaskFailed",
+            "States.Timeout"
+          ],
+          "IntervalSeconds": 3,
+          "MaxAttempts": 2,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "ResultPath": "$.error",
+          "Next": "FailureState"
+        }
+      ],
+      "Next": "ValidationEngineV2"
+    },
+    "ValidationEngineV2": {
+      "Type": "Task",
+      "Comment": "Multi-phase code validation: TreeSitter, javalang, Regex, Maven (conditional)",
+      "Resource": "arn:aws:lambda:us-east-1:376129851858:function:ValidationEngineV2",
+      "ResultPath": "$.validation_results",
+      "TimeoutSeconds": 600,
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.TaskFailed",
+            "States.Timeout"
+          ],
+          "IntervalSeconds": 5,
+          "MaxAttempts": 2,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "ResultPath": "$.error",
+          "Next": "FailureState"
+        }
+      ],
+      "Next": "PackageManagerV2"
+    },
+    "PackageManagerV2": {
+      "Type": "Task",
+      "Comment": "Package validated code and create deployment ZIP",
+      "Resource": "arn:aws:lambda:us-east-1:376129851858:function:ValidatorV2",
+      "ResultPath": "$.packaging",
+      "TimeoutSeconds": 900,
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.TaskFailed",
+            "States.Timeout"
+          ],
+          "IntervalSeconds": 5,
+          "MaxAttempts": 2,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "ResultPath": "$.error",
+          "Next": "FailureState"
+        }
+      ],
+      "Next": "SuccessState"
+    },
+    "SuccessState": {
+      "Type": "Succeed",
+      "Comment": "Java generation completed successfully!"
+    },
+    "FailureState": {
+      "Type": "Fail",
+      "Comment": "Java generation failed",
+      "Error": "JavaGenerationFailed",
+      "Cause": "Error during Java generation workflow. Check logs for details."
+    }
+  }
+}

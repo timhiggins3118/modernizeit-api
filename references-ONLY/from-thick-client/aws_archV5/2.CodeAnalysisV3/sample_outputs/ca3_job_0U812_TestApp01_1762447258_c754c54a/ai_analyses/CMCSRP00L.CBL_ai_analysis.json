@@ -1,0 +1,28 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "CMCSRP00L.CBL",
+  "timestamp": "2025-11-06T16:41:26.352915Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This COPYBOOK defines the data structure for retrieving and storing claim representative information related to insurance claims, specifically for program CMCSRP00",
+    "content": "Contains a structured data layout including: 1) A claim identifier composed of prefix, suffix, and number, 2) An array of 100 claim representative records containing rep numbers and relationships, 3) Counter fields for tracking number of representatives",
+    "usage": "This COPYBOOK is included in COBOL programs (particularly CMCSRP00) that need to process or manage claim representative relationships. It provides a standardized data structure for working with multiple claim representatives associated with a single claim",
+    "dependencies": [
+      "CMCSRP00"
+    ],
+    "modernization_approach": "Convert to a modern data structure with: 1) A Claim class containing the claim identifier fields, 2) A ClaimRepresentative class for the representative data, 3) Replace the OCCURS clause with a dynamic collection/list, 4) Consider implementing as a proper database table structure with relationships between claims and representatives",
+    "complexity": "LOW",
+    "complexity_reasoning": "The structure is straightforward with basic data types, a simple array, and clear relationships. No complex computational logic or business rules are present. The main complexity consideration is the fixed-size array of 100 elements which should be made dynamic in modern implementations"
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

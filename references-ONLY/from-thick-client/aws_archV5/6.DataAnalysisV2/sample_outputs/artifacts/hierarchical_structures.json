@@ -1,0 +1,5172 @@
+{
+  "job_id": "da2_job_0U812_TestApp01_1762439897_08497588",
+  "generated_at": "2025-11-06T14:38:19.670243+00:00",
+  "summary": {
+    "total_entities": 34,
+    "total_relationships": 120,
+    "copybook_files": 125
+  },
+  "entities": [
+    {
+      "name": "SpecialWorkFields",
+      "source_file": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "record_name": "SPECIAL-WORK-FIELDS",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "wk_hw_claim",
+          "cobol_name": "WK-HW-CLAIM",
+          "level": "05"
+        },
+        {
+          "name": "clacpre",
+          "cobol_name": "CLACPRE",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clacsuf",
+          "cobol_name": "CLACSUF",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clacnbr",
+          "cobol_name": "CLACNBR",
+          "level": "10",
+          "pic": "S9(006)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "wk_hw_claim_rd",
+          "cobol_name": "WK-HW-CLAIM-RD",
+          "level": "05"
+        },
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "10",
+          "pic": "S9(006)",
+          "data_type": "INTEGER",
+          "is_potential_key": true
+        },
+        {
+          "name": "wk_rkrsnbr",
+          "cobol_name": "WK-RKRSNBR",
+          "level": "05",
+          "pic": "S9(011)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "wk_rkrsnbr_rd",
+          "cobol_name": "WK-RKRSNBR-RD",
+          "level": "05"
+        },
+        {
+          "name": "issue",
+          "cobol_name": "ISSUE",
+          "level": "05",
+          "pic": "S9(005)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "si_risk_stat",
+          "cobol_name": "SI-RISK-STAT",
+          "level": "05",
+          "pic": "1",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "risk_experience_stat",
+          "cobol_name": "RISK-EXPERIENCE-STAT",
+          "level": "05",
+          "pic": "1",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "risk_represented_stat",
+          "cobol_name": "RISK-REPRESENTED-STAT",
+          "level": "05",
+          "pic": "1",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "Cmldca01Ctrl",
+      "source_file": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "record_name": "CMLDCA01-CTRL",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        },
+        {
+          "name": "prprcseq",
+          "cobol_name": "PRPRCSEQ",
+          "level": "05"
+        }
+      ]
+    },
+    {
+      "name": "Cmldca01Hold",
+      "source_file": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "record_name": "CMLDCA01-HOLD",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        },
+        {
+          "name": "prprcseq",
+          "cobol_name": "PRPRCSEQ",
+          "level": "05"
+        }
+      ]
+    },
+    {
+      "name": "Cmldmo06Ctrl",
+      "source_file": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "record_name": "CMLDMO06-CTRL",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        },
+        {
+          "name": "prprcseq",
+          "cobol_name": "PRPRCSEQ",
+          "level": "05"
+        }
+      ]
+    },
+    {
+      "name": "Cmldmo06Hold",
+      "source_file": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "record_name": "CMLDMO06-HOLD",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        },
+        {
+          "name": "prprcseq",
+          "cobol_name": "PRPRCSEQ",
+          "level": "05"
+        }
+      ]
+    },
+    {
+      "name": "WkSrcclaim",
+      "source_file": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+      "record_name": "WK-SRCCLAIM",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "srcclmpr",
+          "cobol_name": "SRCCLMPR",
+          "level": "05",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "srcclmsu",
+          "cobol_name": "SRCCLMSU",
+          "level": "05",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "srcclmnum",
+          "cobol_name": "SRCCLMNUM",
+          "level": "05",
+          "pic": "X(006)",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "WkObjclaim",
+      "source_file": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+      "record_name": "WK-OBJCLAIM",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "objclmpr",
+          "cobol_name": "OBJCLMPR",
+          "level": "05",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "objclmsu",
+          "cobol_name": "OBJCLMSU",
+          "level": "05",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "objclmnum",
+          "cobol_name": "OBJCLMNUM",
+          "level": "05",
+          "pic": "X(006)",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "Loops",
+      "source_file": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+      "record_name": "LOOPS",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "num_di_loaded",
+          "cobol_name": "NUM-DI-LOADED",
+          "level": "05",
+          "pic": "9(003)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "loop1",
+          "cobol_name": "LOOP1",
+          "level": "05",
+          "pic": "9(003)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "loop2",
+          "cobol_name": "LOOP2",
+          "level": "05",
+          "pic": "9(003)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "beg_loop2",
+          "cobol_name": "BEG-LOOP2",
+          "level": "05",
+          "pic": "9(003)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "end_loop1",
+          "cobol_name": "END-LOOP1",
+          "level": "05",
+          "pic": "9(003)",
+          "data_type": "INTEGER"
+        }
+      ]
+    },
+    {
+      "name": "SpecialWorkFields",
+      "source_file": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+      "record_name": "SPECIAL-WORK-FIELDS",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "wk_rkrsnbr",
+          "cobol_name": "WK-RKRSNBR",
+          "level": "05",
+          "pic": "S9(011)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "wk_rkrsnbr_rd",
+          "cobol_name": "WK-RKRSNBR-RD",
+          "level": "05"
+        },
+        {
+          "name": "issue",
+          "cobol_name": "ISSUE",
+          "level": "05",
+          "pic": "S9(005)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "wk_hw_claim",
+          "cobol_name": "WK-HW-CLAIM",
+          "level": "05"
+        },
+        {
+          "name": "clacpre",
+          "cobol_name": "CLACPRE",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clacsuf",
+          "cobol_name": "CLACSUF",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clacnbr",
+          "cobol_name": "CLACNBR",
+          "level": "10",
+          "pic": "S9(006)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "wk_hw_claim_rd",
+          "cobol_name": "WK-HW-CLAIM-RD",
+          "level": "05"
+        },
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "10",
+          "pic": "S9(006)",
+          "data_type": "INTEGER",
+          "is_potential_key": true
+        },
+        {
+          "name": "files_open_stat",
+          "cobol_name": "FILES-OPEN-STAT",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "si_risk_stat",
+          "cobol_name": "SI-RISK-STAT",
+          "level": "05",
+          "pic": "1",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "risk_experience_stat",
+          "cobol_name": "RISK-EXPERIENCE-STAT",
+          "level": "05",
+          "pic": "1",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "risk_represented_stat",
+          "cobol_name": "RISK-REPRESENTED-STAT",
+          "level": "05",
+          "pic": "1",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "Panel",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "PANEL-RECORD",
+      "section": "file_section",
+      "attributes": [
+        {
+          "name": "b_cmsocsec",
+          "cobol_name": "B-CMSOCSEC",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clfildte",
+          "cobol_name": "B-CLFILDTE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clcrsts",
+          "cobol_name": "B-CLCRSTS",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clinjdte",
+          "cobol_name": "B-CLINJDTE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clactblt",
+          "cobol_name": "B-CLACTBLT",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clrtndte",
+          "cobol_name": "B-CLRTNDTE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clacctyp",
+          "cobol_name": "B-CLACCTYP",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clsolepr",
+          "cobol_name": "B-CLSOLEPR",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clsettle",
+          "cobol_name": "B-CLSETTLE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clstldte",
+          "cobol_name": "B-CLSTLDTE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clhndprc",
+          "cobol_name": "B-CLHNDPRC",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_cltype",
+          "cobol_name": "B-CLTYPE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clhmeovr",
+          "cobol_name": "B-CLHMEOVR",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_cldeath",
+          "cobol_name": "B-CLDEATH",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clinjdgn",
+          "cobol_name": "B-CLINJDGN",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clrvsdte",
+          "cobol_name": "B-CLRVSDTE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clcoemp",
+          "cobol_name": "B-CLCOEMP",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_cltotind",
+          "cobol_name": "B-CLTOTIND",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_cltotmed",
+          "cobol_name": "B-CLTOTMED",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clcmpnsdte",
+          "cobol_name": "B-CLCMPNSDTE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clmdcldte",
+          "cobol_name": "B-CLMDCLDTE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "pr_cltype",
+          "cobol_name": "PR-CLTYPE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "pr_clbwcloc",
+          "cobol_name": "PR-CLBWCLOC",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_pnrisk",
+          "cobol_name": "B-PNRISK",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clrstyp",
+          "cobol_name": "B-CLRSTYP",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrsemp",
+          "cobol_name": "B-RKRSEMP",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrsdbas",
+          "cobol_name": "B-RKRSDBAS",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrsref",
+          "cobol_name": "B-RKRSREF",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrsadr1",
+          "cobol_name": "B-RKRSADR1",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrsadr2",
+          "cobol_name": "B-RKRSADR2",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrscity",
+          "cobol_name": "B-RKRSCITY",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrstate",
+          "cobol_name": "B-RKRSTATE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrszip",
+          "cobol_name": "B-RKRSZIP",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rpname",
+          "cobol_name": "B-RPNAME",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrscnln",
+          "cobol_name": "B-RKRSCNLN",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrscnfn",
+          "cobol_name": "B-RKRSCNFN",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrscnmi",
+          "cobol_name": "B-RKRSCNMI",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrsphon",
+          "cobol_name": "B-RKRSPHON",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkfcntry",
+          "cobol_name": "B-RKFCNTRY",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_pnclaim",
+          "cobol_name": "B-PNCLAIM",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clactype",
+          "cobol_name": "B-CLACTYPE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "pr_lead_clm",
+          "cobol_name": "PR-LEAD-CLM",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_cmssntyp",
+          "cobol_name": "B-CMSSNTYP",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clrlrel",
+          "cobol_name": "B-CLRLREL",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_claitype",
+          "cobol_name": "B-CLAITYPE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_claicode",
+          "cobol_name": "B-CLAICODE",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER",
+          "is_potential_key": true
+        },
+        {
+          "name": "b_clairefd",
+          "cobol_name": "B-CLAIREFD",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rpnumber",
+          "cobol_name": "B-RPNUMBER",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER",
+          "is_potential_key": true
+        },
+        {
+          "name": "b_clrprel",
+          "cobol_name": "B-CLRPREL",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_clrpsts",
+          "cobol_name": "B-CLRPSTS",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "pr_rep_num",
+          "cobol_name": "PR-REP-NUM",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "sfl_drop",
+          "cobol_name": "SFL-DROP",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrsmann",
+          "cobol_name": "B-RKRSMANN",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_rkrsflg",
+          "cobol_name": "B-RKRSFLG",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_slct01",
+          "cobol_name": "B-SLCT01",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_slct02",
+          "cobol_name": "B-SLCT02",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_slct03",
+          "cobol_name": "B-SLCT03",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "n_pnclaim",
+          "cobol_name": "N-PNCLAIM",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "n_cmsocsec",
+          "cobol_name": "N-CMSOCSEC",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "n_pnrisk1",
+          "cobol_name": "N-PNRISK1",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "s_pnname",
+          "cobol_name": "S-PNNAME",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "s_repname",
+          "cobol_name": "S-REPNAME",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "s_empname",
+          "cobol_name": "S-EMPNAME",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_protect",
+          "cobol_name": "B-PROTECT",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "hi_pndata",
+          "cobol_name": "HI-PNDATA",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "pr_pnpck05a",
+          "cobol_name": "PR-PNPCK05A",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_pnpck05a",
+          "cobol_name": "B-PNPCK05A",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "overlay_msgcl",
+          "cobol_name": "OVERLAY-MSGCL",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "n_pnrisk",
+          "cobol_name": "N-PNRISK",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "n_rpnumber",
+          "cobol_name": "N-RPNUMBER",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER",
+          "is_potential_key": true
+        },
+        {
+          "name": "sfldsp_05a",
+          "cobol_name": "SFLDSP-05A",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "sflctl_05a",
+          "cobol_name": "SFLCTL-05A",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "sflend_05a",
+          "cobol_name": "SFLEND-05A",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "p_paperless",
+          "cobol_name": "P-PAPERLESS",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "b_pnclbwcloc",
+          "cobol_name": "B-PNCLBWCLOC",
+          "level": "05",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        }
+      ]
+    },
+    {
+      "name": "FunctionKeyLabels",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "FUNCTION-KEY-LABELS",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "f01",
+          "cobol_name": "F01",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f02",
+          "cobol_name": "F02",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f03",
+          "cobol_name": "F03",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f04",
+          "cobol_name": "F04",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f05",
+          "cobol_name": "F05",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f06",
+          "cobol_name": "F06",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f07",
+          "cobol_name": "F07",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f08",
+          "cobol_name": "F08",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f09",
+          "cobol_name": "F09",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f10",
+          "cobol_name": "F10",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f11",
+          "cobol_name": "F11",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f12",
+          "cobol_name": "F12",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f13",
+          "cobol_name": "F13",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f14",
+          "cobol_name": "F14",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f15",
+          "cobol_name": "F15",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f16",
+          "cobol_name": "F16",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f17",
+          "cobol_name": "F17",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f18",
+          "cobol_name": "F18",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f19",
+          "cobol_name": "F19",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f20",
+          "cobol_name": "F20",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f21",
+          "cobol_name": "F21",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f22",
+          "cobol_name": "F22",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f23",
+          "cobol_name": "F23",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "f24",
+          "cobol_name": "F24",
+          "level": "05",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "CtrlKeys",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "CTRL-KEYS",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        }
+      ]
+    },
+    {
+      "name": "CtrlRange",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "CTRL-RANGE",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        }
+      ]
+    },
+    {
+      "name": "HoldKeys",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "HOLD-KEYS",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        }
+      ]
+    },
+    {
+      "name": "HoldRange",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "HOLD-RANGE",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        }
+      ]
+    },
+    {
+      "name": "NullKeys",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "NULL-KEYS",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        }
+      ]
+    },
+    {
+      "name": "NullRange",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "NULL-RANGE",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        }
+      ]
+    },
+    {
+      "name": "SpecialWorkFields",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "SPECIAL-WORK-FIELDS",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "alt_f10",
+          "cobol_name": "ALT-F10",
+          "level": "05",
+          "pic": "X(022)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "qclscan_data",
+          "cobol_name": "QCLSCAN-DATA",
+          "level": "05"
+        },
+        {
+          "name": "qcls_string",
+          "cobol_name": "QCLS-STRING",
+          "level": "10",
+          "pic": "X(999)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "qcls_strlen",
+          "cobol_name": "QCLS-STRLEN",
+          "level": "10",
+          "pic": "S9(003)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "qcls_strpos",
+          "cobol_name": "QCLS-STRPOS",
+          "level": "10",
+          "pic": "S9(003)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "qcls_pattern",
+          "cobol_name": "QCLS-PATTERN",
+          "level": "10",
+          "pic": "X(999)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "qcls_patlen",
+          "cobol_name": "QCLS-PATLEN",
+          "level": "10",
+          "pic": "S9(003)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "qcls_translate",
+          "cobol_name": "QCLS-TRANSLATE",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "qcls_trim",
+          "cobol_name": "QCLS-TRIM",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "qcls_wild",
+          "cobol_name": "QCLS-WILD",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "qcls_result",
+          "cobol_name": "QCLS-RESULT",
+          "level": "10",
+          "pic": "S9(003)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "swf_claim",
+          "cobol_name": "SWF-CLAIM",
+          "level": "05"
+        },
+        {
+          "name": "swf_prefix",
+          "cobol_name": "SWF-PREFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "swf_suffix",
+          "cobol_name": "SWF-SUFFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "swf_number",
+          "cobol_name": "SWF-NUMBER",
+          "level": "10",
+          "pic": "X(006)",
+          "data_type": "VARCHAR",
+          "is_potential_key": true
+        },
+        {
+          "name": "assoc_lead",
+          "cobol_name": "ASSOC-LEAD",
+          "level": "05"
+        },
+        {
+          "name": "assoc",
+          "cobol_name": "ASSOC",
+          "level": "10",
+          "pic": "X(010)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "lead",
+          "cobol_name": "LEAD",
+          "level": "10",
+          "pic": "X(010)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "wk_claiseqn",
+          "cobol_name": "WK-CLAISEQN",
+          "level": "05",
+          "pic": "9(003)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "hold_risk_address",
+          "cobol_name": "HOLD-RISK-ADDRESS",
+          "level": "05"
+        },
+        {
+          "name": "rkrsemp",
+          "cobol_name": "RKRSEMP",
+          "level": "10"
+        },
+        {
+          "name": "rkrsdbas",
+          "cobol_name": "RKRSDBAS",
+          "level": "10"
+        },
+        {
+          "name": "rkrsref",
+          "cobol_name": "RKRSREF",
+          "level": "10"
+        },
+        {
+          "name": "rkrsadr1",
+          "cobol_name": "RKRSADR1",
+          "level": "10"
+        },
+        {
+          "name": "rkrsadr2",
+          "cobol_name": "RKRSADR2",
+          "level": "10"
+        },
+        {
+          "name": "rkrscity",
+          "cobol_name": "RKRSCITY",
+          "level": "10"
+        },
+        {
+          "name": "rkrstate",
+          "cobol_name": "RKRSTATE",
+          "level": "10"
+        },
+        {
+          "name": "rkrszip",
+          "cobol_name": "RKRSZIP",
+          "level": "10"
+        },
+        {
+          "name": "rkfcntry",
+          "cobol_name": "RKFCNTRY",
+          "level": "10"
+        },
+        {
+          "name": "rkrscnln",
+          "cobol_name": "RKRSCNLN",
+          "level": "10"
+        },
+        {
+          "name": "rkrscnfn",
+          "cobol_name": "RKRSCNFN",
+          "level": "10"
+        },
+        {
+          "name": "rkrscnmi",
+          "cobol_name": "RKRSCNMI",
+          "level": "10"
+        },
+        {
+          "name": "rkrsphon",
+          "cobol_name": "RKRSPHON",
+          "level": "10"
+        },
+        {
+          "name": "new_risk_address",
+          "cobol_name": "NEW-RISK-ADDRESS",
+          "level": "05"
+        },
+        {
+          "name": "rkrsemp",
+          "cobol_name": "RKRSEMP",
+          "level": "10"
+        },
+        {
+          "name": "rkrsdbas",
+          "cobol_name": "RKRSDBAS",
+          "level": "10"
+        },
+        {
+          "name": "rkrsref",
+          "cobol_name": "RKRSREF",
+          "level": "10"
+        },
+        {
+          "name": "rkrsadr1",
+          "cobol_name": "RKRSADR1",
+          "level": "10"
+        },
+        {
+          "name": "rkrsadr2",
+          "cobol_name": "RKRSADR2",
+          "level": "10"
+        },
+        {
+          "name": "rkrscity",
+          "cobol_name": "RKRSCITY",
+          "level": "10"
+        },
+        {
+          "name": "rkrstate",
+          "cobol_name": "RKRSTATE",
+          "level": "10"
+        },
+        {
+          "name": "rkrszip",
+          "cobol_name": "RKRSZIP",
+          "level": "10"
+        },
+        {
+          "name": "rkfcntry",
+          "cobol_name": "RKFCNTRY",
+          "level": "10"
+        },
+        {
+          "name": "rkrscnln",
+          "cobol_name": "RKRSCNLN",
+          "level": "10"
+        },
+        {
+          "name": "rkrscnfn",
+          "cobol_name": "RKRSCNFN",
+          "level": "10"
+        },
+        {
+          "name": "rkrscnmi",
+          "cobol_name": "RKRSCNMI",
+          "level": "10"
+        },
+        {
+          "name": "rkrsphon",
+          "cobol_name": "RKRSPHON",
+          "level": "10"
+        },
+        {
+          "name": "hld_pgm_option",
+          "cobol_name": "HLD-PGM-OPTION",
+          "level": "05",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "x",
+          "cobol_name": "X",
+          "level": "05",
+          "pic": "9(001)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "previous_panel",
+          "cobol_name": "PREVIOUS-PANEL",
+          "level": "05",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "current_date",
+          "cobol_name": "CURRENT-DATE",
+          "level": "05",
+          "pic": "9(008)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "filed_date",
+          "cobol_name": "FILED-DATE",
+          "level": "05",
+          "pic": "9(008)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "injury_date",
+          "cobol_name": "INJURY-DATE",
+          "level": "05",
+          "pic": "9(008)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "panel_date",
+          "cobol_name": "PANEL-DATE",
+          "level": "05",
+          "pic": "9(008)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "hold_pnname",
+          "cobol_name": "HOLD-PNNAME",
+          "level": "05",
+          "pic": "X(050)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "hold_ssn",
+          "cobol_name": "HOLD-SSN",
+          "level": "05",
+          "pic": "9(009)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "record_cnt",
+          "cobol_name": "RECORD-CNT",
+          "level": "05",
+          "pic": "9(003)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "current_time_8",
+          "cobol_name": "CURRENT-TIME-8",
+          "level": "05",
+          "pic": "S9(008)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "current_time",
+          "cobol_name": "CURRENT-TIME",
+          "level": "10",
+          "pic": "S9(006)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "hold_pnclaim",
+          "cobol_name": "HOLD-PNCLAIM",
+          "level": "05",
+          "pic": "X(011)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "work_ssn",
+          "cobol_name": "WORK-SSN",
+          "level": "05",
+          "pic": "9(009)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "work_ssnx",
+          "cobol_name": "WORK-SSNX",
+          "level": "05"
+        },
+        {
+          "name": "part1",
+          "cobol_name": "PART1",
+          "level": "10",
+          "pic": "9(003)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "part2",
+          "cobol_name": "PART2",
+          "level": "10",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "part3",
+          "cobol_name": "PART3",
+          "level": "10",
+          "pic": "9(004)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "edit_ssn",
+          "cobol_name": "EDIT-SSN",
+          "level": "05"
+        },
+        {
+          "name": "part1",
+          "cobol_name": "PART1",
+          "level": "10",
+          "pic": "X(003)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "dash1",
+          "cobol_name": "DASH1",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "part2",
+          "cobol_name": "PART2",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "dash2",
+          "cobol_name": "DASH2",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "part3",
+          "cobol_name": "PART3",
+          "level": "10",
+          "pic": "X(004)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "man_nbr",
+          "cobol_name": "MAN-NBR",
+          "level": "05"
+        },
+        {
+          "name": "rkrsmann",
+          "cobol_name": "RKRSMANN",
+          "level": "10",
+          "pic": "X(004)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rkrsmann",
+          "cobol_name": "RKRSMANN",
+          "level": "10",
+          "pic": "X(004)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "work_name_data",
+          "cobol_name": "WORK-NAME-DATA",
+          "level": "05"
+        },
+        {
+          "name": "cmfstnam",
+          "cobol_name": "CMFSTNAM",
+          "level": "10",
+          "pic": "X(015)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "cmmdlint",
+          "cobol_name": "CMMDLINT",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "cmlstnam",
+          "cobol_name": "CMLSTNAM",
+          "level": "10",
+          "pic": "X(020)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "pnname",
+          "cobol_name": "PNNAME",
+          "level": "10",
+          "pic": "X(050)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "panel_table",
+          "cobol_name": "PANEL-TABLE",
+          "level": "05"
+        },
+        {
+          "name": "slct01",
+          "cobol_name": "SLCT01",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "slct02",
+          "cobol_name": "SLCT02",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "slct03",
+          "cobol_name": "SLCT03",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "panel_table_rd",
+          "cobol_name": "PANEL-TABLE-RD",
+          "level": "05"
+        },
+        {
+          "name": "panel_table_data",
+          "cobol_name": "PANEL-TABLE-DATA",
+          "level": "10"
+        },
+        {
+          "name": "panel_pick",
+          "cobol_name": "PANEL-PICK",
+          "level": "15",
+          "pic": "PIC",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "window_panel",
+          "cobol_name": "WINDOW-PANEL",
+          "level": "15",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "claim_data",
+          "cobol_name": "CLAIM-DATA",
+          "level": "05"
+        },
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "10",
+          "pic": "X(006)",
+          "data_type": "VARCHAR",
+          "is_potential_key": true
+        },
+        {
+          "name": "pnname",
+          "cobol_name": "PNNAME",
+          "level": "10",
+          "pic": "X(030)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "cltype",
+          "cobol_name": "CLTYPE",
+          "level": "10",
+          "pic": "X(004)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "validate_claim",
+          "cobol_name": "VALIDATE-CLAIM",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR",
+          "is_potential_key": true
+        },
+        {
+          "name": "work_option_table",
+          "cobol_name": "WORK-OPTION-TABLE",
+          "level": "05"
+        },
+        {
+          "name": "work_table_rd",
+          "cobol_name": "WORK-TABLE-RD",
+          "level": "05"
+        },
+        {
+          "name": "work_option",
+          "cobol_name": "WORK-OPTION",
+          "level": "10",
+          "pic": "9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "risk_address",
+          "cobol_name": "RISK-ADDRESS",
+          "level": "05"
+        },
+        {
+          "name": "rkrsemp",
+          "cobol_name": "RKRSEMP",
+          "level": "10"
+        },
+        {
+          "name": "rkrsdbas",
+          "cobol_name": "RKRSDBAS",
+          "level": "10"
+        },
+        {
+          "name": "rkrsref",
+          "cobol_name": "RKRSREF",
+          "level": "10"
+        },
+        {
+          "name": "rkrsadr1",
+          "cobol_name": "RKRSADR1",
+          "level": "10"
+        },
+        {
+          "name": "rkrsadr2",
+          "cobol_name": "RKRSADR2",
+          "level": "10"
+        },
+        {
+          "name": "rkrscity",
+          "cobol_name": "RKRSCITY",
+          "level": "10"
+        },
+        {
+          "name": "rkrstate",
+          "cobol_name": "RKRSTATE",
+          "level": "10"
+        },
+        {
+          "name": "rkrszip",
+          "cobol_name": "RKRSZIP",
+          "level": "10"
+        },
+        {
+          "name": "rkfcntry",
+          "cobol_name": "RKFCNTRY",
+          "level": "10"
+        },
+        {
+          "name": "risk_address_rd",
+          "cobol_name": "RISK-ADDRESS-RD",
+          "level": "05"
+        },
+        {
+          "name": "citystzip",
+          "cobol_name": "CITYSTZIP",
+          "level": "10",
+          "pic": "X(039)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "addr_fld",
+          "cobol_name": "ADDR-FLD",
+          "level": "05"
+        },
+        {
+          "name": "hld_rkrsnbr",
+          "cobol_name": "HLD-RKRSNBR",
+          "level": "05"
+        },
+        {
+          "name": "hld_rkrsnbr1",
+          "cobol_name": "HLD-RKRSNBR1",
+          "level": "05"
+        },
+        {
+          "name": "hld_rkrsemp",
+          "cobol_name": "HLD-RKRSEMP",
+          "level": "05"
+        },
+        {
+          "name": "hld_rkrsdbas",
+          "cobol_name": "HLD-RKRSDBAS",
+          "level": "05"
+        },
+        {
+          "name": "hld_rkrsadr1",
+          "cobol_name": "HLD-RKRSADR1",
+          "level": "05"
+        },
+        {
+          "name": "hld_rkrsadr2",
+          "cobol_name": "HLD-RKRSADR2",
+          "level": "05"
+        },
+        {
+          "name": "hld_rkrscity",
+          "cobol_name": "HLD-RKRSCITY",
+          "level": "05"
+        },
+        {
+          "name": "hld_rkrstate",
+          "cobol_name": "HLD-RKRSTATE",
+          "level": "05"
+        },
+        {
+          "name": "hld_rkrszip",
+          "cobol_name": "HLD-RKRSZIP",
+          "level": "05"
+        },
+        {
+          "name": "hld_rkfcntry",
+          "cobol_name": "HLD-RKFCNTRY",
+          "level": "05"
+        },
+        {
+          "name": "ws_message",
+          "cobol_name": "WS-MESSAGE",
+          "level": "05",
+          "pic": "X(7)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "wk_misc_alpha_fld",
+          "cobol_name": "WK-MISC-ALPHA-FLD",
+          "level": "05",
+          "pic": "X(100)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "wk_pnrisk_siz",
+          "cobol_name": "WK-PNRISK-SIZ",
+          "level": "05",
+          "pic": "S9(003)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "wk_rcd_num",
+          "cobol_name": "WK-RCD-NUM",
+          "level": "05",
+          "pic": "S9(005)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "wk_remainder",
+          "cobol_name": "WK-REMAINDER",
+          "level": "05",
+          "pic": "S9(001)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "wk_rpnumber",
+          "cobol_name": "WK-RPNUMBER",
+          "level": "05",
+          "pic": "S9(008)",
+          "data_type": "INTEGER",
+          "is_potential_key": true
+        },
+        {
+          "name": "wk_rpnumber_rd",
+          "cobol_name": "WK-RPNUMBER-RD",
+          "level": "05",
+          "is_potential_key": true
+        },
+        {
+          "name": "wk_rpnumber_1",
+          "cobol_name": "WK-RPNUMBER-1",
+          "level": "10",
+          "pic": "S9(006)",
+          "data_type": "INTEGER",
+          "is_potential_key": true
+        },
+        {
+          "name": "wk_rpnumber_2",
+          "cobol_name": "WK-RPNUMBER-2",
+          "level": "10",
+          "pic": "S9(002)",
+          "data_type": "INTEGER",
+          "is_potential_key": true
+        },
+        {
+          "name": "inter_rpnumber",
+          "cobol_name": "INTER-RPNUMBER",
+          "level": "05",
+          "pic": "X(008)",
+          "data_type": "VARCHAR",
+          "is_potential_key": true
+        },
+        {
+          "name": "inter_rpnumber_rd",
+          "cobol_name": "INTER-RPNUMBER-RD",
+          "level": "05",
+          "is_potential_key": true
+        },
+        {
+          "name": "wk_sfl_pag_num",
+          "cobol_name": "WK-SFL-PAG-NUM",
+          "level": "05",
+          "pic": "S9(004)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "wk_edit_rep",
+          "cobol_name": "WK-EDIT-REP",
+          "level": "05"
+        },
+        {
+          "name": "edit_rpnum_1",
+          "cobol_name": "EDIT-RPNUM-1",
+          "level": "10",
+          "pic": "ZZZZZ9",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "edit_rpnum_2",
+          "cobol_name": "EDIT-RPNUM-2",
+          "level": "10",
+          "pic": "S9(002)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "wk_sfl05a_rep_data",
+          "cobol_name": "WK-SFL05A-REP-DATA",
+          "level": "05"
+        },
+        {
+          "name": "wk_rpnumber_1",
+          "cobol_name": "WK-RPNUMBER-1",
+          "level": "10",
+          "pic": "ZZZZZ9",
+          "data_type": "INTEGER",
+          "is_potential_key": true
+        },
+        {
+          "name": "wk_rpnumber_2",
+          "cobol_name": "WK-RPNUMBER-2",
+          "level": "10",
+          "pic": "S9(002)",
+          "data_type": "INTEGER",
+          "is_potential_key": true
+        },
+        {
+          "name": "ads_rep_sts",
+          "cobol_name": "ADS-REP-STS",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rpdspnam",
+          "cobol_name": "RPDSPNAM",
+          "level": "10",
+          "pic": "X(029)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "rkrpsts",
+          "cobol_name": "RKRPSTS",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rkrpstsd",
+          "cobol_name": "RKRPSTSD",
+          "level": "10",
+          "pic": "Z9/99/9999",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "rpstsrvu",
+          "cobol_name": "RPSTSRVU",
+          "level": "10",
+          "pic": "X(010)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rpstsrvd",
+          "cobol_name": "RPSTSRVD",
+          "level": "10",
+          "pic": "Z9/99/9999",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "wk_sfl05a_rep_hdg_data",
+          "cobol_name": "WK-SFL05A-REP-HDG-DATA",
+          "level": "05"
+        },
+        {
+          "name": "wk_sfl05a_risk_data",
+          "cobol_name": "WK-SFL05A-RISK-DATA",
+          "level": "05"
+        },
+        {
+          "name": "pnrisk",
+          "cobol_name": "PNRISK",
+          "level": "10",
+          "pic": "X(012)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "sav_lin_attrib_sts",
+          "cobol_name": "SAV-LIN-ATTRIB-STS",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "risk_sec_sts",
+          "cobol_name": "RISK-SEC-STS",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rkrsemp",
+          "cobol_name": "RKRSEMP",
+          "level": "10",
+          "pic": "X(016)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rkrscrtu",
+          "cobol_name": "RKRSCRTU",
+          "level": "10",
+          "pic": "X(010)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rkrscrtd",
+          "cobol_name": "RKRSCRTD",
+          "level": "10",
+          "pic": "Z9/99/9999",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "rkrsrvsu",
+          "cobol_name": "RKRSRVSU",
+          "level": "10",
+          "pic": "X(010)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rkrsrvsd",
+          "cobol_name": "RKRSRVSD",
+          "level": "10",
+          "pic": "Z9/99/9999",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "wk_sfl05a_risk_hdg_data",
+          "cobol_name": "WK-SFL05A-RISK-HDG-DATA",
+          "level": "05"
+        },
+        {
+          "name": "wk_sfl05a_sfl_siz",
+          "cobol_name": "WK-SFL05A-SFL-SIZ",
+          "level": "05",
+          "pic": "S9(004)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "wk_unimportant",
+          "cobol_name": "WK-UNIMPORTANT",
+          "level": "05",
+          "pic": "S9(005)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "sfl05_mode_status",
+          "cobol_name": "SFL05-MODE-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "cmldcl20_status",
+          "cobol_name": "CMLDCL20-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "cmldcl40_status",
+          "cobol_name": "CMLDCL40-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "cmldcl60_status",
+          "cobol_name": "CMLDCL60-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "cmlacl50_status",
+          "cobol_name": "CMLACL50-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "fnckey_06_status",
+          "cobol_name": "FNCKEY-06-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR",
+          "is_potential_key": true
+        },
+        {
+          "name": "clfildte_status",
+          "cobol_name": "CLFILDTE-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clinjdte_status",
+          "cobol_name": "CLINJDTE-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rkrsnbr_status",
+          "cobol_name": "RKRSNBR-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rkrsnbr_local_status",
+          "cobol_name": "RKRSNBR-LOCAL-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "risk_address_status",
+          "cobol_name": "RISK-ADDRESS-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "ovrd_address_status",
+          "cobol_name": "OVRD-ADDRESS-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "risk_header_status",
+          "cobol_name": "RISK-HEADER-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rkrsadr_status_1_2",
+          "cobol_name": "RKRSADR-STATUS-1-2",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rkrsmann_status",
+          "cobol_name": "RKRSMANN-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "risk_address_aut",
+          "cobol_name": "RISK-ADDRESS-AUT",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "date_status",
+          "cobol_name": "DATE-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "revise_status_02",
+          "cobol_name": "REVISE-STATUS-02",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "cmfacl50_status",
+          "cobol_name": "CMFACL50-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rep_pcn_tracking_status",
+          "cobol_name": "REP-PCN-TRACKING-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "ir_motions_exist_stat",
+          "cobol_name": "IR-MOTIONS-EXIST-STAT",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "delete_cmlacl50_status",
+          "cobol_name": "DELETE-CMLACL50-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "int_rep_status",
+          "cobol_name": "INT-REP-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "int_rpnumber_status",
+          "cobol_name": "INT-RPNUMBER-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR",
+          "is_potential_key": true
+        },
+        {
+          "name": "ws_claim",
+          "cobol_name": "WS-CLAIM",
+          "level": "05"
+        },
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "10",
+          "pic": "X(006)",
+          "data_type": "VARCHAR",
+          "is_potential_key": true
+        },
+        {
+          "name": "fnckey_21_hit",
+          "cobol_name": "FNCKEY-21-HIT",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR",
+          "is_potential_key": true
+        },
+        {
+          "name": "w_risk",
+          "cobol_name": "W-RISK",
+          "level": "05",
+          "pic": "9(11)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "w_risk_r",
+          "cobol_name": "W-RISK-R",
+          "level": "05",
+          "pic": "X(11)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "risk_address_check",
+          "cobol_name": "RISK-ADDRESS-CHECK",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clbwcloc_table_status",
+          "cobol_name": "CLBWCLOC-TABLE-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clpplflg_pl_status",
+          "cobol_name": "CLPPLFLG-PL-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clpplflg_p_status",
+          "cobol_name": "CLPPLFLG-P-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "paper_changed_status",
+          "cobol_name": "PAPER-CHANGED-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "bwcloc_status",
+          "cobol_name": "BWCLOC-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "cltype_valid_flag",
+          "cobol_name": "CLTYPE-VALID-FLAG",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR",
+          "is_potential_key": true
+        },
+        {
+          "name": "work_clpplflg",
+          "cobol_name": "WORK-CLPPLFLG",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "wrk_clbwcloc",
+          "cobol_name": "WRK-CLBWCLOC",
+          "level": "05",
+          "pic": "X(080)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "hld_paper_status",
+          "cobol_name": "HLD-PAPER-STATUS",
+          "level": "05",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "hld_pnbwcloc",
+          "cobol_name": "HLD-PNBWCLOC",
+          "level": "05",
+          "pic": "X(041)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "wrk_rkrsnbr",
+          "cobol_name": "WRK-RKRSNBR",
+          "level": "05",
+          "pic": "S9(011)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "no_changes_p_status",
+          "cobol_name": "NO-CHANGES-P-STATUS",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "w_clbwcloc",
+          "cobol_name": "W-CLBWCLOC",
+          "level": "05"
+        },
+        {
+          "name": "w_addr",
+          "cobol_name": "W-ADDR",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "w_sect",
+          "cobol_name": "W-SECT",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "w_area",
+          "cobol_name": "W-AREA",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "w_pnclbwcloc",
+          "cobol_name": "W-PNCLBWCLOC",
+          "level": "05"
+        },
+        {
+          "name": "w_addr",
+          "cobol_name": "W-ADDR",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "w_sect",
+          "cobol_name": "W-SECT",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "w_area",
+          "cobol_name": "W-AREA",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "posx",
+          "cobol_name": "POSX",
+          "level": "05",
+          "pic": "S9(001)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "num",
+          "cobol_name": "NUM",
+          "level": "05",
+          "pic": "9(001)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "hyphen_cnt",
+          "cobol_name": "HYPHEN-CNT",
+          "level": "05",
+          "pic": "S9(001)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "prv_msgcnt",
+          "cobol_name": "PRV-MSGCNT",
+          "level": "05",
+          "pic": "99",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "f21_for_code1",
+          "cobol_name": "F21-FOR-CODE1",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR",
+          "is_potential_key": true
+        },
+        {
+          "name": "clinjdte_aut",
+          "cobol_name": "CLINJDTE-AUT",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "ws_clinjdte",
+          "cobol_name": "WS-CLINJDTE",
+          "level": "05"
+        },
+        {
+          "name": "recal_cltotamt",
+          "cobol_name": "RECAL-CLTOTAMT",
+          "level": "05"
+        },
+        {
+          "name": "ws_bwc_addr",
+          "cobol_name": "WS-BWC-ADDR",
+          "level": "05",
+          "pic": "X(081)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "ws_cur_addr",
+          "cobol_name": "WS-CUR-ADDR",
+          "level": "05",
+          "pic": "X(071)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "ws_inp_addr",
+          "cobol_name": "WS-INP-ADDR",
+          "level": "05",
+          "pic": "X(081)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "ws_out_addr",
+          "cobol_name": "WS-OUT-ADDR",
+          "level": "05",
+          "pic": "X(081)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "ws_ovr_addr",
+          "cobol_name": "WS-OVR-ADDR",
+          "level": "05",
+          "pic": "X(081)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "space_flag",
+          "cobol_name": "SPACE-FLAG",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "size_out_addr",
+          "cobol_name": "SIZE-OUT-ADDR",
+          "level": "05",
+          "pic": "9(003)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "loop",
+          "cobol_name": "LOOP",
+          "level": "05",
+          "pic": "S9(003)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "loop2",
+          "cobol_name": "LOOP2",
+          "level": "05",
+          "pic": "S9(003)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "hld_rpzip5",
+          "cobol_name": "HLD-RPZIP5",
+          "level": "05",
+          "pic": "X(005)",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "RepRiskMsgData",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "REP-RISK-MSG-DATA",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "rep_msg_data",
+          "cobol_name": "REP-MSG-DATA",
+          "level": "05"
+        },
+        {
+          "name": "rep_prefix",
+          "cobol_name": "REP-PREFIX",
+          "level": "10",
+          "pic": "X(006)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "rep_suffix",
+          "cobol_name": "REP-SUFFIX",
+          "level": "10",
+          "pic": "X(002)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "risk_msg_data",
+          "cobol_name": "RISK-MSG-DATA",
+          "level": "05",
+          "pic": "X(011)",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "HldRepAddress",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "HLD-REP-ADDRESS",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "hld_rep_address_flds",
+          "cobol_name": "HLD-REP-ADDRESS-FLDS",
+          "level": "05"
+        },
+        {
+          "name": "hld_rpaddr01",
+          "cobol_name": "HLD-RPADDR01",
+          "level": "10"
+        },
+        {
+          "name": "hld_rpaddr02",
+          "cobol_name": "HLD-RPADDR02",
+          "level": "10"
+        },
+        {
+          "name": "hld_rpaddr03",
+          "cobol_name": "HLD-RPADDR03",
+          "level": "10"
+        },
+        {
+          "name": "hld_rpcity",
+          "cobol_name": "HLD-RPCITY",
+          "level": "10"
+        },
+        {
+          "name": "hld_rpstate",
+          "cobol_name": "HLD-RPSTATE",
+          "level": "10"
+        },
+        {
+          "name": "hld_rpcnty",
+          "cobol_name": "HLD-RPCNTY",
+          "level": "10"
+        },
+        {
+          "name": "hld_rpfcntry",
+          "cobol_name": "HLD-RPFCNTRY",
+          "level": "10"
+        },
+        {
+          "name": "hld_rpzip",
+          "cobol_name": "HLD-RPZIP",
+          "level": "10"
+        }
+      ]
+    },
+    {
+      "name": "WsCltype",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "WS-CLTYPE",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "ws_cltype1",
+          "cobol_name": "WS-CLTYPE1",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "ws_cltype2",
+          "cobol_name": "WS-CLTYPE2",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "ws_cltype3",
+          "cobol_name": "WS-CLTYPE3",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "ws_cltype4",
+          "cobol_name": "WS-CLTYPE4",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "WsDocketVariables",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "WS-DOCKET-VARIABLES",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "emp_docketing_rep_cl",
+          "cobol_name": "EMP-DOCKETING-REP-CL",
+          "level": "05",
+          "pic": "S9(008)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "designated_sts_cl",
+          "cobol_name": "DESIGNATED-STS-CL",
+          "level": "05",
+          "pic": "1",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "emp_docketing_rep_rl",
+          "cobol_name": "EMP-DOCKETING-REP-RL",
+          "level": "05",
+          "pic": "S9(008)",
+          "data_type": "INTEGER"
+        },
+        {
+          "name": "designated_sts_rl",
+          "cobol_name": "DESIGNATED-STS-RL",
+          "level": "05",
+          "pic": "1",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "Cmldcl50Ctrl",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "CMLDCL50-CTRL",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        }
+      ]
+    },
+    {
+      "name": "Cmldcl50Hold",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "CMLDCL50-HOLD",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clprefix",
+          "cobol_name": "CLPREFIX",
+          "level": "05"
+        },
+        {
+          "name": "clsuffix",
+          "cobol_name": "CLSUFFIX",
+          "level": "05"
+        },
+        {
+          "name": "clnumber",
+          "cobol_name": "CLNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        }
+      ]
+    },
+    {
+      "name": "DefaultValues",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "DEFAULT-VALUES",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "cldeath",
+          "cobol_name": "CLDEATH",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clsettle",
+          "cobol_name": "CLSETTLE",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "clinjdgn",
+          "cobol_name": "CLINJDGN",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "SflDspyKeys05",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "SFL-DSPY-KEYS-05",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clrpsts",
+          "cobol_name": "CLRPSTS",
+          "level": "05"
+        },
+        {
+          "name": "clrpstsd",
+          "cobol_name": "CLRPSTSD",
+          "level": "05"
+        },
+        {
+          "name": "rpnumber",
+          "cobol_name": "RPNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        },
+        {
+          "name": "clrprel",
+          "cobol_name": "CLRPREL",
+          "level": "05"
+        }
+      ]
+    },
+    {
+      "name": "SflHddnKeys05",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "SFL-HDDN-KEYS-05",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "hdrpsts",
+          "cobol_name": "HDRPSTS",
+          "level": "05"
+        },
+        {
+          "name": "hdrpstsd",
+          "cobol_name": "HDRPSTSD",
+          "level": "05"
+        },
+        {
+          "name": "hdnumber",
+          "cobol_name": "HDNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        },
+        {
+          "name": "hdrprel",
+          "cobol_name": "HDRPREL",
+          "level": "05"
+        }
+      ]
+    },
+    {
+      "name": "SflNullKeys05",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "SFL-NULL-KEYS-05",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "clrpsts",
+          "cobol_name": "CLRPSTS",
+          "level": "05"
+        },
+        {
+          "name": "clrpstsd",
+          "cobol_name": "CLRPSTSD",
+          "level": "05"
+        },
+        {
+          "name": "rpnumber",
+          "cobol_name": "RPNUMBER",
+          "level": "05",
+          "is_potential_key": true
+        },
+        {
+          "name": "clrprel",
+          "cobol_name": "CLRPREL",
+          "level": "05"
+        }
+      ]
+    },
+    {
+      "name": "SflDspyKeys07",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "SFL-DSPY-KEYS-07",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "rkrsnbr",
+          "cobol_name": "RKRSNBR",
+          "level": "05"
+        },
+        {
+          "name": "pnrisk",
+          "cobol_name": "PNRISK",
+          "level": "05"
+        },
+        {
+          "name": "rkrsmann",
+          "cobol_name": "RKRSMANN",
+          "level": "05"
+        },
+        {
+          "name": "rkrsflg",
+          "cobol_name": "RKRSFLG",
+          "level": "05"
+        }
+      ]
+    },
+    {
+      "name": "SflHddnKeys07",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "SFL-HDDN-KEYS-07",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "hdrsnbr",
+          "cobol_name": "HDRSNBR",
+          "level": "05"
+        },
+        {
+          "name": "hdrisk",
+          "cobol_name": "HDRISK",
+          "level": "05"
+        },
+        {
+          "name": "hdrsmann",
+          "cobol_name": "HDRSMANN",
+          "level": "05"
+        },
+        {
+          "name": "hdrsflg",
+          "cobol_name": "HDRSFLG",
+          "level": "05"
+        }
+      ]
+    },
+    {
+      "name": "SflNullKeys07",
+      "source_file": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "record_name": "SFL-NULL-KEYS-07",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "rkrsnbr",
+          "cobol_name": "RKRSNBR",
+          "level": "05"
+        },
+        {
+          "name": "pnrisk",
+          "cobol_name": "PNRISK",
+          "level": "05"
+        },
+        {
+          "name": "rkrsmann",
+          "cobol_name": "RKRSMANN",
+          "level": "05"
+        },
+        {
+          "name": "rkrsflg",
+          "cobol_name": "RKRSFLG",
+          "level": "05"
+        }
+      ]
+    },
+    {
+      "name": "CaseTranslationRd",
+      "source_file": "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+      "record_name": "CASE-TRANSLATION-RD",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "case_table",
+          "cobol_name": "CASE-TABLE",
+          "level": "05"
+        },
+        {
+          "name": "upper_case",
+          "cobol_name": "UPPER-CASE",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "lower_case",
+          "cobol_name": "LOWER-CASE",
+          "level": "10",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "UpperCaseWords",
+      "source_file": "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+      "record_name": "UPPER-CASE-WORDS",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "uc_table",
+          "cobol_name": "UC-TABLE",
+          "level": "05"
+        },
+        {
+          "name": "lc_word",
+          "cobol_name": "LC-WORD",
+          "level": "10",
+          "pic": "X(10)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "uc_type",
+          "cobol_name": "UC-TYPE",
+          "level": "10",
+          "pic": "X(06)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "uc_word",
+          "cobol_name": "UC-WORD",
+          "level": "10",
+          "pic": "X(10)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "uc_next_char",
+          "cobol_name": "UC-NEXT-CHAR",
+          "level": "10",
+          "pic": "X(06)",
+          "data_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "name": "QclscanData",
+      "source_file": "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+      "record_name": "QCLSCAN-DATA",
+      "section": "working_storage",
+      "attributes": [
+        {
+          "name": "qcls_string",
+          "cobol_name": "QCLS-STRING",
+          "level": "05",
+          "pic": "X(050)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "qcls_strlen",
+          "cobol_name": "QCLS-STRLEN",
+          "level": "05",
+          "pic": "S9(003)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "qcls_strpos",
+          "cobol_name": "QCLS-STRPOS",
+          "level": "05",
+          "pic": "S9(003)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "qcls_pattern",
+          "cobol_name": "QCLS-PATTERN",
+          "level": "05",
+          "pic": "X(010)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "qcls_patlen",
+          "cobol_name": "QCLS-PATLEN",
+          "level": "05",
+          "pic": "S9(003)",
+          "data_type": "DECIMAL"
+        },
+        {
+          "name": "qcls_translate",
+          "cobol_name": "QCLS-TRANSLATE",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "qcls_trim",
+          "cobol_name": "QCLS-TRIM",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "qcls_wild",
+          "cobol_name": "QCLS-WILD",
+          "level": "05",
+          "pic": "X(001)",
+          "data_type": "VARCHAR"
+        },
+        {
+          "name": "qcls_result",
+          "cobol_name": "QCLS-RESULT",
+          "level": "05",
+          "pic": "S9(003)",
+          "data_type": "DECIMAL"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldca01Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldca01Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldmo06Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldmo06Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "CtrlKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "CtrlRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "HoldKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "HoldRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "NullKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "Cmldca01Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "Cmldmo06Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "Cmldmo06Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "CtrlKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "CtrlRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "HoldKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "HoldRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "NullKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Ctrl",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "Cmldmo06Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "Cmldmo06Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "CtrlKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "CtrlRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "HoldKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "HoldRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "NullKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldca01Hold",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "Cmldmo06Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "CtrlKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "CtrlRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "HoldKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "HoldRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "NullKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Ctrl",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "CtrlKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "CtrlRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "HoldKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "HoldRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "NullKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldmo06Hold",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "CtrlKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "CtrlRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "HoldKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "HoldRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "NullKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlKeys",
+      "to_entity": "CtrlRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlKeys",
+      "to_entity": "HoldKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlKeys",
+      "to_entity": "HoldRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlKeys",
+      "to_entity": "NullKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlKeys",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlKeys",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlKeys",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlKeys",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlKeys",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlRange",
+      "to_entity": "HoldKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlRange",
+      "to_entity": "HoldRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlRange",
+      "to_entity": "NullKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlRange",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlRange",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlRange",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlRange",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "CtrlRange",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldKeys",
+      "to_entity": "HoldRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldKeys",
+      "to_entity": "NullKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldKeys",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldKeys",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldKeys",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldKeys",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldKeys",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldRange",
+      "to_entity": "NullKeys",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldRange",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldRange",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldRange",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldRange",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "HoldRange",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "NullKeys",
+      "to_entity": "NullRange",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "NullKeys",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "NullKeys",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "NullKeys",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "NullKeys",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "NullRange",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "NullRange",
+      "to_entity": "SpecialWorkFields",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "NullRange",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "NullRange",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldcl50Ctrl",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SpecialWorkFields",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "Cmldcl50Ctrl",
+      "to_entity": "Cmldcl50Hold",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "clnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    },
+    {
+      "from_entity": "SflDspyKeys05",
+      "to_entity": "SflNullKeys05",
+      "relationship_type": "potential_foreign_key",
+      "join_field": "rpnumber",
+      "confidence": 0.7,
+      "source": "field_name_match"
+    }
+  ],
+  "copybook_analysis": [
+    {
+      "copybook_name": "STDPROCESS",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFHCL00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFDCL50",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-UTFMTB00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+        "IBMi-Cobol/Cobol/UTCSUL10.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFDMO00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFDCA00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFHMO00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSCL50L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSRP00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DATEFLIP",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "STATUSCODE",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/UTCSUL10.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSDC00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSRK20L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSDC00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSRP00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSRK20C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCSCL50.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-DIFWCC00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFMCC00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-DIFWCC10",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DIPWCC00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DIPWCC01",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSUL10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/UTCSUL10.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSC101L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSCC00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/DICPCC00.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFMRP00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-ADFWNP00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFMRP10",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-XAFMZC00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-XAFDTR00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "ADCPSH21L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSCL50C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/ADCPSH21.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFHCL90",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFDCL20",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFDCL40",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFHCM00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-XAFHDS00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-XAFDDS00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFMLT00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-AMFTRQ00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFTRQ00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFACL50",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFHRK00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFDRK00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFARK00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-FMFHCF00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-XAFMLC00",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CMFDCL60",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "KEYRCDMNT",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "EXTSUPINF",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "LOCALDATA",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTXCMS00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTXSSD00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSCP00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSPM00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSNT00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSNT10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSRQ00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSCT00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSCT10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSSC00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSUL00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSRC10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSRC30L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTXSFS00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+        "IBMi-Cobol/Cobol/UTCSUL10.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTXSRM00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTXSNC10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSZC00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSCV00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSCV10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSCS00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSCL01L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSRP10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSCL10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "F21WS",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "IMCSIR00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "IMCSIR10L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "FMCSPL00L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCPRP40L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSC100L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSCL60L",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-FMT00-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-FMT00-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-FMT01-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-FMT01-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-FMT02-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-FMT02-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-SFL04-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-SFL04-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CTL04-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CTL04-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-SFL05-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-SFL05-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CTL05-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CTL05-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-SFL05A-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-SFL05A-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CTL05A-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CTL05A-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-SFL07-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-SFL07-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CTL07-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-CTL07-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-FMT98-I",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-FMT98-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-MSGSF",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "DDS-MSGCL-O",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCCSV00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTXCMS00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTXCMS10C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSCP00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTXSSD00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSPM00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCSQM00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSCC00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSRC10C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "UTCWNT00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSCL01C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSCL10C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "IMCSIR00C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "IMCSIR10C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCPRP40C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "CMCSCL60C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "F21PRC",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "USRSPCCTL",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    },
+    {
+      "copybook_name": "XACSCT10C",
+      "used_by": [
+        "IBMi-Cobol/Cobol/CMCMCL00.CBL"
+      ],
+      "data_structures": []
+    }
+  ]
+}

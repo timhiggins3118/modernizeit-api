@@ -1,0 +1,29 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "CMCSCL50C.CBL",
+  "timestamp": "2025-11-06T16:41:26.274380Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This appears to be a COBOL wrapper function that provides a standardized way to call the CMCSCL50 program",
+    "content": "Contains a single paragraph (99000-CALL-CMCSCL50-FUNCTION) with a CALL statement to invoke CMCSCL50 program passing CMCSCL50-DATA as a parameter",
+    "usage": "This paragraph is likely called by other COBOL programs that need to interface with CMCSCL50. The 99000 prefix suggests this is a utility/common function",
+    "dependencies": [
+      "CMCSCL50 (called program)",
+      "CMCSCL50-DATA (data structure)"
+    ],
+    "modernization_approach": "1. Identify all programs calling this wrapper function\n2. Document the structure of CMCSCL50-DATA\n3. Create a modern service wrapper around CMCSCL50\n4. Replace calls to this function with calls to the new service wrapper\n5. Consider consolidating with actual CMCSCL50 program logic during modernization",
+    "complexity": "LOW",
+    "complexity_reasoning": "Very simple wrapper function with single responsibility - contains only one CALL statement and passes a single parameter. No complex logic or conditional processing."
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

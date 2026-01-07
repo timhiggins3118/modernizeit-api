@@ -1,0 +1,114 @@
+{
+  "file_name": "UTCSUL10L.CBL",
+  "file_type": "COPYBOOK",
+  "copybook_type": "DATA",
+  "confidence": 0.9,
+  "data_dictionary": [
+    {
+      "level": 5,
+      "name": "UL-DATA",
+      "pic": "X(050).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "UL-LENGTH",
+      "pic": "9(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "UL-TRANSALTION",
+      "pic": "X(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "UL-ACTION",
+      "pic": "X(001).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    }
+  ],
+  "data_items_count": 4,
+  "paragraphs": [],
+  "paragraph_count": 0,
+  "note": "Copybook - data dictionary only (NESTED structure)",
+  "units": [
+    {
+      "name": "SYN-BLOCK-1",
+      "start_line": 1,
+      "end_line": 18,
+      "line_count": 18,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 13,
+          "operation": "IF",
+          "source": "88  NO-JUSTIFICATION        VALUE \" \".",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 13,
+            "unit": "SYN-BLOCK-1"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 14,
+          "operation": "IF",
+          "source": "88  LEFT-JUSTIFIED          VALUE \"L\".",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 14,
+            "unit": "SYN-BLOCK-1"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 15,
+          "operation": "IF",
+          "source": "88  RIGHT-JUSTIFIED         VALUE \"R\".",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 15,
+            "unit": "SYN-BLOCK-1"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 17,
+          "operation": "IF",
+          "source": "88  JUSTIFICATION-REQUESTED VALUE \"L\" \"R\" \"C\".",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 17,
+            "unit": "SYN-BLOCK-1"
+          }
+        }
+      ],
+      "statement_count": 4,
+      "synthetic": true,
+      "generation_method": "statement_grouping"
+    }
+  ],
+  "unit_type": "synthetic",
+  "traceability": {
+    "enabled": true,
+    "version": "v3.0",
+    "statement_id_format": "s{n}",
+    "line_numbers_present": true
+  },
+  "raw_content": "      *---------------------------------------------------------------*\r\n      *  Upper\\Lower Case Conversion                Program: UTCSUL10 *\r\n      *---------------------------------------------------------------*\r\n       01  UTCSUL10-DATA.\r\n      *---------------------------------------------------------------*\r\n           05  UL-DATA                PIC  X(050).\r\n           05  UL-LENGTH              PIC  9(002).\r\n           05  UL-TRANSALTION         PIC  X(002).\r\n               88  UPPER-TO-LOWER          VALUE \"UL\" .\r\n               88  LOWER-TO-UPPER          VALUE \"LU\" .\r\n               88  CAPITALIZE              VALUE \"CP\" .\r\n           05  UL-ACTION              PIC  X(001).\r\n               88  NO-JUSTIFICATION        VALUE \" \".\r\n               88  LEFT-JUSTIFIED          VALUE \"L\".\r\n               88  RIGHT-JUSTIFIED         VALUE \"R\".\r\n               88  CENTERED                VALUE \"C\".\r\n               88  JUSTIFICATION-REQUESTED VALUE \"L\" \"R\" \"C\".\r\n",
+  "raw_content_truncated": false
+}

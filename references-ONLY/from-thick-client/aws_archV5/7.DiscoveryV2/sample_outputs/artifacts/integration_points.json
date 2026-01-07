@@ -1,0 +1,275 @@
+{
+  "integration_points": [
+    {
+      "integration_type": "Transaction Manager",
+      "system_name": "Likely CICS (based on status codes)",
+      "description": "Likely CICS (based on status codes) transaction manager integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/STATUSCODE.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "S3",
+        "migration_approach": "Microservices refactoring to REST APIs",
+        "estimated_effort_weeks": 8,
+        "complexity": "High"
+      },
+      "integration_id": "int_001"
+    },
+    {
+      "integration_type": "Transaction Manager",
+      "system_name": "Possibly CICS (based on typical IBM i environments)",
+      "description": "Possibly CICS (based on typical IBM i environments) transaction manager integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/CMCSRP00C.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "Microservices refactoring to REST APIs",
+        "estimated_effort_weeks": 8,
+        "complexity": "High"
+      },
+      "integration_id": "int_002"
+    },
+    {
+      "integration_type": "Transaction Manager",
+      "system_name": "Possibly CICS (based on structure)",
+      "description": "Possibly CICS (based on structure) transaction manager integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/ADCPSH21L.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "Microservices refactoring to REST APIs",
+        "estimated_effort_weeks": 8,
+        "complexity": "High"
+      },
+      "integration_id": "int_003"
+    },
+    {
+      "integration_type": "Transaction Manager",
+      "system_name": "but could be part of a CICS system",
+      "description": "but could be part of a CICS system transaction manager integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/CMCSCL50L.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "Microservices refactoring to REST APIs",
+        "estimated_effort_weeks": 8,
+        "complexity": "High"
+      },
+      "integration_id": "int_004"
+    },
+    {
+      "integration_type": "Database",
+      "system_name": "but likely uses DB2 or VSAM",
+      "description": "but likely uses DB2 or VSAM database integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/CMCSRP00C.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "AWS DMS + Schema Conversion Tool",
+        "estimated_effort_weeks": 4,
+        "complexity": "Medium"
+      },
+      "integration_id": "int_005"
+    },
+    {
+      "integration_type": "Database",
+      "system_name": "Likely DB2 (based on IBM i environment)",
+      "description": "Likely DB2 (based on IBM i environment) database integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/ADCPSH21L.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "AWS DMS + Schema Conversion Tool",
+        "estimated_effort_weeks": 4,
+        "complexity": "Medium"
+      },
+      "integration_id": "int_006"
+    },
+    {
+      "integration_type": "Database",
+      "system_name": "but likely uses DB2 or VSAM for persistent storage",
+      "description": "but likely uses DB2 or VSAM for persistent storage database integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/CMCSCL50L.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "AWS DMS + Schema Conversion Tool",
+        "estimated_effort_weeks": 4,
+        "complexity": "Medium"
+      },
+      "integration_id": "int_007"
+    },
+    {
+      "integration_type": "File System",
+      "system_name": "Likely VSAM (based on status codes)",
+      "description": "Likely VSAM (based on status codes) file system integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/STATUSCODE.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "S3",
+        "migration_approach": "Data migration to DynamoDB or S3",
+        "estimated_effort_weeks": 1,
+        "complexity": "Low"
+      },
+      "integration_id": "int_008"
+    },
+    {
+      "integration_type": "Database",
+      "system_name": "Not directly visible",
+      "description": "Not directly visible database integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/CMCSRP00C.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "AWS Database Migration Service",
+        "estimated_effort_weeks": 2,
+        "complexity": "Low"
+      },
+      "integration_id": "int_009"
+    },
+    {
+      "integration_type": "Messaging",
+      "system_name": "Not evident",
+      "description": "Not evident messaging integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/CMCSRP00C.CBL",
+        "IBMi-Cobol/Cobol/ADCPSH21L.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "Queue replacement with SQS",
+        "estimated_effort_weeks": 2,
+        "complexity": "Low"
+      },
+      "integration_id": "int_010"
+    },
+    {
+      "integration_type": "File System",
+      "system_name": "Likely QSAM or VSAM (based on data structure definition)",
+      "description": "Likely QSAM or VSAM (based on data structure definition) file system integration",
+      "access_pattern": "Mixed",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/DIPWCC00.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "Data migration to DynamoDB or S3",
+        "estimated_effort_weeks": 1,
+        "complexity": "Low"
+      },
+      "integration_id": "int_011"
+    },
+    {
+      "integration_type": "File System",
+      "system_name": "Likely QSAM or VSAM (based on record structure)",
+      "description": "Likely QSAM or VSAM (based on record structure) file system integration",
+      "access_pattern": "Mixed",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/DIPWCC01.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "Data migration to DynamoDB or S3",
+        "estimated_effort_weeks": 1,
+        "complexity": "Low"
+      },
+      "integration_id": "int_012"
+    },
+    {
+      "integration_type": "Database",
+      "system_name": "None directly visible",
+      "description": "None directly visible database integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/CMCSCL50L.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "AWS Database Migration Service",
+        "estimated_effort_weeks": 2,
+        "complexity": "Low"
+      },
+      "integration_id": "int_013"
+    },
+    {
+      "integration_type": "Transaction Manager",
+      "system_name": "None visible",
+      "description": "None visible transaction manager integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/CMCSCL50L.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "Microservices refactoring",
+        "estimated_effort_weeks": 4,
+        "complexity": "Low"
+      },
+      "integration_id": "int_014"
+    },
+    {
+      "integration_type": "File System",
+      "system_name": "Possibly VSAM or QSAM (based on typical IBM i systems)",
+      "description": "Possibly VSAM or QSAM (based on typical IBM i systems) file system integration",
+      "access_pattern": "Synchronous",
+      "programs_using": [
+        "IBMi-Cobol/Cobol/CMCSCL50L.CBL"
+      ],
+      "detected_in_analysis": true,
+      "modernization_recommendation": {
+        "aws_service": "RDS",
+        "migration_approach": "Data migration to DynamoDB or S3",
+        "estimated_effort_weeks": 1,
+        "complexity": "Low"
+      },
+      "integration_id": "int_015"
+    }
+  ],
+  "summary": {
+    "total_integration_points": 15,
+    "by_type": {
+      "Transaction Manager": 5,
+      "Database": 5,
+      "File System": 4,
+      "Messaging": 1
+    },
+    "high_complexity_count": 4,
+    "medium_complexity_count": 3,
+    "low_complexity_count": 8,
+    "total_migration_effort_weeks": 58
+  },
+  "generated_at": "2025-11-06T14:43:29.141368+00:00",
+  "source_job_id": "dv2_job_0U812_TestApp01_1762440076_890f28c3"
+}

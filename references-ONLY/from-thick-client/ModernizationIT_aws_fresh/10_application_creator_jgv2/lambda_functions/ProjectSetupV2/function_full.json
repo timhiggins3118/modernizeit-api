@@ -1,0 +1,62 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "06fbb62d-450f-4d26-9373-da0833cbe691",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 29 Oct 2025 15:10:43 GMT",
+      "content-type": "application/json",
+      "content-length": "2867",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "06fbb62d-450f-4d26-9373-da0833cbe691"
+    },
+    "RetryAttempts": 0
+  },
+  "Configuration": {
+    "FunctionName": "ProjectSetupV2",
+    "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:ProjectSetupV2",
+    "Runtime": "python3.11",
+    "Role": "arn:aws:iam::376129851858:role/evaluation_lambda_role",
+    "Handler": "project_setup_v2_handler.lambda_handler",
+    "CodeSize": 354394,
+    "Description": "",
+    "Timeout": 300,
+    "MemorySize": 512,
+    "LastModified": "2025-10-14T17:52:09.000+0000",
+    "CodeSha256": "i515QdAbGxMi1dVKxE7LIFvkasN+FnlduTU+PFypbeY=",
+    "Version": "$LATEST",
+    "Environment": {
+      "Variables": {
+        "BEDROCK_MODEL_ID": "anthropic.claude-3-5-sonnet-20240620-v1:0",
+        "BUCKET_NAME": "code-transformation-v2"
+      }
+    },
+    "TracingConfig": {
+      "Mode": "PassThrough"
+    },
+    "RevisionId": "458459a0-3bef-463d-b44f-a8d6b3df5fcd",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+      "x86_64"
+    ],
+    "EphemeralStorage": {
+      "Size": 512
+    },
+    "SnapStart": {
+      "ApplyOn": "None",
+      "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+      "RuntimeVersionArn": "arn:aws:lambda:us-east-1::runtime:d6935992cddc0c573a0cb7ac0214699a5676aefd38a43d64192dce8a044a3724"
+    },
+    "LoggingConfig": {
+      "LogFormat": "Text",
+      "LogGroup": "/aws/lambda/ProjectSetupV2"
+    }
+  },
+  "Code": {
+    "RepositoryType": "S3",
+    "Location": "https://prod-iad-c1-djusa-tasks.s3.us-east-1.amazonaws.com/snapshots/376129851858/ProjectSetupV2-0ea43e80-3a03-496e-8571-3e667669ef7a?versionId=nyb0t4CmVXXWa.dr6r50G2ChsS6tSMGu&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB8aCXVzLWVhc3QtMSJGMEQCIEf8lfqEgtzFUsDb3yjE9Ute292m8yJTzo3C5s1ALRMbAiBmGtRyvTehjdHBFrclwKkXtjb%2BvJGGV04xDDUYWPep4CqUAgjY%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAQaDDQ3OTIzMzAyNTM3OSIMRuMwwkGytfnN59ZfKugB4WRNbG1g%2BhBOsJx2ZXgWT7oWCYlr26HqYh%2F5jNNHH60Xyu49qvONYFCpXb0Zas0%2B8GfCPoMnJV7m3sZ0wYSKFMcTxRw7uTc7mynIv6ZZNER29nA24nOFNBb53HFZi0ZNBMOC7zrimsEWaHrHd2q%2BqV9I%2FE%2BQAhx1RL93iHnURfS2%2B7rgh5eYzTvdKHhLhUDdfGmWpqV7%2BVSeHC3jjJI9fY52INPyEVNeYkBtTxqz%2FiQ3ORqR6y6e%2F28lMeh1St3bpb1iQp1xymujJxARpl0%2F%2FQZ4y9ZHYwMjTaUcWRJEbFp4a%2BDzMb1KCTDUy4jIBjqOAQ8Kap4g7vldXVP9zKVS9ayOTnrWsrduZPazXkqhnB8rZhV%2BWyyv0YkvgmHsTcnF%2FCsI9ATPNhluL7cNtb%2BYmL9iO8NSgcx%2Fp%2Bkiifi2Vm0fZGPEB5g090qly0tBPafL5781qPoxYUyioX0%2Bfii2qjpl%2FJQrZ3cxq5N3QmKjQVVDKWlgfXJWTBDlsYUCUKE%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251029T151043Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIAW7FEDUVRTDHGIMOX%2F20251029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=479c70885338afb430a75dc8d12f6f52ec47d825a788d941e63c0e91d39b4d3f"
+  }
+}

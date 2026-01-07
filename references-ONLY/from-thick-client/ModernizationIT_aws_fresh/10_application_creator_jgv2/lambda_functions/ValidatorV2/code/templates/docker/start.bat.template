@@ -1,0 +1,116 @@
+@echo off
+setlocal enabledelayedexpansion
+
+echo ================================================
+echo   Starting {{APPLICATION_NAME}}
+echo ================================================
+echo.
+
+:: Check if Docker is installed
+echo Checking Docker installation...
+docker --version >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [ERROR] Docker is not installed!
+    echo Please install Docker Desktop from: https://www.docker.com/products/docker-desktop
+    pause
+    exit /b 1
+)
+echo [OK] Docker is installed
+
+:: Check if Docker is running
+echo Checking if Docker is running...
+docker info >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [ERROR] Docker is installed but not running!
+    echo Please start Docker Desktop and try again.
+    pause
+    exit /b 1
+)
+echo [OK] Docker is running
+
+:: Check for docker compose
+docker compose version >nul 2>&1
+if %errorlevel% equ 0 (
+    set COMPOSE_CMD=docker compose
+) else (
+    docker-compose version >nul 2>&1
+    if %errorlevel% equ 0 (
+        set COMPOSE_CMD=docker-compose
+    ) else (
+        echo [ERROR] Docker Compose is not available!
+        pause
+        exit /b 1
+    )
+)
+echo [OK] Docker Compose is available
+
+:: Check if image exists
+set APP_IMAGE=modernized-app:latest
+echo Checking if image exists...
+docker image inspect %APP_IMAGE% >nul 2>&1
+if %errorlevel% equ 0 (
+    echo [OK] Using cached image
+    set REBUILD=false
+) else (
+    echo [INFO] Image will be built
+    set REBUILD=true
+)
+
+:: Build if needed
+if "%REBUILD%"=="true" (
+    echo.
+    echo Building Docker image (first time, may take 5-10 minutes^)...
+    echo This will be cached for future runs.
+    echo.
+    docker build -t %APP_IMAGE% .
+    if %errorlevel% neq 0 (
+        echo [ERROR] Build failed!
+        pause
+        exit /b 1
+    )
+    echo [OK] Image built successfully
+)
+
+:: Start services
+echo.
+echo Starting services (application + database^)...
+%COMPOSE_CMD% up -d
+
+:: Wait for application
+echo.
+echo Waiting for application to start
+set MAX_ATTEMPTS=30
+set ATTEMPT=0
+
+:wait_loop
+curl -s http://localhost:8080/actuator/health >nul 2>&1
+if %errorlevel% equ 0 (
+    echo [OK] Application is healthy
+    goto :app_ready
+)
+echo|set /p=.
+timeout /t 2 /nobreak >nul
+set /a ATTEMPT+=1
+if %ATTEMPT% lss %MAX_ATTEMPTS% goto :wait_loop
+
+echo.
+echo [ERROR] Application did not start within expected time.
+echo Check logs with: %COMPOSE_CMD% logs
+pause
+exit /b 1
+
+:app_ready
+echo.
+echo ================================================
+echo   [OK] Application is running!
+echo ================================================
+echo.
+echo Application URL:  http://localhost:8080
+echo Health Check:     http://localhost:8080/actuator/health
+echo API Docs:         http://localhost:8080/swagger-ui.html
+echo Database:         localhost:5432 (postgres)
+echo.
+echo To view logs:  %COMPOSE_CMD% logs -f
+echo To stop:       stop.bat
+echo.
+pause

@@ -1,0 +1,157 @@
+{
+  "ai_insights": {
+    "dependency_patterns": {
+      "description": "The system exhibits a moderate level of interdependency with a mix of direct and indirect couplings. There's a central program (CMCMCL00) that appears to be a controller or orchestrator, with multiple smaller utility and business logic components.",
+      "key_observations": [
+        "CMCMCL00 is a central program with high fan-out",
+        "Extensive use of copybooks for shared data structures",
+        "Multiple utility programs (UTx*) used across the system",
+        "Heavy reliance on file I/O operations",
+        "Limited use of database operations"
+      ]
+    },
+    "coupling_analysis": {
+      "high_coupling_programs": [
+        {
+          "program": "CMCMCL00.CBL",
+          "fan_in": 0,
+          "fan_out": 71,
+          "coupling_score": 0.95
+        },
+        {
+          "program": "CMCSCL50.CBL",
+          "fan_in": 1,
+          "fan_out": 16,
+          "coupling_score": 0.75
+        }
+      ],
+      "coupling_clusters": [
+        {
+          "cluster_name": "Client Management",
+          "programs": [
+            "CMCMCL00",
+            "CMCSCL50",
+            "CMCSRP00"
+          ],
+          "internal_coupling": 0.8
+        },
+        {
+          "cluster_name": "Utility Functions",
+          "programs": [
+            "UTCSDC00",
+            "UTCSUL00",
+            "UTXSFS00"
+          ],
+          "internal_coupling": 0.7
+        }
+      ]
+    },
+    "circular_dependencies": [
+      {
+        "cycle": [
+          "CMCMCL00",
+          "UTCSDC00",
+          "CMCMCL00"
+        ],
+        "risk": "Medium",
+        "recommendation": "Extract shared functionality to break cycle"
+      }
+    ],
+    "architectural_layers": [
+      {
+        "layer": "Presentation",
+        "programs": [
+          "CMCMCL00"
+        ],
+        "purpose": "Main interface and orchestration"
+      },
+      {
+        "layer": "Business Logic",
+        "programs": [
+          "CMCSCL50",
+          "ADCPSH21",
+          "DICPCC00"
+        ],
+        "purpose": "Core business operations"
+      },
+      {
+        "layer": "Data Access",
+        "programs": [
+          "STATUSCODE",
+          "UTCSUL10"
+        ],
+        "purpose": "File I/O and data retrieval"
+      },
+      {
+        "layer": "Utility",
+        "programs": [
+          "UTCSDC00",
+          "UTXSFS00",
+          "DATEFLIP"
+        ],
+        "purpose": "Shared utility functions"
+      }
+    ],
+    "microservice_recommendations": [
+      {
+        "service_name": "ClientManagementService",
+        "programs": [
+          "CMCMCL00",
+          "CMCSCL50"
+        ],
+        "justification": "Encapsulates core client management functionality"
+      },
+      {
+        "service_name": "UtilityService",
+        "programs": [
+          "UTCSDC00",
+          "UTXSFS00",
+          "DATEFLIP"
+        ],
+        "justification": "Provides common utility functions across the system"
+      },
+      {
+        "service_name": "DataAccessService",
+        "programs": [
+          "STATUSCODE",
+          "UTCSUL10"
+        ],
+        "justification": "Centralizes data access and file I/O operations"
+      }
+    ],
+    "risk_assessment": {
+      "high_risk_areas": [
+        "CMCMCL00 due to high coupling and central role",
+        "File I/O operations scattered across multiple programs"
+      ],
+      "single_points_of_failure": [
+        "CMCMCL00"
+      ],
+      "refactoring_priorities": [
+        "Decompose CMCMCL00 into smaller, more focused components",
+        "Centralize file I/O operations",
+        "Reduce copybook dependencies"
+      ]
+    },
+    "migration_strategy": {
+      "recommended_approach": "Strangler Fig pattern with gradual service extraction",
+      "decomposition_order": [
+        "UtilityService",
+        "DataAccessService",
+        "ClientManagementService"
+      ],
+      "estimated_complexity": "High"
+    }
+  },
+  "static_summary": {
+    "total_programs": 20,
+    "total_dependencies": 408,
+    "program_calls": 92,
+    "copybook_dependencies": 167,
+    "file_operations": 149,
+    "database_operations": 0
+  },
+  "generated_at": "2025-11-06T14:36:01.955696+00:00",
+  "source_job_id": "dmv2_job_0U812_TestApp01_1762439738_3581cb90",
+  "model_used": "anthropic.claude-3-5-sonnet-20240620-v1:0"
+}

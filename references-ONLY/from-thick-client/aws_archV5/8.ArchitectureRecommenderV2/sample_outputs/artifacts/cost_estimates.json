@@ -1,0 +1,44 @@
+{
+  "job_id": "ar2_job_0U812_TestApp01_1762440236_d06e31f2",
+  "cost_breakdown": {
+    "compute": {
+      "lambda": 0.0,
+      "lambda_functions": 1,
+      "ecs": 0,
+      "ecs_services": 0,
+      "ec2": 0,
+      "ec2_instances": 0,
+      "subtotal": 0.0
+    },
+    "database": {
+      "rds": 0,
+      "dynamodb": 0,
+      "subtotal": 0
+    },
+    "storage": {
+      "s3": 2.3,
+      "ebs": 0,
+      "subtotal": 2.3
+    },
+    "networking": {
+      "data_transfer": 0.9,
+      "nat_gateway": 70.2,
+      "subtotal": 71.1
+    },
+    "other": {
+      "cloudwatch": 5.0,
+      "kms": 1.0,
+      "subtotal": 6.0
+    },
+    "total_monthly_usd": 79.4,
+    "total_annual_usd": 952.8
+  },
+  "assumptions": [
+    "Costs based on us-east-1 region",
+    "Assumes 730 hours/month (AWS standard)",
+    "Lambda: 30 invocations/month per function, 1s duration",
+    "RDS: Single-AZ for dev, Multi-AZ adds 2x cost",
+    "S3: Standard storage class",
+    "Data transfer: 10GB outbound/month"
+  ]
+}

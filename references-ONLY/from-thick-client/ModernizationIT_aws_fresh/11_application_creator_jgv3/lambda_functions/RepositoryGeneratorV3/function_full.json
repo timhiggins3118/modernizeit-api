@@ -1,0 +1,67 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "80d2ccc5-546d-4058-8df7-edb9ba88efde",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 29 Oct 2025 15:10:47 GMT",
+      "content-type": "application/json",
+      "content-length": "3015",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "80d2ccc5-546d-4058-8df7-edb9ba88efde"
+    },
+    "RetryAttempts": 0
+  },
+  "Configuration": {
+    "FunctionName": "RepositoryGeneratorV3",
+    "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:RepositoryGeneratorV3",
+    "Runtime": "python3.11",
+    "Role": "arn:aws:iam::376129851858:role/evaluation_lambda_role",
+    "Handler": "repository_generator_v3_handler.lambda_handler",
+    "CodeSize": 9453,
+    "Description": "",
+    "Timeout": 300,
+    "MemorySize": 512,
+    "LastModified": "2025-10-17T10:54:08.000+0000",
+    "CodeSha256": "tSpMgJCQIqpZaCjV3cc2hO+rddGB2DeRy2BH2Yy84uM=",
+    "Version": "$LATEST",
+    "Environment": {
+      "Variables": {
+        "BUCKET_NAME": "code-transformation-v3"
+      }
+    },
+    "TracingConfig": {
+      "Mode": "PassThrough"
+    },
+    "RevisionId": "36929661-a283-49fa-9ce6-891387940c38",
+    "Layers": [
+      {
+        "Arn": "arn:aws:lambda:us-east-1:376129851858:layer:jinja2-layer:1",
+        "CodeSize": 352056
+      }
+    ],
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+      "x86_64"
+    ],
+    "EphemeralStorage": {
+      "Size": 512
+    },
+    "SnapStart": {
+      "ApplyOn": "None",
+      "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+      "RuntimeVersionArn": "arn:aws:lambda:us-east-1::runtime:6c687d1ae05d783a82cd99c5896c1baddfe1daf7ac4068082fb989401de8b287"
+    },
+    "LoggingConfig": {
+      "LogFormat": "Text",
+      "LogGroup": "/aws/lambda/RepositoryGeneratorV3"
+    }
+  },
+  "Code": {
+    "RepositoryType": "S3",
+    "Location": "https://prod-iad-c1-djusa-tasks.s3.us-east-1.amazonaws.com/snapshots/376129851858/RepositoryGeneratorV3-c3cb89a7-c54a-4318-b29d-12c299732de2?versionId=yXKB1h3izFJszw3HZooyP9ZnucbRxMyq&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB8aCXVzLWVhc3QtMSJHMEUCIQC8NEkdgu65%2Fzs3sznEIE2kla6j%2FsRQ7p%2BsVyr81rvhcAIgCtbVMXEYouXH7vzZUyG1CSK%2FXuUvRSqf8UJHuaOdI9kqlAII2P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAEGgw0NzkyMzMwMjUzNzkiDA%2FY%2BOL8LdheTnU8FyroATJcdZGtgzXsWkVkWce0orhs38Ct%2F09l9%2F9EgCHAy5%2F7%2FWqo2Kq80XxxdFtVU1DcU%2Fo0tPctpcjxxe%2BLDwrJDwFgdpESy8aBgpmMi88tUzMCCYHTnjtYGuhuRkFmGD%2Fr9Hag9M5pWEmX4GCMKVSqugbZtU%2Bfcr7bablnO11UENeoGVhFopKSR43eyhueNUekIvzp7ZRoFvjAso6Rmr6qizygY5EFB1PClvjEgCqzA2ZEkLgnb9MmUaLvmfTRaM%2FSaw0x37UCktI4YnxKBeDeaD8POECZ6sRCOrbcQLjoM4K%2BIadyfMfclGow8c6IyAY6jQFb%2FBxdmwRNfpbIEwLIMEN5MzL3gcoVv%2FsNU5z2zEIVW1dXk4AzhLB%2ByHgDcbRYaxOQ9C7%2BKf7FxLYIl5LOuS81Nv%2FW%2BiX5S9O96tifvDLJxoY0QqWrla3YTh32%2Fjmn7FQGED%2BDlAwleHr6SdvVkAwi7fekmePHSSD%2Fhb31se%2FCcUmUHW6hl7YijsUqjaU%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251029T151047Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIAW7FEDUVRQYETCOYP%2F20251029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=8afb4bb9c9c5bf9b81e503017e20ae343f8d42eac0d15a9d4eddbf3b4ee8870e"
+  }
+}

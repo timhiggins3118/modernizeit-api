@@ -1,0 +1,4 @@
+# SummaryGeneratorV3 Dependencies
+# boto3 is included in Lambda Python 3.11 runtime
+# No additional dependencies needed
+boto3>=1.28.0

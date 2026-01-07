@@ -1,0 +1,57 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "f5b0ac67-f4ed-4ea1-b4c7-9b2975c47e0f",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 29 Oct 2025 15:10:45 GMT",
+      "content-type": "application/json",
+      "content-length": "1764",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "f5b0ac67-f4ed-4ea1-b4c7-9b2975c47e0f"
+    },
+    "RetryAttempts": 0
+  },
+  "Configuration": {
+    "FunctionName": "ValidationEngineV2",
+    "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:ValidationEngineV2",
+    "Role": "arn:aws:iam::376129851858:role/ValidationEngineV2LambdaRole",
+    "CodeSize": 0,
+    "Description": "ValidationEngineV2 - Multi-phase Java code validation (TreeSitter, javalang, Regex, Maven)",
+    "Timeout": 600,
+    "MemorySize": 4096,
+    "LastModified": "2025-10-14T17:32:56.000+0000",
+    "CodeSha256": "bb9a975b22355f38ca93ab7a3b81637a529f79f82e855b3d082d7c51985f4bd6",
+    "Version": "$LATEST",
+    "Environment": {
+      "Variables": {
+        "BUCKET_NAME": "code-transformation-v2"
+      }
+    },
+    "TracingConfig": {
+      "Mode": "PassThrough"
+    },
+    "RevisionId": "2604529b-ff7a-486e-abd0-a624bdf1d845",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Image",
+    "Architectures": [
+      "x86_64"
+    ],
+    "EphemeralStorage": {
+      "Size": 10240
+    },
+    "SnapStart": {
+      "ApplyOn": "None",
+      "OptimizationStatus": "Off"
+    },
+    "LoggingConfig": {
+      "LogFormat": "Text",
+      "LogGroup": "/aws/lambda/ValidationEngineV2"
+    }
+  },
+  "Code": {
+    "RepositoryType": "ECR",
+    "ImageUri": "376129851858.dkr.ecr.us-east-1.amazonaws.com/java-generation-v2/validation-engine:latest",
+    "ResolvedImageUri": "376129851858.dkr.ecr.us-east-1.amazonaws.com/java-generation-v2/validation-engine@sha256:bb9a975b22355f38ca93ab7a3b81637a529f79f82e855b3d082d7c51985f4bd6"
+  }
+}

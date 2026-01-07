@@ -1,0 +1,10 @@
+{
+  "FunctionName": "ArchitectureRecommenderV2StatusAPI",
+  "Runtime": "python3.11",
+  "Handler": "architecture_status_v2_handler.lambda_handler",
+  "Timeout": 60,
+  "MemorySize": 256,
+  "PackageType": "Zip",
+  "Environment": null,
+  "Layers": null
+}

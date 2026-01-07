@@ -1,0 +1,2268 @@
+{
+  "file_name": "DICPCC00.CBL",
+  "file_type": "COBOL_PROGRAM",
+  "confidence": 1.0,
+  "divisions": [
+    {
+      "name": "IDENTIFICATION",
+      "line": 2
+    },
+    {
+      "name": "ENVIRONMENT",
+      "line": 30
+    },
+    {
+      "name": "DATA",
+      "line": 57
+    },
+    {
+      "name": "PROCEDURE",
+      "line": 151
+    }
+  ],
+  "sections": [
+    {
+      "name": "CONFIGURATION",
+      "line": 32
+    },
+    {
+      "name": "INPUT-OUTPUT",
+      "line": 39
+    },
+    {
+      "name": "FILE",
+      "line": 58
+    },
+    {
+      "name": "WORKING-STORAGE",
+      "line": 81
+    }
+  ],
+  "paragraphs": [
+    {
+      "name": "FILE-CONTROL",
+      "start_line": 40,
+      "end_line": 153,
+      "line_count": 113,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 63,
+          "operation": "IF",
+          "source": "01  DIFWCC00-RECORD.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 63,
+            "unit": "FILE-CONTROL"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 64,
+          "operation": "IF",
+          "source": "COPY DDS-DIFWCC00 OF DIPWCC00.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 64,
+            "unit": "FILE-CONTROL"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 77,
+          "operation": "IF",
+          "source": "01  DIFWCC10-RECORD.",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 77,
+            "unit": "FILE-CONTROL"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 78,
+          "operation": "IF",
+          "source": "COPY DDS-DIFWCC10 OF DIPWCC10.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 78,
+            "unit": "FILE-CONTROL"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 114,
+          "operation": "IF",
+          "source": "02  SAV-DIFWCC10 OCCURS 500 TIMES.",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 114,
+            "unit": "FILE-CONTROL"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 115,
+          "operation": "IF",
+          "source": "COPY DDS-DIFWCC10 OF DIPWCC10.",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 115,
+            "unit": "FILE-CONTROL"
+          }
+        }
+      ],
+      "statement_count": 6
+    },
+    {
+      "name": "00000-MAIN-CONTROL-ROUTINE",
+      "start_line": 154,
+      "end_line": 163,
+      "line_count": 9,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 156,
+          "operation": "PERFORM",
+          "source": "PERFORM 10000-INITIALIZE-PROGRAM.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 156,
+            "unit": "00000-MAIN-CONTROL-ROUTINE"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 157,
+          "operation": "PERFORM",
+          "source": "PERFORM 20000-LEVEL-PROCESSING",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 157,
+            "unit": "00000-MAIN-CONTROL-ROUTINE"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 159,
+          "operation": "ADD",
+          "source": "PERFORM 50000-ADDITIONAL-VALIDATIONS",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 159,
+            "unit": "00000-MAIN-CONTROL-ROUTINE"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 160,
+          "operation": "PERFORM",
+          "source": "PERFORM 99999-CLOSE-PROGRAM.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 160,
+            "unit": "00000-MAIN-CONTROL-ROUTINE"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 161,
+          "operation": "GO TO",
+          "source": "GO TO   99999-EXIT-PROGRAM.",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 161,
+            "unit": "00000-MAIN-CONTROL-ROUTINE"
+          }
+        }
+      ],
+      "statement_count": 5
+    },
+    {
+      "name": "10000-INITIALIZE-PROGRAM",
+      "start_line": 164,
+      "end_line": 170,
+      "line_count": 6,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 166,
+          "operation": "OPEN",
+          "source": "OPEN I-O    DIPWCC00-FILE",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 166,
+            "unit": "10000-INITIALIZE-PROGRAM"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "SAVE-ERROR-TYPE",
+      "start_line": 171,
+      "end_line": 179,
+      "line_count": 8,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 173,
+          "operation": "PERFORM",
+          "source": "PERFORM 11000-RETRIEVE-SYS-DATE.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 173,
+            "unit": "SAVE-ERROR-TYPE"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 175,
+          "operation": "PERFORM",
+          "source": "PERFORM 80102-READ-DIPWCC00",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 175,
+            "unit": "SAVE-ERROR-TYPE"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 177,
+          "operation": "IF",
+          "source": "IF OK",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 177,
+            "unit": "SAVE-ERROR-TYPE"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 178,
+          "operation": "PERFORM",
+          "source": "PERFORM 20000-SEPARATE-BWC-CLAIM.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 178,
+            "unit": "SAVE-ERROR-TYPE"
+          }
+        }
+      ],
+      "statement_count": 4
+    },
+    {
+      "name": "11000-RETRIEVE-SYS-DATE",
+      "start_line": 180,
+      "end_line": 195,
+      "line_count": 15,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 185,
+          "operation": "CALL",
+          "source": "CALL \"UTCSDC00\"            USING UTCSDC00-DATA.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 185,
+            "unit": "11000-RETRIEVE-SYS-DATE"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 187,
+          "operation": "MOVE",
+          "source": "MOVE GREGORIAN-DATE           TO MMDDCCYY-DATE.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 187,
+            "unit": "11000-RETRIEVE-SYS-DATE"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 188,
+          "operation": "MOVE",
+          "source": "MOVE CORR MMDDCCYY-DATE-RD    TO CCYYMMDD-DATE-RD.",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 188,
+            "unit": "11000-RETRIEVE-SYS-DATE"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 189,
+          "operation": "MOVE",
+          "source": "MOVE CCYYMMDD-DATE            TO CURRENT-DATE.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 189,
+            "unit": "11000-RETRIEVE-SYS-DATE"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 191,
+          "operation": "ACCEPT",
+          "source": "ACCEPT CURRENT-TIME           FROM TIME.",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 191,
+            "unit": "11000-RETRIEVE-SYS-DATE"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 192,
+          "operation": "MOVE",
+          "source": "MOVE CURRENT-DATE             TO PACKED-DATE.",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 192,
+            "unit": "11000-RETRIEVE-SYS-DATE"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 193,
+          "operation": "MOVE",
+          "source": "MOVE CURRENT-HHMMSS           TO PACKED-TIME.",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 193,
+            "unit": "11000-RETRIEVE-SYS-DATE"
+          }
+        }
+      ],
+      "statement_count": 7
+    },
+    {
+      "name": "20000-LEVEL-PROCESSING",
+      "start_line": 196,
+      "end_line": 205,
+      "line_count": 9,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 198,
+          "operation": "IF",
+          "source": "IF TRANTYPE OF DIPWCC00-DATA = PROGRAM-OPTIONS",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 198,
+            "unit": "20000-LEVEL-PROCESSING"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 199,
+          "operation": "PERFORM",
+          "source": "PERFORM 20000-CONVERT-FORMAT.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 199,
+            "unit": "20000-LEVEL-PROCESSING"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 201,
+          "operation": "PERFORM",
+          "source": "PERFORM 80102-READ-DIPWCC00",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 201,
+            "unit": "20000-LEVEL-PROCESSING"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 202,
+          "operation": "IF",
+          "source": "IF OK",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 202,
+            "unit": "20000-LEVEL-PROCESSING"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 203,
+          "operation": "PERFORM",
+          "source": "PERFORM 20000-SEPARATE-BWC-CLAIM.",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 203,
+            "unit": "20000-LEVEL-PROCESSING"
+          }
+        }
+      ],
+      "statement_count": 5
+    },
+    {
+      "name": "20000-SEPARATE-BWC-CLAIM",
+      "start_line": 206,
+      "end_line": 231,
+      "line_count": 25,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 208,
+          "operation": "MOVE",
+          "source": "MOVE DIFWCC00               TO DIPWCC01-DATA",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 208,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 209,
+          "operation": "MOVE",
+          "source": "MOVE CORR DIPWCC01-DATA     TO DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 209,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 212,
+          "operation": "MOVE",
+          "source": "MOVE SRCCLAIM OF DIPWCC01-DATA TO PNCLAIM OF XACSCC00-DATA",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 212,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 214,
+          "operation": "CALL",
+          "source": "CALL \"XACSCC00\"               USING XACSCC00-DATA",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 214,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 216,
+          "operation": "MOVE",
+          "source": "MOVE CLPREFIX OF XACSCC00-DATA TO SRCCLMPR  OF WK-SRCCLAIM",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 216,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 217,
+          "operation": "MOVE",
+          "source": "MOVE CLSUFFIX OF XACSCC00-DATA TO SRCCLMSU  OF WK-SRCCLAIM",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 217,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 218,
+          "operation": "MOVE",
+          "source": "MOVE CLNUMBER OF XACSCC00-DATA TO SRCCLMNUM OF WK-SRCCLAIM",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 218,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 221,
+          "operation": "MOVE",
+          "source": "MOVE OBJCLAIM OF DIPWCC01-DATA TO PNCLAIM   OF XACSCC00-DATA",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 221,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 223,
+          "operation": "CALL",
+          "source": "CALL \"XACSCC00\"               USING XACSCC00-DATA",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 223,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 224,
+          "operation": "MOVE",
+          "source": "MOVE CLPREFIX OF XACSCC00-DATA TO OBJCLMPR  OF WK-OBJCLAIM",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 224,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 225,
+          "operation": "MOVE",
+          "source": "MOVE CLSUFFIX OF XACSCC00-DATA TO OBJCLMSU  OF WK-OBJCLAIM",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 225,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 226,
+          "operation": "MOVE",
+          "source": "MOVE CLNUMBER OF XACSCC00-DATA TO OBJCLMNUM OF WK-OBJCLAIM",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 226,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s13",
+          "line": 228,
+          "operation": "MOVE",
+          "source": "MOVE CORR  WK-SRCCLAIM        TO DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s13",
+            "line": 228,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        },
+        {
+          "stmt_id": "s14",
+          "line": 229,
+          "operation": "MOVE",
+          "source": "MOVE CORR  WK-OBJCLAIM        TO DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s14",
+            "line": 229,
+            "unit": "20000-SEPARATE-BWC-CLAIM"
+          }
+        }
+      ],
+      "statement_count": 14
+    },
+    {
+      "name": "20000-CONVERT-FORMAT",
+      "start_line": 232,
+      "end_line": 247,
+      "line_count": 15,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 236,
+          "operation": "PERFORM",
+          "source": "PERFORM 40000-VALIDATE-RECORD.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 236,
+            "unit": "20000-CONVERT-FORMAT"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 238,
+          "operation": "IF",
+          "source": "IF DIPRCFLG OF DIFWCC00 = SPACES",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 238,
+            "unit": "20000-CONVERT-FORMAT"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 239,
+          "operation": "MOVE",
+          "source": "MOVE \"PR\"                 TO DIPRCFLG OF DIFWCC00.",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 239,
+            "unit": "20000-CONVERT-FORMAT"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 242,
+          "operation": "PERFORM",
+          "source": "PERFORM 20000-SEPARATE-BWC-CLAIM.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 242,
+            "unit": "20000-CONVERT-FORMAT"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 243,
+          "operation": "IF",
+          "source": "IF SRCCLMPR OF DIPWCC00-DATA NUMERIC",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 243,
+            "unit": "20000-CONVERT-FORMAT"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 245,
+          "operation": "MOVE",
+          "source": "MOVE SRCCLMPR OF DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 245,
+            "unit": "20000-CONVERT-FORMAT"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 247,
+          "operation": "MOVE",
+          "source": "MOVE 99 TO SRCCLMPR OF DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 247,
+            "unit": "20000-CONVERT-FORMAT"
+          }
+        }
+      ],
+      "statement_count": 7
+    },
+    {
+      "name": "END-IF",
+      "start_line": 248,
+      "end_line": 254,
+      "line_count": 6,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 250,
+          "operation": "IF",
+          "source": "IF OBJCLMPR OF DIPWCC00-DATA NUMERIC",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 250,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 252,
+          "operation": "MOVE",
+          "source": "MOVE OBJCLMPR OF DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 252,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 254,
+          "operation": "MOVE",
+          "source": "MOVE 99 TO OBJCLMPR OF DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 254,
+            "unit": "END-IF"
+          }
+        }
+      ],
+      "statement_count": 3
+    },
+    {
+      "name": "END-IF",
+      "start_line": 255,
+      "end_line": 294,
+      "line_count": 39,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 257,
+          "operation": "IF",
+          "source": "IF DIPRCFLG OF DIFWCC00 = \"PR\"",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 257,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 258,
+          "operation": "ADD",
+          "source": "ADD  1        TO   NUM-DI-LOADED",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 258,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 259,
+          "operation": "MOVE",
+          "source": "MOVE SRCCLMPR OF DIPWCC00-DATA TO CCSRCPFX",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 259,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 261,
+          "operation": "MOVE",
+          "source": "MOVE SRCCLMSU OF DIPWCC00-DATA TO CCSRCSFX",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 261,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 263,
+          "operation": "MOVE",
+          "source": "MOVE SRCCLMNUM OF DIPWCC00-DATA TO CCSRCNBR",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 263,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 265,
+          "operation": "MOVE",
+          "source": "MOVE OBJCLMPR OF DIPWCC00-DATA TO CCOBJPFX",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 265,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 267,
+          "operation": "MOVE",
+          "source": "MOVE OBJCLMSU OF DIPWCC00-DATA TO CCOBJSFX",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 267,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 269,
+          "operation": "MOVE",
+          "source": "MOVE OBJCLMNUM OF DIPWCC00-DATA TO CCOBJNBR",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 269,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 271,
+          "operation": "MOVE",
+          "source": "MOVE COMBIND  OF DIPWCC00-DATA TO CCINDCAT",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 271,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 273,
+          "operation": "MOVE",
+          "source": "MOVE COMBDATE OF DIPWCC00-DATA TO CCBWCDTE",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 273,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 275,
+          "operation": "MOVE",
+          "source": "MOVE COMBTIME OF DIPWCC01-DATA TO WK-COMBTIME (1:6)",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 275,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 276,
+          "operation": "MOVE",
+          "source": "MOVE WK-COMBTIME-RD            TO CCBWCTIM",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 276,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s13",
+          "line": 278,
+          "operation": "IF",
+          "source": "INITIALIZE     DIFWCC10 OF SAV-DIFWCC10 (NUM-DI-LOADED)",
+          "traceability": {
+            "stmt_id": "s13",
+            "line": 278,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s14",
+          "line": 279,
+          "operation": "MOVE",
+          "source": "MOVE CORR DIPWCC00-DATA TO DIFWCC10",
+          "traceability": {
+            "stmt_id": "s14",
+            "line": 279,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s15",
+          "line": 280,
+          "operation": "IF",
+          "source": "OF SAV-DIFWCC10 (NUM-DI-LOADED)",
+          "traceability": {
+            "stmt_id": "s15",
+            "line": 280,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s16",
+          "line": 281,
+          "operation": "MOVE",
+          "source": "MOVE CORR DIFWCC00      TO DIFWCC10",
+          "traceability": {
+            "stmt_id": "s16",
+            "line": 281,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s17",
+          "line": 282,
+          "operation": "IF",
+          "source": "OF SAV-DIFWCC10 (NUM-DI-LOADED)",
+          "traceability": {
+            "stmt_id": "s17",
+            "line": 282,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s18",
+          "line": 283,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s18",
+            "line": 283,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s19",
+          "line": 284,
+          "operation": "IF",
+          "source": "INITIALIZE        DIFWCC10          OF DIFWCC10-RECORD",
+          "traceability": {
+            "stmt_id": "s19",
+            "line": 284,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s20",
+          "line": 285,
+          "operation": "MOVE",
+          "source": "MOVE CORR DIPWCC00-DATA TO DIFWCC10 OF DIFWCC10-RECORD",
+          "traceability": {
+            "stmt_id": "s20",
+            "line": 285,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s21",
+          "line": 286,
+          "operation": "MOVE",
+          "source": "MOVE CORR DIFWCC00 TO DIFWCC10      OF DIFWCC10-RECORD",
+          "traceability": {
+            "stmt_id": "s21",
+            "line": 286,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s22",
+          "line": 287,
+          "operation": "PERFORM",
+          "source": "PERFORM 80302-WRITE-DIPWCC10-RECORD",
+          "traceability": {
+            "stmt_id": "s22",
+            "line": 287,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s23",
+          "line": 290,
+          "operation": "MOVE",
+          "source": "MOVE PACKED-DATE              TO DIPRCDTE.",
+          "traceability": {
+            "stmt_id": "s23",
+            "line": 290,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s24",
+          "line": 291,
+          "operation": "MOVE",
+          "source": "MOVE PACKED-TIME              TO DIPRCTIM.",
+          "traceability": {
+            "stmt_id": "s24",
+            "line": 291,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s25",
+          "line": 292,
+          "operation": "PERFORM",
+          "source": "PERFORM 80107-REWRITE-DIPWCC00-RECORD.",
+          "traceability": {
+            "stmt_id": "s25",
+            "line": 292,
+            "unit": "END-IF"
+          }
+        }
+      ],
+      "statement_count": 25
+    },
+    {
+      "name": "40000-VALIDATE-RECORD",
+      "start_line": 295,
+      "end_line": 318,
+      "line_count": 23,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 297,
+          "operation": "IF",
+          "source": "IF SRCCLMPR OF DIPWCC00-DATA = SPACES",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 297,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 300,
+          "operation": "MOVE",
+          "source": "MOVE \"01\"                 TO DIPRCFLG OF DIFWCC00.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 300,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 302,
+          "operation": "IF",
+          "source": "IF SRCCLMNUM OF DIPWCC00-DATA NOT NUMERIC",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 302,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 303,
+          "operation": "MOVE",
+          "source": "MOVE \"02\"                 TO DIPRCFLG OF DIFWCC00.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 303,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 305,
+          "operation": "IF",
+          "source": "IF DIPRCFLG OF DIFWCC00 = SPACE",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 305,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 307,
+          "operation": "MOVE",
+          "source": "MOVE SRCCLMPR OF DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 307,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 309,
+          "operation": "MOVE",
+          "source": "MOVE SRCCLMSU OF DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 309,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 311,
+          "operation": "MOVE",
+          "source": "MOVE SRCCLMNUM OF DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 311,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 314,
+          "operation": "CALL",
+          "source": "CALL \"XACSCC00\"               USING XACSCC00-DATA",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 314,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 316,
+          "operation": "IF",
+          "source": "IF INVALID-CLAIM-FORMAT",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 316,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 317,
+          "operation": "MOVE",
+          "source": "MOVE \"03\"             TO DIPRCFLG OF DIFWCC00",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 317,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 318,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 318,
+            "unit": "40000-VALIDATE-RECORD"
+          }
+        }
+      ],
+      "statement_count": 12
+    },
+    {
+      "name": "END-IF",
+      "start_line": 319,
+      "end_line": 342,
+      "line_count": 23,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 321,
+          "operation": "IF",
+          "source": "IF OBJCLMPR OF DIPWCC00-DATA = SPACES",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 321,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 324,
+          "operation": "MOVE",
+          "source": "MOVE \"01\"                 TO DIPRCFLG OF DIFWCC00.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 324,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 326,
+          "operation": "IF",
+          "source": "IF  OBJCLMNUM OF DIPWCC00-DATA NOT NUMERIC",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 326,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 327,
+          "operation": "MOVE",
+          "source": "MOVE \"02\"                 TO DIPRCFLG OF DIFWCC00.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 327,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 329,
+          "operation": "IF",
+          "source": "IF DIPRCFLG OF DIFWCC00 = SPACE",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 329,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 331,
+          "operation": "MOVE",
+          "source": "MOVE OBJCLMPR OF DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 331,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 333,
+          "operation": "MOVE",
+          "source": "MOVE OBJCLMSU OF DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 333,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 335,
+          "operation": "MOVE",
+          "source": "MOVE OBJCLMNUM OF DIPWCC00-DATA",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 335,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 338,
+          "operation": "CALL",
+          "source": "CALL \"XACSCC00\"               USING XACSCC00-DATA",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 338,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 340,
+          "operation": "IF",
+          "source": "IF INVALID-CLAIM-FORMAT",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 340,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 341,
+          "operation": "MOVE",
+          "source": "MOVE \"04\"             TO DIPRCFLG OF DIFWCC00",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 341,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 342,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 342,
+            "unit": "END-IF"
+          }
+        }
+      ],
+      "statement_count": 12
+    },
+    {
+      "name": "END-IF",
+      "start_line": 343,
+      "end_line": 357,
+      "line_count": 14,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 345,
+          "operation": "IF",
+          "source": "IF COMBIND OF DIPWCC00-DATA NOT = \"C\" AND \"D\"",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 345,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 346,
+          "operation": "MOVE",
+          "source": "MOVE \"05\"                  TO DIPRCFLG OF DIFWCC00.",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 346,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 348,
+          "operation": "IF",
+          "source": "IF COMBDATE OF DIPWCC00-DATA NOT NUMERIC",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 348,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 350,
+          "operation": "MOVE",
+          "source": "MOVE \"06\"                  TO DIPRCFLG OF DIFWCC00.",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 350,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 352,
+          "operation": "IF",
+          "source": "IF SRCCLMPR OF DIPWCC00-DATA = OBJCLMPR OF DIPWCC00-DATA AND",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 352,
+            "unit": "END-IF"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 355,
+          "operation": "MOVE",
+          "source": "MOVE \"07\"                  TO DIPRCFLG OF DIFWCC00.",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 355,
+            "unit": "END-IF"
+          }
+        }
+      ],
+      "statement_count": 6
+    },
+    {
+      "name": "50000-ADDITIONAL-VALIDATIONS",
+      "start_line": 358,
+      "end_line": 443,
+      "line_count": 85,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 360,
+          "operation": "IF",
+          "source": "IF NUM-DI-LOADED >= 2",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 360,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 361,
+          "operation": "COMPUTE",
+          "source": "COMPUTE END-LOOP1 = NUM-DI-LOADED - 1",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 361,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s3",
+          "line": 362,
+          "operation": "PERFORM",
+          "source": "PERFORM VARYING LOOP1 FROM 1 BY 1",
+          "traceability": {
+            "stmt_id": "s3",
+            "line": 362,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s4",
+          "line": 364,
+          "operation": "COMPUTE",
+          "source": "COMPUTE BEG-LOOP2 = LOOP1 + 1",
+          "traceability": {
+            "stmt_id": "s4",
+            "line": 364,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s5",
+          "line": 365,
+          "operation": "PERFORM",
+          "source": "PERFORM VARYING LOOP2 FROM BEG-LOOP2 BY 1",
+          "traceability": {
+            "stmt_id": "s5",
+            "line": 365,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s6",
+          "line": 367,
+          "operation": "IF",
+          "source": "IF  CCINDCAT OF SAV-FMT (LOOP1) = \"C\"",
+          "traceability": {
+            "stmt_id": "s6",
+            "line": 367,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s7",
+          "line": 383,
+          "operation": "IF",
+          "source": "IF NO-ERROR-FOUND(LOOP1)",
+          "traceability": {
+            "stmt_id": "s7",
+            "line": 383,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s8",
+          "line": 385,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s8",
+            "line": 385,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s9",
+          "line": 386,
+          "operation": "IF",
+          "source": "IF NO-ERROR-FOUND(LOOP2)",
+          "traceability": {
+            "stmt_id": "s9",
+            "line": 386,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s10",
+          "line": 388,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s10",
+            "line": 388,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s11",
+          "line": 389,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s11",
+            "line": 389,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s12",
+          "line": 390,
+          "operation": "IF",
+          "source": "IF  CCINDCAT OF SAV-FMT (LOOP1) = \"C\"",
+          "traceability": {
+            "stmt_id": "s12",
+            "line": 390,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s13",
+          "line": 406,
+          "operation": "IF",
+          "source": "IF NO-ERROR-FOUND(LOOP1)",
+          "traceability": {
+            "stmt_id": "s13",
+            "line": 406,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s14",
+          "line": 408,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s14",
+            "line": 408,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s15",
+          "line": 409,
+          "operation": "IF",
+          "source": "IF NO-ERROR-FOUND(LOOP2)",
+          "traceability": {
+            "stmt_id": "s15",
+            "line": 409,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s16",
+          "line": 411,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s16",
+            "line": 411,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s17",
+          "line": 412,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s17",
+            "line": 412,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s18",
+          "line": 413,
+          "operation": "PERFORM",
+          "source": "END-PERFORM",
+          "traceability": {
+            "stmt_id": "s18",
+            "line": 413,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s19",
+          "line": 414,
+          "operation": "PERFORM",
+          "source": "END-PERFORM",
+          "traceability": {
+            "stmt_id": "s19",
+            "line": 414,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s20",
+          "line": 415,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s20",
+            "line": 415,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s21",
+          "line": 416,
+          "operation": "IF",
+          "source": "IF NUM-DI-LOADED > 0",
+          "traceability": {
+            "stmt_id": "s21",
+            "line": 416,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s22",
+          "line": 417,
+          "operation": "PERFORM",
+          "source": "PERFORM VARYING LOOP1 FROM 1 BY 1",
+          "traceability": {
+            "stmt_id": "s22",
+            "line": 417,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s23",
+          "line": 419,
+          "operation": "IF",
+          "source": "IF NO-ERROR-FOUND(LOOP1)",
+          "traceability": {
+            "stmt_id": "s23",
+            "line": 419,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s24",
+          "line": 421,
+          "operation": "PERFORM",
+          "source": "PERFORM 51000-GET-CCKEY",
+          "traceability": {
+            "stmt_id": "s24",
+            "line": 421,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s25",
+          "line": 422,
+          "operation": "MOVE",
+          "source": "MOVE NEXT-NUMBER TO CCKEY OF CMFMCC00",
+          "traceability": {
+            "stmt_id": "s25",
+            "line": 422,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s26",
+          "line": 423,
+          "operation": "MOVE",
+          "source": "MOVE CORR SAV-FMT (LOOP1) TO CMFMCC00",
+          "traceability": {
+            "stmt_id": "s26",
+            "line": 423,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s27",
+          "line": 424,
+          "operation": "MOVE",
+          "source": "MOVE CURRENT-DATE TO CCLODDTE OF CMFMCC00",
+          "traceability": {
+            "stmt_id": "s27",
+            "line": 424,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s28",
+          "line": 425,
+          "operation": "MOVE",
+          "source": "MOVE CURRENT-HHMMSS TO CCLODTIM OF CMFMCC00",
+          "traceability": {
+            "stmt_id": "s28",
+            "line": 425,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s29",
+          "line": 426,
+          "operation": "MOVE",
+          "source": "MOVE \"NP\"           TO CCPRCSTS OF CMFMCC00",
+          "traceability": {
+            "stmt_id": "s29",
+            "line": 426,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s30",
+          "line": 427,
+          "operation": "PERFORM",
+          "source": "PERFORM 80202-WRITE-CMPMCC00-RECORD",
+          "traceability": {
+            "stmt_id": "s30",
+            "line": 427,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s31",
+          "line": 428,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s31",
+            "line": 428,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s32",
+          "line": 429,
+          "operation": "IF",
+          "source": "IF DUPLICATE-ERROR(LOOP1)",
+          "traceability": {
+            "stmt_id": "s32",
+            "line": 429,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s33",
+          "line": 430,
+          "operation": "MOVE",
+          "source": "MOVE \"08\" TO DIPRCFLG OF SAV-DIFWCC10 (LOOP1)",
+          "traceability": {
+            "stmt_id": "s33",
+            "line": 430,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s34",
+          "line": 431,
+          "operation": "ELSE",
+          "source": "ELSE",
+          "traceability": {
+            "stmt_id": "s34",
+            "line": 431,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s35",
+          "line": 432,
+          "operation": "MOVE",
+          "source": "MOVE \"09\" TO DIPRCFLG OF SAV-DIFWCC10 (LOOP1)",
+          "traceability": {
+            "stmt_id": "s35",
+            "line": 432,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s36",
+          "line": 433,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s36",
+            "line": 433,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s37",
+          "line": 434,
+          "operation": "IF",
+          "source": "INITIALIZE        DIFWCC10       OF DIFWCC10-RECORD",
+          "traceability": {
+            "stmt_id": "s37",
+            "line": 434,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s38",
+          "line": 435,
+          "operation": "MOVE",
+          "source": "MOVE CORR DIFWCC10 OF SAV-DIFWCC10 (LOOP1)",
+          "traceability": {
+            "stmt_id": "s38",
+            "line": 435,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s39",
+          "line": 436,
+          "operation": "IF",
+          "source": "TO DIFWCC10   OF DIFWCC10-RECORD",
+          "traceability": {
+            "stmt_id": "s39",
+            "line": 436,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s40",
+          "line": 437,
+          "operation": "PERFORM",
+          "source": "PERFORM 80302-WRITE-DIPWCC10-RECORD",
+          "traceability": {
+            "stmt_id": "s40",
+            "line": 437,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s41",
+          "line": 438,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s41",
+            "line": 438,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s42",
+          "line": 439,
+          "operation": "PERFORM",
+          "source": "END-PERFORM",
+          "traceability": {
+            "stmt_id": "s42",
+            "line": 439,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        },
+        {
+          "stmt_id": "s43",
+          "line": 440,
+          "operation": "IF",
+          "source": "END-IF",
+          "traceability": {
+            "stmt_id": "s43",
+            "line": 440,
+            "unit": "50000-ADDITIONAL-VALIDATIONS"
+          }
+        }
+      ],
+      "statement_count": 43
+    },
+    {
+      "name": "51000-GET-CCKEY",
+      "start_line": 444,
+      "end_line": 448,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 446,
+          "operation": "MOVE",
+          "source": "MOVE \"CCKEY\"                  TO TABLE-NAME.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 446,
+            "unit": "51000-GET-CCKEY"
+          }
+        },
+        {
+          "stmt_id": "s2",
+          "line": 448,
+          "operation": "CALL",
+          "source": "CALL \"UTCSNG00\"            USING TABLE-NAME",
+          "traceability": {
+            "stmt_id": "s2",
+            "line": 448,
+            "unit": "51000-GET-CCKEY"
+          }
+        }
+      ],
+      "statement_count": 2
+    },
+    {
+      "name": "NEXT-NUMBER",
+      "start_line": 449,
+      "end_line": 451,
+      "line_count": 2,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "80102-READ-DIPWCC00",
+      "start_line": 452,
+      "end_line": 456,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 454,
+          "operation": "READ",
+          "source": "READ DIPWCC00-FILE.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 454,
+            "unit": "80102-READ-DIPWCC00"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80107-REWRITE-DIPWCC00-RECORD",
+      "start_line": 457,
+      "end_line": 461,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 459,
+          "operation": "IF",
+          "source": "REWRITE DIFWCC00-RECORD.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 459,
+            "unit": "80107-REWRITE-DIPWCC00-RECORD"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80201-READ-CMPMCC00-FILE",
+      "start_line": 462,
+      "end_line": 466,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 464,
+          "operation": "READ",
+          "source": "READ CMPMCC00-FILE.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 464,
+            "unit": "80201-READ-CMPMCC00-FILE"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80202-WRITE-CMPMCC00-RECORD",
+      "start_line": 467,
+      "end_line": 471,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 469,
+          "operation": "WRITE",
+          "source": "WRITE CMFMCC00-RECORD.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 469,
+            "unit": "80202-WRITE-CMPMCC00-RECORD"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80203-REWRITE-CMLMCC00-RECORD",
+      "start_line": 472,
+      "end_line": 476,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 474,
+          "operation": "WRITE",
+          "source": "REWRITE CMFMCC00-RECORD.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 474,
+            "unit": "80203-REWRITE-CMLMCC00-RECORD"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "80302-WRITE-DIPWCC10-RECORD",
+      "start_line": 477,
+      "end_line": 481,
+      "line_count": 4,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 479,
+          "operation": "IF",
+          "source": "WRITE DIFWCC10-RECORD.",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 479,
+            "unit": "80302-WRITE-DIPWCC10-RECORD"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "99999-CLOSE-PROGRAM",
+      "start_line": 482,
+      "end_line": 485,
+      "line_count": 3,
+      "statements": [
+        {
+          "stmt_id": "s1",
+          "line": 484,
+          "operation": "CLOSE",
+          "source": "CLOSE DIPWCC00-FILE",
+          "traceability": {
+            "stmt_id": "s1",
+            "line": 484,
+            "unit": "99999-CLOSE-PROGRAM"
+          }
+        }
+      ],
+      "statement_count": 1
+    },
+    {
+      "name": "DIPWCC10-FILE",
+      "start_line": 486,
+      "end_line": 488,
+      "line_count": 2,
+      "statements": [],
+      "statement_count": 0
+    },
+    {
+      "name": "99999-EXIT-PROGRAM",
+      "start_line": 489,
+      "end_line": 492,
+      "line_count": 3,
+      "statements": [],
+      "statement_count": 0
+    }
+  ],
+  "paragraph_count": 25,
+  "data_dictionary": [
+    {
+      "level": 1,
+      "name": "CURRENT-DATE",
+      "pic": "9(008).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 1,
+      "name": "PACKED-DATE",
+      "pic": "9(8)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 1,
+      "name": "PACKED-TIME",
+      "pic": "9(6)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 1,
+      "name": "CURRENT-TIME",
+      "pic": "9(8).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "CURRENT-HHMMSS",
+      "pic": "9(6).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "CURRENT-FF",
+      "pic": "9(2).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "SRCCLMPR",
+      "pic": "X(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "SRCCLMSU",
+      "pic": "X(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "SRCCLMNUM",
+      "pic": "X(006).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "OBJCLMPR",
+      "pic": "X(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "OBJCLMSU",
+      "pic": "X(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "OBJCLMNUM",
+      "pic": "X(006).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 1,
+      "name": "WK-COMBTIME",
+      "pic": "X(012)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 1,
+      "name": "WK-COMBTIME-RD",
+      "pic": "9(12).",
+      "usage": null,
+      "redefines": "WK-COMBTIME",
+      "occurs": null
+    },
+    {
+      "level": 1,
+      "name": "PROGRAM-OPTIONS",
+      "pic": "X(1)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "NUM-DI-LOADED",
+      "pic": "9(003)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "LOOP1",
+      "pic": "9(003).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "LOOP2",
+      "pic": "9(003).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "BEG-LOOP2",
+      "pic": "9(003).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "END-LOOP1",
+      "pic": "9(003).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "TABLE-NAME",
+      "pic": "X(010).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    },
+    {
+      "level": 5,
+      "name": "NEXT-NUMBER",
+      "pic": "S9(011)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null
+    }
+  ],
+  "dependencies": {
+    "copybooks": [
+      {
+        "name": "STDPROCESS",
+        "of": "UTILLIB-QCPYCBL"
+      },
+      {
+        "name": "DDS-DIFWCC00",
+        "of": "DIPWCC00"
+      },
+      {
+        "name": "DDS-CMFMCC00",
+        "of": "CMPMCC00"
+      },
+      {
+        "name": "DDS-DIFWCC10",
+        "of": "DIPWCC10"
+      },
+      {
+        "name": "DIPWCC00",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "DIPWCC01",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "STATUSCODE",
+        "of": "UTILLIB-QCPYCBL"
+      },
+      {
+        "name": "DATEFLIP",
+        "of": "UTILLIB-QCPYCBL"
+      },
+      {
+        "name": "UTCSUL10L",
+        "of": "UTILLIB-QCPYCBL"
+      },
+      {
+        "name": "UTCSDC00L",
+        "of": "UTILLIB-QCPYCBL"
+      },
+      {
+        "name": "UTCSC101L",
+        "of": "UTILLIB-QCPYCBL"
+      },
+      {
+        "name": "XACSCC00L",
+        "of": "QCPYCBL"
+      },
+      {
+        "name": "DDS-DIFWCC10",
+        "of": "DIPWCC10"
+      }
+    ],
+    "files": [
+      "CMPMCC00-FILE",
+      "DIPWCC00-FILE",
+      "DIPWCC10-FILE"
+    ],
+    "calls": [
+      "UTCSDC00",
+      "UTCSNG00",
+      "XACSCC00"
+    ],
+    "sql_count": 0
+  },
+  "total_lines": 492,
+  "unit_type": "paragraph",
+  "traceability": {
+    "enabled": true,
+    "version": "v3.0",
+    "statement_id_format": "s{n}",
+    "line_numbers_present": true
+  }
+}

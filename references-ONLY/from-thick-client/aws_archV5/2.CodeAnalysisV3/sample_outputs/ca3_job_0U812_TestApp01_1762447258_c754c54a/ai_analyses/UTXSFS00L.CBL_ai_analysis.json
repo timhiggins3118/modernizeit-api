@@ -1,0 +1,28 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "UTXSFS00L.CBL",
+  "timestamp": "2025-11-06T16:41:23.085546Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This COPYBOOK defines a data structure for string formatting operations, specifically for handling text alignment and formatting tasks in COBOL programs",
+    "content": "Contains a single 01-level data structure (UTXSFS00-DATA) with three fields: a 512-character string buffer, a 5-digit length field, and a 1-character action code with condition names for left/center/right alignment",
+    "usage": "Included by COBOL programs that need to perform string formatting operations, particularly text alignment. The naming suggests it's used by program UTXSFS00 and potentially other programs needing string formatting capabilities",
+    "dependencies": [
+      "UTXSFS00"
+    ],
+    "modernization_approach": "This structure can be converted to a modern class/object with string manipulation methods. Consider: 1) Creating a StringFormatter class in the target language 2) Implementing alignment methods corresponding to the condition names 3) Using native string handling functions of the target language 4) Consider reducing the 512-character buffer if modern requirements allow",
+    "complexity": "LOW",
+    "complexity_reasoning": "Simple data structure with clear purpose, standard COBOL data types, and straightforward condition names. No complex relationships or business logic embedded. Easy to understand and convert to modern equivalents."
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

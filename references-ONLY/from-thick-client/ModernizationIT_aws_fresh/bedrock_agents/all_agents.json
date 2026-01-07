@@ -1,0 +1,377 @@
+{
+    "agentSummaries": [
+        {
+            "agentId": "KLM58PFSFG",
+            "agentName": "agent-factory-multi-db",
+            "agentStatus": "PREPARED",
+            "description": "created by avi to connect with multiple db",
+            "updatedAt": "2025-10-13T13:28:26.949151+00:00"
+        },
+        {
+            "agentId": "TUIBSZRMBB",
+            "agentName": "agent-factory-sqlite-mcp",
+            "agentStatus": "PREPARED",
+            "description": "agent with SQLITE MCP Server- crated and used by avi for MCP server demo",
+            "latestAgentVersion": "4",
+            "updatedAt": "2025-10-28T10:54:42.142688+00:00"
+        },
+        {
+            "agentId": "0LPTFX1CSA",
+            "agentName": "agent_dummy",
+            "agentStatus": "PREPARED",
+            "description": "bwdbjbqfeb",
+            "updatedAt": "2025-10-06T12:26:52.223360+00:00"
+        },
+        {
+            "agentId": "MIRKAZE22R",
+            "agentName": "api-schema-demo",
+            "agentStatus": "PREPARED",
+            "guardrailConfiguration": {
+                "guardrailIdentifier": "itowa3d7e15f",
+                "guardrailVersion": "DRAFT"
+            },
+            "updatedAt": "2025-10-15T05:35:12.510263+00:00"
+        },
+        {
+            "agentId": "E3WHQ6SSZY",
+            "agentName": "avi-testing_10",
+            "agentStatus": "PREPARED",
+            "description": "Drifter testing",
+            "latestAgentVersion": "8",
+            "updatedAt": "2025-10-24T08:13:39.887608+00:00"
+        },
+        {
+            "agentId": "EVNWBTKLP4",
+            "agentName": "avi-testing_10_Clone",
+            "agentStatus": "PREPARED",
+            "description": "Cloned from avi-testing_10",
+            "updatedAt": "2025-10-29T10:50:00.196022+00:00"
+        },
+        {
+            "agentId": "1B8NP496RE",
+            "agentName": "COBOLAnalyst",
+            "agentStatus": "PREPARED",
+            "updatedAt": "2025-09-16T07:31:33.406798+00:00"
+        },
+        {
+            "agentId": "LGXEUDJILW",
+            "agentName": "COBOLAnalystV2",
+            "agentStatus": "PREPARED",
+            "updatedAt": "2025-10-29T12:52:52.841616+00:00"
+        },
+        {
+            "agentId": "TP8XJLYJUM",
+            "agentName": "COBOLDataAnalystV2",
+            "agentStatus": "PREPARED",
+            "updatedAt": "2025-10-02T18:49:57.328081+00:00"
+        },
+        {
+            "agentId": "KW7DTNPAGD",
+            "agentName": "CodeRefactorAnalyst",
+            "agentStatus": "PREPARED",
+            "latestAgentVersion": "1",
+            "updatedAt": "2025-09-16T15:27:30.875852+00:00"
+        },
+        {
+            "agentId": "TLWNQMIJSO",
+            "agentName": "dev-pravin-agent",
+            "agentStatus": "PREPARED",
+            "description": "dev-agent-testing-pravin",
+            "latestAgentVersion": "2",
+            "updatedAt": "2025-10-17T10:15:25.192955+00:00"
+        },
+        {
+            "agentId": "WEN80LUYCS",
+            "agentName": "Evaluation_agent",
+            "agentStatus": "PREPARED",
+            "description": "test-evaluation",
+            "latestAgentVersion": "4",
+            "updatedAt": "2025-08-05T08:06:48.338486+00:00"
+        },
+        {
+            "agentId": "7YGYBRWMNS",
+            "agentName": "Instructor",
+            "agentStatus": "PREPARED",
+            "description": "You are an educational assistant specialized in 1st standard (Grade 1) curriculum for children aged 6-7 years. Your role is to provide helpful, engaging, and age-appropriate educational support.",
+            "latestAgentVersion": "1",
+            "updatedAt": "2025-10-15T08:34:33.356172+00:00"
+        },
+        {
+            "agentId": "ENKH1CEELM",
+            "agentName": "Marketing-Strategy-Assistant-qa-pravin",
+            "agentStatus": "PREPARED",
+            "description": "Test",
+            "latestAgentVersion": "1",
+            "updatedAt": "2025-10-16T14:04:20.699650+00:00"
+        },
+        {
+            "agentId": "YRVMQYNTXS",
+            "agentName": "PoojaTesting",
+            "agentStatus": "PREPARED",
+            "description": "You are an educational assistant specialized in 1st standard (Grade 1) curriculum for children aged 6-7 years. Your role is to provide helpful, engaging, and age-appropriate educational support.",
+            "latestAgentVersion": "18",
+            "updatedAt": "2025-10-16T12:03:32.614843+00:00"
+        },
+        {
+            "agentId": "BIL860NFZS",
+            "agentName": "ProjectManagementProcessValidation",
+            "agentStatus": "PREPARED",
+            "description": "This agent will be used to validate and optimize the project management process for users and timesheets.",
+            "updatedAt": "2025-10-28T20:27:39.310578+00:00"
+        },
+        {
+            "agentId": "PDCVCVXP3Y",
+            "agentName": "qa-agent-analysis",
+            "agentStatus": "PREPARED",
+            "description": "Specialized AI agent designed for the COBOL Conversion Reviewer",
+            "latestAgentVersion": "15",
+            "updatedAt": "2025-10-09T08:09:53.793694+00:00"
+        },
+        {
+            "agentId": "DUSHESZDAS",
+            "agentName": "qa-agent_101",
+            "agentStatus": "FAILED",
+            "description": "Test",
+            "latestAgentVersion": "4",
+            "updatedAt": "2025-10-28T08:21:44.142176+00:00"
+        },
+        {
+            "agentId": "BTMV0PZUHK",
+            "agentName": "qaagent-pravin",
+            "agentStatus": "PREPARED",
+            "description": "Automation Test Cases are executing with qaagnt-pravin.",
+            "updatedAt": "2025-09-12T09:51:13.009794+00:00"
+        },
+        {
+            "agentId": "OYJCAYKR7U",
+            "agentName": "Raw_Agent",
+            "agentStatus": "PREPARED",
+            "description": "You are raw special agent",
+            "updatedAt": "2025-10-17T12:22:06.042682+00:00"
+        },
+        {
+            "agentId": "28FDKFH5DW",
+            "agentName": "Raw_Agent_Clone",
+            "agentStatus": "PREPARED",
+            "description": "This is a custom description for the cloned agent(Raw_Agent)",
+            "updatedAt": "2025-10-29T06:50:18.248129+00:00"
+        },
+        {
+            "agentId": "KARJCQRTPY",
+            "agentName": "Raw_Agent_Clone_V2",
+            "agentStatus": "PREPARED",
+            "description": "This is a custom description for the cloned agent(Raw_Agent_V2)",
+            "updatedAt": "2025-10-29T07:00:31.257775+00:00"
+        },
+        {
+            "agentId": "B74LFERVHE",
+            "agentName": "Raw_Agent_Clone_V2_Clone",
+            "agentStatus": "PREPARED",
+            "description": "Cloned from Raw_Agent_Clone_V2",
+            "updatedAt": "2025-10-29T10:19:15.232596+00:00"
+        },
+        {
+            "agentId": "WV3V7210VS",
+            "agentName": "scoutitai-admin",
+            "agentStatus": "PREPARED",
+            "latestAgentVersion": "10",
+            "updatedAt": "2025-10-07T15:30:04.659935+00:00"
+        },
+        {
+            "agentId": "FNHH05FQ3W",
+            "agentName": "scoutitai-admin-ts",
+            "agentStatus": "PREPARED",
+            "description": "this is admin agent for timestream-db, Act  as a Bishop(Team Comander)",
+            "guardrailConfiguration": {
+                "guardrailIdentifier": "6d3x0mv2ar7v",
+                "guardrailVersion": "DRAFT"
+            },
+            "latestAgentVersion": "9",
+            "updatedAt": "2025-10-09T10:48:33.497641+00:00"
+        },
+        {
+            "agentId": "AMYJQFHYGU",
+            "agentName": "scoutitai-blender",
+            "agentStatus": "PREPARED",
+            "description": "This agent takes any metric data in csv format and performs six sigma anaylsis.",
+            "latestAgentVersion": "7",
+            "updatedAt": "2025-10-27T14:17:10.246550+00:00"
+        },
+        {
+            "agentId": "OIATHYXCI0",
+            "agentName": "scoutitai-critic-nexgen",
+            "agentStatus": "PREPARED",
+            "description": "New AGI model - Agentic Scoring using Agentic Integrity Index (AI2 Score)",
+            "latestAgentVersion": "13",
+            "updatedAt": "2025-10-29T14:56:14.595109+00:00"
+        },
+        {
+            "agentId": "U7AQDKDYMZ",
+            "agentName": "scoutitai-drifter",
+            "agentStatus": "PREPARED",
+            "description": "Prototype for the Drifter by Tony. This guy is meant to become a FULLY autonomous agent who examines AND manages drift of deviation for all buckets.",
+            "latestAgentVersion": "3",
+            "updatedAt": "2025-10-27T11:17:42.110685+00:00"
+        },
+        {
+            "agentId": "AZLVECBY0Q",
+            "agentName": "scoutitai-enforcer",
+            "agentStatus": "PREPARED",
+            "description": "the discipline arm for the critic",
+            "latestAgentVersion": "1",
+            "updatedAt": "2025-10-27T20:23:40.200306+00:00"
+        },
+        {
+            "agentId": "HFPU43NHBS",
+            "agentName": "scoutitai-img-generator",
+            "agentStatus": "PREPARED",
+            "latestAgentVersion": "4",
+            "updatedAt": "2025-03-03T06:38:29.701926+00:00"
+        },
+        {
+            "agentId": "CJECJBJS2E",
+            "agentName": "scoutitai-implied-value-PROD",
+            "agentStatus": "PREPARED",
+            "description": "Gartner recommended agent that assigns dollar values to the work our agents perform.",
+            "latestAgentVersion": "3",
+            "updatedAt": "2025-09-15T15:17:26.016142+00:00"
+        },
+        {
+            "agentId": "ED3SMMVH7F",
+            "agentName": "scoutitai-normalizer",
+            "agentStatus": "PREPARED",
+            "latestAgentVersion": "1",
+            "updatedAt": "2025-01-27T16:12:38.901431+00:00"
+        },
+        {
+            "agentId": "NQNQEVAUPP",
+            "agentName": "scoutitai-predictor",
+            "agentStatus": "PREPARED",
+            "description": "This agent runs Monte Carlo simulations to predict future RPI scores by improving the 3 worst performing buckets.",
+            "latestAgentVersion": "12",
+            "updatedAt": "2025-10-28T10:38:17.019240+00:00"
+        },
+        {
+            "agentId": "MD2TOJKUW4",
+            "agentName": "scoutitai-prompt-evaluator",
+            "agentStatus": "PREPARED",
+            "description": "This agent takes input as agent prompt and remediation provided by the critic agent and anlyze the prompt againt the remediations",
+            "latestAgentVersion": "4",
+            "updatedAt": "2025-10-03T13:56:36.660915+00:00"
+        },
+        {
+            "agentId": "VYWATIEBZQ",
+            "agentName": "scoutitai-prophet",
+            "agentStatus": "PREPARED",
+            "description": "This agent studies paths from appneta",
+            "latestAgentVersion": "8",
+            "updatedAt": "2025-10-27T12:27:20.478445+00:00"
+        },
+        {
+            "agentId": "33JIBJXERS",
+            "agentName": "scoutitai-prophet-new",
+            "agentStatus": "PREPARED",
+            "description": "new prophet agent, with improved data",
+            "latestAgentVersion": "1",
+            "updatedAt": "2025-10-07T15:42:12.667183+00:00"
+        },
+        {
+            "agentId": "9WKRSDPEIR",
+            "agentName": "scoutitai-radar",
+            "agentStatus": "PREPARED",
+            "description": "customer insight agent",
+            "latestAgentVersion": "10",
+            "updatedAt": "2025-08-12T14:30:05.706734+00:00"
+        },
+        {
+            "agentId": "A9PVH7ONO8",
+            "agentName": "scoutitai-sales",
+            "agentStatus": "PREPARED",
+            "latestAgentVersion": "4",
+            "updatedAt": "2025-09-26T07:24:20.641568+00:00"
+        },
+        {
+            "agentId": "J8XIU1CYDW",
+            "agentName": "scoutitai-support",
+            "agentStatus": "PREPARED",
+            "description": "Multi-use agent for sales and support for all Broadcom products.",
+            "latestAgentVersion": "16",
+            "updatedAt": "2025-10-13T13:21:25.948722+00:00"
+        },
+        {
+            "agentId": "PLH3NXIVZX",
+            "agentName": "scoutitai-support-decanted",
+            "agentStatus": "PREPARED",
+            "description": "Technical support agent for Broadcom IT Operations Management products.",
+            "updatedAt": "2025-10-14T21:15:12.003530+00:00"
+        },
+        {
+            "agentId": "AO58QWSNEP",
+            "agentName": "scoutitai-transformer",
+            "agentStatus": "PREPARED",
+            "description": "Son of the Blender and the Trender. Clone created for Chris Pastena, AWS Global Services",
+            "latestAgentVersion": "3",
+            "updatedAt": "2025-10-17T16:24:12.896980+00:00"
+        },
+        {
+            "agentId": "C8EEZTVK6B",
+            "agentName": "scoutitai-trender",
+            "agentStatus": "PREPARED",
+            "description": "lambdaless",
+            "latestAgentVersion": "2",
+            "updatedAt": "2025-10-27T10:09:49.812738+00:00"
+        },
+        {
+            "agentId": "UOKIS8EK5G",
+            "agentName": "scoutitai-trends-PROD",
+            "agentStatus": "PREPARED",
+            "description": "This agent does the 50/200day crossover analysis for any application or location. ",
+            "latestAgentVersion": "6",
+            "updatedAt": "2025-10-09T05:04:22.130014+00:00"
+        },
+        {
+            "agentId": "HT6YLFNBSM",
+            "agentName": "scoutitai-ts-5600",
+            "agentStatus": "PREPARED",
+            "latestAgentVersion": "11",
+            "updatedAt": "2025-10-13T10:38:03.473971+00:00"
+        },
+        {
+            "agentId": "GCGLDEQWUY",
+            "agentName": "something",
+            "agentStatus": "PREPARED",
+            "description": "bbejb",
+            "updatedAt": "2025-10-06T11:50:20.723943+00:00"
+        },
+        {
+            "agentId": "L99YHOQHDY",
+            "agentName": "SQL-Evaluator",
+            "agentStatus": "PREPARED",
+            "description": "Evaluate the Trace for SQL Improvement",
+            "updatedAt": "2025-02-07T10:45:26.810061+00:00"
+        },
+        {
+            "agentId": "OJM5KCCQQC",
+            "agentName": "test_timestream",
+            "agentStatus": "PREPARED",
+            "description": "create to test agent core",
+            "latestAgentVersion": "1",
+            "updatedAt": "2025-09-03T11:32:08.339231+00:00"
+        },
+        {
+            "agentId": "4MWJ9I1OQD",
+            "agentName": "timestream-mcp-agent",
+            "agentStatus": "PREPARED",
+            "description": "created by avi-for timestream MCP",
+            "latestAgentVersion": "1",
+            "updatedAt": "2025-10-13T13:10:36.885460+00:00"
+        },
+        {
+            "agentId": "LVAV5PRBRK",
+            "agentName": "xyz",
+            "agentStatus": "PREPARED",
+            "description": "knwBBNwonvhv",
+            "updatedAt": "2025-10-06T12:21:28.016913+00:00"
+        }
+    ]
+}

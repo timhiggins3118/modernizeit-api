@@ -1,0 +1,5481 @@
+{
+  "job_id": "da2_job_0U812_TestApp01_1762439897_08497588",
+  "generated_at": "2025-11-06T14:38:20.033343+00:00",
+  "summary": {
+    "total_files": 20,
+    "total_data_items": 614,
+    "total_01_levels": 95,
+    "total_copybooks": 167
+  },
+  "files": [
+    {
+      "file_path": "IBMi-Cobol/Cobol/STATUSCODE.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 36,
+          "total_01_levels": 6,
+          "total_copybooks": 16,
+          "total_fd_entries": 6
+        },
+        "working_storage": [
+          {
+            "level": "01",
+            "name": "SPECIAL-WORK-FIELDS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "WK-HW-CLAIM."
+              },
+              {
+                "level": "10",
+                "name": "CLACPRE",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "CLACSUF",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "CLACNBR",
+                "pic": "S9(006)",
+                "data_type": "mixed",
+                "length": 6,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-HW-CLAIM-RD",
+                "redefines": "WK-HW-CLAIM"
+              },
+              {
+                "level": "10",
+                "name": "CLPREFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "CLSUFFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "CLNUMBER",
+                "pic": "S9(006)",
+                "data_type": "mixed",
+                "length": 6
+              },
+              {
+                "level": "05",
+                "name": "WK-RKRSNBR",
+                "pic": "S9(011)",
+                "data_type": "mixed",
+                "length": 11,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-RKRSNBR-RD",
+                "redefines": "WK-RKRSNBR"
+              },
+              {
+                "level": "05",
+                "name": "ISSUE",
+                "pic": "S9(005)",
+                "data_type": "mixed",
+                "length": 5,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "SI-RISK-STAT",
+                "pic": "1",
+                "data_type": "mixed",
+                "length": 0
+              },
+              {
+                "level": "88",
+                "name": "SI-RISK",
+                "value": "B\"1\"."
+              },
+              {
+                "level": "88",
+                "name": "NON-SI-RISK",
+                "value": "B\"0\"."
+              },
+              {
+                "level": "05",
+                "name": "RISK-EXPERIENCE-STAT",
+                "pic": "1",
+                "data_type": "mixed",
+                "length": 0
+              },
+              {
+                "level": "88",
+                "name": "RISK-EXPERIENCED",
+                "value": "B\"1\"."
+              },
+              {
+                "level": "88",
+                "name": "RISK-INEXPERIENCED",
+                "value": "B\"0\"."
+              },
+              {
+                "level": "05",
+                "name": "RISK-REPRESENTED-STAT",
+                "pic": "1",
+                "data_type": "mixed",
+                "length": 0
+              },
+              {
+                "level": "88",
+                "name": "RISK-REPRESENTED",
+                "value": "B\"1\"."
+              },
+              {
+                "level": "88",
+                "name": "RISK-UNREPRESENTED",
+                "value": "B\"0\"."
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CMLDCA01-CTRL.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "PRPRCSEQ",
+                "value": "ZEROS."
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CMLDCA01-HOLD.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "PRPRCSEQ",
+                "value": "ZEROS."
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CMLDMO06-CTRL.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "PRPRCSEQ",
+                "value": "ZEROS."
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CMLDMO06-HOLD.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "PRPRCSEQ",
+                "value": "ZEROS."
+              }
+            ]
+          }
+        ],
+        "file_section": [
+          {
+            "fd_name": "CMLHCL00-FILE",
+            "statement": "FD  CMLHCL00-FILE"
+          },
+          {
+            "fd_name": "CMLDCL50-FILE",
+            "statement": "FD  CMLDCL50-FILE"
+          },
+          {
+            "fd_name": "UTLMTB00-FILE",
+            "statement": "FD  UTLMTB00-FILE"
+          },
+          {
+            "fd_name": "CMLDMO06-FILE",
+            "statement": "FD  CMLDMO06-FILE"
+          },
+          {
+            "fd_name": "CMLDCA01-FILE",
+            "statement": "FD  CMLDCA01-FILE"
+          },
+          {
+            "fd_name": "CMLHMO00-FILE",
+            "statement": "FD  CMLHMO00-FILE"
+          }
+        ],
+        "linkage_section": [
+          {
+            "level": "01",
+            "name": "LINK-DATA",
+            "fields": []
+          }
+        ],
+        "copybooks": [
+          {
+            "copybook_name": "STDPROCESS",
+            "statement": "COPY STDPROCESS OF QCPYCBL  SUPPRESS."
+          },
+          {
+            "copybook_name": "DDS-CMFHCL00",
+            "statement": "COPY DDS-CMFHCL00 OF CMLHCL00."
+          },
+          {
+            "copybook_name": "DDS-CMFDCL50",
+            "statement": "COPY DDS-CMFDCL50 OF CMLDCL50."
+          },
+          {
+            "copybook_name": "DDS-UTFMTB00",
+            "statement": "COPY DDS-UTFMTB00 OF UTLMTB00."
+          },
+          {
+            "copybook_name": "DDS-CMFDMO00",
+            "statement": "COPY DDS-CMFDMO00 OF CMLDMO06."
+          },
+          {
+            "copybook_name": "DDS-CMFDCA00",
+            "statement": "COPY DDS-CMFDCA00 OF CMLDCA01."
+          },
+          {
+            "copybook_name": "DDS-CMFHMO00",
+            "statement": "COPY DDS-CMFHMO00 OF CMLHMO00."
+          },
+          {
+            "copybook_name": "CMCSCL50L",
+            "statement": "COPY CMCSCL50L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSRP00L",
+            "statement": "COPY CMCSRP00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "DATEFLIP",
+            "statement": "COPY DATEFLIP   OF QCPYCBL."
+          },
+          {
+            "copybook_name": "STATUSCODE",
+            "statement": "COPY STATUSCODE OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSDC00L",
+            "statement": "COPY UTCSDC00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSRK20L",
+            "statement": "COPY CMCSRK20L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSDC00C",
+            "statement": "COPY UTCSDC00C  OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSRP00C",
+            "statement": "COPY CMCSRP00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSRK20C",
+            "statement": "COPY CMCSRK20C  OF QCPYCBL."
+          }
+        ]
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTCSDC00L.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCSRP00C.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/ADCPSH21L.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/DATEFLIP.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/DIPWCC00.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/DIPWCC01.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTCSUL10L.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCSCL50L.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/XACSCC00L.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTXSFS00L.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCSCL50C.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTCSDC00C.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 30,
+          "total_01_levels": 15,
+          "total_copybooks": 13,
+          "total_fd_entries": 3
+        },
+        "working_storage": [
+          {
+            "level": "01",
+            "name": "CURRENT-DATE",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "PACKED-DATE",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "PACKED-TIME",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CURRENT-TIME",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CURRENT-TIME-RD",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CURRENT-HHMMSS",
+                "pic": "9(6)",
+                "data_type": "mixed",
+                "length": 6
+              },
+              {
+                "level": "05",
+                "name": "CURRENT-FF",
+                "pic": "9(2)",
+                "data_type": "mixed",
+                "length": 2
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SAVE-WRK-REC.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "SAV-FMT",
+                "occurs": 500,
+                "is_array": true
+              },
+              {
+                "level": "06",
+                "name": "CCSRCPFX"
+              },
+              {
+                "level": "06",
+                "name": "CCSRCSFX"
+              },
+              {
+                "level": "06",
+                "name": "CCSRCNBR"
+              },
+              {
+                "level": "06",
+                "name": "CCOBJPFX"
+              },
+              {
+                "level": "06",
+                "name": "CCOBJSFX"
+              },
+              {
+                "level": "06",
+                "name": "CCOBJNBR"
+              },
+              {
+                "level": "06",
+                "name": "CCINDCAT"
+              },
+              {
+                "level": "06",
+                "name": "CCBWCDTE"
+              },
+              {
+                "level": "06",
+                "name": "CCBWCTIM"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SAVE-DIPWCC10.",
+            "fields": [
+              {
+                "level": "02",
+                "name": "SAV-DIFWCC10",
+                "occurs": 500,
+                "is_array": true
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SAVE-ERROR-TYPE.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "VALIDATION-ERROR",
+                "pic": "X",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "occurs": 500,
+                "is_array": true
+              },
+              {
+                "level": "88",
+                "name": "NO-ERROR-FOUND",
+                "value": " "
+              },
+              {
+                "level": "88",
+                "name": "DUPLICATE-ERROR",
+                "value": "D"
+              },
+              {
+                "level": "88",
+                "name": "INVERSE-ERROR",
+                "value": "I"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "WK-SRCCLAIM.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "SRCCLMPR",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "SRCCLMSU",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "SRCCLMNUM",
+                "pic": "X(006)",
+                "data_type": "alphanumeric",
+                "length": 6
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "WK-OBJCLAIM.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "OBJCLMPR",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "OBJCLMSU",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "OBJCLMNUM",
+                "pic": "X(006)",
+                "data_type": "alphanumeric",
+                "length": 6
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "WK-COMBTIME",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "WK-COMBTIME-RD",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "PROGRAM-OPTIONS",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "LOOPS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "NUM-DI-LOADED",
+                "pic": "9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "value": "0."
+              },
+              {
+                "level": "05",
+                "name": "LOOP1",
+                "pic": "9(003)",
+                "data_type": "mixed",
+                "length": 3
+              },
+              {
+                "level": "05",
+                "name": "LOOP2",
+                "pic": "9(003)",
+                "data_type": "mixed",
+                "length": 3
+              },
+              {
+                "level": "05",
+                "name": "BEG-LOOP2",
+                "pic": "9(003)",
+                "data_type": "mixed",
+                "length": 3
+              },
+              {
+                "level": "05",
+                "name": "END-LOOP1",
+                "pic": "9(003)",
+                "data_type": "mixed",
+                "length": 3
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SPECIAL-WORK-FIELDS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "TABLE-NAME",
+                "pic": "X(010)",
+                "data_type": "alphanumeric",
+                "length": 10
+              },
+              {
+                "level": "05",
+                "name": "NEXT-NUMBER",
+                "pic": "S9(011)",
+                "data_type": "mixed",
+                "length": 11
+              }
+            ]
+          }
+        ],
+        "file_section": [
+          {
+            "fd_name": "DIPWCC00-FILE",
+            "statement": "FD  DIPWCC00-FILE"
+          },
+          {
+            "fd_name": "CMPMCC00-FILE",
+            "statement": "FD  CMPMCC00-FILE"
+          },
+          {
+            "fd_name": "DIPWCC10-FILE",
+            "statement": "FD  DIPWCC10-FILE"
+          }
+        ],
+        "linkage_section": [],
+        "copybooks": [
+          {
+            "copybook_name": "STDPROCESS",
+            "statement": "COPY STDPROCESS OF UTILLIB-QCPYCBL  SUPPRESS."
+          },
+          {
+            "copybook_name": "DDS-DIFWCC00",
+            "statement": "COPY DDS-DIFWCC00 OF DIPWCC00."
+          },
+          {
+            "copybook_name": "DDS-CMFMCC00",
+            "statement": "COPY DDS-CMFMCC00 OF CMPMCC00."
+          },
+          {
+            "copybook_name": "DDS-DIFWCC10",
+            "statement": "COPY DDS-DIFWCC10 OF DIPWCC10."
+          },
+          {
+            "copybook_name": "DIPWCC00",
+            "statement": "COPY DIPWCC00   OF QCPYCBL."
+          },
+          {
+            "copybook_name": "DIPWCC01",
+            "statement": "COPY DIPWCC01   OF QCPYCBL."
+          },
+          {
+            "copybook_name": "STATUSCODE",
+            "statement": "COPY STATUSCODE OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "DATEFLIP",
+            "statement": "COPY DATEFLIP   OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSUL10L",
+            "statement": "COPY UTCSUL10L  OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSDC00L",
+            "statement": "COPY UTCSDC00L  OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSC101L",
+            "statement": "COPY UTCSC101L  OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSCC00L",
+            "statement": "COPY XACSCC00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "DDS-DIFWCC10",
+            "statement": "COPY DDS-DIFWCC10 OF DIPWCC10."
+          }
+        ]
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCSRP00L.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 23,
+          "total_01_levels": 2,
+          "total_copybooks": 17,
+          "total_fd_entries": 7
+        },
+        "working_storage": [
+          {
+            "level": "01",
+            "name": "SPECIAL-WORK-FIELDS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "WK-RKRSNBR",
+                "pic": "S9(011)",
+                "data_type": "mixed",
+                "length": 11,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-RKRSNBR-RD",
+                "redefines": "WK-RKRSNBR"
+              },
+              {
+                "level": "05",
+                "name": "ISSUE",
+                "pic": "S9(005)",
+                "data_type": "mixed",
+                "length": 5,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-HW-CLAIM."
+              },
+              {
+                "level": "10",
+                "name": "CLACPRE",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "CLACSUF",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "CLACNBR",
+                "pic": "S9(006)",
+                "data_type": "mixed",
+                "length": 6,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-HW-CLAIM-RD",
+                "redefines": "WK-HW-CLAIM"
+              },
+              {
+                "level": "10",
+                "name": "CLPREFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "CLSUFFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "CLNUMBER",
+                "pic": "S9(006)",
+                "data_type": "mixed",
+                "length": 6
+              },
+              {
+                "level": "05",
+                "name": "FILES-OPEN-STAT",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "N"
+              },
+              {
+                "level": "88",
+                "name": "FILES-OPEN",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "FILES-NOT-OPEN",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "SI-RISK-STAT",
+                "pic": "1",
+                "data_type": "mixed",
+                "length": 0
+              },
+              {
+                "level": "88",
+                "name": "SI-RISK",
+                "value": "B\"1\"."
+              },
+              {
+                "level": "88",
+                "name": "NON-SI-RISK",
+                "value": "B\"0\"."
+              },
+              {
+                "level": "05",
+                "name": "RISK-EXPERIENCE-STAT",
+                "pic": "1",
+                "data_type": "mixed",
+                "length": 0
+              },
+              {
+                "level": "88",
+                "name": "RISK-EXPERIENCED",
+                "value": "B\"1\"."
+              },
+              {
+                "level": "88",
+                "name": "RISK-INEXPERIENCED",
+                "value": "B\"0\"."
+              },
+              {
+                "level": "05",
+                "name": "RISK-REPRESENTED-STAT",
+                "pic": "1",
+                "data_type": "mixed",
+                "length": 0
+              },
+              {
+                "level": "88",
+                "name": "RISK-REPRESENTED",
+                "value": "B\"1\"."
+              },
+              {
+                "level": "88",
+                "name": "RISK-UNREPRESENTED",
+                "value": "B\"0\"."
+              }
+            ]
+          }
+        ],
+        "file_section": [
+          {
+            "fd_name": "CMLHCL00-FILE",
+            "statement": "FD  CMLHCL00-FILE"
+          },
+          {
+            "fd_name": "UTLMTB00-FILE",
+            "statement": "FD  UTLMTB00-FILE"
+          },
+          {
+            "fd_name": "CMLMRP00-FILE",
+            "statement": "FD  CMLMRP00-FILE"
+          },
+          {
+            "fd_name": "ADPWNP00-FILE",
+            "statement": "FD  ADPWNP00-FILE"
+          },
+          {
+            "fd_name": "CMLMRP10-FILE",
+            "statement": "FD  CMLMRP10-FILE"
+          },
+          {
+            "fd_name": "XALMZC04-FILE",
+            "statement": "FD  XALMZC04-FILE"
+          },
+          {
+            "fd_name": "XALDTR02-FILE",
+            "statement": "FD  XALDTR02-FILE"
+          }
+        ],
+        "linkage_section": [
+          {
+            "level": "01",
+            "name": "LINK-DATA",
+            "fields": []
+          }
+        ],
+        "copybooks": [
+          {
+            "copybook_name": "STDPROCESS",
+            "statement": "COPY STDPROCESS OF UTILLIB-QCPYCBL  SUPPRESS."
+          },
+          {
+            "copybook_name": "DDS-CMFHCL00",
+            "statement": "COPY DDS-CMFHCL00 OF CMLHCL00."
+          },
+          {
+            "copybook_name": "DDS-UTFMTB00",
+            "statement": "COPY DDS-UTFMTB00 OF UTLMTB00."
+          },
+          {
+            "copybook_name": "DDS-CMFMRP00",
+            "statement": "COPY DDS-CMFMRP00 OF CMLMRP00."
+          },
+          {
+            "copybook_name": "DDS-ADFWNP00",
+            "statement": "COPY DDS-ADFWNP00 OF ADPWNP00."
+          },
+          {
+            "copybook_name": "DDS-CMFMRP10",
+            "statement": "COPY DDS-CMFMRP10 OF CMLMRP10."
+          },
+          {
+            "copybook_name": "DDS-XAFMZC00",
+            "statement": "COPY DDS-XAFMZC00 OF XALMZC04."
+          },
+          {
+            "copybook_name": "DDS-XAFDTR00",
+            "statement": "COPY DDS-XAFDTR00 OF XALDTR02."
+          },
+          {
+            "copybook_name": "DATEFLIP",
+            "statement": "COPY DATEFLIP   OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "STATUSCODE",
+            "statement": "COPY STATUSCODE OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSDC00L",
+            "statement": "COPY UTCSDC00L OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "ADCPSH21L",
+            "statement": "COPY ADCPSH21L OF PRODSRC-QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSRP00L",
+            "statement": "COPY CMCSRP00L OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSCL50L",
+            "statement": "COPY CMCSCL50L OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSDC00C",
+            "statement": "COPY UTCSDC00C  OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSRP00C",
+            "statement": "COPY CMCSRP00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSCL50C",
+            "statement": "COPY CMCSCL50C  OF QCPYCBL."
+          }
+        ]
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 472,
+          "total_01_levels": 66,
+          "total_copybooks": 117,
+          "total_fd_entries": 26
+        },
+        "working_storage": [
+          {
+            "level": "01",
+            "name": "FUNCTION-KEY-LABELS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "F01",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F02",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F03",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F04",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F05",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F06",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F07",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F08",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F09",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F10",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F11",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F12",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F13",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F14",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F15",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F16",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F17",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F18",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F19",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F20",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F21",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F22",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F23",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              },
+              {
+                "level": "05",
+                "name": "F24",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "HOLD-CMLHCL00.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "HOLD-CMLDCL20.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "HOLD-CMLDCL40.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "HOLD-CMLDCL50.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CTRL-KEYS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CTRL-RANGE",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "HOLD-KEYS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "HOLD-RANGE",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "NULL-KEYS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "NULL-RANGE",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX"
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "COPY-KEYS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "NON-COPY-FIELDS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SPECIAL-WORK-FIELDS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "ALT-F10",
+                "pic": "X(022)",
+                "data_type": "alphanumeric",
+                "length": 22
+              },
+              {
+                "level": "05",
+                "name": "QCLSCAN-DATA."
+              },
+              {
+                "level": "10",
+                "name": "QCLS-STRING",
+                "pic": "X(999)",
+                "data_type": "alphanumeric",
+                "length": 999
+              },
+              {
+                "level": "10",
+                "name": "QCLS-STRLEN",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal"
+              },
+              {
+                "level": "10",
+                "name": "QCLS-STRPOS",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal"
+              },
+              {
+                "level": "10",
+                "name": "QCLS-PATTERN",
+                "pic": "X(999)",
+                "data_type": "alphanumeric",
+                "length": 999
+              },
+              {
+                "level": "10",
+                "name": "QCLS-PATLEN",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal"
+              },
+              {
+                "level": "10",
+                "name": "QCLS-TRANSLATE",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "10",
+                "name": "QCLS-TRIM",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "10",
+                "name": "QCLS-WILD",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "10",
+                "name": "QCLS-RESULT",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal"
+              },
+              {
+                "level": "88",
+                "name": "PATTERN-FOUND",
+                "value": "001"
+              },
+              {
+                "level": "05",
+                "name": "SWF-CLAIM."
+              },
+              {
+                "level": "10",
+                "name": "SWF-PREFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "SWF-SUFFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "SWF-NUMBER",
+                "pic": "X(006)",
+                "data_type": "alphanumeric",
+                "length": 6
+              },
+              {
+                "level": "05",
+                "name": "ASSOC-LEAD."
+              },
+              {
+                "level": "10",
+                "name": "ASSOC",
+                "pic": "X(010)",
+                "data_type": "alphanumeric",
+                "length": 10
+              },
+              {
+                "level": "10",
+                "name": "LEAD",
+                "pic": "X(010)",
+                "data_type": "alphanumeric",
+                "length": 10
+              },
+              {
+                "level": "05",
+                "name": "WK-CLAISEQN",
+                "pic": "9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "HOLD-RISK-ADDRESS."
+              },
+              {
+                "level": "10",
+                "name": "RKRSEMP"
+              },
+              {
+                "level": "10",
+                "name": "RKRSDBAS"
+              },
+              {
+                "level": "10",
+                "name": "RKRSREF"
+              },
+              {
+                "level": "10",
+                "name": "RKRSADR1"
+              },
+              {
+                "level": "10",
+                "name": "RKRSADR2"
+              },
+              {
+                "level": "10",
+                "name": "RKRSCITY"
+              },
+              {
+                "level": "10",
+                "name": "RKRSTATE"
+              },
+              {
+                "level": "10",
+                "name": "RKRSZIP"
+              },
+              {
+                "level": "10",
+                "name": "RKFCNTRY"
+              },
+              {
+                "level": "10",
+                "name": "RKRSCNLN"
+              },
+              {
+                "level": "10",
+                "name": "RKRSCNFN"
+              },
+              {
+                "level": "10",
+                "name": "RKRSCNMI"
+              },
+              {
+                "level": "10",
+                "name": "RKRSPHON"
+              },
+              {
+                "level": "05",
+                "name": "NEW-RISK-ADDRESS."
+              },
+              {
+                "level": "10",
+                "name": "RKRSEMP"
+              },
+              {
+                "level": "10",
+                "name": "RKRSDBAS"
+              },
+              {
+                "level": "10",
+                "name": "RKRSREF"
+              },
+              {
+                "level": "10",
+                "name": "RKRSADR1"
+              },
+              {
+                "level": "10",
+                "name": "RKRSADR2"
+              },
+              {
+                "level": "10",
+                "name": "RKRSCITY"
+              },
+              {
+                "level": "10",
+                "name": "RKRSTATE"
+              },
+              {
+                "level": "10",
+                "name": "RKRSZIP"
+              },
+              {
+                "level": "10",
+                "name": "RKFCNTRY"
+              },
+              {
+                "level": "10",
+                "name": "RKRSCNLN"
+              },
+              {
+                "level": "10",
+                "name": "RKRSCNFN"
+              },
+              {
+                "level": "10",
+                "name": "RKRSCNMI"
+              },
+              {
+                "level": "10",
+                "name": "RKRSPHON"
+              },
+              {
+                "level": "05",
+                "name": "HLD-PGM-OPTION",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "88",
+                "name": "REPRESENTATIVES",
+                "value": "09"
+              },
+              {
+                "level": "88",
+                "name": "RISK",
+                "value": "10"
+              },
+              {
+                "level": "88",
+                "name": "RELATED-CLAIMANTS",
+                "value": "13"
+              },
+              {
+                "level": "05",
+                "name": "X",
+                "pic": "9(001)",
+                "data_type": "mixed",
+                "length": 1,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "PREVIOUS-PANEL",
+                "pic": "9(002)",
+                "data_type": "mixed",
+                "length": 2,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "CURRENT-DATE",
+                "pic": "9(008)",
+                "data_type": "mixed",
+                "length": 8,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "FILED-DATE",
+                "pic": "9(008)",
+                "data_type": "mixed",
+                "length": 8,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "INJURY-DATE",
+                "pic": "9(008)",
+                "data_type": "mixed",
+                "length": 8,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "PANEL-DATE",
+                "pic": "9(008)",
+                "data_type": "mixed",
+                "length": 8,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "HOLD-PNNAME",
+                "pic": "X(050)",
+                "data_type": "alphanumeric",
+                "length": 50,
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "HOLD-SSN",
+                "pic": "9(009)",
+                "data_type": "mixed",
+                "length": 9,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "RECORD-CNT",
+                "pic": "9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "CURRENT-TIME-8",
+                "pic": "S9(008)",
+                "data_type": "mixed",
+                "length": 8
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "redefines": "CURRENT-TIME-8"
+              },
+              {
+                "level": "10",
+                "name": "CURRENT-TIME",
+                "pic": "S9(006)",
+                "data_type": "mixed",
+                "length": 6
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "HOLD-PNCLAIM",
+                "pic": "X(011)",
+                "data_type": "alphanumeric",
+                "length": 11,
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "WORK-SSN",
+                "pic": "9(009)",
+                "data_type": "mixed",
+                "length": 9,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WORK-SSNX",
+                "redefines": "WORK-SSN"
+              },
+              {
+                "level": "10",
+                "name": "PART1",
+                "pic": "9(003)",
+                "data_type": "mixed",
+                "length": 3
+              },
+              {
+                "level": "10",
+                "name": "PART2",
+                "pic": "9(002)",
+                "data_type": "mixed",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "PART3",
+                "pic": "9(004)",
+                "data_type": "mixed",
+                "length": 4
+              },
+              {
+                "level": "05",
+                "name": "EDIT-SSN."
+              },
+              {
+                "level": "10",
+                "name": "PART1",
+                "pic": "X(003)",
+                "data_type": "alphanumeric",
+                "length": 3
+              },
+              {
+                "level": "10",
+                "name": "DASH1",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "-"
+              },
+              {
+                "level": "10",
+                "name": "PART2",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "DASH2",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "-"
+              },
+              {
+                "level": "10",
+                "name": "PART3",
+                "pic": "X(004)",
+                "data_type": "alphanumeric",
+                "length": 4
+              },
+              {
+                "level": "05",
+                "name": "MAN-NBR."
+              },
+              {
+                "level": "10",
+                "name": "RKRSMANN",
+                "pic": "X(004)",
+                "data_type": "alphanumeric",
+                "length": 4,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "-"
+              },
+              {
+                "level": "10",
+                "name": "RKRSMANN",
+                "pic": "X(004)",
+                "data_type": "alphanumeric",
+                "length": 4,
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "WORK-NAME-DATA."
+              },
+              {
+                "level": "10",
+                "name": "CMFSTNAM",
+                "pic": "X(015)",
+                "data_type": "alphanumeric",
+                "length": 15,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "CMMDLINT",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "CMLSTNAM",
+                "pic": "X(020)",
+                "data_type": "alphanumeric",
+                "length": 20,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "PNNAME",
+                "pic": "X(050)",
+                "data_type": "alphanumeric",
+                "length": 50,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "F"
+              },
+              {
+                "level": "05",
+                "name": "PANEL-TABLE."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(006)",
+                "data_type": "alphanumeric",
+                "length": 6,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "SLCT01",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "05"
+              },
+              {
+                "level": "10",
+                "name": "SLCT02",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "06"
+              },
+              {
+                "level": "10",
+                "name": "SLCT03",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "04"
+              },
+              {
+                "level": "05",
+                "name": "PANEL-TABLE-RD",
+                "redefines": "PANEL-TABLE"
+              },
+              {
+                "level": "10",
+                "name": "PANEL-TABLE-DATA",
+                "occurs": 5,
+                "is_array": true
+              },
+              {
+                "level": "15",
+                "name": "PANEL-PICK",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "15",
+                "name": "WINDOW-PANEL",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "CLAIM-DATA."
+              },
+              {
+                "level": "10",
+                "name": "CLPREFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "CLSUFFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "CLNUMBER",
+                "pic": "X(006)",
+                "data_type": "alphanumeric",
+                "length": 6,
+                "value": "ZEROS."
+              },
+              {
+                "level": "10",
+                "name": "PNNAME",
+                "pic": "X(030)",
+                "data_type": "alphanumeric",
+                "length": 30,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "CLTYPE",
+                "pic": "X(004)",
+                "data_type": "alphanumeric",
+                "length": 4,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "VALIDATE-CLAIM",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "GOOD-CLAIM-DATA",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "BAD-CLAIM-DATA",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "WORK-OPTION-TABLE."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "9(002)",
+                "data_type": "mixed",
+                "length": 2,
+                "value": "11."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "9(002)",
+                "data_type": "mixed",
+                "length": 2,
+                "value": "12."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "9(002)",
+                "data_type": "mixed",
+                "length": 2,
+                "value": "13."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "9(002)",
+                "data_type": "mixed",
+                "length": 2,
+                "value": "14."
+              },
+              {
+                "level": "05",
+                "name": "WORK-TABLE-RD",
+                "redefines": "WORK-OPTION-TABLE"
+              },
+              {
+                "level": "10",
+                "name": "WORK-OPTION",
+                "pic": "9(002)",
+                "data_type": "mixed",
+                "length": 2,
+                "occurs": 4,
+                "is_array": true
+              },
+              {
+                "level": "05",
+                "name": "RISK-ADDRESS."
+              },
+              {
+                "level": "10",
+                "name": "RKRSEMP"
+              },
+              {
+                "level": "10",
+                "name": "RKRSDBAS"
+              },
+              {
+                "level": "10",
+                "name": "RKRSREF"
+              },
+              {
+                "level": "10",
+                "name": "RKRSADR1"
+              },
+              {
+                "level": "10",
+                "name": "RKRSADR2"
+              },
+              {
+                "level": "10",
+                "name": "RKRSCITY"
+              },
+              {
+                "level": "10",
+                "name": "RKRSTATE"
+              },
+              {
+                "level": "10",
+                "name": "RKRSZIP"
+              },
+              {
+                "level": "10",
+                "name": "RKFCNTRY"
+              },
+              {
+                "level": "05",
+                "name": "RISK-ADDRESS-RD",
+                "redefines": "RISK-ADDRESS"
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(175)",
+                "data_type": "alphanumeric",
+                "length": 175
+              },
+              {
+                "level": "10",
+                "name": "CITYSTZIP",
+                "pic": "X(039)",
+                "data_type": "alphanumeric",
+                "length": 39
+              },
+              {
+                "level": "88",
+                "name": "NO-CITYSTZIP",
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(035)",
+                "data_type": "alphanumeric",
+                "length": 35
+              },
+              {
+                "level": "05",
+                "name": "ADDR-FLD",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "HLD-RKRSNBR",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "HLD-RKRSNBR1",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "HLD-RKRSEMP",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "HLD-RKRSDBAS",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "HLD-RKRSADR1",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "HLD-RKRSADR2",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "HLD-RKRSCITY",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "HLD-RKRSTATE",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "HLD-RKRSZIP",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "HLD-RKFCNTRY",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "WS-MESSAGE",
+                "pic": "X(7)",
+                "data_type": "alphanumeric",
+                "length": 7,
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "WK-MISC-ALPHA-FLD",
+                "pic": "X(100)",
+                "data_type": "alphanumeric",
+                "length": 100,
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "WK-PNRISK-SIZ",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-RCD-NUM",
+                "pic": "S9(005)",
+                "data_type": "mixed",
+                "length": 5,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-REMAINDER",
+                "pic": "S9(001)",
+                "data_type": "mixed",
+                "length": 1,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-RPNUMBER",
+                "pic": "S9(008)",
+                "data_type": "mixed",
+                "length": 8,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-RPNUMBER-RD",
+                "redefines": "WK-RPNUMBER"
+              },
+              {
+                "level": "10",
+                "name": "WK-RPNUMBER-1",
+                "pic": "S9(006)",
+                "data_type": "mixed",
+                "length": 6
+              },
+              {
+                "level": "10",
+                "name": "WK-RPNUMBER-2",
+                "pic": "S9(002)",
+                "data_type": "mixed",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "INTER-RPNUMBER",
+                "pic": "X(008)",
+                "data_type": "alphanumeric",
+                "length": 8
+              },
+              {
+                "level": "05",
+                "name": "INTER-RPNUMBER-RD",
+                "redefines": "INTER-RPNUMBER"
+              },
+              {
+                "level": "05",
+                "name": "WK-SFL-PAG-NUM",
+                "pic": "S9(004)",
+                "data_type": "mixed",
+                "length": 4,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-EDIT-REP."
+              },
+              {
+                "level": "10",
+                "name": "EDIT-RPNUM-1",
+                "pic": "ZZZZZ9",
+                "data_type": "mixed",
+                "length": 1
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "-"
+              },
+              {
+                "level": "10",
+                "name": "EDIT-RPNUM-2",
+                "pic": "S9(002)",
+                "data_type": "mixed",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "WK-SFL05A-REP-DATA."
+              },
+              {
+                "level": "10",
+                "name": "WK-RPNUMBER-1",
+                "pic": "ZZZZZ9",
+                "data_type": "mixed",
+                "length": 1
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "-"
+              },
+              {
+                "level": "10",
+                "name": "WK-RPNUMBER-2",
+                "pic": "S9(002)",
+                "data_type": "mixed",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "X\"20\"."
+              },
+              {
+                "level": "10",
+                "name": "ADS-REP-STS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACE."
+              },
+              {
+                "level": "88",
+                "name": "ADS-REP",
+                "value": "X\"38\"."
+              },
+              {
+                "level": "88",
+                "name": "NOT-ADS-REP",
+                "value": "SPACE."
+              },
+              {
+                "level": "88",
+                "name": "SEC-RISK-ADS-REP",
+                "value": "X\"39\"."
+              },
+              {
+                "level": "88",
+                "name": "SEC-RISK-NOT-ADS-REP",
+                "value": "X\"21\"."
+              },
+              {
+                "level": "10",
+                "name": "RPDSPNAM",
+                "pic": "X(029)",
+                "data_type": "alphanumeric",
+                "length": 29
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "X\"20\"."
+              },
+              {
+                "level": "10",
+                "name": "RKRPSTS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "RKRPSTSD",
+                "pic": "Z9/99/9999",
+                "data_type": "mixed",
+                "length": 7
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "RPSTSRVU",
+                "pic": "X(010)",
+                "data_type": "alphanumeric",
+                "length": 10
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "RPSTSRVD",
+                "pic": "Z9/99/9999",
+                "data_type": "mixed",
+                "length": 7
+              },
+              {
+                "level": "05",
+                "name": "WK-SFL05A-REP-HDG-DATA."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(008)",
+                "data_type": "alphanumeric",
+                "length": 8,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(003)",
+                "data_type": "alphanumeric",
+                "length": 3,
+                "value": "Rep"
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(031)",
+                "data_type": "alphanumeric",
+                "length": 31,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(009)",
+                "data_type": "alphanumeric",
+                "length": 9,
+                "value": "IC Status"
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(004)",
+                "data_type": "alphanumeric",
+                "length": 4,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(015)",
+                "data_type": "alphanumeric",
+                "length": 15
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(006)",
+                "data_type": "alphanumeric",
+                "length": 6,
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "WK-SFL05A-RISK-DATA."
+              },
+              {
+                "level": "10",
+                "name": "PNRISK",
+                "pic": "X(012)",
+                "data_type": "alphanumeric",
+                "length": 12
+              },
+              {
+                "level": "10",
+                "name": "SAV-LIN-ATTRIB-STS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "SAV-LIN-ATTRIB",
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "KILL-LIN-ATTRIB",
+                "value": "X\"20\"."
+              },
+              {
+                "level": "10",
+                "name": "RISK-SEC-STS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACE."
+              },
+              {
+                "level": "88",
+                "name": "SEC-RISK",
+                "value": "X\"21\"."
+              },
+              {
+                "level": "88",
+                "name": "NOT-SEC-RISK",
+                "value": "SPACE."
+              },
+              {
+                "level": "10",
+                "name": "RKRSEMP",
+                "pic": "X(016)",
+                "data_type": "alphanumeric",
+                "length": 16
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "X\"20\"."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "RKRSCRTU",
+                "pic": "X(010)",
+                "data_type": "alphanumeric",
+                "length": 10
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "RKRSCRTD",
+                "pic": "Z9/99/9999",
+                "data_type": "mixed",
+                "length": 7
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "RKRSRVSU",
+                "pic": "X(010)",
+                "data_type": "alphanumeric",
+                "length": 10
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "RKRSRVSD",
+                "pic": "Z9/99/9999",
+                "data_type": "mixed",
+                "length": 7
+              },
+              {
+                "level": "05",
+                "name": "WK-SFL05A-RISK-HDG-DATA."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(004)",
+                "data_type": "alphanumeric",
+                "length": 4,
+                "value": "Risk"
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(011)",
+                "data_type": "alphanumeric",
+                "length": 11,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "CONTINUED-RISK-HDG",
+                "value": "(Continued)"
+              },
+              {
+                "level": "88",
+                "name": "NOT-CONTINUED-RISK-HDG",
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(017)",
+                "data_type": "alphanumeric",
+                "length": 17,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(017)",
+                "data_type": "alphanumeric",
+                "length": 17
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(005)",
+                "data_type": "alphanumeric",
+                "length": 5,
+                "value": "SPACES."
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(012)",
+                "data_type": "alphanumeric",
+                "length": 12,
+                "value": "Revised Date"
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X(009)",
+                "data_type": "alphanumeric",
+                "length": 9,
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "WK-SFL05A-SFL-SIZ",
+                "pic": "S9(004)",
+                "data_type": "mixed",
+                "length": 4,
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "WK-UNIMPORTANT",
+                "pic": "S9(005)",
+                "data_type": "mixed",
+                "length": 5,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "SFL05-MODE-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "SFL05-DROP-MODE",
+                "value": "1"
+              },
+              {
+                "level": "88",
+                "name": "SFL05-FOLD-MODE",
+                "value": "ZERO."
+              },
+              {
+                "level": "88",
+                "name": "SFL05-SAVE-MODE"
+              },
+              {
+                "level": "05",
+                "name": "CMLDCL20-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "CMLDCL20-OPEN",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "CMLDCL20-CLOSED",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CMLDCL40-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "CMLDCL40-OPEN",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "CMLDCL40-CLOSED",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CMLDCL60-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "CMLDCL60-OPEN",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "CMLDCL60-CLOSED",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CMLACL50-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "FIRST-READ-CMLACL50",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "CMLACL50-READ",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "FNCKEY-06-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "FNCKEY-06-HIT",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "FNCKEY-06-NOT-HIT",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CLFILDTE-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "CLFILDTE-EXISTS",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-CLFILDTE-EXISTS",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CLINJDTE-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "CLINJDTE-EXISTS",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-CLINJDTE-EXISTS",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "RKRSNBR-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "RKRSNBR-EXISTS",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-RKRSNBR-EXISTS",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "RKRSNBR-LOCAL-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "RKRSNBR-LOCAL-EXISTS",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-RKRSNBR-LOCAL-EXISTS",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "RISK-ADDRESS-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "RISK-ADDRESS-EXISTS",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-RISK-ADDRESS-EXISTS",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "OVRD-ADDRESS-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "OVRD-ADDRESS-EXISTS",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-OVRD-ADDRESS-EXISTS",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "RISK-HEADER-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "RISK-HEADER-EXISTS",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-RISK-HEADER-EXISTS",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "RKRSADR-STATUS-1-2",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "RKRSADR1-OOB-EXISTS",
+                "value": "A"
+              },
+              {
+                "level": "88",
+                "name": "RKRSADR2-OOB-EXISTS",
+                "value": "B"
+              },
+              {
+                "level": "88",
+                "name": "NO-OUT-OF-BUSINESS",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "RKRSMANN-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "RKRSMANN-EXISTS",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-RKRSMANN-EXISTS",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "RISK-ADDRESS-AUT",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "IN-RKADDRUPDT-TABLE",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NOT-IN-RKADDRUPDT-TABLE",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "DATE-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "SETTLE-DATE-REQUIRED",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-SETTLE-DATE-REQUIRED",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "REVISE-STATUS-02",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "REVISE-OPTION-02",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NOT-REVISE-OPTION-02",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CMFACL50-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "CMFACL50-CHG",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-CMFACL50-CHG",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "REP-PCN-TRACKING-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "REP-PCN-TRACKING",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NOT-REP-PCN-TRACKING",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "IR-MOTIONS-EXIST-STAT",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "IR-MOTIONS-EXIST",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-IR-MOTIONS-EXIST",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "DELETE-CMLACL50-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "N"
+              },
+              {
+                "level": "88",
+                "name": "CMLACL50-DELETE-OCCURRED",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-CMLACL50-DELETE-OCCURRED",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "INT-REP-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "INT-REP-NEEDED",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "INT-REP-NOT-NEEDED",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "INT-RPNUMBER-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "INT-RPNUMBER-EXIST",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "INT-RPNUMBER-NOT-EXIST",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "WS-CLAIM."
+              },
+              {
+                "level": "10",
+                "name": "CLPREFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "CLSUFFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "CLNUMBER",
+                "pic": "X(006)",
+                "data_type": "alphanumeric",
+                "length": 6
+              },
+              {
+                "level": "05",
+                "name": "FNCKEY-21-HIT",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "F21-NOT-HIT",
+                "value": "0"
+              },
+              {
+                "level": "88",
+                "name": "F21-HIT",
+                "value": "1"
+              },
+              {
+                "level": "05",
+                "name": "W-RISK",
+                "pic": "9(11)",
+                "data_type": "mixed",
+                "length": 11
+              },
+              {
+                "level": "05",
+                "name": "W-RISK-R",
+                "pic": "X(11)",
+                "data_type": "alphanumeric",
+                "length": 11,
+                "redefines": "W-RISK"
+              },
+              {
+                "level": "05",
+                "name": "RISK-ADDRESS-CHECK",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "RISK-ADDRESS-MATCH",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "RISK-ADDRESS-NO-MATCH",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CLBWCLOC-TABLE-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "IN-CLBWCLOC-TABLE",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NOT-IN-CLBWCLOC-TABLE",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CLPPLFLG-PL-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "CLPPLFLG-CHANGED-PL-Y",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "CLPPLFLG-CHANGED-PL-N",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CLPPLFLG-P-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "CLPPLFLG-CHANGED-P-Y",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "CLPPLFLG-CHANGED-P-N",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "PAPER-CHANGED-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "PAPER-CHANGED-Y",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "PAPER-CHANGED-N",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "BWCLOC-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "BWCLOC-FOUND",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "BWCLOC-NOT-FOUND",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CLTYPE-VALID-FLAG",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "CLTYPE-VALID",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "CLTYPE-NOT-VALID",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "WORK-CLPPLFLG",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "WRK-CLBWCLOC",
+                "pic": "X(080)",
+                "data_type": "alphanumeric",
+                "length": 80
+              },
+              {
+                "level": "05",
+                "name": "HLD-PAPER-STATUS",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "HLD-PNBWCLOC",
+                "pic": "X(041)",
+                "data_type": "alphanumeric",
+                "length": 41
+              },
+              {
+                "level": "05",
+                "name": "WRK-RKRSNBR",
+                "pic": "S9(011)",
+                "data_type": "mixed",
+                "length": 11
+              },
+              {
+                "level": "05",
+                "name": "NO-CHANGES-P-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "NO-CHANGES-P-YES",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NO-CHANGES-P-NO",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "W-CLBWCLOC."
+              },
+              {
+                "level": "10",
+                "name": "W-ADDR",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "W-SECT",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "W-AREA",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "W-PNCLBWCLOC."
+              },
+              {
+                "level": "10",
+                "name": "W-ADDR",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "-"
+              },
+              {
+                "level": "10",
+                "name": "W-SECT",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "-"
+              },
+              {
+                "level": "10",
+                "name": "W-AREA",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "POSX",
+                "pic": "S9(001)",
+                "data_type": "mixed",
+                "length": 1,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "NUM",
+                "pic": "9(001)",
+                "data_type": "mixed",
+                "length": 1,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "HYPHEN-CNT",
+                "pic": "S9(001)",
+                "data_type": "mixed",
+                "length": 1,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal",
+                "value": "ZEROS."
+              },
+              {
+                "level": "05",
+                "name": "PRV-MSGCNT",
+                "pic": "99",
+                "data_type": "numeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "F21-FOR-CODE1",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "CODE1-CHECK-ON",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "CODE1-CHECK-OFF",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CLINJDTE-AUT",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "SPACES."
+              },
+              {
+                "level": "88",
+                "name": "IN-CLINJDTEUP-TABLE",
+                "value": "Y"
+              },
+              {
+                "level": "88",
+                "name": "NOT-IN-CLINJDTEUP-TABLE",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "WS-CLINJDTE"
+              },
+              {
+                "level": "05",
+                "name": "RECAL-CLTOTAMT"
+              },
+              {
+                "level": "05",
+                "name": "WS-BWC-ADDR",
+                "pic": "X(081)",
+                "data_type": "alphanumeric",
+                "length": 81
+              },
+              {
+                "level": "05",
+                "name": "WS-CUR-ADDR",
+                "pic": "X(071)",
+                "data_type": "alphanumeric",
+                "length": 71
+              },
+              {
+                "level": "05",
+                "name": "WS-INP-ADDR",
+                "pic": "X(081)",
+                "data_type": "alphanumeric",
+                "length": 81
+              },
+              {
+                "level": "05",
+                "name": "WS-OUT-ADDR",
+                "pic": "X(081)",
+                "data_type": "alphanumeric",
+                "length": 81
+              },
+              {
+                "level": "05",
+                "name": "WS-OVR-ADDR",
+                "pic": "X(081)",
+                "data_type": "alphanumeric",
+                "length": 81
+              },
+              {
+                "level": "05",
+                "name": "SPACE-FLAG",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "88",
+                "name": "SPACE-FOUND",
+                "value": "S"
+              },
+              {
+                "level": "88",
+                "name": "NON-SPACE-FOUND",
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "SIZE-OUT-ADDR",
+                "pic": "9(003)",
+                "data_type": "mixed",
+                "length": 3
+              },
+              {
+                "level": "05",
+                "name": "LOOP",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3
+              },
+              {
+                "level": "05",
+                "name": "LOOP2",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3
+              },
+              {
+                "level": "05",
+                "name": "HLD-RPZIP5",
+                "pic": "X(005)",
+                "data_type": "alphanumeric",
+                "length": 5
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CMFHCL00-HOLD.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CMFHCL00-NEW.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CLAIMS-ENTERED.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLAIM1",
+                "pic": "X(011)",
+                "data_type": "alphanumeric",
+                "length": 11
+              },
+              {
+                "level": "05",
+                "name": "CLAIM2",
+                "pic": "X(011)",
+                "data_type": "alphanumeric",
+                "length": 11
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "REP-MSG-WORK.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "REP-PREFIX",
+                "pic": "9(006)",
+                "data_type": "mixed",
+                "length": 6
+              },
+              {
+                "level": "05",
+                "name": "REP-SUFFIX",
+                "pic": "9(002)",
+                "data_type": "mixed",
+                "length": 2
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "REP-RISK-MSG-DATA.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "REP-MSG-DATA."
+              },
+              {
+                "level": "10",
+                "name": "REP-PREFIX",
+                "pic": "X(006)",
+                "data_type": "alphanumeric",
+                "length": 6
+              },
+              {
+                "level": "10",
+                "name": "FILLER",
+                "pic": "X",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "-"
+              },
+              {
+                "level": "10",
+                "name": "REP-SUFFIX",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2
+              },
+              {
+                "level": "05",
+                "name": "RISK-MSG-DATA",
+                "pic": "X(011)",
+                "data_type": "alphanumeric",
+                "length": 11
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "HLD-CMFACL50",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "HLD-REP-ADDRESS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "HLD-REP-ADDRESS-FLDS."
+              },
+              {
+                "level": "10",
+                "name": "HLD-RPADDR01"
+              },
+              {
+                "level": "10",
+                "name": "HLD-RPADDR02"
+              },
+              {
+                "level": "10",
+                "name": "HLD-RPADDR03"
+              },
+              {
+                "level": "10",
+                "name": "HLD-RPCITY"
+              },
+              {
+                "level": "10",
+                "name": "HLD-RPSTATE"
+              },
+              {
+                "level": "10",
+                "name": "HLD-RPCNTY"
+              },
+              {
+                "level": "10",
+                "name": "HLD-RPFCNTRY"
+              },
+              {
+                "level": "10",
+                "name": "HLD-RPZIP"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "WS-CLTYPE.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "WS-CLTYPE1",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "05",
+                "name": "WS-CLTYPE2",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "05",
+                "name": "WS-CLTYPE3",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "05",
+                "name": "WS-CLTYPE4",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "WS-DOCKET-VARIABLES.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "EMP-DOCKETING-REP-CL",
+                "pic": "S9(008)",
+                "data_type": "mixed",
+                "length": 8
+              },
+              {
+                "level": "05",
+                "name": "DESIGNATED-STS-CL",
+                "pic": "1",
+                "data_type": "mixed",
+                "length": 0
+              },
+              {
+                "level": "05",
+                "name": "EMP-DOCKETING-REP-RL",
+                "pic": "S9(008)",
+                "data_type": "mixed",
+                "length": 8
+              },
+              {
+                "level": "05",
+                "name": "DESIGNATED-STS-RL",
+                "pic": "1",
+                "data_type": "mixed",
+                "length": 0
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CMLDCL50-CTRL.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER",
+                "value": "ZEROS."
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CMLDCL50-HOLD.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLPREFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLSUFFIX",
+                "value": "SPACES."
+              },
+              {
+                "level": "05",
+                "name": "CLNUMBER",
+                "value": "ZEROS."
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CMLDRK02-CTRL.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "RKRSNBR",
+                "value": "ZEROS."
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CMLDRK02-HOLD.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "RKRSNBR",
+                "value": "ZEROS."
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "DEFAULT-VALUES.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLDEATH",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CLSETTLE",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "N"
+              },
+              {
+                "level": "05",
+                "name": "CLINJDGN",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "I"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "FMT00-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "FMT00-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "FMT01-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "FMT01-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "FMT02-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "FMT02-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "SFL04-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "SFL04-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CTL04-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CTL04-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "SFL05-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "SFL05-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CTL05-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CTL05-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "SFL05A-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "SFL05A-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CTL05A-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CTL05A-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "SFL07-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "SFL07-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CTL07-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "CTL07-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "FMT98-INPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "FMT98-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "MSGSF-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "MSGCL-OUTPUT.",
+            "fields": []
+          },
+          {
+            "level": "01",
+            "name": "SFL-DSPY-KEYS-04.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CMSOCSEC"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-HDDN-KEYS-04.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "HDSOCSEC"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-NULL-KEYS-04.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CMSOCSEC"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-HOLD-FLDS-04.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "RECORD-NUMBER-04",
+                "pic": "9(005)",
+                "data_type": "mixed",
+                "length": 5,
+                "value": "ZEROES."
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-DSPY-KEYS-05.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLRPSTS"
+              },
+              {
+                "level": "05",
+                "name": "CLRPSTSD"
+              },
+              {
+                "level": "05",
+                "name": "RPNUMBER"
+              },
+              {
+                "level": "05",
+                "name": "CLRPREL"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-HDDN-KEYS-05.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "HDRPSTS"
+              },
+              {
+                "level": "05",
+                "name": "HDRPSTSD"
+              },
+              {
+                "level": "05",
+                "name": "HDNUMBER"
+              },
+              {
+                "level": "05",
+                "name": "HDRPREL"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-NULL-KEYS-05.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CLRPSTS"
+              },
+              {
+                "level": "05",
+                "name": "CLRPSTSD"
+              },
+              {
+                "level": "05",
+                "name": "RPNUMBER"
+              },
+              {
+                "level": "05",
+                "name": "CLRPREL"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-HOLD-FLDS-05.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "RECORD-NUMBER-05",
+                "pic": "9(005)",
+                "data_type": "mixed",
+                "length": 5,
+                "value": "ZEROES."
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-DSPY-KEYS-07.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "RKRSNBR"
+              },
+              {
+                "level": "05",
+                "name": "PNRISK"
+              },
+              {
+                "level": "05",
+                "name": "RKRSMANN"
+              },
+              {
+                "level": "05",
+                "name": "RKRSFLG"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-HDDN-KEYS-07.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "HDRSNBR"
+              },
+              {
+                "level": "05",
+                "name": "HDRISK"
+              },
+              {
+                "level": "05",
+                "name": "HDRSMANN"
+              },
+              {
+                "level": "05",
+                "name": "HDRSFLG"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-NULL-KEYS-07.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "RKRSNBR"
+              },
+              {
+                "level": "05",
+                "name": "PNRISK"
+              },
+              {
+                "level": "05",
+                "name": "RKRSMANN"
+              },
+              {
+                "level": "05",
+                "name": "RKRSFLG"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "SFL-HOLD-FLDS-07.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "RECORD-NUMBER-07",
+                "pic": "9(005)",
+                "data_type": "mixed",
+                "length": 5,
+                "value": "ZEROES."
+              }
+            ]
+          }
+        ],
+        "file_section": [
+          {
+            "fd_name": "CMLHCL00-FILE",
+            "statement": "FD  CMLHCL00-FILE"
+          },
+          {
+            "fd_name": "CMLHCL90-FILE",
+            "statement": "FD  CMLHCL90-FILE"
+          },
+          {
+            "fd_name": "CMLDCL20-FILE",
+            "statement": "FD  CMLDCL20-FILE"
+          },
+          {
+            "fd_name": "CMLDCL40-FILE",
+            "statement": "FD  CMLDCL40-FILE"
+          },
+          {
+            "fd_name": "CMLHCM00-FILE",
+            "statement": "FD  CMLHCM00-FILE"
+          },
+          {
+            "fd_name": "UTLMTB00-FILE",
+            "statement": "FD  UTLMTB00-FILE"
+          },
+          {
+            "fd_name": "XALHDS00-FILE",
+            "statement": "FD  XALHDS00-FILE"
+          },
+          {
+            "fd_name": "CMLMRP00-FILE",
+            "statement": "FD  CMLMRP00-FILE"
+          },
+          {
+            "fd_name": "XALMZC04-FILE",
+            "statement": "FD  XALMZC04-FILE"
+          },
+          {
+            "fd_name": "XALDDS01-FILE",
+            "statement": "FD  XALDDS01-FILE"
+          },
+          {
+            "fd_name": "CMLMLT00-FILE",
+            "statement": "FD  CMLMLT00-FILE"
+          },
+          {
+            "fd_name": "AMPTRQ00-FILE",
+            "statement": "FD  AMPTRQ00-FILE"
+          },
+          {
+            "fd_name": "CMLDMO00-FILE",
+            "statement": "FD  CMLDMO00-FILE"
+          },
+          {
+            "fd_name": "CMLHMO00-FILE",
+            "statement": "FD  CMLHMO00-FILE"
+          },
+          {
+            "fd_name": "CMJHCL00-FILE",
+            "statement": "FD  CMJHCL00-FILE"
+          },
+          {
+            "fd_name": "CMLTRQ00-FILE",
+            "statement": "FD  CMLTRQ00-FILE"
+          },
+          {
+            "fd_name": "CMLDCL50-FILE",
+            "statement": "FD  CMLDCL50-FILE"
+          },
+          {
+            "fd_name": "CMLACL50-FILE",
+            "statement": "FD  CMLACL50-FILE"
+          },
+          {
+            "fd_name": "CMLHRK00-FILE",
+            "statement": "FD  CMLHRK00-FILE"
+          },
+          {
+            "fd_name": "CMLDRK02-FILE",
+            "statement": "FD  CMLDRK02-FILE"
+          },
+          {
+            "fd_name": "CMLARK00-FILE",
+            "statement": "FD  CMLARK00-FILE"
+          },
+          {
+            "fd_name": "FMLHCF00-FILE",
+            "statement": "FD  FMLHCF00-FILE"
+          },
+          {
+            "fd_name": "XAJMLC02-FILE",
+            "statement": "FD  XAJMLC02-FILE"
+          },
+          {
+            "fd_name": "CMLDCL60-FILE",
+            "statement": "FD  CMLDCL60-FILE"
+          },
+          {
+            "fd_name": "CMLHRK05-FILE",
+            "statement": "FD  CMLHRK05-FILE"
+          },
+          {
+            "fd_name": "PANEL-FILE",
+            "statement": "FD  PANEL-FILE"
+          }
+        ],
+        "linkage_section": [],
+        "copybooks": [
+          {
+            "copybook_name": "STDPROCESS",
+            "statement": "COPY STDPROCESS OF QCPYCBL  SUPPRESS."
+          },
+          {
+            "copybook_name": "DDS-CMFHCL00",
+            "statement": "COPY DDS-CMFHCL00 OF CMLHCL00."
+          },
+          {
+            "copybook_name": "DDS-CMFHCL90",
+            "statement": "COPY DDS-CMFHCL90 OF CMLHCL90."
+          },
+          {
+            "copybook_name": "DDS-CMFDCL20",
+            "statement": "COPY DDS-CMFDCL20 OF CMLDCL20."
+          },
+          {
+            "copybook_name": "DDS-CMFDCL40",
+            "statement": "COPY DDS-CMFDCL40 OF CMLDCL40."
+          },
+          {
+            "copybook_name": "DDS-CMFHCM00",
+            "statement": "COPY DDS-CMFHCM00 OF CMLHCM00."
+          },
+          {
+            "copybook_name": "DDS-UTFMTB00",
+            "statement": "COPY DDS-UTFMTB00 OF UTLMTB00."
+          },
+          {
+            "copybook_name": "DDS-XAFHDS00",
+            "statement": "COPY DDS-XAFHDS00 OF XALHDS00."
+          },
+          {
+            "copybook_name": "DDS-CMFMRP00",
+            "statement": "COPY DDS-CMFMRP00 OF CMLMRP00."
+          },
+          {
+            "copybook_name": "DDS-XAFMZC00",
+            "statement": "COPY DDS-XAFMZC00 OF XALMZC04."
+          },
+          {
+            "copybook_name": "DDS-XAFDDS00",
+            "statement": "COPY DDS-XAFDDS00 OF XALDDS01."
+          },
+          {
+            "copybook_name": "DDS-CMFMLT00",
+            "statement": "COPY DDS-CMFMLT00 OF CMLMLT00."
+          },
+          {
+            "copybook_name": "DDS-AMFTRQ00",
+            "statement": "COPY DDS-AMFTRQ00 OF AMPTRQ00."
+          },
+          {
+            "copybook_name": "DDS-CMFDMO00",
+            "statement": "COPY DDS-CMFDMO00 OF CMLDMO00."
+          },
+          {
+            "copybook_name": "DDS-CMFHMO00",
+            "statement": "COPY DDS-CMFHMO00 OF CMLHMO00."
+          },
+          {
+            "copybook_name": "DDS-CMFHCL00",
+            "statement": "COPY DDS-CMFHCL00 OF CMJHCL00"
+          },
+          {
+            "copybook_name": "DDS-CMFTRQ00",
+            "statement": "COPY DDS-CMFTRQ00 OF CMLTRQ00."
+          },
+          {
+            "copybook_name": "DDS-CMFDCL50",
+            "statement": "COPY DDS-CMFDCL50 OF CMLDCL50."
+          },
+          {
+            "copybook_name": "DDS-CMFACL50",
+            "statement": "COPY DDS-CMFACL50 OF CMLACL50."
+          },
+          {
+            "copybook_name": "DDS-CMFHRK00",
+            "statement": "COPY DDS-CMFHRK00 OF CMLHRK00."
+          },
+          {
+            "copybook_name": "DDS-CMFDRK00",
+            "statement": "COPY DDS-CMFDRK00 OF CMLDRK02."
+          },
+          {
+            "copybook_name": "DDS-CMFARK00",
+            "statement": "COPY DDS-CMFARK00 OF CMLARK00."
+          },
+          {
+            "copybook_name": "DDS-FMFHCF00",
+            "statement": "COPY DDS-FMFHCF00 OF FMLHCF00."
+          },
+          {
+            "copybook_name": "DDS-XAFMLC00",
+            "statement": "COPY DDS-XAFMLC00 OF XAJMLC02."
+          },
+          {
+            "copybook_name": "DDS-CMFDCL60",
+            "statement": "COPY DDS-CMFDCL60 OF CMLDCL60."
+          },
+          {
+            "copybook_name": "DDS-CMFHRK00",
+            "statement": "COPY DDS-CMFHRK00 OF CMLHRK05."
+          },
+          {
+            "copybook_name": "KEYRCDMNT",
+            "statement": "COPY KEYRCDMNT  OF MODLLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "EXTSUPINF",
+            "statement": "COPY EXTSUPINF  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "DATEFLIP",
+            "statement": "COPY DATEFLIP   OF QCPYCBL."
+          },
+          {
+            "copybook_name": "LOCALDATA",
+            "statement": "COPY LOCALDATA  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTXCMS00L",
+            "statement": "COPY UTXCMS00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTXSSD00L",
+            "statement": "COPY UTXSSD00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSCP00L",
+            "statement": "COPY UTCSCP00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSPM00L",
+            "statement": "COPY UTCSPM00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSNT00L",
+            "statement": "COPY UTCSNT00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSNT10L",
+            "statement": "COPY UTCSNT10L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSRQ00L",
+            "statement": "COPY XACSRQ00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSCT00L",
+            "statement": "COPY XACSCT00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSCT10L",
+            "statement": "COPY XACSCT10L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "DDS-CMFHCL00",
+            "statement": "COPY DDS-CMFHCL00 OF CMLHCL00"
+          },
+          {
+            "copybook_name": "DDS-CMFDCL20",
+            "statement": "COPY DDS-CMFDCL20 OF CMLDCL20"
+          },
+          {
+            "copybook_name": "DDS-CMFDCL40",
+            "statement": "COPY DDS-CMFDCL40 OF CMLDCL40"
+          },
+          {
+            "copybook_name": "DDS-CMFDCL50",
+            "statement": "COPY DDS-CMFDCL50 OF CMLDCL50"
+          },
+          {
+            "copybook_name": "DDS-CMFHCL90",
+            "statement": "COPY DDS-CMFHCL90 OF CMLHCL90"
+          },
+          {
+            "copybook_name": "DDS-CMFHCL90",
+            "statement": "COPY DDS-CMFHCL90 OF CMLHCL90"
+          },
+          {
+            "copybook_name": "XACSCC00L",
+            "statement": "COPY XACSCC00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSSC00L",
+            "statement": "COPY CMCSSC00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSUL00L",
+            "statement": "COPY UTCSUL00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSRC10L",
+            "statement": "COPY XACSRC10L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSRC30L",
+            "statement": "COPY XACSRC30L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTXSFS00L",
+            "statement": "COPY UTXSFS00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSDC00L",
+            "statement": "COPY UTCSDC00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTXSRM00L",
+            "statement": "COPY UTXSRM00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTXSNC10L",
+            "statement": "COPY UTXSNC10L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSZC00L",
+            "statement": "COPY XACSZC00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSCV00L",
+            "statement": "COPY XACSCV00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSCV10L",
+            "statement": "COPY XACSCV10L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSCS00L",
+            "statement": "COPY XACSCS00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSCL01L",
+            "statement": "COPY CMCSCL01L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSRP10L",
+            "statement": "COPY CMCSRP10L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSCL10L",
+            "statement": "COPY CMCSCL10L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "F21WS",
+            "statement": "COPY F21WS      OF MODLLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "IMCSIR00L",
+            "statement": "COPY IMCSIR00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "IMCSIR10L",
+            "statement": "COPY IMCSIR10L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "FMCSPL00L",
+            "statement": "COPY FMCSPL00L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCPRP40L",
+            "statement": "COPY CMCPRP40L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSC100L",
+            "statement": "COPY UTCSC100L  OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSCL60L",
+            "statement": "COPY CMCSCL60L  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "DDS-FMT00-I",
+            "statement": "COPY DDS-FMT00-I   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-FMT00-O",
+            "statement": "COPY DDS-FMT00-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-FMT01-I",
+            "statement": "COPY DDS-FMT01-I   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-FMT01-O",
+            "statement": "COPY DDS-FMT01-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-FMT02-I",
+            "statement": "COPY DDS-FMT02-I   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-FMT02-O",
+            "statement": "COPY DDS-FMT02-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-SFL04-I",
+            "statement": "COPY DDS-SFL04-I   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-SFL04-O",
+            "statement": "COPY DDS-SFL04-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-CTL04-I",
+            "statement": "COPY DDS-CTL04-I   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-CTL04-O",
+            "statement": "COPY DDS-CTL04-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-SFL05-I",
+            "statement": "COPY DDS-SFL05-I   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-SFL05-O",
+            "statement": "COPY DDS-SFL05-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-CTL05-I",
+            "statement": "COPY DDS-CTL05-I   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-CTL05-O",
+            "statement": "COPY DDS-CTL05-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-SFL05A-I",
+            "statement": "COPY DDS-SFL05A-I  OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-SFL05A-O",
+            "statement": "COPY DDS-SFL05A-O  OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-CTL05A-I",
+            "statement": "COPY DDS-CTL05A-I  OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-CTL05A-O",
+            "statement": "COPY DDS-CTL05A-O  OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-SFL07-I",
+            "statement": "COPY DDS-SFL07-I   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-SFL07-O",
+            "statement": "COPY DDS-SFL07-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-CTL07-I",
+            "statement": "COPY DDS-CTL07-I   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-CTL07-O",
+            "statement": "COPY DDS-CTL07-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-FMT98-I",
+            "statement": "COPY DDS-FMT98-I   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-FMT98-O",
+            "statement": "COPY DDS-FMT98-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-MSGSF",
+            "statement": "COPY DDS-MSGSF     OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-MSGCL-O",
+            "statement": "COPY DDS-MSGCL-O   OF CMCMCL00."
+          },
+          {
+            "copybook_name": "DDS-SFL04-I",
+            "statement": "COPY DDS-SFL04-I   OF CMCMCL00"
+          },
+          {
+            "copybook_name": "DDS-SFL05-I",
+            "statement": "COPY DDS-SFL05-I   OF CMCMCL00"
+          },
+          {
+            "copybook_name": "DDS-SFL07-I",
+            "statement": "COPY DDS-SFL07-I   OF CMCMCL00"
+          },
+          {
+            "copybook_name": "UTCCSV00C",
+            "statement": "COPY UTCCSV00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTXCMS00C",
+            "statement": "COPY UTXCMS00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTXCMS10C",
+            "statement": "COPY UTXCMS10C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSCP00C",
+            "statement": "COPY UTCSCP00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTXSSD00C",
+            "statement": "COPY UTXSSD00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSPM00C",
+            "statement": "COPY UTCSPM00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSQM00C",
+            "statement": "COPY UTCSQM00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSCC00C",
+            "statement": "COPY XACSCC00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSRC10C",
+            "statement": "COPY XACSRC10C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSDC00C",
+            "statement": "COPY UTCSDC00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCWNT00C",
+            "statement": "COPY UTCWNT00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSCL01C",
+            "statement": "COPY CMCSCL01C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSCL10C",
+            "statement": "COPY CMCSCL10C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "IMCSIR00C",
+            "statement": "COPY IMCSIR00C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "IMCSIR10C",
+            "statement": "COPY IMCSIR10C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCPRP40C",
+            "statement": "COPY CMCPRP40C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "CMCSCL60C",
+            "statement": "COPY CMCSCL60C  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "F21PRC",
+            "statement": "COPY F21PRC     OF MODLLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "USRSPCCTL",
+            "statement": "COPY USRSPCCTL  OF QCPYCBL."
+          },
+          {
+            "copybook_name": "XACSCT10C",
+            "statement": "COPY XACSCT10C  OF QCPYCBL."
+          }
+        ]
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTCSC101L.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 0,
+          "total_01_levels": 0,
+          "total_copybooks": 0,
+          "total_fd_entries": 0
+        },
+        "working_storage": [],
+        "file_section": [],
+        "linkage_section": [],
+        "copybooks": []
+      }
+    },
+    {
+      "file_path": "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+      "data_structures": {
+        "summary": {
+          "total_fields": 53,
+          "total_01_levels": 6,
+          "total_copybooks": 4,
+          "total_fd_entries": 1
+        },
+        "working_storage": [
+          {
+            "level": "01",
+            "name": "SPECIAL-CHARACTERS",
+            "fields": [
+              {
+                "level": "88",
+                "name": "SPECIAL-CHARACTER",
+                "value": " "
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CASE-TRANSLATION.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Aa"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Bb"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Cc"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Dd"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Ee"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Ff"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Gg"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Hh"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Ii"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Jj"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Kk"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Ll"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Mm"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Nn"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Oo"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Pp"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Qq"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Rr"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Ss"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Tt"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Uu"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Vv"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Ww"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Xx"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Yy"
+              },
+              {
+                "level": "05",
+                "name": "FILLER",
+                "pic": "X(002)",
+                "data_type": "alphanumeric",
+                "length": 2,
+                "value": "Zz"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "CASE-TRANSLATION-RD",
+            "fields": [
+              {
+                "level": "05",
+                "name": "CASE-TABLE",
+                "occurs": 26,
+                "is_array": true
+              },
+              {
+                "level": "10",
+                "name": "UPPER-CASE",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "10",
+                "name": "LOWER-CASE",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "FILE-OPENS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "UTILTB00-STATUS",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1,
+                "value": "0"
+              },
+              {
+                "level": "88",
+                "name": "UTLMTB00-CLOSED",
+                "value": "0"
+              },
+              {
+                "level": "88",
+                "name": "UTLMTB00-OPENED",
+                "value": "1"
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "UPPER-CASE-WORDS.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "UC-TABLE",
+                "occurs": 250,
+                "is_array": true
+              },
+              {
+                "level": "10",
+                "name": "LC-WORD",
+                "pic": "X(10)",
+                "data_type": "alphanumeric",
+                "length": 10
+              },
+              {
+                "level": "10",
+                "name": "UC-TYPE",
+                "pic": "X(06)",
+                "data_type": "alphanumeric",
+                "length": 6
+              },
+              {
+                "level": "88",
+                "name": "WHOLE-WORD",
+                "value": "*WHOLE"
+              },
+              {
+                "level": "88",
+                "name": "PARTIAL-WORD",
+                "value": "*PART "
+              },
+              {
+                "level": "10",
+                "name": "UC-WORD",
+                "pic": "X(10)",
+                "data_type": "alphanumeric",
+                "length": 10
+              },
+              {
+                "level": "10",
+                "name": "UC-NEXT-CHAR",
+                "pic": "X(06)",
+                "data_type": "alphanumeric",
+                "length": 6
+              },
+              {
+                "level": "88",
+                "name": "NEXT-CHAR-UPPER",
+                "value": "*UPPER"
+              },
+              {
+                "level": "88",
+                "name": "NEXT-CHAR-LOWER",
+                "value": "*LOWER"
+              },
+              {
+                "level": "88",
+                "name": "NEXT-CHAR-SAME",
+                "value": "*SAME "
+              }
+            ]
+          },
+          {
+            "level": "01",
+            "name": "QCLSCAN-DATA.",
+            "fields": [
+              {
+                "level": "05",
+                "name": "QCLS-STRING",
+                "pic": "X(050)",
+                "data_type": "alphanumeric",
+                "length": 50
+              },
+              {
+                "level": "05",
+                "name": "QCLS-STRLEN",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal"
+              },
+              {
+                "level": "05",
+                "name": "QCLS-STRPOS",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal"
+              },
+              {
+                "level": "05",
+                "name": "QCLS-PATTERN",
+                "pic": "X(010)",
+                "data_type": "alphanumeric",
+                "length": 10
+              },
+              {
+                "level": "05",
+                "name": "QCLS-PATLEN",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal"
+              },
+              {
+                "level": "05",
+                "name": "QCLS-TRANSLATE",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "05",
+                "name": "QCLS-TRIM",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "05",
+                "name": "QCLS-WILD",
+                "pic": "X(001)",
+                "data_type": "alphanumeric",
+                "length": 1
+              },
+              {
+                "level": "05",
+                "name": "QCLS-RESULT",
+                "pic": "S9(003)",
+                "data_type": "mixed",
+                "length": 3,
+                "usage": "COMP-3",
+                "storage_type": "packed_decimal"
+              },
+              {
+                "level": "88",
+                "name": "PATTERN-FOUND",
+                "value": "001"
+              }
+            ]
+          }
+        ],
+        "file_section": [
+          {
+            "fd_name": "UTLMTB00-FILE",
+            "statement": "FD  UTLMTB00-FILE"
+          }
+        ],
+        "linkage_section": [],
+        "copybooks": [
+          {
+            "copybook_name": "DDS-UTFMTB00",
+            "statement": "COPY DDS-UTFMTB00 OF UTLMTB00."
+          },
+          {
+            "copybook_name": "STATUSCODE",
+            "statement": "COPY STATUSCODE OF UTILLIB-QCPYCBL  SUPPRESS."
+          },
+          {
+            "copybook_name": "UTXSFS00L",
+            "statement": "COPY UTXSFS00L  OF UTILLIB-QCPYCBL."
+          },
+          {
+            "copybook_name": "UTCSUL10L",
+            "statement": "COPY UTCSUL10L  OF UTILLIB-QCPYCBL."
+          }
+        ]
+      }
+    }
+  ]
+}

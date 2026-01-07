@@ -1,0 +1,10 @@
+{
+  "FunctionName": "DataAnalysisV2RegexDataExtractor",
+  "Runtime": "python3.11",
+  "Handler": "regex_data_extractor_v2_handler.lambda_handler",
+  "Timeout": 120,
+  "MemorySize": 512,
+  "PackageType": "Zip",
+  "Environment": null,
+  "Layers": null
+}

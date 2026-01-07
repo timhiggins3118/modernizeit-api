@@ -1,0 +1,1 @@
+{"note": "This flow does not use Step Functions. Direct Lambda invocation from API Gateway."}

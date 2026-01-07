@@ -1,0 +1,28 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "UTCSDC00L.CBL",
+  "timestamp": "2025-11-06T16:41:18.253285Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "estimated_tokens": 0
+  },
+  "program_level": {
+    "purpose": "This is a COBOL copybook that defines data structures for date processing and conversion between different date formats (Gregorian, Julian) with validation rules",
+    "content": "Contains structured data definitions for date handling including: Gregorian dates (MMDDCCYY format), Julian dates, alphabetic date representations, numeric date components, and control flags for date operations. Includes validation rules via level-88 condition names",
+    "usage": "This copybook is likely included in other COBOL programs that need to perform date manipulations, validations, or conversions. The UTCSDC00 prefix suggests it's part of a utility/common services module",
+    "dependencies": [
+      "UTCSDC00 - Main program that likely uses this copybook"
+    ],
+    "modernization_approach": "1. Create a modern Date Utility class/module that encapsulates this functionality\n2. Replace COBOL-specific data structures with native date objects in target language\n3. Maintain validation rules as business logic\n4. Consider using standard date libraries (e.g., Java's LocalDate, JavaScript's Date)\n5. Preserve business rules for date range validations (1901-2099)",
+    "complexity": "MEDIUM",
+    "complexity_reasoning": "While the structure is straightforward, it contains numerous business rules and validation conditions that must be carefully preserved. The multiple date format support and century handling logic adds complexity that must be carefully tested during modernization"
+  },
+  "paragraphs": [],
+  "paragraph_count": 0
+}

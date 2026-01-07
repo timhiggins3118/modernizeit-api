@@ -1,0 +1,399 @@
+{
+  "by_program": [
+    {
+      "program": "IBMi-Cobol/Cobol/CMCMCL00.CBL",
+      "fan_in": 0,
+      "fan_out": 80,
+      "coupling_factor": 0.465,
+      "cohesion_score": 0.0,
+      "classification": "Medium Coupling"
+    },
+    {
+      "program": "UTCSNT00",
+      "fan_in": 17,
+      "fan_out": 0,
+      "coupling_factor": 0.099,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "UTCSUL00",
+      "fan_in": 13,
+      "fan_out": 0,
+      "coupling_factor": 0.076,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "QCLSCAN",
+      "fan_in": 9,
+      "fan_out": 0,
+      "coupling_factor": 0.052,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "XACSRC10",
+      "fan_in": 8,
+      "fan_out": 0,
+      "coupling_factor": 0.047,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/DICPCC00.CBL",
+      "fan_in": 0,
+      "fan_out": 6,
+      "coupling_factor": 0.035,
+      "cohesion_score": 0.4,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "XACSCT00",
+      "fan_in": 6,
+      "fan_out": 0,
+      "coupling_factor": 0.035,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "CMCSSC00",
+      "fan_in": 5,
+      "fan_out": 0,
+      "coupling_factor": 0.029,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "XACSCC00",
+      "fan_in": 4,
+      "fan_out": 0,
+      "coupling_factor": 0.023,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "UTXSNC10",
+      "fan_in": 3,
+      "fan_out": 0,
+      "coupling_factor": 0.017,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "UTXSFS00",
+      "fan_in": 3,
+      "fan_out": 0,
+      "coupling_factor": 0.017,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/UTCSUL10.CBL",
+      "fan_in": 0,
+      "fan_out": 3,
+      "coupling_factor": 0.017,
+      "cohesion_score": 0.7,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "UTCSDC00",
+      "fan_in": 2,
+      "fan_out": 0,
+      "coupling_factor": 0.012,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "UTXSRM00",
+      "fan_in": 2,
+      "fan_out": 0,
+      "coupling_factor": 0.012,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "XACSZC00",
+      "fan_in": 2,
+      "fan_out": 0,
+      "coupling_factor": 0.012,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "XACSRC30",
+      "fan_in": 2,
+      "fan_out": 0,
+      "coupling_factor": 0.012,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "UTXSC100",
+      "fan_in": 2,
+      "fan_out": 0,
+      "coupling_factor": 0.012,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/CMCSRP00C.CBL",
+      "fan_in": 0,
+      "fan_out": 1,
+      "coupling_factor": 0.006,
+      "cohesion_score": 0.9,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "CMCSRP00",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/CMCSCL50C.CBL",
+      "fan_in": 0,
+      "fan_out": 1,
+      "coupling_factor": 0.006,
+      "cohesion_score": 0.9,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "CMCSCL50",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/UTCSDC00C.CBL",
+      "fan_in": 0,
+      "fan_out": 1,
+      "coupling_factor": 0.006,
+      "cohesion_score": 0.9,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "UTCSNG00",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "XACSCV00",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "XACSCV10",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "FMCSPL00",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "XACSRQ00",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IMCSIR00",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "UTCSNT10",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IMCSIR10",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "CMCSRP72",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "CMCSRP73",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "CMCSRP10",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "UTXCEF00",
+      "fan_in": 1,
+      "fan_out": 0,
+      "coupling_factor": 0.006,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/STATUSCODE.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/CMCSCL50.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/UTCSDC00L.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/ADCPSH21L.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/DATEFLIP.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/DIPWCC00.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/DIPWCC01.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/UTCSUL10L.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/CMCSCL50L.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/XACSCC00L.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/UTXSFS00L.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/CMCSRP00L.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/ADCPSH21.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    },
+    {
+      "program": "IBMi-Cobol/Cobol/UTCSC101L.CBL",
+      "fan_in": 0,
+      "fan_out": 0,
+      "coupling_factor": 0.0,
+      "cohesion_score": 1.0,
+      "classification": "Low Coupling"
+    }
+  ],
+  "overall": {
+    "total_programs": 48,
+    "average_fan_in": 1.92,
+    "average_fan_out": 1.92,
+    "average_coupling": 0.022,
+    "high_coupling_count": 0,
+    "medium_coupling_count": 1,
+    "low_coupling_count": 47
+  },
+  "generated_at": "2025-11-06T14:36:04.641288+00:00",
+  "source_job_id": "dmv2_job_0U812_TestApp01_1762439738_3581cb90"
+}

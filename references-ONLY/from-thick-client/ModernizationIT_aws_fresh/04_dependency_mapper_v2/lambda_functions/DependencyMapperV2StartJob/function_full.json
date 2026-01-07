@@ -1,0 +1,56 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "812885b7-2f3f-486c-8c8d-e78c3c7ad374",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 29 Oct 2025 15:10:31 GMT",
+      "content-type": "application/json",
+      "content-length": "2824",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "812885b7-2f3f-486c-8c8d-e78c3c7ad374"
+    },
+    "RetryAttempts": 0
+  },
+  "Configuration": {
+    "FunctionName": "DependencyMapperV2StartJob",
+    "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:DependencyMapperV2StartJob",
+    "Runtime": "python3.11",
+    "Role": "arn:aws:iam::376129851858:role/BedrockAgentRole-CodeRefactor",
+    "Handler": "start_dependency_mapper_v2_handler.lambda_handler",
+    "CodeSize": 2625,
+    "Description": "Dependency Mapper V2 - Start Job API",
+    "Timeout": 300,
+    "MemorySize": 512,
+    "LastModified": "2025-10-06T11:50:58.000+0000",
+    "CodeSha256": "Zy6dRfvW3qDhT3tZv4+USfE56M1UUU3u3ZEl0dqyOWc=",
+    "Version": "$LATEST",
+    "TracingConfig": {
+      "Mode": "PassThrough"
+    },
+    "RevisionId": "efbbfc05-e732-4d30-bd7b-4ea887e770cd",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+      "x86_64"
+    ],
+    "EphemeralStorage": {
+      "Size": 512
+    },
+    "SnapStart": {
+      "ApplyOn": "None",
+      "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+      "RuntimeVersionArn": "arn:aws:lambda:us-east-1::runtime:d6935992cddc0c573a0cb7ac0214699a5676aefd38a43d64192dce8a044a3724"
+    },
+    "LoggingConfig": {
+      "LogFormat": "Text",
+      "LogGroup": "/aws/lambda/DependencyMapperV2StartJob"
+    }
+  },
+  "Code": {
+    "RepositoryType": "S3",
+    "Location": "https://prod-iad-c1-djusa-tasks.s3.us-east-1.amazonaws.com/snapshots/376129851858/DependencyMapperV2StartJob-4a6edd63-3aa9-4889-8042-22bb43eef9d0?versionId=ZAO1fwe7qwyBpjz0UbUlS3Sq_XJv1hmq&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB8aCXVzLWVhc3QtMSJHMEUCIQCD%2BIJzbQHGKR7TLC4yUg5PDpqUJsxkzcLBVfdpB3WytAIgU5jnT7oZ2fkSp%2Bm346S3HiHokFvgKhcPAy1BaH%2FycGkqlAII2P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAEGgw0NzkyMzMwMjUzNzkiDJDRYQxqrddDwyZRfSroAc%2ByEL6i03420tBDA71T90otJuFBMh3TnYl4QN9iVbJJWYF9QRoTDR2LznndOzgju1X7gec3R%2BxhdLLtZF6Cf%2BjQBVLIjIaSp6pEiaFw7eaptU3aFc8YgvShVDe7WQJi4lRvAUOsumOXN3rCTdwmVjSMGHacnXbFkmzRmUheT7Xd7WP0DBZwt4s6s3YTph49H6X0nIL40CV4Q4HryInT1ER8YsezVfMLxwX9sUJ7Dyv8ZLOS%2FF4LhB7tR8fRHuW4sPWSOKDNPY7poPgyW0asGCxNpqdi0wnMf0SLiOhjBQ22RsrZytk%2BC4Yw2s6IyAY6jQE%2BBjqS%2F0AOWFKyTLLfrW3BBZ0YiUm7Lsq6U2w6s94kH0a5Is7VioYpy5dFRClou3ace%2FV3xd1nPp%2Btv7Bs2kCM4zdQDErhoTKSXs61fqFfBYe41%2BU8hWdPemzTHxxKxtdRU8esxbzKv9VT7J6XFYoKkXC12dbEhGlSvtRtigWnxC28RmFhkWsGEzfDuPQ%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251029T151031Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIAW7FEDUVRRZ2GNNVO%2F20251029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=679305bd67d19cf70503235d6f70bdf772f6abe413204fc92929c98251d0775d"
+  }
+}

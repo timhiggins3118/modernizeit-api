@@ -1,0 +1,44 @@
+{
+    "Configuration": {
+        "FunctionName": "CodeAnalysisV2StatusAPI",
+        "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:CodeAnalysisV2StatusAPI",
+        "Runtime": "python3.11",
+        "Role": "arn:aws:iam::376129851858:role/BedrockAgentRole-CodeRefactor",
+        "Handler": "status_api_handler.lambda_handler",
+        "CodeSize": 1714,
+        "Description": "Code Analysis V2 - Status API",
+        "Timeout": 30,
+        "MemorySize": 256,
+        "LastModified": "2025-10-01T21:41:25.321+0000",
+        "CodeSha256": "My9kWtyY6QE8xRb5Y4oPJhWu8ra2pyBDV5uEFjLjvtk=",
+        "Version": "$LATEST",
+        "TracingConfig": {
+            "Mode": "PassThrough"
+        },
+        "RevisionId": "51377097-4b9f-4e80-b755-57b492ce9521",
+        "State": "Active",
+        "LastUpdateStatus": "Successful",
+        "PackageType": "Zip",
+        "Architectures": [
+            "x86_64"
+        ],
+        "EphemeralStorage": {
+            "Size": 512
+        },
+        "SnapStart": {
+            "ApplyOn": "None",
+            "OptimizationStatus": "Off"
+        },
+        "RuntimeVersionConfig": {
+            "RuntimeVersionArn": "arn:aws:lambda:us-east-1::runtime:d6935992cddc0c573a0cb7ac0214699a5676aefd38a43d64192dce8a044a3724"
+        },
+        "LoggingConfig": {
+            "LogFormat": "Text",
+            "LogGroup": "/aws/lambda/CodeAnalysisV2StatusAPI"
+        }
+    },
+    "Code": {
+        "RepositoryType": "S3",
+        "Location": "https://prod-iad-c1-djusa-tasks.s3.us-east-1.amazonaws.com/snapshots/376129851858/CodeAnalysisV2StatusAPI-c4a64171-1eb9-4f3f-a7f6-a0d0bfb314eb?versionId=47uUK3kjqn92AyPFSH1PLe7XtG8vI6J6&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB8aCXVzLWVhc3QtMSJGMEQCIEf8lfqEgtzFUsDb3yjE9Ute292m8yJTzo3C5s1ALRMbAiBmGtRyvTehjdHBFrclwKkXtjb%2BvJGGV04xDDUYWPep4CqUAgjY%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAQaDDQ3OTIzMzAyNTM3OSIMRuMwwkGytfnN59ZfKugB4WRNbG1g%2BhBOsJx2ZXgWT7oWCYlr26HqYh%2F5jNNHH60Xyu49qvONYFCpXb0Zas0%2B8GfCPoMnJV7m3sZ0wYSKFMcTxRw7uTc7mynIv6ZZNER29nA24nOFNBb53HFZi0ZNBMOC7zrimsEWaHrHd2q%2BqV9I%2FE%2BQAhx1RL93iHnURfS2%2B7rgh5eYzTvdKHhLhUDdfGmWpqV7%2BVSeHC3jjJI9fY52INPyEVNeYkBtTxqz%2FiQ3ORqR6y6e%2F28lMeh1St3bpb1iQp1xymujJxARpl0%2F%2FQZ4y9ZHYwMjTaUcWRJEbFp4a%2BDzMb1KCTDUy4jIBjqOAQ8Kap4g7vldXVP9zKVS9ayOTnrWsrduZPazXkqhnB8rZhV%2BWyyv0YkvgmHsTcnF%2FCsI9ATPNhluL7cNtb%2BYmL9iO8NSgcx%2Fp%2Bkiifi2Vm0fZGPEB5g090qly0tBPafL5781qPoxYUyioX0%2Bfii2qjpl%2FJQrZ3cxq5N3QmKjQVVDKWlgfXJWTBDlsYUCUKE%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251029T150521Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIAW7FEDUVRTDHGIMOX%2F20251029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=416de0cf081146213ea602f0e7654a15114840c4f19cda16d3207d262e31d3ef"
+    }
+}

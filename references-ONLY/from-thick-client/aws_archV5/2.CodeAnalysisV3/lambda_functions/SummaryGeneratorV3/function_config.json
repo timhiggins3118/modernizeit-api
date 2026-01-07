@@ -1,0 +1,33 @@
+{
+    "FunctionName": "SummaryGeneratorV3",
+    "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:SummaryGeneratorV3",
+    "Role": "arn:aws:iam::376129851858:role/BedrockTimestreamLambdaRole",
+    "CodeSize": 0,
+    "Description": "",
+    "Timeout": 60,
+    "MemorySize": 512,
+    "LastModified": "2025-11-06T14:05:54.000+0000",
+    "CodeSha256": "cf6cbdea9daa423fe8bb539a14c360854916e27f69ccbd77870311a78a15b6a6",
+    "Version": "$LATEST",
+    "TracingConfig": {
+        "Mode": "PassThrough"
+    },
+    "RevisionId": "945f1d89-4b80-47d4-9500-aa1decba6d3a",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Image",
+    "Architectures": [
+        "x86_64"
+    ],
+    "EphemeralStorage": {
+        "Size": 512
+    },
+    "SnapStart": {
+        "ApplyOn": "None",
+        "OptimizationStatus": "Off"
+    },
+    "LoggingConfig": {
+        "LogFormat": "Text",
+        "LogGroup": "/aws/lambda/SummaryGeneratorV3"
+    }
+}

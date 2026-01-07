@@ -1,0 +1,11 @@
+{
+  "source_hash": "9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74",
+  "generated_at": "2025-11-06T16:39:50.322063+00:00",
+  "mappings_created": [
+    "cobol_to_java.json"
+  ],
+  "detected_languages": [
+    "cobol"
+  ],
+  "cobol_file_count": 20
+}

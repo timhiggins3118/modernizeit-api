@@ -1,0 +1,314 @@
+{
+  "Comment": "Code Refactor V2 Workflow - With AI Batching for Recipe Generation",
+  "StartAt": "CaptureStartTime",
+  "States": {
+    "CaptureStartTime": {
+      "Type": "Pass",
+      "Comment": "Capture workflow start time",
+      "Parameters": {
+        "started_at.$": "$$.State.EnteredTime"
+      },
+      "ResultPath": "$.workflow_metadata",
+      "Next": "UpdateStatusRunning"
+    },
+    "UpdateStatusRunning": {
+      "Type": "Task",
+      "Comment": "Update job status to running",
+      "Resource": "arn:aws:states:::aws-sdk:s3:putObject",
+      "Parameters": {
+        "Bucket": "code-transformation-v2",
+        "Key.$": "States.Format('{}/{}/code_refactor_v2/jobs/{}/status.json', $.scout_account_id, $.application_name, $.job_id)",
+        "Body": {
+          "state": "running",
+          "started_at.$": "$.workflow_metadata.started_at",
+          "phase": "pattern_detection",
+          "message": "Detecting refactoring patterns..."
+        },
+        "ContentType": "application/json"
+      },
+      "ResultPath": "$.status_update_result",
+      "Next": "ParallelPatternDetection"
+    },
+    "ParallelPatternDetection": {
+      "Type": "Parallel",
+      "Comment": "Run Regex, AST, and AI pattern detectors in parallel",
+      "Branches": [
+        {
+          "StartAt": "RegexPatternDetector",
+          "States": {
+            "RegexPatternDetector": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::lambda:invoke",
+              "Parameters": {
+                "FunctionName": "RefactorV2RegexPatternDetector",
+                "Payload": {
+                  "job_id.$": "$.job_id",
+                  "scout_account_id.$": "$.scout_account_id",
+                  "application_name.$": "$.application_name",
+                  "source_hash.$": "$.source_hash"
+                }
+              },
+              "Retry": [
+                {
+                  "ErrorEquals": [
+                    "States.ALL"
+                  ],
+                  "IntervalSeconds": 2,
+                  "MaxAttempts": 3,
+                  "BackoffRate": 2.0
+                }
+              ],
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "ASTPatternDetector",
+          "States": {
+            "ASTPatternDetector": {
+              "Type": "Task",
+              "Resource": "arn:aws:states:::lambda:invoke",
+              "Parameters": {
+                "FunctionName": "RefactorV2ASTPatternDetector",
+                "Payload": {
+                  "job_id.$": "$.job_id",
+                  "scout_account_id.$": "$.scout_account_id",
+                  "application_name.$": "$.application_name",
+                  "source_hash.$": "$.source_hash"
+                }
+              },
+              "Retry": [
+                {
+                  "ErrorEquals": [
+                    "States.ALL"
+                  ],
+                  "IntervalSeconds": 2,
+                  "MaxAttempts": 3,
+                  "BackoffRate": 2.0
+                }
+              ],
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "PrepareRefactorBatches",
+          "States": {
+            "PrepareRefactorBatches": {
+              "Type": "Task",
+              "Comment": "Split files into batches for AI pattern analysis",
+              "Resource": "arn:aws:states:::lambda:invoke",
+              "Parameters": {
+                "FunctionName": "RefactorV2PrepareRefactorBatches",
+                "Payload": {
+                  "job_id.$": "$.job_id",
+                  "scout_account_id.$": "$.scout_account_id",
+                  "application_name.$": "$.application_name",
+                  "source_hash.$": "$.source_hash"
+                }
+              },
+              "ResultPath": "$.batch_preparation",
+              "Next": "CheckBatchCount"
+            },
+            "CheckBatchCount": {
+              "Type": "Choice",
+              "Comment": "Check if there are batches to process",
+              "Choices": [
+                {
+                  "Variable": "$.batch_preparation.Payload.body.total_batches",
+                  "NumericGreaterThan": 0,
+                  "Next": "RefactorAnalyzerMap"
+                }
+              ],
+              "Default": "SkipAIPatternAnalysis"
+            },
+            "RefactorAnalyzerMap": {
+              "Type": "Map",
+              "Comment": "Process AI pattern batches in parallel",
+              "MaxConcurrency": 40,
+              "ItemsPath": "$.batch_preparation.Payload.body.batches",
+              "Parameters": {
+                "job_id.$": "$.job_id",
+                "scout_account_id.$": "$.scout_account_id",
+                "application_name.$": "$.application_name",
+                "source_hash.$": "$.source_hash",
+                "batch.$": "$$.Map.Item.Value"
+              },
+              "Iterator": {
+                "StartAt": "ProcessRefactorBatch",
+                "States": {
+                  "ProcessRefactorBatch": {
+                    "Type": "Task",
+                    "Resource": "arn:aws:states:::lambda:invoke",
+                    "Parameters": {
+                      "FunctionName": "RefactorV2BedrockAnalyzerBatch",
+                      "Payload.$": "$"
+                    },
+                    "Retry": [
+                      {
+                        "ErrorEquals": [
+                          "States.ALL"
+                        ],
+                        "IntervalSeconds": 5,
+                        "MaxAttempts": 3,
+                        "BackoffRate": 2.0
+                      }
+                    ],
+                    "End": true
+                  }
+                }
+              },
+              "ResultPath": "$.batch_results",
+              "Next": "MergeRefactorBatches"
+            },
+            "MergeRefactorBatches": {
+              "Type": "Task",
+              "Comment": "Merge all AI pattern batch results",
+              "Resource": "arn:aws:states:::lambda:invoke",
+              "Parameters": {
+                "FunctionName": "RefactorV2MergeRefactorBatches",
+                "Payload": {
+                  "job_id.$": "$.job_id",
+                  "scout_account_id.$": "$.scout_account_id",
+                  "application_name.$": "$.application_name",
+                  "source_hash.$": "$.source_hash",
+                  "total_batches.$": "$.batch_preparation.Payload.body.total_batches",
+                  "total_files.$": "$.batch_preparation.Payload.body.total_files"
+                }
+              },
+              "End": true
+            },
+            "SkipAIPatternAnalysis": {
+              "Type": "Pass",
+              "Comment": "No files to analyze with AI",
+              "Result": {
+                "statusCode": 200,
+                "body": {
+                  "status": "skipped",
+                  "message": "No COBOL files for AI pattern analysis"
+                }
+              },
+              "End": true
+            }
+          }
+        }
+      ],
+      "ResultPath": "$.parallel_results",
+      "Next": "RecipeGenerator",
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "HandlePatternDetectionError",
+          "ResultPath": "$.error"
+        }
+      ]
+    },
+    "RecipeGenerator": {
+      "Type": "Task",
+      "Comment": "Generate refactoring recipes from all pattern sources",
+      "Resource": "arn:aws:states:::lambda:invoke",
+      "Parameters": {
+        "FunctionName": "RefactorV2RecipeGenerator",
+        "Payload": {
+          "job_id.$": "$.job_id",
+          "scout_account_id.$": "$.scout_account_id",
+          "application_name.$": "$.application_name",
+          "source_hash.$": "$.source_hash",
+          "regex_status": "completed",
+          "ast_status": "completed",
+          "ai_status": "completed"
+        }
+      },
+      "ResultPath": "$.recipe_result",
+      "Next": "UpdateStatusCompleted",
+      "Retry": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "IntervalSeconds": 2,
+          "MaxAttempts": 3,
+          "BackoffRate": 2.0
+        }
+      ],
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "HandleRecipeGenerationError",
+          "ResultPath": "$.error"
+        }
+      ]
+    },
+    "UpdateStatusCompleted": {
+      "Type": "Task",
+      "Comment": "Update job status to completed",
+      "Resource": "arn:aws:states:::aws-sdk:s3:putObject",
+      "Parameters": {
+        "Bucket": "code-transformation-v2",
+        "Key.$": "States.Format('{}/{}/code_refactor_v2/jobs/{}/status.json', $.scout_account_id, $.application_name, $.job_id)",
+        "Body": {
+          "state": "completed",
+          "started_at.$": "$.workflow_metadata.started_at",
+          "completed_at.$": "$$.State.EnteredTime",
+          "phase": "completed",
+          "message": "Recipe generation completed successfully",
+          "outputs": {
+            "refactor_recipes.$": "$.recipe_result.Payload.body.output_path"
+          }
+        },
+        "ContentType": "application/json"
+      },
+      "Next": "Success"
+    },
+    "Success": {
+      "Type": "Succeed",
+      "Comment": "Workflow completed successfully"
+    },
+    "HandlePatternDetectionError": {
+      "Type": "Task",
+      "Comment": "Handle pattern detection failure",
+      "Resource": "arn:aws:states:::aws-sdk:s3:putObject",
+      "Parameters": {
+        "Bucket": "code-transformation-v2",
+        "Key.$": "States.Format('{}/{}/code_refactor_v2/jobs/{}/status.json', $.scout_account_id, $.application_name, $.job_id)",
+        "Body": {
+          "state": "failed",
+          "started_at.$": "$.workflow_metadata.started_at",
+          "failed_at.$": "$$.State.EnteredTime",
+          "phase": "pattern_detection",
+          "error_type": "pattern_detection_error",
+          "error.$": "$.error"
+        },
+        "ContentType": "application/json"
+      },
+      "Next": "Failure"
+    },
+    "HandleRecipeGenerationError": {
+      "Type": "Task",
+      "Comment": "Handle recipe generation failure",
+      "Resource": "arn:aws:states:::aws-sdk:s3:putObject",
+      "Parameters": {
+        "Bucket": "code-transformation-v2",
+        "Key.$": "States.Format('{}/{}/code_refactor_v2/jobs/{}/status.json', $.scout_account_id, $.application_name, $.job_id)",
+        "Body": {
+          "state": "failed",
+          "started_at.$": "$.workflow_metadata.started_at",
+          "failed_at.$": "$$.State.EnteredTime",
+          "phase": "recipe_generation",
+          "error_type": "recipe_error",
+          "error.$": "$.error"
+        },
+        "ContentType": "application/json"
+      },
+      "Next": "Failure"
+    },
+    "Failure": {
+      "Type": "Fail",
+      "Comment": "Workflow failed"
+    }
+  }
+}

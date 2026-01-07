@@ -1,0 +1,94 @@
+{
+  "file_name": "CMCSCL50L.CBL",
+  "file_type": "COPYBOOK",
+  "copybook_type": "DATA",
+  "confidence": 0.9,
+  "data_dictionary": [
+    {
+      "level": 5,
+      "name": "CLACPRE",
+      "pic": "X(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "CLACSUF",
+      "pic": "X(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "CLACNBR",
+      "pic": "S9(006).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "CLPREFIX",
+      "pic": "X(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "CLSUFFIX",
+      "pic": "X(002).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "CLNUMBER",
+      "pic": "S9(006).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "PRPRCSEQ",
+      "pic": "S9(007).",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    },
+    {
+      "level": 5,
+      "name": "BWC-REP-NEEDED-FLAG",
+      "pic": "X(001)",
+      "usage": null,
+      "redefines": null,
+      "occurs": null,
+      "children": []
+    }
+  ],
+  "data_items_count": 8,
+  "paragraphs": [],
+  "paragraph_count": 0,
+  "note": "Copybook - data dictionary only (NESTED structure)",
+  "units": [],
+  "unit_type": "synthetic",
+  "traceability": {
+    "enabled": true,
+    "version": "v3.0",
+    "statement_id_format": "s{n}",
+    "line_numbers_present": true
+  },
+  "raw_content": "      *---------------------------------------------------------------*\r\n       01  CMCSCL50-DATA.\r\n      *---------------------------------------------------------------*\r\n           05  CLACPRE                 PIC  X(002).\r\n           05  CLACSUF                 PIC  X(002).\r\n           05  CLACNBR                 PIC S9(006).\r\n           05  CLPREFIX                PIC  X(002).\r\n           05  CLSUFFIX                PIC  X(002).\r\n           05  CLNUMBER                PIC S9(006).\r\n           05  PRPRCSEQ                PIC S9(007).\r\n           05  BWC-REP-NEEDED-FLAG     PIC  X(001) VALUE SPACES.\r\n               88  BWC-REP-NEEDED                  VALUE \"Y\".\r\n               88  BWC-REP-NOT-NEEDED              VALUE \"N\".\r\n",
+  "raw_content_truncated": false
+}

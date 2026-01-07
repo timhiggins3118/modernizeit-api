@@ -1,0 +1,277 @@
+{
+  "schema_version": "v3.0",
+  "job_id": "ca3_job_0U812_TestApp01_1762447258_c754c54a",
+  "scout_account_id": "0U812",
+  "application_name": "TestApp01",
+  "file_name": "CMCSCL50.CBL",
+  "timestamp": "2025-11-06T16:42:02.048909Z",
+  "analyzer": "BedrockAnalyzerPerFile",
+  "model": "us.anthropic.claude-3-5-sonnet-20241022-v2:0",
+  "batching_strategy": {
+    "strategy": "single_call",
+    "num_batches": 1,
+    "batch_size": 30,
+    "estimated_tokens": 28650
+  },
+  "program_level": {
+    "business_purpose": "This appears to be a claims processing and risk assessment program that evaluates various types of insurance claims (RL, RM, 27) and checks multiple risk factors including bankruptcy status, BWC filing status, and risk experience. The program likely determines claim eligibility and risk classification for insurance processing.",
+    "data_flows": "The program reads claim header records (CMLHCL00) and processes them through multiple validation steps. It maintains working storage for risk numbers (WK-RKRSNBR) and various status indicators. The program appears to transform raw claim data into risk assessments through multiple levels of validation and checking.",
+    "business_rules": [
+      "Claims must be validated against multiple claim types (RL, RM, 27)",
+      "Bankruptcy status must be verified for SI (Self-Insured) entities",
+      "Claims filed by BWC require special processing with first and second level checks",
+      "Risk assessment includes SI risk status, risk experience, and risk representation",
+      "Multiple issue validations must be performed on claims",
+      "Risk numbers must be maintained and tracked (11-digit numeric field)"
+    ],
+    "dependencies": [
+      "CMLHCL00 - Claim Header File",
+      "CMLDCL50 - Claims Data File",
+      "UTLMTB00 - Utility Table",
+      "CMLDCA01 - Claims Analysis File",
+      "CMLDMO06 - Motion File",
+      "CMLHMO00 - Motion Header File"
+    ],
+    "complexity": "HIGH",
+    "complexity_reasoning": "The program exhibits high complexity due to: 1) Multiple interrelated business rules and validations, 2) Complex file interactions with 6+ different files, 3) Multiple levels of risk assessment logic, 4) Numerous status checks and conditional processing, 5) Complex data transformations between different formats (e.g., WK-RKRSNBR redefinitions)",
+    "recommendations": "1) Break down the monolithic structure into smaller microservices by claim type and validation function, 2) Implement a proper domain model for claims and risk assessment, 3) Replace file-based operations with database operations, 4) Create separate services for bankruptcy checks, BWC processing, and risk assessment, 5) Implement proper error handling and logging mechanisms in Java"
+  },
+  "paragraphs": [
+    {
+      "name": "FILE-CONTROL",
+      "business_logic": "Defines file control entries and access methods for all program files",
+      "data_flow": "Defines access methods for CMLHCL00, CMLDCL50, UTLMTB00, CMLDCA01, CMLDMO06, CMLHMO00 files",
+      "dependencies": [],
+      "java_recommendations": "Replace file definitions with JPA/Hibernate entities and repository interfaces"
+    },
+    {
+      "name": "00000-MAIN-CONTROL-ROUTINE",
+      "business_logic": "Main program orchestration controlling initialization, processing and cleanup",
+      "data_flow": "Controls overall program flow",
+      "dependencies": [
+        "10000-INITIALIZE-PROGRAM",
+        "20000-PROCESS-RECORDS",
+        "99999-CLOSE-PROGRAM"
+      ],
+      "java_recommendations": "Convert to Spring Boot @SpringBootApplication class with main() method"
+    },
+    {
+      "name": "10000-INITIALIZE-PROGRAM",
+      "business_logic": "Initializes program by opening files and setting up initial data",
+      "data_flow": "Opens CMLHCL00 file, moves LINK-DATA to working storage",
+      "dependencies": [],
+      "java_recommendations": "Create @PostConstruct initialization method in service class"
+    },
+    {
+      "name": "20000-PROCESS-RECORDS",
+      "business_logic": "Main processing routine that orchestrates claim validation checks",
+      "data_flow": "Controls flow through multiple claim validation steps",
+      "dependencies": [
+        "20100-GET-CLAIM-HEADER",
+        "20200-CHECK-RL-CLAIM",
+        "20300-CHECK-RM-CLAIM",
+        "20400-CHECK-27-CLAIM",
+        "20500-CHECK-BANKRUPT-SI",
+        "20600-CHECK-FILED-BY-BWC",
+        "20700-CHECK-SI-RISK",
+        "20800-CHECK-RISK-EXPERIENCE",
+        "20900-CHECK-RISK-REPRESENTED",
+        "20A00-CHECK-ISSUES"
+      ],
+      "java_recommendations": "Create ClaimValidationService with separate methods for each validation step"
+    },
+    {
+      "name": "20100-GET-CLAIM-HEADER",
+      "business_logic": "Retrieves claim header record",
+      "data_flow": "Reads CMLHCL00 file randomly based on claim key",
+      "dependencies": [
+        "80102-READ-CMLHCL00-RANDOM"
+      ],
+      "java_recommendations": "Create ClaimHeaderRepository with findById() method"
+    },
+    {
+      "name": "20200-CHECK-RL-CLAIM",
+      "business_logic": "Validates if claim is an RL type claim",
+      "data_flow": "Checks CLACPRE and CLTYPE fields",
+      "dependencies": [],
+      "java_recommendations": "Create RLClaimValidator class implementing ClaimValidator interface"
+    },
+    {
+      "name": "20300-CHECK-RM-CLAIM",
+      "business_logic": "Validates if claim is an RM type claim",
+      "data_flow": "Checks CLACPRE and CLTYPE fields",
+      "dependencies": [],
+      "java_recommendations": "Create RMClaimValidator class implementing ClaimValidator interface"
+    },
+    {
+      "name": "20400-CHECK-27-CLAIM",
+      "business_logic": "Validates if claim is a type 27 claim",
+      "data_flow": "Checks CLACSUF and CLTYPE fields",
+      "dependencies": [],
+      "java_recommendations": "Create Type27ClaimValidator class implementing ClaimValidator interface"
+    },
+    {
+      "name": "20500-CHECK-BANKRUPT-SI",
+      "business_logic": "Checks bankruptcy status for self-insured entities",
+      "data_flow": "Reads CMLDCL50 file and calls CMCSRK20 function",
+      "dependencies": [
+        "80202-READ-CMLDCL50-RANDOM",
+        "99000-CALL-CMCSRK20-FUNCTION"
+      ],
+      "java_recommendations": "Create BankruptcyService with integration to external bankruptcy check service"
+    },
+    {
+      "name": "20600-CHECK-FILED-BY-BWC",
+      "business_logic": "Validates claims filed by BWC through first and second level checks",
+      "data_flow": "Checks claim prefix and performs multi-level validation",
+      "dependencies": [
+        "20610-CHECK-1ST-LEVEL",
+        "20620-CHECK-2ND-LEVEL"
+      ],
+      "java_recommendations": "Create BWCClaimValidator with separate methods for each validation level"
+    },
+    {
+      "name": "20610-CHECK-1ST-LEVEL",
+      "business_logic": "Performs first level BWC filing validation",
+      "data_flow": "Reads CMLDMO06 and CMLHMO00 files",
+      "dependencies": [
+        "80511-START-CMLDMO06-EQUAL",
+        "80503-READ-CMLDMO06-NEXT",
+        "80602-READ-CMLHMO00-RANDOM"
+      ],
+      "java_recommendations": "Create FirstLevelBWCValidator class with JPA repositories"
+    },
+    {
+      "name": "20620-CHECK-2ND-LEVEL",
+      "business_logic": "Performs second level BWC filing validation",
+      "data_flow": "Reads CMLDCA01 file",
+      "dependencies": [
+        "80411-START-CMLDCA01-EQUAL",
+        "80403-READ-CMLDCA01-NEXT"
+      ],
+      "java_recommendations": "Create SecondLevelBWCValidator class with JPA repositories"
+    },
+    {
+      "name": "20700-CHECK-SI-RISK",
+      "business_logic": "Validates self-insured risk status",
+      "data_flow": "Checks CLACSUF and RKRSTYP fields",
+      "dependencies": [],
+      "java_recommendations": "Create SelfInsuredRiskValidator class with risk validation logic"
+    },
+    {
+      "name": "20800-CHECK-RISK-EXPERIENCE",
+      "business_logic": "Evaluates risk experience based on claim dates",
+      "data_flow": "Calls date conversion utility and compares dates",
+      "dependencies": [
+        "99900-CALL-UTCSDC00-FUNCTION"
+      ],
+      "java_recommendations": "Create RiskExperienceService using Java time APIs"
+    },
+    {
+      "name": "20900-CHECK-RISK-REPRESENTED",
+      "business_logic": "Checks if risk is represented",
+      "data_flow": "Calls CMCSRP00 function and processes representation data",
+      "dependencies": [
+        "99000-CALL-CMCSRP00-FUNCTION"
+      ],
+      "java_recommendations": "Create RiskRepresentationService with external service integration"
+    },
+    {
+      "name": "20A00-CHECK-ISSUES",
+      "business_logic": "Validates claim issues against utility table",
+      "data_flow": "Reads CMLDMO06 and UTLMTB00 files",
+      "dependencies": [
+        "80511-START-CMLDMO06-EQUAL",
+        "80503-READ-CMLDMO06-NEXT",
+        "80311-START-UTLMTB00-EQUAL",
+        "80303-READ-UTLMTB00-NEXT"
+      ],
+      "java_recommendations": "Create IssueValidationService with JPA repositories"
+    },
+    {
+      "name": "80102-READ-CMLHCL00-RANDOM",
+      "business_logic": "Reads claim header file randomly",
+      "data_flow": "Reads CMLHCL00 file",
+      "dependencies": [],
+      "java_recommendations": "Replace with JPA repository findById() method"
+    },
+    {
+      "name": "80202-READ-CMLDCL50-RANDOM",
+      "business_logic": "Reads claims data file randomly",
+      "data_flow": "Reads CMLDCL50 file",
+      "dependencies": [],
+      "java_recommendations": "Replace with JPA repository findById() method"
+    },
+    {
+      "name": "80302-READ-UTLMTB00-RANDOM",
+      "business_logic": "Reads utility table randomly",
+      "data_flow": "Reads UTLMTB00 file",
+      "dependencies": [],
+      "java_recommendations": "Replace with JPA repository findById() method"
+    },
+    {
+      "name": "80303-READ-UTLMTB00-NEXT",
+      "business_logic": "Reads next utility table record",
+      "data_flow": "Reads UTLMTB00 file sequentially",
+      "dependencies": [],
+      "java_recommendations": "Replace with JPA repository findAll() with Pageable"
+    },
+    {
+      "name": "80311-START-UTLMTB00-EQUAL",
+      "business_logic": "Positions utility table for sequential read",
+      "data_flow": "Positions UTLMTB00 file pointer",
+      "dependencies": [],
+      "java_recommendations": "Not needed in Java - use JPA queries instead"
+    },
+    {
+      "name": "80403-READ-CMLDCA01-NEXT",
+      "business_logic": "Reads next claims analysis record",
+      "data_flow": "Reads CMLDCA01 file sequentially",
+      "dependencies": [],
+      "java_recommendations": "Replace with JPA repository findAll() with Pageable"
+    },
+    {
+      "name": "80411-START-CMLDCA01-EQUAL",
+      "business_logic": "Positions claims analysis file for sequential read",
+      "data_flow": "Positions CMLDCA01 file pointer",
+      "dependencies": [],
+      "java_recommendations": "Not needed in Java - use JPA queries instead"
+    },
+    {
+      "name": "80503-READ-CMLDMO06-NEXT",
+      "business_logic": "Reads next motion file record",
+      "data_flow": "Reads CMLDMO06 file sequentially",
+      "dependencies": [],
+      "java_recommendations": "Replace with JPA repository findAll() with Pageable"
+    },
+    {
+      "name": "80511-START-CMLDMO06-EQUAL",
+      "business_logic": "Positions motion file for sequential read",
+      "data_flow": "Positions CMLDMO06 file pointer",
+      "dependencies": [],
+      "java_recommendations": "Not needed in Java - use JPA queries instead"
+    },
+    {
+      "name": "80602-READ-CMLHMO00-RANDOM",
+      "business_logic": "Reads motion header file randomly",
+      "data_flow": "Reads CMLHMO00 file",
+      "dependencies": [],
+      "java_recommendations": "Replace with JPA repository findById() method"
+    },
+    {
+      "name": "99999-CLOSE-PROGRAM",
+      "business_logic": "Performs program cleanup and closure",
+      "data_flow": "Moves final data to LINK-DATA and closes files",
+      "dependencies": [],
+      "java_recommendations": "Use @PreDestroy for cleanup and Spring context for resource management"
+    },
+    {
+      "name": "99999-EXIT-PROGRAM",
+      "business_logic": "Final exit point for program",
+      "data_flow": "None",
+      "dependencies": [],
+      "java_recommendations": "Not needed in Java - handled by Spring context shutdown"
+    }
+  ],
+  "paragraph_count": 28
+}

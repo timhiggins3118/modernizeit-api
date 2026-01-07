@@ -1,0 +1,62 @@
+{
+  "ResponseMetadata": {
+    "RequestId": "b36148e4-a930-4b3d-8ae3-f62e2ea42716",
+    "HTTPStatusCode": 200,
+    "HTTPHeaders": {
+      "date": "Wed, 29 Oct 2025 15:10:44 GMT",
+      "content-type": "application/json",
+      "content-length": "2904",
+      "connection": "keep-alive",
+      "x-amzn-requestid": "b36148e4-a930-4b3d-8ae3-f62e2ea42716"
+    },
+    "RetryAttempts": 0
+  },
+  "Configuration": {
+    "FunctionName": "RepositoryGeneratorV2",
+    "FunctionArn": "arn:aws:lambda:us-east-1:376129851858:function:RepositoryGeneratorV2",
+    "Runtime": "python3.11",
+    "Role": "arn:aws:iam::376129851858:role/evaluation_lambda_role",
+    "Handler": "repository_generator_v2_handler.lambda_handler",
+    "CodeSize": 7618,
+    "Description": "",
+    "Timeout": 300,
+    "MemorySize": 512,
+    "LastModified": "2025-10-14T19:07:00.000+0000",
+    "CodeSha256": "j1+pc+FDn4YbNE7R9W7hvEZJUJBd5QsqhXgRJqmm9qI=",
+    "Version": "$LATEST",
+    "Environment": {
+      "Variables": {
+        "BEDROCK_MODEL_ID": "anthropic.claude-3-5-sonnet-20240620-v1:0",
+        "BUCKET_NAME": "code-transformation-v2"
+      }
+    },
+    "TracingConfig": {
+      "Mode": "PassThrough"
+    },
+    "RevisionId": "d74a604c-79c8-48ad-a9b6-82ef6bed94ae",
+    "State": "Active",
+    "LastUpdateStatus": "Successful",
+    "PackageType": "Zip",
+    "Architectures": [
+      "x86_64"
+    ],
+    "EphemeralStorage": {
+      "Size": 512
+    },
+    "SnapStart": {
+      "ApplyOn": "None",
+      "OptimizationStatus": "Off"
+    },
+    "RuntimeVersionConfig": {
+      "RuntimeVersionArn": "arn:aws:lambda:us-east-1::runtime:d6935992cddc0c573a0cb7ac0214699a5676aefd38a43d64192dce8a044a3724"
+    },
+    "LoggingConfig": {
+      "LogFormat": "Text",
+      "LogGroup": "/aws/lambda/RepositoryGeneratorV2"
+    }
+  },
+  "Code": {
+    "RepositoryType": "S3",
+    "Location": "https://prod-iad-c1-djusa-tasks.s3.us-east-1.amazonaws.com/snapshots/376129851858/RepositoryGeneratorV2-f2e41ada-a392-49e8-8e08-ef9677951a87?versionId=9ZNFeMovAEJA1mEQJVy4agI7dX1.ezlk&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEB4aCXVzLWVhc3QtMSJIMEYCIQCS%2BnC4mtXLlUI9BFQl9U15tG1X%2BIZFgl8KXtJ5N5tKHQIhALnyfaeguh6%2FE4GXFO22u%2BCyjamHnYO%2BDlRcBu29drxoKpQCCNf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQBBoMNDc5MjMzMDI1Mzc5IgybRuK%2FflRMsrSqsRoq6AHOVE8cZ%2F4jFUIiI7hhM%2FRMurSzmKtNZQgj7wGzQrIPSveseM5qmrvzZIS4nmFv8yrtU%2FAN1OREGHUatFmBZ6wCh6BJd8FwDNii5Yy%2B4368xLxCH6fgRegUuE6KRW%2BlnEWkhT6S7xQCWcg5kOl%2FsR5Q3gyWBiMboPkeFicgjfN6SEfVD55IHGADjz4FDMwgt25TOW99JXNvNouJCzss8H7Vdra6Q6BT0bf%2Blm7ezaputaoMvJqh%2F2%2B03Y2EtmXB85LzFoPyICC0mfHTwk9Dzyv0Y8k6DRszBq2Fs6LvoWSYsAIOeBdo9ZLpMK2tiMgGOowBgLMr%2FYQaiegOUdZSEPWCrOhedM8nwXMAfOukUsWb7EiOd7yBnbxXkzbDo1mP%2BnEQf9P%2FEaI%2BVCq94jWYZPvGTc8k4Haxx3isV435uPtot%2BdKsSaJqKXi%2BLx8lL6m3oB9jPa%2F2r3Zl3QrVN1n0jHMLFYckfElee4y1tmXlrcJkXf9A%2F3erQI6SKjJzG4%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20251029T151044Z&X-Amz-SignedHeaders=host&X-Amz-Expires=600&X-Amz-Credential=ASIAW7FEDUVRYOHJR64Z%2F20251029%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=d25e29dbf9ae8ae6afdd890c6c5e23068972b2c0fd37870ddde01482790966e4"
+  }
+}

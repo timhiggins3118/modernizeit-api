@@ -1,0 +1,20 @@
+{
+    "executionArn": "arn:aws:states:us-east-1:376129851858:execution:DataAnalysisWorkflowV2:execution-da2_job_0U812_TestApp01_1762439897_08497588",
+    "stateMachineArn": "arn:aws:states:us-east-1:376129851858:stateMachine:DataAnalysisWorkflowV2",
+    "name": "execution-da2_job_0U812_TestApp01_1762439897_08497588",
+    "status": "SUCCEEDED",
+    "startDate": "2025-11-06T08:38:17.964000-06:00",
+    "stopDate": "2025-11-06T08:40:30.554000-06:00",
+    "input": "{\"job_id\": \"da2_job_0U812_TestApp01_1762439897_08497588\", \"scout_account_id\": \"0U812\", \"application_name\": \"TestApp01\", \"source_hash\": \"9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74\"}",
+    "inputDetails": {
+        "included": true
+    },
+    "output": "{\"ChecksumCRC32\":\"QpqbvA==\",\"ChecksumType\":\"FULL_OBJECT\",\"ETag\":\"\\\"88a16256cf95c249efdc2528c9a9dfd7\\\"\",\"ServerSideEncryption\":\"AES256\"}",
+    "outputDetails": {
+        "included": true
+    },
+    "traceHeader": "Root=1-690cb2d8-07daed4173b88ca710266106;Parent=575fe2649727507f;Sampled=0",
+    "redriveCount": 0,
+    "redriveStatus": "NOT_REDRIVABLE",
+    "redriveStatusReason": "Execution is SUCCEEDED and cannot be redriven"
+}
