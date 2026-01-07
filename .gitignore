@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.so
+!engines/code_analysis/grammar/cobol.so
 .Python
 .venv/
 venv/
@@ -15,9 +16,6 @@ data/
 aws_creds/
 *.log
 logs/
-
-# Compiled Tree-Sitter Grammar (platform-specific, built on each deployment)
-engines/code_analysis/grammar/cobol.so
 
 # Environment
 .env
