@@ -1,1 +1,0 @@
-{"state":"completed","phase":"completed","message":"ERD generation completed successfully","outputs":{"erd":"s3://code-transformation-v2/0U812/TestApp01/data_analysis_v2/jobs/da2_job_0U812_TestApp01_1762439897_08497588/artifacts/erd.json"},"completed_at":"2025-11-06T14:40:30.246Z","started_at":"2025-11-06T14:38:17.999Z"}

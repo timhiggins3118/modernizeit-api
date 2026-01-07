@@ -1,9 +1,0 @@
-{
-  "job_id": "dmv2_job_0U812_TestApp01_1762439738_3581cb90",
-  "scout_account_id": "0U812",
-  "application_name": "TestApp01",
-  "source_hash": "9ec86076ac3255da03e23428fe0a874d4bb75c421feb22eb8ce7821d1392af74",
-  "created_at": "2025-11-06T14:35:38.535246+00:00",
-  "workflow_execution_arn": "arn:aws:states:us-east-1:376129851858:execution:DependencyMapperWorkflowV2:execution-dmv2_job_0U812_TestApp01_1762439738_3581cb90",
-  "status": "pending"
-}

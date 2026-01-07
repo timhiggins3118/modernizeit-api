@@ -16,6 +16,7 @@ data/
 aws_creds/
 *.log
 logs/
+references-ONLY/
 
 # Environment
 .env
