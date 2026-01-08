@@ -316,12 +316,18 @@ class Settings:
         """
         # Priority 1: Environment variable
         env_val = os.getenv("S3_PREFIX")
-        if env_val:
+        if env_val is not None:
+            # Handle literal '""' from docker-compose
+            if env_val.strip() in ('""', "''", ''):
+                return ""
             return env_val.strip().strip("/")
 
         # Priority 2: Config file
         if "s3_prefix" in self._config_data:
-            return str(self._config_data["s3_prefix"]).strip().strip("/")
+            val = str(self._config_data["s3_prefix"]).strip()
+            if val in ('""', "''", ''):
+                return ""
+            return val.strip("/")
 
         # Priority 3: Default
         return "modernizeit_output"

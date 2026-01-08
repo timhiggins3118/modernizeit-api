@@ -1,0 +1,63 @@
+# Docker Compose for LOCAL development
+# Usage: docker-compose -f docker-compose.local.yml up
+
+version: '3.8'
+
+services:
+  modernizeit-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: modernizeit-api-local
+    ports:
+      - "8000:8000"
+    environment:
+      # Application Settings
+      - ENV=development
+      - DEBUG=true
+
+      # Storage Configuration - S3 Mode
+      - STORAGE_MODE=s3
+      - S3_BUCKET=code-transformation-v2
+      - S3_PREFIX=""
+      - S3_REGION=us-east-1
+
+      # AWS Configuration
+      - AWS_DEFAULT_REGION=us-east-1
+
+      # Database Configuration
+      - DATA_PROVIDER=dynamodb
+      - DYNAMODB_TABLE_NAME=modernizeit-dev
+      - ACCOUNT_ID=341
+      - AWS_REGION=us-east-1
+
+      # Bedrock Configuration
+      - BEDROCK_MODEL=anthropic.claude-3-5-sonnet-20240620-v1:0
+      - BEDROCK_REGION=us-east-1
+      - BEDROCK_MODE=real
+
+      # CORS Configuration
+      - ALLOWED_ORIGINS=http://localhost:5173,http://localhost:5174,http://localhost:5175
+
+    volumes:
+      # Mount AWS credentials from host
+      - ~/.aws:/root/.aws:ro
+
+      # SQLite database persistence
+      - modernizeit-db-local:/app/db
+
+      # Optional: Mount local code for development (hot reload)
+      # - .:/app
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  modernizeit-db-local:
+    driver: local

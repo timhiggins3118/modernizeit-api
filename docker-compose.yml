@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  modernizeit-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: modernizeit-api
+    ports:
+      - "8000:8000"
+    environment:
+      # Application Settings
+      - ENV=production
+      - DEBUG=false
+
+      # Storage Configuration
+      # Options: "s3" or "local"
+      - STORAGE_MODE=s3
+
+      # S3 Configuration (when STORAGE_MODE=s3)
+      - S3_BUCKET=code-transformation-v2
+      - S3_PREFIX=
+      - S3_REGION=us-east-1
+
+      # Local Storage Configuration (when STORAGE_MODE=local)
+      # - BASE_LOCAL_PATH=/app/modernizeit_output
+
+      # AWS Credentials (if not using IAM role)
+      # For local development, mount ~/.aws or set these:
+      # - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      # - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_DEFAULT_REGION=us-east-1
+
+      # Database Configuration
+      - DATA_PROVIDER=dynamodb
+      - DYNAMODB_TABLE_NAME=modernizeit-dev-data
+      - ACCOUNT_ID=341
+      - AWS_REGION=us-east-1
+
+      # Bedrock Configuration
+      - BEDROCK_MODEL=anthropic.claude-3-5-sonnet-20240620-v1:0
+      - BEDROCK_REGION=us-east-1
+      - BEDROCK_MODE=real
+
+      # CORS Configuration
+      - ALLOWED_ORIGINS=http://localhost:5173,http://localhost:5174,http://localhost:5175
+
+    volumes:
+      # AWS credentials (for local development)
+      # Uncomment if running locally and not using IAM role
+      # - ~/.aws:/root/.aws:ro
+
+      # Local storage volume (only needed if STORAGE_MODE=local)
+      # Uncomment and adjust path as needed:
+      # - ./modernizeit_output:/app/modernizeit_output
+
+      # SQLite database persistence (optional)
+      - modernizeit-db:/app/db
+
+    restart: unless-stopped
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  modernizeit-db:
+    driver: local

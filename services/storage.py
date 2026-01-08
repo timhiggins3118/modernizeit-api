@@ -260,7 +260,9 @@ class S3StorageBackend(StorageBackend):
 
     def _resolve_key(self, path: str) -> str:
         """Resolve relative path to S3 key."""
-        return f"{self.prefix}/code-transformation-v2/{path}"
+        if self.prefix:
+            return f"{self.prefix}/{path}"
+        return path
 
     def list_files(self, path: str, pattern: str = "*", recursive: bool = True) -> List[str]:
         """List files at path matching pattern."""

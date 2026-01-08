@@ -6,7 +6,8 @@ from pydantic import BaseModel
 import os
 import logging
 
-from utils.s3_helper import S3Helper, get_aws_credentials_from_db
+from utils.s3_helper import S3Helper
+from db.dynamodb import get_credentials as get_aws_credentials_from_dynamodb
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/s3", tags=["s3"])
@@ -49,12 +50,9 @@ async def validate_bucket(request: ValidateBucketRequest):
         HTTPException: If AWS credentials not found or bucket validation fails
     """
     try:
-        # Get database path
-        db_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'jobs.db')
-
-        # Get AWS credentials from database
-        logger.info("Getting AWS credentials from database")
-        creds = get_aws_credentials_from_db(db_path)
+        # Get AWS credentials from DynamoDB
+        logger.info("Getting AWS credentials from DynamoDB")
+        creds = get_aws_credentials_from_dynamodb()
 
         if not creds:
             raise HTTPException(
@@ -103,8 +101,7 @@ async def check_credentials_configured():
         dict with configured status
     """
     try:
-        db_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'jobs.db')
-        creds = get_aws_credentials_from_db(db_path)
+        creds = get_aws_credentials_from_dynamodb()
 
         return {
             'configured': creds is not None,
@@ -130,8 +127,7 @@ async def list_buckets():
         HTTPException: If AWS credentials not found or listing fails
     """
     try:
-        db_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'jobs.db')
-        creds = get_aws_credentials_from_db(db_path)
+        creds = get_aws_credentials_from_dynamodb()
 
         if not creds:
             raise HTTPException(
@@ -181,8 +177,7 @@ async def list_files(request: ListFilesRequest):
         HTTPException: If AWS credentials not found or listing fails
     """
     try:
-        db_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'jobs.db')
-        creds = get_aws_credentials_from_db(db_path)
+        creds = get_aws_credentials_from_dynamodb()
 
         if not creds:
             raise HTTPException(
@@ -230,8 +225,7 @@ async def delete_file(request: DeleteFileRequest):
         HTTPException: If AWS credentials not found or deletion fails
     """
     try:
-        db_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'jobs.db')
-        creds = get_aws_credentials_from_db(db_path)
+        creds = get_aws_credentials_from_dynamodb()
 
         if not creds:
             raise HTTPException(
@@ -276,8 +270,7 @@ async def delete_folder(request: DeleteFolderRequest):
         HTTPException: If AWS credentials not found or deletion fails
     """
     try:
-        db_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'jobs.db')
-        creds = get_aws_credentials_from_db(db_path)
+        creds = get_aws_credentials_from_dynamodb()
 
         if not creds:
             raise HTTPException(
@@ -322,8 +315,7 @@ async def delete_bucket(request: DeleteBucketRequest):
         HTTPException: If AWS credentials not found or deletion fails
     """
     try:
-        db_path = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'jobs.db')
-        creds = get_aws_credentials_from_db(db_path)
+        creds = get_aws_credentials_from_dynamodb()
 
         if not creds:
             raise HTTPException(

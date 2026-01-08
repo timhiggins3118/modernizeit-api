@@ -123,7 +123,7 @@ def _save_job_record(
     source_hash: Optional[str]
 ) -> None:
     """
-    Save job record to the jobs database.
+    Save job record to DynamoDB using proper application → workflow → job hierarchy.
 
     Args:
         job_id: The job identifier
@@ -131,42 +131,72 @@ def _save_job_record(
         working_folder: The resolved working folder path
         source_hash: Source hash from the ingest response
     """
-    from migrate_dynamodb.dynamodb_jobs import JobRecord, save_job
+    from db import dynamodb
 
-    # Build artifacts path: working_folder/bucket/account/app
-    # The ingest handler uses BUCKET_NAME = 'code-transformation-v2'
+    # Build artifacts path
     bucket = "code-transformation-v2"
     artifacts_path = str(
         Path(working_folder) / bucket / request.scout_account_id / request.application_name
     )
 
-    now = datetime.utcnow()
-    record = JobRecord(
-        job_id=job_id,
-        flow_type="ingest",
-        status="completed",
-        created_at=now,
-        updated_at=now,
-        artifacts_path=artifacts_path,
-        input_json=json.dumps({
-            "scout_account_id": request.scout_account_id,
-            "application_name": request.application_name,
-            "zip_file_path": request.zip_file_path,
-            "working_folder": working_folder,
-            "generate_type_mappings": request.generate_type_mappings,
-            "source_lang": request.source_lang,
-            "target_lang": request.target_lang,
-            "source_hash": source_hash,
-        })
-    )
-
     try:
-        print(f"[runner.py] Saving job to DynamoDB: {job_id}, tenant: {request.scout_account_id}")
-        save_job(record)
-        print(f"[runner.py] Job saved successfully to DynamoDB: {job_id}")
+        print(f"[ingest] Saving job to DynamoDB: {job_id}")
+
+        # Step 1: Get or create application
+        app = dynamodb.get_or_create_application(
+            account_id=request.scout_account_id,
+            application_name=request.application_name,
+            description=f"Ingested application from {request.zip_file_path}",
+            source_language=request.source_lang or "COBOL",
+            target_language=request.target_lang or "Java"
+        )
+
+        if not app:
+            print(f"[ingest] ERROR: Failed to get/create application")
+            return
+
+        app_id = app.get('application_id')
+        print(f"[ingest] Application: {app_id}")
+
+        # Step 2: Create workflow for this ingest job
+        workflow = dynamodb.create_workflow(
+            application_id=app_id,
+            workflow_name="Ingest",
+            workflow_type="ingest",
+            account_id=request.scout_account_id,
+            status="completed"
+        )
+
+        if not workflow:
+            print(f"[ingest] ERROR: Failed to create workflow")
+            return
+
+        workflow_id = workflow.get('workflow_id')
+        print(f"[ingest] Workflow: {workflow_id}")
+
+        # Step 3: Save job under workflow
+        success = dynamodb.save_job(
+            job_id=job_id,
+            workflow_id=workflow_id,
+            job_type="ingest",
+            status="completed",
+            progress=100,
+            input_path=request.zip_file_path,
+            output_path=artifacts_path,
+            account_id=request.scout_account_id,
+            result_data=json.dumps({
+                "source_hash": source_hash,
+                "application_name": request.application_name
+            })
+        )
+
+        if success:
+            print(f"[ingest] Job saved successfully: {job_id}")
+        else:
+            print(f"[ingest] ERROR: Failed to save job")
+
     except Exception as e:
-        print(f"[runner.py] ERROR: Failed to save job to DynamoDB: {job_id}")
-        print(f"[runner.py] Exception: {type(e).__name__}: {str(e)}")
+        print(f"[ingest] ERROR: Exception saving job: {type(e).__name__}: {str(e)}")
         import traceback
         traceback.print_exc()
         raise

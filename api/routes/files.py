@@ -207,15 +207,27 @@ def _find_refactor_class_name(account: str, app: str) -> Optional[str]:
     Find the refactor class folder name (e.g., 'IFPR321').
     """
     refactor_base = f"{account}/{app}/code_refactor"
+    print(f"[files] _find_refactor_class_name: refactor_base={refactor_base}")
     if not storage_service.directory_exists(refactor_base):
+        print(f"[files] _find_refactor_class_name: refactor_base does not exist")
         return None
 
-    class_dirs = storage_service.list_directories(refactor_base)
-    for class_dir in class_dirs:
-        transformed_path = f"{refactor_base}/{class_dir}/output/transformed"
-        if storage_service.directory_exists(transformed_path):
-            return class_dir
+    try:
+        class_dirs = storage_service.list_directories(refactor_base)
+        print(f"[files] _find_refactor_class_name: class_dirs={class_dirs}")
+        for class_dir in class_dirs:
+            transformed_path = f"{refactor_base}/{class_dir}/output/transformed"
+            print(f"[files] _find_refactor_class_name: checking {transformed_path}")
+            if storage_service.directory_exists(transformed_path):
+                print(f"[files] _find_refactor_class_name: found class_dir={class_dir}")
+                return class_dir
+    except Exception as e:
+        print(f"[files] _find_refactor_class_name: Error listing directories: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
 
+    print(f"[files] _find_refactor_class_name: no class dir found")
     return None
 
 
@@ -383,9 +395,10 @@ async def list_java_files(account: str, app: str, source: Optional[str] = None):
 
         files = []
         for f in storage_service.list_files(workspace_path, pattern="*.java"):
+            filename = f.split("/")[-1]
             files.append(FileInfo(
-                name=f.split("/")[-1],
-                path=f,
+                name=filename,
+                path=filename,  # Return just filename, not full path
                 type="file"
             ))
         return FileListResponse(files=files, total=len(files))

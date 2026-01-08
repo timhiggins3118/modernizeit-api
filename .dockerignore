@@ -1,0 +1,63 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docker
+Dockerfile
+.dockerignore
+docker-compose*.yml
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ModernizeIT specific
+modernizeit_output/
+data/
+logs/
+*.log
+task_logs/
+references-ONLY/
+dont_use/
+
+# Environment files (will be provided at runtime)
+.env
+.env.local
+.env.*.local
+aws_creds/
+
+# Documentation (not needed in container)
+*.md
+docs/
+
+# Testing
+tests/
+test_*.py
+
+# Temporary files
+*.tmp
+temp/
+tmp/
